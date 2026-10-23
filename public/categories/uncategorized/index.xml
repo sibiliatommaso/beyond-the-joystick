@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Uncategorized on My New Hugo Project</title>
+    <link>http://localhost:1313/categories/uncategorized/</link>
+    <description>Recent content in Uncategorized on My New Hugo Project</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Feb 2026 14:07:44 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/uncategorized/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VIPER: The New Challenge of AI Navigation in Permanent Moon Shadows</title>
+      <link>http://localhost:1313/posts/2026-02-28-viper-the-new-challenge-of-ai-navigation-in-permanent-moon-shadows/</link>
+      <pubDate>Sat, 28 Feb 2026 14:07:44 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-28-viper-the-new-challenge-of-ai-navigation-in-permanent-moon-shadows/</guid>
+      <description>&lt;!-- wp:heading --&gt;
+&lt;h2 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;Abstract: The Resurrection of VIPER and the Extreme Lunar South Pole&lt;/strong&gt;&lt;/h2&gt;
+&lt;!-- /wp:heading --&gt;
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;The paradigm of autonomous space robotics is undergoing a fundamental shift. The &lt;strong&gt;VIPER rover AI navigation&lt;/strong&gt; architecture represents a definitive milestone in this evolution. As documented by NASA Ames Research Center, the &lt;em&gt;Volatiles Investigating Polar Exploration Rover&lt;/em&gt; (VIPER) was designed to operate where no solar-powered vehicle has gone before: the &lt;strong&gt;Permanently Shadowed Regions (PSRs)&lt;/strong&gt; of the lunar South Pole.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

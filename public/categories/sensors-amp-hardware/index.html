@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Sensors &amp;Amp; Hardware | My New Hugo Project</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/categories/sensors-amp-hardware/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.95ae6e9689bd0037456375629f411acbf8ed76e0e9a7599900ad281f9526dee6.css" integrity="sha256-la5ulom9ADdFY3Vin0Eay/jtduDpp1mZAK0oH5Um3uY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/categories/sensors-amp-hardware/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/categories/sensors-amp-hardware/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="My New Hugo Project (Alt + H)">My New Hugo Project</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Sensors &amp;Amp; Hardware
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Rover Slip Estimation on Lunar Sand: Lab Test
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Planetary exploration rovers serve as essential tools for advancing scientific investigations, but their mobility is significantly challenged by loose and deformable surfaces like lunar dust and Martian regolith. These extraterrestrial terrains exhibit low cohesion and bearing capacity, leading to excessive wheel slip where the wheels rotate without generating sufficient forward motion.
+As we dive deeper into autonomous space robotics here on Beyond the Joystick, I am realizing that mastering rover slip estimation is just as critical as orbital mechanics. If a rover cannot detect slip, standard wheel odometry accrues massive errors, causing deviations from planned trajectories and increasing the risk of entrapment. To understand how engineers solve this, we are going to explore how academic researchers utilize a single-wheel testbed to analyze wheel-terrain interactions before the software ever leaves Earth.
+...</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2026-09-20T08:19:05+00:00'>September 20, 2026</span>&nbsp;·&nbsp;<span>Beyond The Joystick</span></footer>
+  <a class="entry-link" aria-label="post link to Rover Slip Estimation on Lunar Sand: Lab Test" href="http://localhost:1313/posts/2026-09-20-rover-slip-estimation-on-lunar-sand-lab-test/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">The New Lunar Gold Rush: How Commercial Rovers are Scaling Autonomous Mobility
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> The era of bespoke, billion-dollar planetary exploration is undergoing a radical paradigm shift. As the cis-lunar economy accelerates, the demand for scalable infrastructure has catalyzed the rapid development of commercial lunar rovers. Unlike legacy flagship missions—such as NASA&#39;s Perseverance, which relies on custom, heavily shielded radiation-hardened (Rad-Hard) avionics—this new wave prioritizes cost-efficiency and rapid deployment.
+Historically, the prohibitive cost of autonomous space navigation stemmed from custom-built hardware and extensively redundant sensor arrays. Legacy systems depend on expensive, legacy processors like the BAE RAD750 (operating at a highly constrained 200 MHz) and demand massive SWaP (Size, Weight, and Power) overheads to guarantee absolute mission survival. However, scaling lunar operations requires a decisive departure from these monolithic architectures.
+...</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2026-04-18T07:36:13+00:00'>April 18, 2026</span>&nbsp;·&nbsp;<span>Beyond The Joystick</span></footer>
+  <a class="entry-link" aria-label="post link to The New Lunar Gold Rush: How Commercial Rovers are Scaling Autonomous Mobility" href="http://localhost:1313/posts/2026-04-18-the-new-lunar-gold-rush-how-commercial-lunar-rovers-are-scaling-autonomous-mobility/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">What Self-Driving Cars Can (and Can&amp;#8217;t) Teach Space Rovers
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> The evolution of vehicular automation and space robotics represents one of the most fascinating and complex technological convergences in contemporary engineering. Although terrestrial autonomous vehicles (AVs) and planetary rovers operate in diametrically opposed environmental domains, their algorithmic foundations, sensory perception paradigms, and decision-making architectures share deep intersections. On Earth, autonomous driving aims to process massive amounts of data in real time at high speeds. These vehicles navigate structured or semi-structured environments characterized by highly stochastic traffic, dynamic obstacles, and stringent passenger safety requirements.
+...</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2026-03-14T08:00:00+00:00'>March 14, 2026</span>&nbsp;·&nbsp;<span>Beyond The Joystick</span></footer>
+  <a class="entry-link" aria-label="post link to What Self-Driving Cars Can (and Can&#8217;t) Teach Space Rovers" href="http://localhost:1313/posts/2026-03-14-self-driving-cars-and-space-rovers/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Automotive vs. Space LiDAR: Why Your Car&amp;#8217;s Sensor Can&amp;#8217;t Survive Mars
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> From the busy streets of San Francisco to the test tracks of Europe, the buzz around autonomous driving is deafening. Companies like Luminar pushed the boundaries of this revolution, equipping vehicles with sleek, high-tech sensors like the &#34;Iris&#34; that promise to map our highways with millimeter precision, spotting hazards through fog and rain. Seeing this incredible technology in action, it begs a logical question: if we have such advanced, relatively affordable &#34;eyes&#34; right here on Earth, why doesn&#39;t NASA just strap one of these sensors onto the next Mars Rover and call it a day? It would save millions of dollars and years of development. The answer reveals one of the harshest truths of space exploration: the tyranny of latency. As we explored in our analysis of the [20-Minute Lag], we cannot joystick a rover in real-time; the vehicle must rely on its own senses to survive. While the basic physics of light detection remains the same, the engineering reality creates a massive, unforgiving divide in the battle of Automotive vs. Space LiDAR. It turns out that a sensor designed to survive rush hour traffic is woefully unprepared for the radioactive freeze of the Red Planet.
+...</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2026-01-17T13:29:09+00:00'>January 17, 2026</span>&nbsp;·&nbsp;<span>Beyond The Joystick</span></footer>
+  <a class="entry-link" aria-label="post link to Automotive vs. Space LiDAR: Why Your Car&#8217;s Sensor Can&#8217;t Survive Mars" href="http://localhost:1313/posts/2026-01-17-automotive-vs-space-lidar/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">A Deep Dive into Visual Odometry: How Rovers Know &amp;#8216;How Far&amp;#8217; They&amp;#8217;ve Gone
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Abstract: The Odometer Fallacy on Mars On Earth, measuring distance is a trivial task. A vehicle’s odometer counts wheel rotations, multiplies by the circumference, and derives the distance traveled with high precision. On Mars, however, this deterministic logic collapses.
+In the chaotic, non-geometric terrain of the Red Planet, wheel rotation does not equal linear motion.
+...</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2025-12-06T08:00:00+00:00'>December 6, 2025</span>&nbsp;·&nbsp;<span>Beyond The Joystick</span></footer>
+  <a class="entry-link" aria-label="post link to A Deep Dive into Visual Odometry: How Rovers Know &#8216;How Far&#8217; They&#8217;ve Gone" href="http://localhost:1313/posts/2025-12-06-how-rovers-know-how-far-theyve-gone/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Rover Perception Systems: How LiDAR, Stereo Vision, and IMUs Work Together
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Abstract: The Criticality of Multi-Modal Perception Autonomous navigation in extraterrestrial environments is defined by an unbreakable physical constraint: the speed of light. With Earth-Mars communication latencies ranging from 4 to 24 minutes, real-time teleoperation is impossible. To survive, a rover must possess a robust Rover Perception architecture.
+Rover perception is not merely the collection of images; it is the transformation of raw sensory data into a semantic and geometric understanding of the surrounding environment. This process must occur on-board, often on resource-constrained processors (such as the radiation-hardened RAD750).
+...</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2025-11-22T08:00:00+00:00'>November 22, 2025</span>&nbsp;·&nbsp;<span>Beyond The Joystick</span></footer>
+  <a class="entry-link" aria-label="post link to Rover Perception Systems: How LiDAR, Stereo Vision, and IMUs Work Together" href="http://localhost:1313/posts/2025-11-22-rover-perception-systems/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">My New Hugo Project</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

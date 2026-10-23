@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Beyond NASA: A Look at the AI Inside China&amp;#8217;s Zhurong Mars Rover | My New Hugo Project</title>
+<meta name="keywords" content="Autonomous Navigation, Mars Rover, Pathfinding Algorithms, Space Robotics, Zhurong">
+<meta name="description" content="
+
+
+
+While global attention is often monopolized by the Jet Propulsion Laboratory (JPL) and its Curiosity-class vehicles, Chinese space engineering reached a critical milestone with the Tianwen-1 mission. Landing in May 2021 on the vast plains of Utopia Planitia, the Zhurong rover represents more than just a political success; it is a tangible demonstration of advanced autonomous robotics. AI Inside China&#39;s Zhurong">
+<meta name="author" content="Beyond The Joystick">
+<link rel="canonical" href="http://localhost:1313/posts/2025-12-13-beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.95ae6e9689bd0037456375629f411acbf8ed76e0e9a7599900ad281f9526dee6.css" integrity="sha256-la5ulom9ADdFY3Vin0Eay/jtduDpp1mZAK0oH5Um3uY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2025-12-13-beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="My New Hugo Project (Alt + H)">My New Hugo Project</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Beyond NASA: A Look at the AI Inside China&amp;#8217;s Zhurong Mars Rover
+    </h1>
+    <div class="post-meta">
+
+<span title='2025-12-13T08:00:00+00:00'>December 13, 2025</span>&nbsp;·&nbsp;<span>Beyond The Joystick</span>
+
+</div>
+  </header> 
+  <div class="post-content md-content"><!-- wp:image {"lightbox":{"enabled":false},"id":423,"sizeSlug":"full","linkDestination":"custom","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full"><a href="https://en.wikipedia.org/wiki/Zhurong_%28rover%29"><img src="/wp-content/uploads/2025/12/Zhurong_rover.png" alt="" class="wp-image-423"/></a></figure>
+<!-- /wp:image -->
+<!-- wp:paragraph -->
+<p>While global attention is often monopolized by the Jet Propulsion Laboratory (JPL) and its Curiosity-class vehicles, Chinese space engineering reached a critical milestone with the <strong>Tianwen-1</strong> mission. Landing in May 2021 on the vast plains of <strong>Utopia Planitia</strong>, the Zhurong rover represents more than just a political success; it is a tangible demonstration of advanced autonomous robotics. AI Inside China's Zhurong</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading"><strong>Tianwen-1 and Zhurong: Mission Highlights</strong></h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Zhurong was designed with a nominal operational life of <strong>90 Sols</strong>.</p>
+<!-- /wp:paragraph -->
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p><strong>Technical Note:</strong> A "Sol" is a Martian day, lasting approximately 24 hours and 39 minutes. While 90 Sols was the minimum requirement for mission success, the rover continued to operate for over an earth-year.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Key Achievements</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>EDL Success:</strong> China became the second nation to successfully complete a soft landing on Mars on its first attempt, managing the "9 minutes of terror" with a fully autonomous GNC (<em>Guidance, Navigation, and Control</em>) system.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Geology and Water:</strong> Using its laser spectrometer (MarSCoDe) and multispectral cameras, Zhurong found evidence of <strong>hydrated minerals</strong> (sulfates, hydrated silica) and sedimentary structures. These findings suggest liquid water was active during the Amazonian epoch—much more recently than previous climate models assumed.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Distance:</strong> By the time it entered hibernation in May 2022, the rover had covered <strong>1,921 meters</strong>, operating with a communication latency of up to 20 minutes.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading"><strong>The Software Architecture: Hierarchical Pathfinding</strong></h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>The <strong>AI Inside China's Zhurong</strong> must solve the fundamental problem of navigating an unstructured environment. To do this, it doesn't rely on a single "magic" algorithm but rather a <strong>hierarchical architecture</strong> combining global planning with local reactivity.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>1. Global Planning: The Role of A*</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>For long-range planning, the rover utilizes the A* (A-Star) algorithm.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>This runs on a "global map" generated from orbital imagery or previous panoramas. As we discussed in <a href="https://beyondthejoystick.space/a-vs-d-lite-the-pathfinding-algorithms/" title="A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover’s Route">A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover's Route</a>, A* is ideal here because it acts as a static "GPS." It calculates the optimal path from point A to point B by minimizing cost (distance + slope), assuming the map is known and immutable.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>2. Local Planning: D* Lite and Reactive Navigation</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>The reality of Martian terrain, however, is full of unknowns invisible from orbit. This is where the Local Planner takes over.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>When onboard sensors (stereo cameras and LiDAR) detect an unforeseen obstacle—such as a 30cm rock missing from the global map—the AI switches to a dynamic algorithm, specifically a variant of D* Lite (Dynamic A*).</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Unlike A*, <strong>D* Lite</strong> is designed for <strong>incremental re-planning</strong>. Instead of recalculating the entire route from scratch (which would waste valuable CPU cycles), it modifies only the portion of the trajectory affected by the new obstacle. This allows Zhurong to adapt in real-time while moving, avoiding hazards without needing to stop for lengthy computations.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading"><strong>Energy Management: "Solar" AI vs. Nuclear Power</strong></h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>A distinct feature of Zhurong's software is its predictive management of thermal and electrical energy. This marks a fundamental architectural difference compared to recent American rovers.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>The Problem: Solar vs. RTG</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>NASA's <strong>Perseverance</strong> is powered by an <strong>MMRTG</strong> (Multi-Mission Radioisotope Thermoelectric Generator). Because it is nuclear, it produces heat and electricity constantly, 24/7, regardless of the weather. It doesn't need to "sleep" to survive the cold, only to recharge batteries during peak loads.</p>
+<!-- /wp:paragraph -->
+<!-- wp:image {"lightbox":{"enabled":false},"id":426,"sizeSlug":"large","linkDestination":"custom","align":"center"} -->
+<figure class="wp-block-image aligncenter size-large"><img src="/wp-content/uploads/2025/12/perseverance-mmrtg-close-1024x576.webp" alt="" class="wp-image-426"/><figcaption class="wp-element-caption">Perseverance's Radioisotope Thermoelectric Generator Before Launch</figcaption></figure>
+<!-- /wp:image -->
+<!-- wp:paragraph -->
+<p>Zhurong, conversely, is <strong>solar-powered</strong>. This makes it a slave to day/night cycles and dust storms.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>The "Active Wake/Sleep" Algorithm</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Zhurong's AI integrates a resource management module that monitors two critical variables:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Solar Irradiance:</strong> Measured via reference cells on the panels.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Internal Temperature:</strong> Monitored by thermal sensors within the chassis.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>The algorithm does not follow a fixed clock. If the AI detects that energy production is insufficient (e.g., due to atmospheric dust) or that the temperature is dropping below critical safety thresholds, it autonomously forces the rover into Sleep Mode.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Crucially, the rover is programmed to wake up automatically only when environmental conditions (light levels and temperature) hit specific parameters that guarantee electronics survival. This environment-based decision-making allowed Zhurong to survive the Martian winter far longer than expected.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading"><strong>Hardware: Active Suspension and the "Slip" Problem</strong></h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Artificial Intelligence, no matter how advanced, cannot violate the laws of physics. As we detailed in <em><a href="https://beyondthejoystick.space/how-rovers-know-how-far-theyve-gone/" title="A Deep Dive into Visual Odometry: How Rovers Know ‘How Far’ They’ve Gone">A Deep Dive into Visual Odometry: How Rovers Know 'How Far' They've Gone</a></em>, Martian terrain presents deadly friction-related hazards.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>The Phenomenon of "High-Slip Interaction"</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>On Mars, wheel rotation does not guarantee movement. When traversing fine sand (regolith), rovers encounter <strong>high-slip interaction</strong>. If the wheels spin but the chassis doesn't move, it creates an accumulated error—or "Drift"—that destroys localization accuracy. in extreme cases, a high <strong>Slip Ratio</strong> can lead to total entrapment, as seen with the <em>Spirit</em> rover.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Zhurong's Hardware Response</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>To mitigate this, Zhurong adopts a unique active suspension system, more complex than NASA's passive Rocker-Bogie.</p>
+<!-- /wp:paragraph -->
+<!-- wp:image {"lightbox":{"enabled":false},"id":427,"sizeSlug":"full","linkDestination":"custom","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full"><a href="https://www.researchgate.net/figure/Mobility-system-of-Zhurong-Mars-rover-Color-figure-can-be-viewed-at_fig1_369886832"><img src="/wp-content/uploads/2025/12/Mobility-system-of-Zhurong-Mars-rover-Color-figure-can-be-viewed-at.png" alt="" class="wp-image-427"/></a><figcaption class="wp-element-caption">Mobility system of Zhurong Mars rover</figcaption></figure>
+<!-- /wp:image -->
+<!-- wp:paragraph -->
+<p>When the AI (by comparing Visual Odometry to wheel encoders) detects that the Slip Ratio is rising dangerously, it can command the hardware to execute physical disengagement maneuvers:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Inchworm Motion:</strong> The rover locks its rear wheels and pushes the front wheels forward by extending the suspension, then locks the front and drags the rear. This simulates "walking" rather than rolling, drastically reducing slip.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Chassis Lift:</strong> It can physically raise the rover's body to prevent the "belly" from touching the ground in deep sand.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Crab Walk:</strong> The wheels can steer up to 90 degrees, allowing the rover to move laterally to escape stall situations or optimize solar panel orientation.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading"><strong>Conclusion</strong></h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>The analysis of the <strong>AI Inside China's Zhurong</strong> reveals how environmental constraints (solar power, soft terrain) drive code evolution. While NASA has pushed the boundaries of raw computing speed (FPGA and nuclear power) as seen in <em>The Evolution of Rover AI: From Sojourner's 'Bump and Go' to Perseverance's AutoNav</em>, the CNSA has developed a resilient system. It is an architecture capable of adapting to the Red Planet's rhythms and modifying its own physical configuration to avoid being trapped in the sands of Utopia Planitia.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/autonomous-navigation/">Autonomous Navigation</a></li>
+      <li><a href="http://localhost:1313/tags/mars-rover/">Mars Rover</a></li>
+      <li><a href="http://localhost:1313/tags/pathfinding-algorithms/">Pathfinding Algorithms</a></li>
+      <li><a href="http://localhost:1313/tags/space-robotics/">Space Robotics</a></li>
+      <li><a href="http://localhost:1313/tags/zhurong/">Zhurong</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">My New Hugo Project</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on My New Hugo Project</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on My New Hugo Project</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 20 Sep 2026 08:19:05 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arduino Mega</title>
+      <link>http://localhost:1313/tags/arduino-mega/</link>
+      <pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
+      <guid>http://localhost:1313/tags/arduino-mega/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lucas-Kanade</title>
+      <link>http://localhost:1313/tags/lucas-kanade/</link>
+      <pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
+      <guid>http://localhost:1313/tags/lucas-kanade/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lunar Regolith</title>
+      <link>http://localhost:1313/tags/lunar-regolith/</link>
+      <pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
+      <guid>http://localhost:1313/tags/lunar-regolith/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Planetary Exploration</title>
+      <link>http://localhost:1313/tags/planetary-exploration/</link>
+      <pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
+      <guid>http://localhost:1313/tags/planetary-exploration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ROS 2 Humble</title>
+      <link>http://localhost:1313/tags/ros-2-humble/</link>
+      <pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ros-2-humble/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rover Slip Estimation</title>
+      <link>http://localhost:1313/tags/rover-slip-estimation/</link>
+      <pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
+      <guid>http://localhost:1313/tags/rover-slip-estimation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Single-Wheel Testbed</title>
+      <link>http://localhost:1313/tags/single-wheel-testbed/</link>
+      <pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
+      <guid>http://localhost:1313/tags/single-wheel-testbed/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Space Robotics</title>
+      <link>http://localhost:1313/tags/space-robotics/</link>
+      <pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
+      <guid>http://localhost:1313/tags/space-robotics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Visual Odometry</title>
+      <link>http://localhost:1313/tags/visual-odometry/</link>
+      <pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
+      <guid>http://localhost:1313/tags/visual-odometry/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wheel Encoders</title>
+      <link>http://localhost:1313/tags/wheel-encoders/</link>
+      <pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
+      <guid>http://localhost:1313/tags/wheel-encoders/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Astrobotic CubeRover</title>
+      <link>http://localhost:1313/tags/astrobotic-cuberover/</link>
+      <pubDate>Sat, 18 Apr 2026 07:36:13 +0000</pubDate>
+      <guid>http://localhost:1313/tags/astrobotic-cuberover/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Autonomous Navigation AI</title>
+      <link>http://localhost:1313/tags/autonomous-navigation-ai/</link>
+      <pubDate>Sat, 18 Apr 2026 07:36:13 +0000</pubDate>
+      <guid>http://localhost:1313/tags/autonomous-navigation-ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Commercial Lunar Rovers</title>
+      <link>http://localhost:1313/tags/commercial-lunar-rovers/</link>
+      <pubDate>Sat, 18 Apr 2026 07:36:13 +0000</pubDate>
+      <guid>http://localhost:1313/tags/commercial-lunar-rovers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>COTS Space Hardware</title>
+      <link>http://localhost:1313/tags/cots-space-hardware/</link>
+      <pubDate>Sat, 18 Apr 2026 07:36:13 +0000</pubDate>
+      <guid>http://localhost:1313/tags/cots-space-hardware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Light-Weight SLAM</title>
+      <link>http://localhost:1313/tags/light-weight-slam/</link>
+      <pubDate>Sat, 18 Apr 2026 07:36:13 +0000</pubDate>
+      <guid>http://localhost:1313/tags/light-weight-slam/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lunar ISRU</title>
+      <link>http://localhost:1313/tags/lunar-isru/</link>
+      <pubDate>Sat, 18 Apr 2026 07:36:13 +0000</pubDate>
+      <guid>http://localhost:1313/tags/lunar-isru/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LUVMI-X</title>
+      <link>http://localhost:1313/tags/luvmi-x/</link>
+      <pubDate>Sat, 18 Apr 2026 07:36:13 +0000</pubDate>
+      <guid>http://localhost:1313/tags/luvmi-x/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Roo-Ver</title>
+      <link>http://localhost:1313/tags/roo-ver/</link>
+      <pubDate>Sat, 18 Apr 2026 07:36:13 +0000</pubDate>
+      <guid>http://localhost:1313/tags/roo-ver/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Space Applications Services</title>
+      <link>http://localhost:1313/tags/space-applications-services/</link>
+      <pubDate>Sat, 18 Apr 2026 07:36:13 +0000</pubDate>
+      <guid>http://localhost:1313/tags/space-applications-services/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Computer Vision</title>
+      <link>http://localhost:1313/tags/computer-vision/</link>
+      <pubDate>Sat, 14 Mar 2026 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/computer-vision/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mars Rover</title>
+      <link>http://localhost:1313/tags/mars-rover/</link>
+      <pubDate>Sat, 14 Mar 2026 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/mars-rover/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rover Perception Systems</title>
+      <link>http://localhost:1313/tags/rover-perception-systems/</link>
+      <pubDate>Sat, 14 Mar 2026 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/rover-perception-systems/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SLAM</title>
+      <link>http://localhost:1313/tags/slam/</link>
+      <pubDate>Sat, 14 Mar 2026 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/slam/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Autonomous Navigation</title>
+      <link>http://localhost:1313/tags/autonomous-navigation/</link>
+      <pubDate>Sat, 14 Feb 2026 08:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/autonomous-navigation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deep Learning</title>
+      <link>http://localhost:1313/tags/deep-learning/</link>
+      <pubDate>Sat, 14 Feb 2026 08:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Foundation Models</title>
+      <link>http://localhost:1313/tags/foundation-models/</link>
+      <pubDate>Sat, 14 Feb 2026 08:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/foundation-models/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mars Science Laboratory</title>
+      <link>http://localhost:1313/tags/mars-science-laboratory/</link>
+      <pubDate>Sat, 14 Feb 2026 08:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/mars-science-laboratory/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NASA SMAP</title>
+      <link>http://localhost:1313/tags/nasa-smap/</link>
+      <pubDate>Sat, 14 Feb 2026 08:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/nasa-smap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rad-Hard Processors</title>
+      <link>http://localhost:1313/tags/rad-hard-processors/</link>
+      <pubDate>Sat, 14 Feb 2026 08:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/rad-hard-processors/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Relative Context Discrepancy</title>
+      <link>http://localhost:1313/tags/relative-context-discrepancy/</link>
+      <pubDate>Sat, 14 Feb 2026 08:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/relative-context-discrepancy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Space Telemetry</title>
+      <link>http://localhost:1313/tags/space-telemetry/</link>
+      <pubDate>Sat, 14 Feb 2026 08:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/space-telemetry/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TimeRCD</title>
+      <link>http://localhost:1313/tags/timercd/</link>
+      <pubDate>Sat, 14 Feb 2026 08:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/timercd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zero-Shot Anomaly Detection</title>
+      <link>http://localhost:1313/tags/zero-shot-anomaly-detection/</link>
+      <pubDate>Sat, 14 Feb 2026 08:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/zero-shot-anomaly-detection/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Automotive vs Space</title>
+      <link>http://localhost:1313/tags/automotive-vs-space/</link>
+      <pubDate>Sat, 17 Jan 2026 13:29:09 +0000</pubDate>
+      <guid>http://localhost:1313/tags/automotive-vs-space/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>COTS vs Rad-Hard</title>
+      <link>http://localhost:1313/tags/cots-vs-rad-hard/</link>
+      <pubDate>Sat, 17 Jan 2026 13:29:09 +0000</pubDate>
+      <guid>http://localhost:1313/tags/cots-vs-rad-hard/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LiDAR Technology</title>
+      <link>http://localhost:1313/tags/lidar-technology/</link>
+      <pubDate>Sat, 17 Jan 2026 13:29:09 +0000</pubDate>
+      <guid>http://localhost:1313/tags/lidar-technology/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pathfinding Algorithms</title>
+      <link>http://localhost:1313/tags/pathfinding-algorithms/</link>
+      <pubDate>Sat, 13 Dec 2025 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/pathfinding-algorithms/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zhurong</title>
+      <link>http://localhost:1313/tags/zhurong/</link>
+      <pubDate>Sat, 13 Dec 2025 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/zhurong/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dead Reckoning</title>
+      <link>http://localhost:1313/tags/dead-reckoning/</link>
+      <pubDate>Sat, 06 Dec 2025 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/dead-reckoning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Extended Kalman Filter</title>
+      <link>http://localhost:1313/tags/extended-kalman-filter/</link>
+      <pubDate>Sat, 06 Dec 2025 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/extended-kalman-filter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mars Rover Navigation</title>
+      <link>http://localhost:1313/tags/mars-rover-navigation/</link>
+      <pubDate>Sat, 06 Dec 2025 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/mars-rover-navigation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sensor Fusion</title>
+      <link>http://localhost:1313/tags/sensor-fusion/</link>
+      <pubDate>Sat, 06 Dec 2025 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/sensor-fusion/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>A* Algorithm</title>
+      <link>http://localhost:1313/tags/a-algorithm/</link>
+      <pubDate>Sat, 29 Nov 2025 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/a-algorithm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>D* Lite</title>
+      <link>http://localhost:1313/tags/d-lite/</link>
+      <pubDate>Sat, 29 Nov 2025 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/d-lite/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IMU</title>
+      <link>http://localhost:1313/tags/imu/</link>
+      <pubDate>Sat, 22 Nov 2025 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/imu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LiDAR</title>
+      <link>http://localhost:1313/tags/lidar/</link>
+      <pubDate>Sat, 22 Nov 2025 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/lidar/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rover Perception</title>
+      <link>http://localhost:1313/tags/rover-perception/</link>
+      <pubDate>Sat, 22 Nov 2025 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/rover-perception/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Graph-SLAM</title>
+      <link>http://localhost:1313/tags/graph-slam/</link>
+      <pubDate>Sat, 08 Nov 2025 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/graph-slam/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mapping Algorithmis</title>
+      <link>http://localhost:1313/tags/mapping-algorithmis/</link>
+      <pubDate>Sat, 08 Nov 2025 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/mapping-algorithmis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VSLAM</title>
+      <link>http://localhost:1313/tags/vslam/</link>
+      <pubDate>Sat, 08 Nov 2025 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/vslam/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Athfinding</title>
+      <link>http://localhost:1313/tags/athfinding/</link>
+      <pubDate>Sat, 01 Nov 2025 08:10:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/athfinding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AutoNav</title>
+      <link>http://localhost:1313/tags/autonav/</link>
+      <pubDate>Sat, 01 Nov 2025 08:10:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/autonav/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NASA JPL</title>
+      <link>http://localhost:1313/tags/nasa-jpl/</link>
+      <pubDate>Sat, 01 Nov 2025 08:10:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/nasa-jpl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Robotics</title>
+      <link>http://localhost:1313/tags/robotics/</link>
+      <pubDate>Sat, 01 Nov 2025 08:10:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/robotics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rover AI Evolution</title>
+      <link>http://localhost:1313/tags/rover-ai-evolution/</link>
+      <pubDate>Sat, 01 Nov 2025 08:10:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/rover-ai-evolution/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Space Exploration</title>
+      <link>http://localhost:1313/tags/space-exploration/</link>
+      <pubDate>Sat, 01 Nov 2025 08:10:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/space-exploration/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

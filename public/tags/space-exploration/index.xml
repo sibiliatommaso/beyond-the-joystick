@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Space Exploration on My New Hugo Project</title>
+    <link>http://localhost:1313/tags/space-exploration/</link>
+    <description>Recent content in Space Exploration on My New Hugo Project</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Nov 2025 08:10:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/space-exploration/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Ultimate Guide to Autonomous Rover Navigation</title>
+      <link>http://localhost:1313/posts/2025-11-01-autonomous-rover-navigation/</link>
+      <pubDate>Sat, 01 Nov 2025 08:10:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2025-11-01-autonomous-rover-navigation/</guid>
+      <description>&lt;!-- wp:html --&gt;
+&lt;div style=&#34;width: 100%; display: flex; justify-content: center; align-items: center;&#34;&gt;
+    &lt;iframe
+        src=&#34;https://www.youtube.com/embed/WRy8EoOdGIU?autoplay=1&#34;
+        style=&#34;width: 100%; max-width: 450px; aspect-ratio: 9 / 16; height: auto; border: none;&#34;
+        allow=&#34;autoplay; encrypted-media&#34;
+        allowfullscreen&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;!-- /wp:html --&gt;
+&lt;!-- wp:heading {&#34;level&#34;:3} --&gt;
+&lt;h3 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;1. Introduction: The Silent Conquest of New Worlds&lt;/strong&gt;&lt;/h3&gt;
+&lt;!-- /wp:heading --&gt;
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;Imagine a lone rover advancing across the red surface of Mars. This isn&#39;t just a remote-controlled vehicle. It&#39;s a robotic pioneer, an explorer relying on &lt;strong&gt;autonomous rover navigation&lt;/strong&gt; to make critical decisions hundreds of millions of kilometers away from any human operator.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

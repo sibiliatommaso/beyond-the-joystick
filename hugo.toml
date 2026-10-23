@@ -1,0 +1,7 @@
+baseURL = 'https://example.org/'
+locale = 'en-us'
+title = 'My New Hugo Project'
+theme = 'PaperMod'
+
+[markup.goldmark.renderer]
+  unsafe = true

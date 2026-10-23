@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>SLAM on My New Hugo Project</title>
+    <link>http://localhost:1313/tags/slam/</link>
+    <description>Recent content in SLAM on My New Hugo Project</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Mar 2026 08:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/slam/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Self-Driving Cars Can (and Can&amp;#8217;t) Teach Space Rovers</title>
+      <link>http://localhost:1313/posts/2026-03-14-self-driving-cars-and-space-rovers/</link>
+      <pubDate>Sat, 14 Mar 2026 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-14-self-driving-cars-and-space-rovers/</guid>
+      <description>&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;The evolution of vehicular automation and space robotics represents one of the most fascinating and complex technological convergences in contemporary engineering. Although terrestrial autonomous vehicles (AVs) and planetary rovers operate in diametrically opposed environmental domains, their algorithmic foundations, sensory perception paradigms, and decision-making architectures share deep intersections. On Earth, autonomous driving aims to process massive amounts of data in real time at high speeds. These vehicles navigate structured or semi-structured environments characterized by highly stochastic traffic, dynamic obstacles, and stringent passenger safety requirements.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What is SLAM? The Key Technology for Autonomous Rover Mapping</title>
+      <link>http://localhost:1313/posts/2025-11-08-what-is-slam-the-key-technology-for-autonomous-rover-mapping/</link>
+      <pubDate>Sat, 08 Nov 2025 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2025-11-08-what-is-slam-the-key-technology-for-autonomous-rover-mapping/</guid>
+      <description>&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;&lt;a href=&#34;https://beyondthejoystick.space/autonomous-rover-navigation/&#34; title=&#34;The Ultimate Guide to Autonomous Rover Navigation&#34;&gt;Navigating celestial bodies autonomously&lt;/a&gt; presents a unique hurdle that we don&#39;t face on Earth: the complete lack of  Global Positioning System (GPS). In this context, a rover&#39;s ability to understand its own location becomes a complex mathematical problem. In advanced robotics, the standard answer to this problem is SLAM (Simultaneous Localization and Mapping). In this article, we’ll break down the core principles of SLAM, examine how it’s critical for current Mars missions, and look at the immense computational strain it puts on space-grade hardware.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Ultimate Guide to Autonomous Rover Navigation</title>
+      <link>http://localhost:1313/posts/2025-11-01-autonomous-rover-navigation/</link>
+      <pubDate>Sat, 01 Nov 2025 08:10:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2025-11-01-autonomous-rover-navigation/</guid>
+      <description>&lt;!-- wp:html --&gt;
+&lt;div style=&#34;width: 100%; display: flex; justify-content: center; align-items: center;&#34;&gt;
+    &lt;iframe
+        src=&#34;https://www.youtube.com/embed/WRy8EoOdGIU?autoplay=1&#34;
+        style=&#34;width: 100%; max-width: 450px; aspect-ratio: 9 / 16; height: auto; border: none;&#34;
+        allow=&#34;autoplay; encrypted-media&#34;
+        allowfullscreen&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;!-- /wp:html --&gt;
+&lt;!-- wp:heading {&#34;level&#34;:3} --&gt;
+&lt;h3 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;1. Introduction: The Silent Conquest of New Worlds&lt;/strong&gt;&lt;/h3&gt;
+&lt;!-- /wp:heading --&gt;
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;Imagine a lone rover advancing across the red surface of Mars. This isn&#39;t just a remote-controlled vehicle. It&#39;s a robotic pioneer, an explorer relying on &lt;strong&gt;autonomous rover navigation&lt;/strong&gt; to make critical decisions hundreds of millions of kilometers away from any human operator.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

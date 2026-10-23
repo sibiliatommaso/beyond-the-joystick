@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Rover Perception Systems: How LiDAR, Stereo Vision, and IMUs Work Together | My New Hugo Project</title>
+<meta name="keywords" content="Computer Vision, IMU, LiDAR, Rover Perception, Sensor Fusion, Space Robotics">
+<meta name="description" content="
+Abstract: The Criticality of Multi-Modal Perception
+
+
+Autonomous navigation in extraterrestrial environments is defined by an unbreakable physical constraint: the speed of light. With Earth-Mars communication latencies ranging from 4 to 24 minutes, real-time teleoperation is impossible. To survive, a rover must possess a robust Rover Perception architecture.
+
+
+Rover perception is not merely the collection of images; it is the transformation of raw sensory data into a semantic and geometric understanding of the surrounding environment. This process must occur on-board, often on resource-constrained processors (such as the radiation-hardened RAD750).">
+<meta name="author" content="Beyond The Joystick">
+<link rel="canonical" href="http://localhost:1313/posts/2025-11-22-rover-perception-systems/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.95ae6e9689bd0037456375629f411acbf8ed76e0e9a7599900ad281f9526dee6.css" integrity="sha256-la5ulom9ADdFY3Vin0Eay/jtduDpp1mZAK0oH5Um3uY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2025-11-22-rover-perception-systems/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="My New Hugo Project (Alt + H)">My New Hugo Project</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Rover Perception Systems: How LiDAR, Stereo Vision, and IMUs Work Together
+    </h1>
+    <div class="post-meta">
+
+<span title='2025-11-22T08:00:00+00:00'>November 22, 2025</span>&nbsp;·&nbsp;<span>Beyond The Joystick</span>
+
+</div>
+  </header> 
+  <div class="post-content md-content"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Abstract: The Criticality of Multi-Modal Perception</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Autonomous navigation in extraterrestrial environments is defined by an unbreakable physical constraint: <a href="https://beyondthejoystick.space/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/" title="The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers">the speed of light</a>. With Earth-Mars communication latencies ranging from 4 to 24 minutes, real-time teleoperation is impossible. To survive, a rover must possess a robust <strong>Rover Perception</strong> architecture.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Rover perception is not merely the collection of images; it is the transformation of raw sensory data into a semantic and geometric understanding of the surrounding environment. This process must occur <em>on-board</em>, often on resource-constrained processors (such as the radiation-hardened RAD750).</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Navigation reliability depends on <strong>Sensor Fusion</strong>: the algorithmic integration of exteroceptive sensors (which look outward, like Cameras and LiDAR) and proprioceptive sensors (which look inward, like IMUs). This article analyzes the engineering behind these digital "eyes" and the mathematics that allow them to work in unison.</p>
+<!-- /wp:paragraph -->
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>1. Stereo Vision: Depth Perception Through Triangulation</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:image {"lightbox":{"enabled":false},"id":271,"sizeSlug":"large","linkDestination":"custom"} -->
+<figure class="wp-block-image size-large"><a href="https://www.researchgate.net/figure/Figure-2-The-epipolar-geometry-of-stereoscopic-vision_fig2_331960044"><img src="/wp-content/uploads/2025/11/epipolar_diagram-1024x572.png" alt="Rover Perception" class="wp-image-271"/></a></figure>
+<!-- /wp:image -->
+<!-- wp:paragraph -->
+<p>Stereo vision remains the pillar of <strong>Rover Perception</strong> for current Martian missions, including NASA's <em>Perseverance</em> and <em>Curiosity</em>. Unlike a single camera, which flattens the world into 2D, stereo vision emulates human binocular vision to calculate depth.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":4} -->
+<h4 class="wp-block-heading"><strong>The Principles of Epipolar Geometry</strong></h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>The system uses two cameras separated by a known horizontal distance, called the <strong>baseline</strong>. When the onboard computer analyzes the left and right images, it searches for pixel correspondences between the same object.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The difference in an object's horizontal position between the two images is defined as <strong>disparity</strong>. Depth Z is calculated inversely to disparity according to the formula:</p>
+<!-- /wp:paragraph -->
+<!-- wp:katex/display-block -->
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>Z = \frac{f \cdot B}{d}</pre></div>
+<!-- /wp:katex/display-block -->
+<!-- wp:paragraph -->
+<p>Where f is the focal length, B is the baseline, and $d$ is the disparity.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":4} -->
+<h4 class="wp-block-heading"><strong>Hardware Implementation &amp; Limitations</strong></h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Perseverance's <em>NavCams</em> offer a 20-megapixel resolution, allowing for the generation of high-fidelity 3D meshes. However, passive stereo vision has critical limits:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Texture Dependence:</strong> It performs poorly on uniform terrain (smooth sand) where finding pixel correspondences is difficult.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Lighting Conditions:</strong> It requires ambient lighting. In shadowed regions or at night, the system becomes blind without artificial illuminators.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>2. LiDAR (Light Detection and Ranging): Precision Point Clouds</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>While stereo vision estimates depth, <strong>LiDAR</strong> measures it directly. This active sensor emits laser pulses and calculates distance by measuring the signal's Time of Flight (ToF).</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":4} -->
+<h4 class="wp-block-heading"><strong>Generating Dense Point Clouds</strong></h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>The result of a LiDAR scan is a <strong>Point Cloud</strong>: a set of millions of vectors in 3D space.</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Operational Advantage:</strong> Unlike cameras, LiDAR is independent of ambient light. This is crucial for missions like <strong>VIPER</strong> (NASA), destined for permanently shadowed regions (PSRs) on the Moon.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Spatial Resolution:</strong> Modern 3D LiDARs can scan 360 degrees, creating instantaneous volumetric maps (Voxel Grids) that allow navigation software to identify negative obstacles (craters) or positive obstacles (rocks) with millimeter precision.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+<!-- wp:heading {"level":4} -->
+<h4 class="wp-block-heading"><strong>Why Isn't LiDAR on Every Rover?</strong></h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Despite its precision, LiDAR has historically presented disadvantages in terms of SWaP (<em>Size, Weight, and Power</em>). Rotating mechanical parts are failure points in environments rich in abrasive dust like Mars. However, the advent of <strong>Solid-State LiDAR</strong> (with no moving parts) is shifting this paradigm for future <strong>Rover Perception</strong> missions.</p>
+<!-- /wp:paragraph -->
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>3. IMU (Inertial Measurement Unit): The Proprioceptive Anchor</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>If cameras and LiDAR are the "eyes," the IMU is the rover's inner ear (vestibular system). It is a fundamental proprioceptive sensor for estimating position when visual sensors fail (e.g., <em>Visual Blackout</em> due to dust storms or occlusion).</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":4} -->
+<h4 class="wp-block-heading"><strong>Components and Functionality</strong></h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>A space-grade IMU typically combines:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Accelerometers (3 axes):</strong> Measure linear acceleration (including gravity).</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Gyroscopes (3 axes):</strong> Measure angular velocity (rotation rate).</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+<!-- wp:heading {"level":4} -->
+<h4 class="wp-block-heading"><strong>The Drift Problem</strong></h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>The IMU operates at high frequency (often &gt;200 Hz), much faster than cameras. However, it suffers from Drift. To obtain position, accelerometer data must be integrated twice (from acceleration to velocity, from velocity to position).</p>
+<!-- /wp:paragraph -->
+<!-- wp:katex/display-block -->
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>x(t) = \iint a(t) \, dt^2</pre></div>
+<!-- /wp:katex/display-block -->
+<!-- wp:paragraph -->
+<p>Any small sensor bias error accumulates quadratically over time, rendering the IMU unreliable over long distances unless "corrected" by external data.</p>
+<!-- /wp:paragraph -->
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>4. The Core Architecture: Implementing Sensor Fusion</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>The true magic of <strong>Rover Perception</strong> lies in data fusion. No single sensor is perfect: vision is precise but slow and light-dependent; the IMU is fast but prone to drift; LiDAR is precise but energy-expensive.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The industry-standard algorithm for fusing these inputs is the <strong>Extended Kalman Filter (EKF)</strong>.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":4} -->
+<h4 class="wp-block-heading"><strong>How the EKF Works</strong></h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>The filter operates in a continuous two-phase cycle:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Prediction (IMU Phase):</strong> The rover estimates its new position based on internal kinematics (IMU/Wheel Odometry). Position certainty decreases (covariance increases).</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Update (Vision/LiDAR Phase):</strong> As soon as visual data is available (e.g., Visual Odometry), the filter corrects the predicted estimate. Position certainty increases (covariance decreases).</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+<!-- wp:heading {"level":4} -->
+<h4 class="wp-block-heading"><strong>Python Example: Simplified Sensor Fusion Logic</strong></h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Here is Python pseudocode conceptually illustrating this cycle in a navigation system:</p>
+<!-- /wp:paragraph -->
+<!-- wp:enlighter/codeblock {"language":"python"} -->
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">class RoverKalmanFilter:
+
+    def __init__(self):
+
+        self.state_estimate = 0.0  # Initial position
+
+        self.error_covariance = 1.0 # Initial uncertainty
+
+    def predict(self, imu_data, dt):
+
+        """
+
+        Prediction Phase: High frequency (e.g., 200Hz)
+
+        Uses IMU to update the estimate, but uncertainty grows.
+
+        """
+
+        # Simplified velocity integration
+
+        self.state_estimate += imu_data['velocity'] * dt
+
+        # Add process noise (Drift) to uncertainty
+
+        process_noise = 0.1 
+
+        self.error_covariance += process_noise
+
+        return self.state_estimate
+
+    def update(self, visual_odom_data):
+
+        """
+
+        Update Phase: Low frequency (e.g., 1-10Hz)
+
+        Uses Vision to correct IMU drift.
+
+        """
+
+        # Calculate Kalman Gain (how much to trust the new measurement)
+
+        measurement_noise = 0.5 # Typical camera error
+
+        kalman_gain = self.error_covariance / (self.error_covariance + measurement_noise)
+
+        # Correct the estimate based on the difference between expected and measured
+
+        innovation = visual_odom_data['position'] - self.state_estimate
+
+        self.state_estimate += kalman_gain * innovation
+
+        # Reduce uncertainty (Covariance collapses)
+
+        self.error_covariance *= (1 - kalman_gain)
+
+        return self.state_estimate</pre>
+<!-- /wp:enlighter/codeblock -->
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>5. Case Study: Perseverance vs. VIPER</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>The <strong>Rover Perception</strong> architecture is dictated by the mission environment.</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Perseverance (Mars):</strong> Utilizes a sophisticated <strong>Visual Odometry</strong> system. The rover captures images while moving, tracks salient features in the terrain, and calculates relative motion. Thanks to dedicated FPGA processors, it can process these maps and execute autonomous navigation ("AutoNav"), covering over 100 meters per Sol without human intervention.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>VIPER (Moon):</strong> Destined for the Nobile Crater, it must face perpetual darkness. Here, stereo vision is useless without its powerful LED headlights. The rover will rely critically on the fusion of IMU data and visual odometry assisted by active light to avoid getting lost in an environment lacking GPS and filled with deceptive shadows.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Conclusion</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p><strong>Rover Perception</strong> is not about choosing the "best sensor," but about creating a redundant architecture. The integration of Stereo Vision for semantic context, LiDAR for precise geometry, and IMUs for high-frequency stability allows modern rovers to traverse terrains that human pilots would find challenging even remotely.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The future lies in neuromorphic cameras (event-based cameras) and edge AI computing, which will allow rovers to perceive motion with the biological efficiency of an insect, drastically reducing power consumption and increasing decision-making autonomy.</p>
+<!-- /wp:paragraph -->
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+<!-- wp:paragraph -->
+<p>Would you like me to develop a specific deep-dive article on <strong>"Visual Odometry Algorithms: From Features to Trajectory"</strong> to link internally to this piece?</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/computer-vision/">Computer Vision</a></li>
+      <li><a href="http://localhost:1313/tags/imu/">IMU</a></li>
+      <li><a href="http://localhost:1313/tags/lidar/">LiDAR</a></li>
+      <li><a href="http://localhost:1313/tags/rover-perception/">Rover Perception</a></li>
+      <li><a href="http://localhost:1313/tags/sensor-fusion/">Sensor Fusion</a></li>
+      <li><a href="http://localhost:1313/tags/space-robotics/">Space Robotics</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">My New Hugo Project</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

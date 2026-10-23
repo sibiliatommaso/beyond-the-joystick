@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on My New Hugo Project</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Recent content in Categories on My New Hugo Project</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 20 Sep 2026 08:19:05 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Algorithms &amp;Amp; AI</title>
+      <link>http://localhost:1313/categories/algorithms-amp-ai/</link>
+      <pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
+      <guid>http://localhost:1313/categories/algorithms-amp-ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sensors &amp;Amp; Hardware</title>
+      <link>http://localhost:1313/categories/sensors-amp-hardware/</link>
+      <pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
+      <guid>http://localhost:1313/categories/sensors-amp-hardware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Advanced Topics &amp;Amp; Future</title>
+      <link>http://localhost:1313/categories/advanced-topics-amp-future/</link>
+      <pubDate>Sat, 18 Apr 2026 07:36:13 +0000</pubDate>
+      <guid>http://localhost:1313/categories/advanced-topics-amp-future/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Missions &amp;Amp; Case Studies</title>
+      <link>http://localhost:1313/categories/missions-amp-case-studies/</link>
+      <pubDate>Sat, 18 Apr 2026 07:36:13 +0000</pubDate>
+      <guid>http://localhost:1313/categories/missions-amp-case-studies/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Uncategorized</title>
+      <link>http://localhost:1313/categories/uncategorized/</link>
+      <pubDate>Sat, 28 Feb 2026 14:07:44 +0000</pubDate>
+      <guid>http://localhost:1313/categories/uncategorized/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Core Concepts</title>
+      <link>http://localhost:1313/categories/core-concepts/</link>
+      <pubDate>Sat, 08 Nov 2025 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/core-concepts/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

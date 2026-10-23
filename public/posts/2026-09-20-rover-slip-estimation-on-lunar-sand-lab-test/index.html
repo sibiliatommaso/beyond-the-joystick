@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Rover Slip Estimation on Lunar Sand: Lab Test | My New Hugo Project</title>
+<meta name="keywords" content="Arduino Mega, Lucas-Kanade, Lunar Regolith, Planetary Exploration, ROS 2 Humble, Rover Slip Estimation, Single-Wheel Testbed, Space Robotics, Visual Odometry, Wheel Encoders">
+<meta name="description" content="
+Planetary exploration rovers serve as essential tools for advancing scientific investigations, but their mobility is significantly challenged by loose and deformable surfaces like lunar dust and Martian regolith. These extraterrestrial terrains exhibit low cohesion and bearing capacity, leading to excessive wheel slip where the wheels rotate without generating sufficient forward motion.
+
+
+As we dive deeper into autonomous space robotics here on Beyond the Joystick, I am realizing that mastering rover slip estimation is just as critical as orbital mechanics. If a rover cannot detect slip, standard wheel odometry accrues massive errors, causing deviations from planned trajectories and increasing the risk of entrapment. To understand how engineers solve this, we are going to explore how academic researchers utilize a single-wheel testbed to analyze wheel-terrain interactions before the software ever leaves Earth.">
+<meta name="author" content="Beyond The Joystick">
+<link rel="canonical" href="http://localhost:1313/posts/2026-09-20-rover-slip-estimation-on-lunar-sand-lab-test/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.95ae6e9689bd0037456375629f411acbf8ed76e0e9a7599900ad281f9526dee6.css" integrity="sha256-la5ulom9ADdFY3Vin0Eay/jtduDpp1mZAK0oH5Um3uY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2026-09-20-rover-slip-estimation-on-lunar-sand-lab-test/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="My New Hugo Project (Alt + H)">My New Hugo Project</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Rover Slip Estimation on Lunar Sand: Lab Test
+    </h1>
+    <div class="post-meta">
+
+<span title='2026-09-20T08:19:05+00:00'>September 20, 2026</span>&nbsp;·&nbsp;<span>Beyond The Joystick</span>
+
+</div>
+  </header> 
+  <div class="post-content md-content"><!-- wp:paragraph -->
+<p>Planetary exploration rovers serve as essential tools for advancing scientific investigations, but their mobility is significantly challenged by loose and deformable surfaces like lunar dust and Martian regolith<sup></sup>. These extraterrestrial terrains exhibit low cohesion and bearing capacity, leading to excessive wheel slip where the wheels rotate without generating sufficient forward motion<sup></sup>.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>As we dive deeper into <a href="https://beyondthejoystick.space/autonomous-rover-navigation/">autonomous space robotics</a> here on <em>Beyond the Joystick</em>, I am realizing that mastering rover slip estimation is just as critical as orbital mechanics. If a rover cannot detect slip, standard wheel odometry accrues massive errors, causing deviations from planned trajectories and increasing the risk of entrapment. To understand how engineers solve this, we are going to explore how <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=11170582">academic researchers utilize a single-wheel testbed to analyze wheel-terrain interactions before the software ever leaves Earth</a>.</p>
+<!-- /wp:paragraph -->
+<!-- wp:gallery {"linkTo":"none"} -->
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"lightbox":{"enabled":false},"id":617,"sizeSlug":"large","linkDestination":"custom"} -->
+<figure class="wp-block-image size-large"><a href="https://images.nasa.gov/details/PIA26016"><img src="/wp-content/uploads/2026/09/PIA26016orig.jpg" alt="Rover slip estimation testbed diagram" class="wp-image-617"/></a><figcaption class="wp-element-caption">Curiosity's Navcams View Its Wheels </figcaption></figure>
+<!-- /wp:image -->
+<!-- wp:image {"lightbox":{"enabled":false},"id":618,"sizeSlug":"large","linkDestination":"custom"} -->
+<figure class="wp-block-image size-large"><a href="https://images.nasa.gov/details/PIA26379"><img src="/wp-content/uploads/2026/09/PIA26379orig-1024x768.jpg" alt="Rover slip estimation testbed diagram" class="wp-image-618"/></a><figcaption class="wp-element-caption">Tracks Tell Tale of Perseverance's Crater Rim Climb </figcaption></figure>
+<!-- /wp:image --></figure>
+<!-- /wp:gallery -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Hardware: Inside a Single-Wheel Testbed</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>To develop accurate rover slip estimation models, engineers rely on single-wheel testbeds to isolate wheel-soil interactions, allowing for precise sensor mounting and controlled experimentation<sup></sup>. The physical architecture of a modern testbed consists of several specific hardware components:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>The Frame and Sliding Carriage:</strong> An alluminio frame houses a moving carriage connected via linear bearings, enabling free motion in horizontal and vertical directions.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Motorized Wheel with Encoder:</strong> The setup utilizes a wheel driven by a DC motor equipped with a high-resolution encoder to measure shaft rotation and velocity.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Load Cell Integration:</strong> Mounted above the motor and wheel, a load cell measures the exact weight falling on the wheel to simulate specific gravity conditions.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Onboard Camera:</strong> A downward-facing camera observes the wheel and soil movement directly, providing the visual data required to perform on-board slip estimation. In the lab, researchers often use river sand as a practical, reproducible substrate to simulate lunar regolith.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+<!-- wp:image {"id":621,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="/wp-content/uploads/2026/09/rover-slip-estimation-testbed-diagram-1024x650.png" alt="Rover slip estimation testbed diagram" class="wp-image-621"/></figure>
+<!-- /wp:image -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Core Logic: Optical Flow vs. Angular Velocity</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>The fundamental mathematical principle behind rover slip estimation involves comparing two independent velocity vectors. The algorithm must identify disparities between the data from the wheel encoder and the on-board camera<sup></sup>.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>First, we process the encoder data to compute the angular displacement, which is then converted into tangential velocity ([katex]v_{enc}[/katex]). This is calculated using the angular velocity ([katex]\omega[/katex]) and the wheel radius ([katex]r[/katex]):</p>
+<!-- /wp:paragraph -->
+<!-- wp:katex/display-block -->
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>v_{enc} = \omega \cdot r</pre></div>
+<!-- /wp:katex/display-block -->
+<!-- wp:paragraph -->
+<p>Simultaneously, the actual linear velocity ([katex]v_{opt}[/katex]) is derived from the onboard camera. The system employs the Lucas-Kanade optical flow algorithm to compute pixel displacement per frame, translating image data into a physical metric velocity.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>To quantify the traction loss, we calculate the slip ratio ([katex]s[/katex]), defined as the difference between the tangential velocity and the linear velocity, normalized by the maximum of these two:</p>
+<!-- /wp:paragraph -->
+<!-- wp:katex/display-block -->
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>s = \frac{v_{enc} - v_{opt}}{\max(v_{enc}, v_{opt})}</pre></div>
+<!-- /wp:katex/display-block -->
+<!-- wp:paragraph -->
+<p>When [katex]v_{enc} &gt; v_{opt}[/katex], the slip ratio is positive, indicating driving conditions where the wheel is slipping against the regolith.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Bridging Hardware and Software: The ROS 2 Architecture</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Transitioning from theoretical physics to actionable autonomy requires a robust software stack. As someone who spends hours configuring Docker containers and ROS 2 communication layers for the PoliSpace drone team, I find the architecture of these rover testbeds incredibly familiar and highly effective.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The testbed framework integrates an embedded microcontroller with a high-level control system<sup></sup>:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Low-Level Acquisition:</strong> An Arduino Mega interfaces with the motor drivers, encoders, and load cell. It continuously acquires sensor data and transmits this telemetry over a serial connection in a lightweight JSON format.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>High-Level Processing:</strong> The high-level control layer is implemented using ROS 2 Humble. A Sensor Data Node parses the JSON messages and publishes the encoder counts and load cell readings as ROS topics. Simultaneously, a Motor Control Node publishes PWM commands back to the Arduino to adjust motor speeds.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>This modular architecture allows a separate visualization node to display real-time wheel dynamics and load responses seamlessly<sup></sup>.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Results: When Incline Beats Traction</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>To validate the slip estimation algorithms, researchers command the motor to rotate to a fixed position across different terrain inclinations<sup></sup>.</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Flat Terrain (0°) and Slight Incline (4°):</strong> The optical flow-based data shows good agreement with the encoder-based data. The slip ratio remains relatively low, staying below 0.2, indicating that the wheel maintains excellent traction.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Moderate Incline (7°):</strong> The terrain dynamics shift dramatically. There is significant deviation between the two velocities, with the carriage covering less than half the expected distance. The average slip ratio increases significantly to approximately 0.5 (50% slippage).</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Critical Incline (15°):</strong> The incline completely defeats the wheel's traction. The carriage barely moves any distance, suggesting total slippage and wheel sinkage. The calculated slip ratio approaches 1, indicating a critical loss of mobility.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Conclusion: From the Lab to the Moon</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Accurate rover slip estimation is essential for ensuring reliable traversal and improving rover autonomy<sup></sup>. By integrating encoders, load cells, and optical flow sensing into a single-wheel testbed, we can accurately quantify slip and study the complex mechanics of wheel-terrain interactions<sup></sup>.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>These empirical findings serve as the foundation for developing machine learning-based slip prediction and adaptive control algorithms, ensuring the success of <a href="https://beyondthejoystick.space/the-new-lunar-gold-rush-how-commercial-lunar-rovers-are-scaling-autonomous-mobility/">future missions on challenging extraterrestrial terrains</a>. With my upcoming internship focusing on exactly these ROS 2 slip-detection architectures for lunar rovers, analyzing these laboratory dynamics provides the perfect primer for the engineering challenges ahead.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/arduino-mega/">Arduino Mega</a></li>
+      <li><a href="http://localhost:1313/tags/lucas-kanade/">Lucas-Kanade</a></li>
+      <li><a href="http://localhost:1313/tags/lunar-regolith/">Lunar Regolith</a></li>
+      <li><a href="http://localhost:1313/tags/planetary-exploration/">Planetary Exploration</a></li>
+      <li><a href="http://localhost:1313/tags/ros-2-humble/">ROS 2 Humble</a></li>
+      <li><a href="http://localhost:1313/tags/rover-slip-estimation/">Rover Slip Estimation</a></li>
+      <li><a href="http://localhost:1313/tags/single-wheel-testbed/">Single-Wheel Testbed</a></li>
+      <li><a href="http://localhost:1313/tags/space-robotics/">Space Robotics</a></li>
+      <li><a href="http://localhost:1313/tags/visual-odometry/">Visual Odometry</a></li>
+      <li><a href="http://localhost:1313/tags/wheel-encoders/">Wheel Encoders</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">My New Hugo Project</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

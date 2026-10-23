@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>TimeRCD on My New Hugo Project</title>
+    <link>http://localhost:1313/tags/timercd/</link>
+    <description>Recent content in TimeRCD on My New Hugo Project</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Feb 2026 08:30:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/timercd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Beyond Reconstruction: Zero-Shot Anomaly Detection of Telemetry with TimeRCD</title>
+      <link>http://localhost:1313/posts/2026-02-14-beyond-reconstruction-zero-shot-anomaly-detection-of-telemetry-with-timercd/</link>
+      <pubDate>Sat, 14 Feb 2026 08:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-14-beyond-reconstruction-zero-shot-anomaly-detection-of-telemetry-with-timercd/</guid>
+      <description>&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;Telemetry monitoring in modern space systems, such as Martian rovers and Earth observation satellites, requires the real-time analysis of extremely high-dimensional data streams. These time-series signals are inherently affected by thermal noise and unpredictable radiative variations, making fault detection a critical computational bottleneck. As highlighted in our previous deep dives on &lt;a href=&#34;https://beyondthejoystick.space/generative-ai-rover-navigation-technical-analysis-of-claude-integration-on-mars/&#34; title=&#34;Generative AI Rover Navigation: Technical Analysis of Claude Integration on Mars&#34;&gt;on-board decision-making autonomy&lt;/a&gt;,interplanetary communication latency forces spacecraft to process and interpret anomalies locally, without waiting for a human feedback loop.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

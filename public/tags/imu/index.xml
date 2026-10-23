@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>IMU on My New Hugo Project</title>
+    <link>http://localhost:1313/tags/imu/</link>
+    <description>Recent content in IMU on My New Hugo Project</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Nov 2025 08:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/imu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rover Perception Systems: How LiDAR, Stereo Vision, and IMUs Work Together</title>
+      <link>http://localhost:1313/posts/2025-11-22-rover-perception-systems/</link>
+      <pubDate>Sat, 22 Nov 2025 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2025-11-22-rover-perception-systems/</guid>
+      <description>&lt;!-- wp:heading {&#34;level&#34;:3} --&gt;
+&lt;h3 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;Abstract: The Criticality of Multi-Modal Perception&lt;/strong&gt;&lt;/h3&gt;
+&lt;!-- /wp:heading --&gt;
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;Autonomous navigation in extraterrestrial environments is defined by an unbreakable physical constraint: &lt;a href=&#34;https://beyondthejoystick.space/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/&#34; title=&#34;The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers&#34;&gt;the speed of light&lt;/a&gt;. With Earth-Mars communication latencies ranging from 4 to 24 minutes, real-time teleoperation is impossible. To survive, a rover must possess a robust &lt;strong&gt;Rover Perception&lt;/strong&gt; architecture.&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;Rover perception is not merely the collection of images; it is the transformation of raw sensory data into a semantic and geometric understanding of the surrounding environment. This process must occur &lt;em&gt;on-board&lt;/em&gt;, often on resource-constrained processors (such as the radiation-hardened RAD750).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

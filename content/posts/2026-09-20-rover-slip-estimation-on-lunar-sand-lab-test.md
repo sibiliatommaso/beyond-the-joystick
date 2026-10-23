@@ -1,0 +1,170 @@
+---
+id: 613
+title: 'Rover Slip Estimation on Lunar Sand: Lab Test'
+date: '2026-09-20T08:19:05+00:00'
+author: 'Beyond The Joystick'
+excerpt: 'Planetary rovers face significant mobility challenges on loose extraterrestrial terrains, making sand entrapment a critical threat. In this Lab Breakdown, we decode the science of Rover Slip Estimation. By benchmarking visual odometry derived from optical flow against the tangential velocity measured by wheel encoders, we explore how single-wheel testbeds isolate and quantify traction loss. This technical analysis of hardware integration and ROS 2 nodes is essential for developing robust hazard avoidance. Discover how autonomous systems detect wheel slip to survive the unpredictable surfaces of the Moon and Mars.'
+layout: post
+guid: 'https://beyondthejoystick.space/?p=613'
+permalink: /rover-slip-estimation-on-lunar-sand-lab-test/
+image: /wp-content/uploads/2026/09/PIA26016orig.jpg
+categories:
+    - 'Algorithms &amp; AI'
+    - 'Sensors &amp; Hardware'
+tags:
+    - 'Arduino Mega'
+    - Lucas-Kanade
+    - 'Lunar Regolith'
+    - 'Planetary Exploration'
+    - 'ROS 2 Humble'
+    - 'Rover Slip Estimation'
+    - 'Single-Wheel Testbed'
+    - 'Space Robotics'
+    - 'Visual Odometry'
+    - 'Wheel Encoders'
+format: false
+---
+
+<!-- wp:paragraph -->
+<p>Planetary exploration rovers serve as essential tools for advancing scientific investigations, but their mobility is significantly challenged by loose and deformable surfaces like lunar dust and Martian regolith<sup></sup>. These extraterrestrial terrains exhibit low cohesion and bearing capacity, leading to excessive wheel slip where the wheels rotate without generating sufficient forward motion<sup></sup>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>As we dive deeper into <a href="https://beyondthejoystick.space/autonomous-rover-navigation/">autonomous space robotics</a> here on <em>Beyond the Joystick</em>, I am realizing that mastering rover slip estimation is just as critical as orbital mechanics. If a rover cannot detect slip, standard wheel odometry accrues massive errors, causing deviations from planned trajectories and increasing the risk of entrapment. To understand how engineers solve this, we are going to explore how <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=11170582">academic researchers utilize a single-wheel testbed to analyze wheel-terrain interactions before the software ever leaves Earth</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:gallery {"linkTo":"none"} -->
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"lightbox":{"enabled":false},"id":617,"sizeSlug":"large","linkDestination":"custom"} -->
+<figure class="wp-block-image size-large"><a href="https://images.nasa.gov/details/PIA26016"><img src="/wp-content/uploads/2026/09/PIA26016orig.jpg" alt="Rover slip estimation testbed diagram" class="wp-image-617"/></a><figcaption class="wp-element-caption">Curiosity's Navcams View Its Wheels </figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"lightbox":{"enabled":false},"id":618,"sizeSlug":"large","linkDestination":"custom"} -->
+<figure class="wp-block-image size-large"><a href="https://images.nasa.gov/details/PIA26379"><img src="/wp-content/uploads/2026/09/PIA26379orig-1024x768.jpg" alt="Rover slip estimation testbed diagram" class="wp-image-618"/></a><figcaption class="wp-element-caption">Tracks Tell Tale of Perseverance's Crater Rim Climb </figcaption></figure>
+<!-- /wp:image --></figure>
+<!-- /wp:gallery -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Hardware: Inside a Single-Wheel Testbed</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>To develop accurate rover slip estimation models, engineers rely on single-wheel testbeds to isolate wheel-soil interactions, allowing for precise sensor mounting and controlled experimentation<sup></sup>. The physical architecture of a modern testbed consists of several specific hardware components:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>The Frame and Sliding Carriage:</strong> An alluminio frame houses a moving carriage connected via linear bearings, enabling free motion in horizontal and vertical directions.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Motorized Wheel with Encoder:</strong> The setup utilizes a wheel driven by a DC motor equipped with a high-resolution encoder to measure shaft rotation and velocity.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Load Cell Integration:</strong> Mounted above the motor and wheel, a load cell measures the exact weight falling on the wheel to simulate specific gravity conditions.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Onboard Camera:</strong> A downward-facing camera observes the wheel and soil movement directly, providing the visual data required to perform on-board slip estimation. In the lab, researchers often use river sand as a practical, reproducible substrate to simulate lunar regolith.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:image {"id":621,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="/wp-content/uploads/2026/09/rover-slip-estimation-testbed-diagram-1024x650.png" alt="Rover slip estimation testbed diagram" class="wp-image-621"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Core Logic: Optical Flow vs. Angular Velocity</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The fundamental mathematical principle behind rover slip estimation involves comparing two independent velocity vectors. The algorithm must identify disparities between the data from the wheel encoder and the on-board camera<sup></sup>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>First, we process the encoder data to compute the angular displacement, which is then converted into tangential velocity ([katex]v_{enc}[/katex]). This is calculated using the angular velocity ([katex]\omega[/katex]) and the wheel radius ([katex]r[/katex]):</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:katex/display-block -->
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>v_{enc} = \omega \cdot r</pre></div>
+<!-- /wp:katex/display-block -->
+
+<!-- wp:paragraph -->
+<p>Simultaneously, the actual linear velocity ([katex]v_{opt}[/katex]) is derived from the onboard camera. The system employs the Lucas-Kanade optical flow algorithm to compute pixel displacement per frame, translating image data into a physical metric velocity.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>To quantify the traction loss, we calculate the slip ratio ([katex]s[/katex]), defined as the difference between the tangential velocity and the linear velocity, normalized by the maximum of these two:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:katex/display-block -->
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>s = \frac{v_{enc} - v_{opt}}{\max(v_{enc}, v_{opt})}</pre></div>
+<!-- /wp:katex/display-block -->
+
+<!-- wp:paragraph -->
+<p>When [katex]v_{enc} &gt; v_{opt}[/katex], the slip ratio is positive, indicating driving conditions where the wheel is slipping against the regolith.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Bridging Hardware and Software: The ROS 2 Architecture</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Transitioning from theoretical physics to actionable autonomy requires a robust software stack. As someone who spends hours configuring Docker containers and ROS 2 communication layers for the PoliSpace drone team, I find the architecture of these rover testbeds incredibly familiar and highly effective.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The testbed framework integrates an embedded microcontroller with a high-level control system<sup></sup>:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Low-Level Acquisition:</strong> An Arduino Mega interfaces with the motor drivers, encoders, and load cell. It continuously acquires sensor data and transmits this telemetry over a serial connection in a lightweight JSON format.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>High-Level Processing:</strong> The high-level control layer is implemented using ROS 2 Humble. A Sensor Data Node parses the JSON messages and publishes the encoder counts and load cell readings as ROS topics. Simultaneously, a Motor Control Node publishes PWM commands back to the Arduino to adjust motor speeds.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>This modular architecture allows a separate visualization node to display real-time wheel dynamics and load responses seamlessly<sup></sup>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Results: When Incline Beats Traction</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>To validate the slip estimation algorithms, researchers command the motor to rotate to a fixed position across different terrain inclinations<sup></sup>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Flat Terrain (0°) and Slight Incline (4°):</strong> The optical flow-based data shows good agreement with the encoder-based data. The slip ratio remains relatively low, staying below 0.2, indicating that the wheel maintains excellent traction.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Moderate Incline (7°):</strong> The terrain dynamics shift dramatically. There is significant deviation between the two velocities, with the carriage covering less than half the expected distance. The average slip ratio increases significantly to approximately 0.5 (50% slippage).</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Critical Incline (15°):</strong> The incline completely defeats the wheel's traction. The carriage barely moves any distance, suggesting total slippage and wheel sinkage. The calculated slip ratio approaches 1, indicating a critical loss of mobility.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Conclusion: From the Lab to the Moon</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Accurate rover slip estimation is essential for ensuring reliable traversal and improving rover autonomy<sup></sup>. By integrating encoders, load cells, and optical flow sensing into a single-wheel testbed, we can accurately quantify slip and study the complex mechanics of wheel-terrain interactions<sup></sup>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>These empirical findings serve as the foundation for developing machine learning-based slip prediction and adaptive control algorithms, ensuring the success of <a href="https://beyondthejoystick.space/the-new-lunar-gold-rush-how-commercial-lunar-rovers-are-scaling-autonomous-mobility/">future missions on challenging extraterrestrial terrains</a>. With my upcoming internship focusing on exactly these ROS 2 slip-detection architectures for lunar rovers, analyzing these laboratory dynamics provides the perfect primer for the engineering challenges ahead.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
