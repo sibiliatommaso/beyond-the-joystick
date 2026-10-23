@@ -10,27 +10,17 @@
     </a>
 
     {{ with .Params.categories }}
-      <div class="post-categories">
-        {{ range . }}
-          {{ $categorySlug := . | urlize }}
-          <a href="{{ printf "/categories/%s/" $categorySlug | relURL }}">
-            {{ . }}
-          </a>
-        {{ end }}
-      </div>
-    {{ end }}
+  	<div class="post-categories">
+    		{{ range . }}
+      			{{ $categorySlug := . | urlize }}
+      			<a href="{{ printf "/categories/%s/" $categorySlug | relURL }}">
+        			{{ . | htmlUnescape }}
+      			</a>
+    		{{ end }}
+  	</div>
+	{{ end }}
 
     <h1>{{ .Title }}</h1>
-
-    {{ with .Params.excerpt }}
-      <p class="post-excerpt">
-        {{ . | plainify | htmlUnescape }}
-      </p>
-    {{ else }}
-      {{ with .Description }}
-        <p class="post-excerpt">{{ . }}</p>
-      {{ end }}
-    {{ end }}
 
     <div class="post-meta">
 
@@ -46,17 +36,6 @@
 
   </header>
 
-
-  <!-- OPTIONAL FEATURED IMAGE -->
-  {{ with .Params.image }}
-    <figure class="post-featured-image">
-      <img src="{{ . | relURL }}"
-           alt="{{ $.Title }}"
-           fetchpriority="high">
-    </figure>
-  {{ end }}
-
-
   <!-- ARTICLE BODY -->
   <div class="post-layout">
 
@@ -65,7 +44,6 @@
     </div>
 
   </div>
-
 
   <!-- ARTICLE FOOTER -->
   <footer class="post-footer">
@@ -83,3 +61,4 @@
 </article>
 
 {{ end }}
+

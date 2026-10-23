@@ -2,7 +2,6 @@
 
 {{ $posts := where site.RegularPages "Section" "posts" }}
 {{ $posts = sort $posts "Date" "desc" }}
-
 {{ $latest := first 6 $posts }}
 
 <div class="articles-page">
@@ -43,27 +42,32 @@
 
         <article class="article-card">
 
+          <!-- COVER IMAGE -->
           {{ with .Params.image }}
             <a class="article-card__image"
                href="{{ $.RelPermalink }}"
                tabindex="-1"
                aria-hidden="true">
-              <img src="{{ . | relURL }}" alt="" loading="lazy">
+              <img src="{{ . | relURL }}"
+                   alt=""
+                   loading="lazy">
             </a>
           {{ end }}
 
           <div class="article-card__body">
 
+            <!-- CATEGORY -->
             {{ with .Params.categories }}
               {{ range first 1 . }}
                 {{ $categorySlug := . | urlize }}
                 <a class="article-card__category"
                    href="{{ printf "/categories/%s/" $categorySlug | relURL }}">
-                  {{ . }}
+                  {{ . | htmlUnescape | replaceRE "&[Aa]mp;" "&" }}
                 </a>
               {{ end }}
             {{ end }}
 
+            <!-- DATE AND READING TIME -->
             <p class="article-card__date">
               <time datetime="{{ .Date.Format "2006-01-02" }}">
                 {{ .Date.Format "January 2, 2006" }}
@@ -72,16 +76,19 @@
               {{ .ReadingTime }} min read
             </p>
 
+            <!-- TITLE -->
             <h3>
               <a href="{{ .RelPermalink }}">
                 {{ .Title }}
               </a>
             </h3>
 
+            <!-- EXCERPT -->
             <p class="article-card__excerpt">
               {{ $excerpt | plainify | htmlUnescape }}
             </p>
 
+            <!-- READ MORE -->
             <a class="article-card__link"
                href="{{ .RelPermalink }}">
               Read Article <span aria-hidden="true">→</span>
@@ -117,11 +124,15 @@
 
         {{ $slug := $term | urlize }}
         {{ $termPage := site.GetPage (printf "/categories/%s" $slug) }}
-        {{ $label := $term | humanize | title }}
+
+        {{ $label := $term | htmlUnescape | humanize }}
 
         {{ with $termPage }}
-          {{ $label = .Title }}
+          {{ $label = .Title | htmlUnescape }}
         {{ end }}
+
+        {{ $label = replaceRE "&[Aa]mp;" "&" $label }}
+        {{ $label = replace $label "Ai" "AI" }}
 
         <a class="category-card"
            href="{{ printf "/categories/%s/" $slug | relURL }}">
@@ -136,7 +147,7 @@
           <p>
             {{ with $termPage }}
               {{ with .Description }}
-                {{ . }}
+                {{ . | htmlUnescape }}
               {{ else }}
                 Explore articles, ideas, and practical insights about {{ $label }}.
               {{ end }}
@@ -180,24 +191,30 @@
 
           <div class="articles-list__content">
 
+            <!-- CATEGORY -->
             {{ with .Params.categories }}
               {{ range first 1 . }}
                 {{ $categorySlug := . | urlize }}
                 <a class="article-card__category"
                    href="{{ printf "/categories/%s/" $categorySlug | relURL }}">
-                  {{ . }}
+                  {{ . | htmlUnescape | replaceRE "&[Aa]mp;" "&" }}
                 </a>
               {{ end }}
             {{ end }}
 
+            <!-- TITLE -->
             <h3>
               <a href="{{ .RelPermalink }}">
                 {{ .Title }}
               </a>
             </h3>
 
-            <p>{{ $excerpt | plainify | htmlUnescape }}</p>
+            <!-- EXCERPT -->
+            <p>
+              {{ $excerpt | plainify | htmlUnescape }}
+            </p>
 
+            <!-- READ MORE -->
             <a class="article-card__link"
                href="{{ .RelPermalink }}">
               Read Article <span aria-hidden="true">→</span>
@@ -223,3 +240,4 @@
 </div>
 
 {{ end }}
+
