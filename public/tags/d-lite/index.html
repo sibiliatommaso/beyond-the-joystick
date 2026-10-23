@@ -1,18 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="UTF-8">
-  <title>D* Lite - Beyond The Joystick</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>D* Lite | Beyond the Joystick</title>
+
+    
+        
+            <meta name="description" content="Explore planetary robotics, autonomous navigation, SLAM, ROS 2, and practical engineering projects for autonomous rovers.">
+        
+    
+
+    <link rel="stylesheet" href="/css/custom.css">
 </head>
+
 <body>
-  <nav>
-    <a href="/">Home</a> | 
-    <a href="/posts/">Blog</a> | 
-    <a href="/about/">About Us</a>
-  </nav>
-  
-  
-  
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+    <header class="site-header">
+  <div class="container header__inner">
+    <a class="brand" href="/">Beyond the Joystick</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <ul>
+        
+        <li><a href="/">Home</a></li>
+        
+        <li><a href="/posts/">Articles</a></li>
+        
+        <li><a href="/#labs">Labs &amp; Projects</a></li>
+        
+        <li><a href="/about/">About</a></li>
+        
+      </ul>
+      
+    </nav>
+  </div>
+  <script>
+    (function () {
+      var b = document.querySelector('.menu-toggle'), n = document.getElementById('site-nav');
+      if (!b || !n) return;
+      document.documentElement.classList.add('js');
+      b.hidden = false;
+      b.addEventListener('click', function () {
+        var open = b.getAttribute('aria-expanded') === 'true';
+        b.setAttribute('aria-expanded', String(!open));
+        b.textContent = open ? 'Menu' : 'Close menu';
+        n.classList.toggle('is-open', !open);
+      });
+    })();
+  </script>
+</header>
+
+
+    <main id="main-content">
+        
   <h1>D* Lite</h1>
   <ul>
     
@@ -20,6 +65,25 @@
     
   </ul>
 
-  
+    </main>
+
+    <footer class="site-footer">
+  <div class="container footer__inner">
+    <div class="footer__about">
+      <p class="footer__brand">Beyond the Joystick</p>
+      <p>Technical articles and hands-on projects on space robotics, autonomous navigation, and planetary exploration.</p>
+    </div>
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="/posts/">Articles</a></li>
+        <li><a href="/#labs">Labs &amp; Projects</a></li>
+        <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+  <p class="container footer__legal">&copy; 2026 Beyond the Joystick. All rights reserved.</p>
+</footer>
+
 </body>
 </html>

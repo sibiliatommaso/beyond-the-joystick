@@ -1,16 +1,81 @@
-{{/* Expects a Page as context. */}}
-{{ $summary := .Params.summary | default .Params.excerpt | default .Summary }}
+{{/*
+  Article card.
+  Expected context: a Hugo Page.
+*/}}
+
+{{ $page := . }}
+
+{{ $summary := $page.Params.summary
+    | default $page.Params.excerpt
+    | default $page.Summary
+}}
+
+{{ $summary = $summary | plainify | htmlUnescape }}
+
 <article class="card">
-  {{ with .Params.image }}
-  <div class="card__media"><img src="{{ . }}" alt="" loading="lazy" decoding="async"></div>
-  {{ end }}
-  <div class="card__body">
-    <p class="card__meta">
-      {{ with .Params.categories }}{{ $c := index . 0 }}{{ if ne $c "Uncategorized" }}<span class="card__category">{{ $c | htmlUnescape }}</span>{{ end }}{{ end }}
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-    </p>
-    <h3 class="card__title"><a href="{{ .RelPermalink }}">{{ .Title | htmlUnescape }}</a></h3>
-    <p class="card__summary">{{ $summary | plainify | htmlUnescape }}</p>
-    <span class="card__cta" aria-hidden="true">Read Article</span>
-  </div>
+
+    <a
+        class="card__media"
+        href="{{ $page.RelPermalink }}"
+        tabindex="-1"
+        aria-hidden="true"
+    >
+        {{ with $page.Params.image }}
+
+            <img
+                src="{{ . | relURL }}"
+                alt=""
+                loading="lazy"
+                decoding="async"
+            >
+
+        {{ else }}
+
+            <span class="card__placeholder" aria-hidden="true">
+                <span>FIELD NOTES</span>
+            </span>
+
+        {{ end }}
+    </a>
+
+    <div class="card__body">
+
+        <div class="card__meta">
+
+            {{ with $page.Params.categories }}
+
+                {{ $category := index . 0 }}
+
+                {{ if ne $category "Uncategorized" }}
+                    <span class="card__category">
+                        {{ $category | htmlUnescape }}
+                    </span>
+                {{ end }}
+
+            {{ end }}
+
+            <time datetime="{{ $page.Date.Format "2006-01-02" }}">
+                {{ $page.Date.Format "January 2, 2006" }}
+            </time>
+
+        </div>
+
+        <h3 class="card__title">
+            <a href="{{ $page.RelPermalink }}">
+                {{ $page.Title | htmlUnescape }}
+            </a>
+        </h3>
+
+        {{ with $summary }}
+            <p class="card__summary">
+                {{ . | truncate 220 }}
+            </p>
+        {{ end }}
+
+        <span class="card__cta" aria-hidden="true">
+            Read Article <span>→</span>
+        </span>
+
+    </div>
+
 </article>

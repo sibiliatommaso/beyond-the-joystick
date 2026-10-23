@@ -1,46 +1,84 @@
-{{ define "main" }}
-{{ with site.Params.heroImage }}{{ end }}
-Beyond the Joystick
+<section class="section" id="latest-articles" aria-labelledby="articles-title">
+    <div class="container">
+        <div class="section__header">
+            <p class="section__eyebrow">FIELD NOTES &amp; ENGINEERING</p>
+            <h2 class="section__title" id="articles-title">Latest Articles</h2>
+            <p class="section__intro">
+                Insights, algorithms, and engineering ideas for the next generation
+                of autonomous planetary rovers.
+            </p>
+        </div>
 
-Space Robotics, Autonomous Navigation & Planetary Exploration
+        {{ $allPosts := where site.RegularPages "Section" "posts" }}
+        {{ $posts := first 6 ($allPosts.ByDate.Reverse) }}
+        {{ $postCount := len $posts }}
 
-Exploring the algorithms, software, and engineering behind autonomous planetary rovers — from SLAM and path planning to ROS 2 and hands-on robotics projects.
-Explore Articles Discover the Labs
-Latest Articles
+        {{ if gt $postCount 0 }}
+            <div class="articles-slider" data-articles-slider>
+                <div class="articles-slider__viewport">
+                    <div class="articles-slider__track">
+                        {{ range $i, $p := $posts }}
+                            <div
+                                class="articles-slider__slide"
+                                role="group"
+                                aria-roledescription="slide"
+                                aria-label="{{ add $i 1 }} of {{ $postCount }}"
+                            >
+                                {{ partial "article-card.html" $p }}
+                            </div>
+                        {{ end }}
+                    </div>
+                </div>
 
-Insights, algorithms, and engineering ideas for the next generation of autonomous planetary rovers.
-{{ $all := where site.RegularPages "Section" "posts" }} {{ $posts := first 16 $all.ByDate.Reverse }} {{ $count := len $posts }} {{ range $i, $p := $posts }} {{ if eq (mod $i 4) 0 }}
-{{ end }} {{ partial "article-card.html" $p }} {{ if or (eq (mod $i 4) 3) (eq (add $i 1) $count) }}
-{{ end }} {{ end }}
+                {{ if gt $postCount 1 }}
+                    <div class="articles-slider__controls">
+                        <button
+                            class="articles-slider__arrow"
+                            type="button"
+                            data-slider-prev
+                            aria-label="Previous articles"
+                        >
+                            <span aria-hidden="true">←</span>
+                        </button>
 
-View All Articles
-From Theory to Practice
+                        <div
+                            class="articles-slider__dots"
+                            data-slider-dots
+                            aria-label="Choose article position"
+                        ></div>
 
-Hands-on robotics projects, software experiments, and engineering tutorials for autonomous planetary exploration.
-{{/* Only posts flagged with `lab: true` in front matter appear here. Optional: lab_type: Tutorial | Source Code | Hardware */}} {{ $labs := first 3 (where site.RegularPages ".Params.lab" true).ByDate.Reverse }} {{ if $labs }}
-{{ range $labs }}
-{{ with .Params.lab_type }}
+                        <button
+                            class="articles-slider__arrow"
+                            type="button"
+                            data-slider-next
+                            aria-label="Next articles"
+                        >
+                            <span aria-hidden="true">→</span>
+                        </button>
 
-{{ . }}
-{{ end }}
-{{ .Title | htmlUnescape }}
+                        <button
+                            class="articles-slider__pause"
+                            type="button"
+                            data-slider-pause
+                            aria-pressed="false"
+                        >
+                            Pause
+                        </button>
+                    </div>
+                {{ end }}
+            </div>
 
-{{ .Params.summary | default .Params.excerpt | default .Summary | plainify | htmlUnescape | truncate 220 }}
-{{ end }}
-{{ else }}
+            <div class="section__more">
+                <a class="btn btn--secondary" href="{{ "/posts/" | relURL }}">
+                    View All Articles
+                </a>
+            </div>
+        {{ else }}
+            <div class="empty-state">
+                <p>No articles are available yet.</p>
+            </div>
+        {{ end }}
+    </div>
+</section>
 
-No hands-on projects are published yet. Practical tutorials and lab breakdowns will appear here as soon as they are ready.
-Browse the Articles
-{{ end }}
-The Engineer Behind the Exploration
-
-Beyond the Joystick explores the technologies that make autonomous planetary exploration possible. Through technical articles, practical tutorials, and engineering projects, the goal is to connect theory with implementation — from autonomous navigation and SLAM to robotics software and rover systems.
-
-Learn More
-{{ with site.Params.kofiURL }}
-Support Independent Space Robotics
-
-Help keep Beyond the Joystick growing with practical robotics tutorials, technical articles, and open engineering projects.
-
-Support the Project
-{{ end }} {{ end }} 
+<script src="{{ "js/articles-slider.js" | relURL }}" defer></script>
