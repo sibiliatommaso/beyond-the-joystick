@@ -1,56 +1,31 @@
-```html
 <header class="site-header">
-  <div class="container header__inner">
+  <div class="header__inner">
 
-    <a class="brand" href="{{ "/" | relURL }}" aria-label="Beyond the Joystick — Home">
-      <img
-        class="brand__logo"
-        src="{{ "images/logo.png" | relURL }}"
-        alt=""
-        width="44"
-        height="44"
-      >
-      <span class="brand__text">
-        <span class="brand__name">Beyond the Joystick</span>
-        <span class="brand__tagline">Games. Ideas. Beyond the Screen.</span>
-      </span>
-    </a>
+    <img
+  	class="brand__logo"
+  	src="{{ "images/logo.png" | relURL }}"
+  	alt=""
+	>
+	<span class="brand__name">Beyond the Joystick</span>
 
     <button
       class="menu-toggle"
       type="button"
       aria-expanded="false"
       aria-controls="site-nav"
-      aria-label="Open navigation menu"
       hidden
     >
-      <span class="menu-toggle__icon" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
-      </span>
-      <span class="menu-toggle__label">Menu</span>
+      Menu
     </button>
 
     <nav id="site-nav" class="site-nav" aria-label="Main navigation">
       <ul>
         {{ range site.Menus.main }}
         <li>
-          <a
-            href="{{ .URL | relURL }}"
-            {{ if $.IsMenuCurrent "main" . }}aria-current="page"{{ end }}
-          >
-            {{ .Name }}
-          </a>
+          <a href="{{ .URL | relURL }}">{{ .Name }}</a>
         </li>
         {{ end }}
       </ul>
-
-      {{ with site.Params.kofiURL }}
-      <a class="btn btn--primary btn--small" href="{{ . }}" target="_blank" rel="noopener noreferrer">
-        Support the Project
-      </a>
-      {{ end }}
     </nav>
 
   </div>
@@ -66,21 +41,12 @@
       button.hidden = false;
 
       button.addEventListener('click', function () {
-        var isOpen = button.getAttribute('aria-expanded') === 'true';
-        var willOpen = !isOpen;
+        var open = button.getAttribute('aria-expanded') === 'true';
 
-        button.setAttribute('aria-expanded', String(willOpen));
-        button.setAttribute(
-          'aria-label',
-          willOpen ? 'Close navigation menu' : 'Open navigation menu'
-        );
-
-        button.querySelector('.menu-toggle__label').textContent =
-          willOpen ? 'Close' : 'Menu';
-
-        nav.classList.toggle('is-open', willOpen);
+        button.setAttribute('aria-expanded', String(!open));
+        button.textContent = open ? 'Menu' : 'Close';
+        nav.classList.toggle('is-open', !open);
       });
     })();
   </script>
 </header>
-```

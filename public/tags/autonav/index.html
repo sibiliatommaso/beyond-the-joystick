@@ -1,38 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>AutoNav | Beyond the Joystick</title>
-
-    
-        
-            <meta name="description" content="Explore planetary robotics, autonomous navigation, SLAM, ROS 2, and practical engineering projects for autonomous rovers.">
-        
-    
-
-    <link rel="stylesheet" href="/css/custom.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AutoNav | Beyond the Joystick</title>
+  <meta name="description" content="Explore planetary robotics, autonomous navigation, SLAM, ROS 2, and practical engineering projects for autonomous rovers.">
+  <link rel="stylesheet" href="/css/custom.css">
 </head>
 <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    ```html
-<header class="site-header">
-  <div class="container header__inner">
+  <header class="site-header">
+  <div class="header__inner">
 
-    <a class="brand" href="/" aria-label="Beyond the Joystick — Home">
+    <a class="brand" href="/" aria-label="Beyond the Joystick home">
+      <span class="brand__name">Beyond the Joystick</span>
       <img
         class="brand__logo"
         src="/images/logo.png"
         alt=""
-        width="44"
-        height="44"
       >
-      <span class="brand__text">
-        <span class="brand__name">Beyond the Joystick</span>
-        <span class="brand__tagline">Games. Ideas. Beyond the Screen.</span>
-      </span>
     </a>
 
     <button
@@ -40,59 +27,31 @@
       type="button"
       aria-expanded="false"
       aria-controls="site-nav"
-      aria-label="Open navigation menu"
       hidden
     >
-      <span class="menu-toggle__icon" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
-      </span>
-      <span class="menu-toggle__label">Menu</span>
+      Menu
     </button>
 
     <nav id="site-nav" class="site-nav" aria-label="Main navigation">
       <ul>
         
         <li>
-          <a
-            href="/"
-            
-          >
-            Home
-          </a>
+          <a href="/">Home</a>
         </li>
         
         <li>
-          <a
-            href="/posts/"
-            
-          >
-            Articles
-          </a>
+          <a href="/posts/">Articles</a>
         </li>
         
         <li>
-          <a
-            href="/#labs"
-            
-          >
-            Labs &amp; Projects
-          </a>
+          <a href="/#labs">Labs &amp; Projects</a>
         </li>
         
         <li>
-          <a
-            href="/about/"
-            
-          >
-            About
-          </a>
+          <a href="/about/">About</a>
         </li>
         
       </ul>
-
-      
     </nav>
 
   </div>
@@ -108,28 +67,19 @@
       button.hidden = false;
 
       button.addEventListener('click', function () {
-        var isOpen = button.getAttribute('aria-expanded') === 'true';
-        var willOpen = !isOpen;
+        var open = button.getAttribute('aria-expanded') === 'true';
 
-        button.setAttribute('aria-expanded', String(willOpen));
-        button.setAttribute(
-          'aria-label',
-          willOpen ? 'Close navigation menu' : 'Open navigation menu'
-        );
-
-        button.querySelector('.menu-toggle__label').textContent =
-          willOpen ? 'Close' : 'Menu';
-
-        nav.classList.toggle('is-open', willOpen);
+        button.setAttribute('aria-expanded', String(!open));
+        button.textContent = open ? 'Menu' : 'Close';
+        nav.classList.toggle('is-open', !open);
       });
     })();
   </script>
 </header>
-```
 
 
-    <main id="main-content">
-        
+  <main id="main-content">
+    
   <h1>AutoNav</h1>
   <ul>
     
@@ -137,9 +87,9 @@
     
   </ul>
 
-    </main>
+  </main>
 
-    <footer class="site-footer">
+  <footer class="site-footer">
   <div class="container footer__inner">
     <div class="footer__about">
       <p class="footer__brand">Beyond the Joystick</p>

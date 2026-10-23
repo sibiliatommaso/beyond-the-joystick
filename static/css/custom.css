@@ -800,4 +800,154 @@ p { margin: 0 0 1em; max-width: 70ch; }
     padding: 0 9px;
   }
 }
-```
+
+/* Full-width site header */
+
+.site-header {
+  width: 100%;
+  background: #0b1220;
+  border-bottom: 1px solid #2b3a50;
+}
+
+.header__inner {
+  width: 100%;
+  max-width: none;
+  min-height: 88px;
+  padding: 16px clamp(20px, 4vw, 64px);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  box-sizing: border-box;
+}
+
+/* Title followed by logo */
+
+.site-header .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  color: #f1f0e8;
+  text-decoration: none;
+}
+
+.site-header .brand__name {
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+
+.site-header .brand__logo {
+  display: block;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+/* Navigation */
+
+.site-header .site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-header .site-nav ul {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 30px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-header .site-nav a {
+  color: #dce3ed;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.site-header .site-nav a:hover {
+  color: #f0b44d;
+}
+
+.site-header .menu-toggle {
+  color: #f1f0e8;
+  background: transparent;
+  border: 1px solid #526078;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.site-header .menu-toggle[hidden] {
+  display: none;
+}
+
+/* Responsive navigation */
+
+@media (max-width: 800px) {
+  .header__inner {
+    min-height: 76px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .site-header .brand {
+    gap: 10px;
+  }
+
+  .site-header .brand__name {
+    font-size: 1.05rem;
+  }
+
+  .site-header .brand__logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .site-header .menu-toggle {
+    display: inline-block;
+  }
+
+  .site-header .site-nav {
+    display: none;
+    width: 100%;
+    padding: 8px 0 12px;
+  }
+
+  .site-header .site-nav.is-open {
+    display: flex;
+  }
+
+  .site-header .site-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .site-header .site-nav a {
+    display: block;
+    padding: 5px 0;
+  }
+}
+
+/* Brand title hover effect */
+
+.site-header .brand__name {
+  color: #f1f0e8;
+  transition: color 200ms ease;
+}
+
+.site-header .brand:hover .brand__name {
+  color: #f4b34f;
+}
+
+.site-header .brand:focus-visible .brand__name {
+  color: #f4b34f;
+}
+
