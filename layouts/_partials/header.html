@@ -1,0 +1,28 @@
+<header class="site-header">
+  <div class="container header__inner">
+    <a class="brand" href="{{ "/" | relURL }}">Beyond the Joystick</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <ul>
+        {{ range site.Menus.main }}
+        <li><a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+      {{ with site.Params.kofiURL }}<a class="btn btn--primary btn--small" href="{{ . }}" rel="noopener">Support the Project</a>{{ end }}
+    </nav>
+  </div>
+  <script>
+    (function () {
+      var b = document.querySelector('.menu-toggle'), n = document.getElementById('site-nav');
+      if (!b || !n) return;
+      document.documentElement.classList.add('js');
+      b.hidden = false;
+      b.addEventListener('click', function () {
+        var open = b.getAttribute('aria-expanded') === 'true';
+        b.setAttribute('aria-expanded', String(!open));
+        b.textContent = open ? 'Menu' : 'Close menu';
+        n.classList.toggle('is-open', !open);
+      });
+    })();
+  </script>
+</header>

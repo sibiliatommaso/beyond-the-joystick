@@ -1,0 +1,3 @@
+{{ $css := resources.Get "css/custom.css" | minify | fingerprint }} Skip to main content {{ partial "header.html" . }}
+{{ block "main" . }}{{ end }}
+{{ partial "footer.html" . }} 

@@ -1,69 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Core Concepts on My New Hugo Project</title>
-    <link>http://localhost:1313/categories/core-concepts/</link>
-    <description>Recent content in Core Concepts on My New Hugo Project</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 08 Nov 2025 08:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/core-concepts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>What is SLAM? The Key Technology for Autonomous Rover Mapping</title>
-      <link>http://localhost:1313/posts/2025-11-08-what-is-slam-the-key-technology-for-autonomous-rover-mapping/</link>
-      <pubDate>Sat, 08 Nov 2025 08:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-11-08-what-is-slam-the-key-technology-for-autonomous-rover-mapping/</guid>
-      <description>&lt;!-- wp:paragraph --&gt;
-&lt;p&gt;&lt;a href=&#34;https://beyondthejoystick.space/autonomous-rover-navigation/&#34; title=&#34;The Ultimate Guide to Autonomous Rover Navigation&#34;&gt;Navigating celestial bodies autonomously&lt;/a&gt; presents a unique hurdle that we don&#39;t face on Earth: the complete lack of  Global Positioning System (GPS). In this context, a rover&#39;s ability to understand its own location becomes a complex mathematical problem. In advanced robotics, the standard answer to this problem is SLAM (Simultaneous Localization and Mapping). In this article, we’ll break down the core principles of SLAM, examine how it’s critical for current Mars missions, and look at the immense computational strain it puts on space-grade hardware.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The 20-Minute Lag: Why We Can&amp;#8217;t Just &amp;#8216;Joystick&amp;#8217; Mars Rovers</title>
-      <link>http://localhost:1313/posts/2025-11-01-the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/</link>
-      <pubDate>Sat, 01 Nov 2025 08:10:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-11-01-the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/</guid>
-      <description>&lt;!-- wp:heading {&#34;level&#34;:4} --&gt;
-&lt;h4 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;I. Introduction: The Space &#34;Video Game&#34; Paradox&lt;/strong&gt;&lt;/h4&gt;
-&lt;!-- /wp:heading --&gt;
-&lt;!-- wp:paragraph --&gt;
-&lt;p&gt;Imagine you&#39;re in the middle of a high-stakes video game. You push the joystick, your avatar sprints. You see an obstacle, you swerve instantly. Total control, immediate feedback. Now, imagine piloting a multi-billion dollar rover on Mars. Why can&#39;t we just &#34;drive&#34; it with a joystick? If we see a cliff, why can&#39;t we just hit the &#34;brakes&#34;?  The answer is brutal and unavoidable: our real enemy is physics. It&#39;s called latency, &lt;strong&gt;the 20-Minute Lag&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The Evolution of Rover AI: A Deep Dive From Sojourner to AutoNav</title>
-      <link>http://localhost:1313/posts/2025-11-01-the-evolution-of-rover-ai/</link>
-      <pubDate>Sat, 01 Nov 2025 08:10:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-11-01-the-evolution-of-rover-ai/</guid>
-      <description>&lt;!-- wp:heading --&gt;
-&lt;h2 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;Abstract: The Challenge of Martian Latency&lt;/strong&gt;&lt;/h2&gt;
-&lt;!-- /wp:heading --&gt;
-&lt;!-- wp:paragraph --&gt;
-&lt;p&gt;The &lt;strong&gt;evolution of rover AI&lt;/strong&gt; is driven by a fundamental engineering necessity: overcoming the communication latency between Earth and Mars.&lt;/p&gt;
-&lt;!-- /wp:paragraph --&gt;
-&lt;!-- wp:paragraph --&gt;
-&lt;p&gt;This delay, which can exceed &lt;strong&gt;20 minutes one-way&lt;/strong&gt;, makes direct teleoperation (or &#34;joysticking&#34;) logistically impractical. Any command sent to avoid a hazard would arrive far too late.&lt;/p&gt;
-&lt;!-- /wp:paragraph --&gt;
-&lt;!-- wp:paragraph --&gt;
-&lt;p&gt;This operational constraint imposes the critical need for &lt;strong&gt;onboard decision-making autonomy&lt;/strong&gt;, transferring intelligence from the Earth-based operator to the rover&#39;s software.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The Ultimate Guide to Autonomous Rover Navigation</title>
-      <link>http://localhost:1313/posts/2025-11-01-autonomous-rover-navigation/</link>
-      <pubDate>Sat, 01 Nov 2025 08:10:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-11-01-autonomous-rover-navigation/</guid>
-      <description>&lt;!-- wp:html --&gt;
-&lt;div style=&#34;width: 100%; display: flex; justify-content: center; align-items: center;&#34;&gt;
-    &lt;iframe
-        src=&#34;https://www.youtube.com/embed/WRy8EoOdGIU?autoplay=1&#34;
-        style=&#34;width: 100%; max-width: 450px; aspect-ratio: 9 / 16; height: auto; border: none;&#34;
-        allow=&#34;autoplay; encrypted-media&#34;
-        allowfullscreen&gt;
-    &lt;/iframe&gt;
-&lt;/div&gt;
-&lt;!-- /wp:html --&gt;
-&lt;!-- wp:heading {&#34;level&#34;:3} --&gt;
-&lt;h3 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;1. Introduction: The Silent Conquest of New Worlds&lt;/strong&gt;&lt;/h3&gt;
-&lt;!-- /wp:heading --&gt;
-&lt;!-- wp:paragraph --&gt;
-&lt;p&gt;Imagine a lone rover advancing across the red surface of Mars. This isn&#39;t just a remote-controlled vehicle. It&#39;s a robotic pioneer, an explorer relying on &lt;strong&gt;autonomous rover navigation&lt;/strong&gt; to make critical decisions hundreds of millions of kilometers away from any human operator.&lt;/p&gt;</description>
-    </item>
-  </channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Core Concepts on Beyond the Joystick</title>
+		<link>//localhost:1313/categories/core-concepts/</link>
+		<description>Recent content in Core Concepts on Beyond the Joystick</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 08 Nov 2025 08:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="//localhost:1313/categories/core-concepts/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>What is SLAM? The Key Technology for Autonomous Rover Mapping</title>
+				<link>//localhost:1313/posts/2025-11-08-what-is-slam-the-key-technology-for-autonomous-rover-mapping/</link>
+				<pubDate>Sat, 08 Nov 2025 08:00:00 +0000</pubDate>
+				<guid>//localhost:1313/posts/2025-11-08-what-is-slam-the-key-technology-for-autonomous-rover-mapping/</guid>
+				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://beyondthejoystick.space/autonomous-rover-navigation/&#34; title=&#34;The Ultimate Guide to Autonomous Rover Navigation&#34;&gt;Navigating celestial bodies autonomously&lt;/a&gt; presents a unique hurdle that we don&#39;t face on Earth: the complete lack of  Global Positioning System (GPS). In this context, a rover&#39;s ability to understand its own location becomes a complex mathematical problem. In advanced robotics, the standard answer to this problem is SLAM (Simultaneous Localization and Mapping). In this article, we’ll break down the core principles of SLAM, examine how it’s critical for current Mars missions, and look at the immense computational strain it puts on space-grade hardware.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The 20-Minute Lag: Why We Can&amp;#8217;t Just &amp;#8216;Joystick&amp;#8217; Mars Rovers</title>
+				<link>//localhost:1313/posts/2025-11-01-the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/</link>
+				<pubDate>Sat, 01 Nov 2025 08:10:00 +0000</pubDate>
+				<guid>//localhost:1313/posts/2025-11-01-the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/</guid>
+				<description>&lt;!-- wp:heading {&#34;level&#34;:4} --&gt;&#xA;&lt;h4 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;I. Introduction: The Space &#34;Video Game&#34; Paradox&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;!-- /wp:heading --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Imagine you&#39;re in the middle of a high-stakes video game. You push the joystick, your avatar sprints. You see an obstacle, you swerve instantly. Total control, immediate feedback. Now, imagine piloting a multi-billion dollar rover on Mars. Why can&#39;t we just &#34;drive&#34; it with a joystick? If we see a cliff, why can&#39;t we just hit the &#34;brakes&#34;?  The answer is brutal and unavoidable: our real enemy is physics. It&#39;s called latency, &lt;strong&gt;the 20-Minute Lag&lt;/strong&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The Evolution of Rover AI: A Deep Dive From Sojourner to AutoNav</title>
+				<link>//localhost:1313/posts/2025-11-01-the-evolution-of-rover-ai/</link>
+				<pubDate>Sat, 01 Nov 2025 08:10:00 +0000</pubDate>
+				<guid>//localhost:1313/posts/2025-11-01-the-evolution-of-rover-ai/</guid>
+				<description>&lt;!-- wp:heading --&gt;&#xA;&lt;h2 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;Abstract: The Challenge of Martian Latency&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;!-- /wp:heading --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;The &lt;strong&gt;evolution of rover AI&lt;/strong&gt; is driven by a fundamental engineering necessity: overcoming the communication latency between Earth and Mars.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;This delay, which can exceed &lt;strong&gt;20 minutes one-way&lt;/strong&gt;, makes direct teleoperation (or &#34;joysticking&#34;) logistically impractical. Any command sent to avoid a hazard would arrive far too late.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;This operational constraint imposes the critical need for &lt;strong&gt;onboard decision-making autonomy&lt;/strong&gt;, transferring intelligence from the Earth-based operator to the rover&#39;s software.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The Ultimate Guide to Autonomous Rover Navigation</title>
+				<link>//localhost:1313/posts/2025-11-01-autonomous-rover-navigation/</link>
+				<pubDate>Sat, 01 Nov 2025 08:10:00 +0000</pubDate>
+				<guid>//localhost:1313/posts/2025-11-01-autonomous-rover-navigation/</guid>
+				<description>&lt;!-- wp:html --&gt;&#xA;&lt;div style=&#34;width: 100%; display: flex; justify-content: center; align-items: center;&#34;&gt;&#xA;    &lt;iframe&#xA;        src=&#34;https://www.youtube.com/embed/WRy8EoOdGIU?autoplay=1&#34;&#xA;        style=&#34;width: 100%; max-width: 450px; aspect-ratio: 9 / 16; height: auto; border: none;&#34;&#xA;        allow=&#34;autoplay; encrypted-media&#34;&#xA;        allowfullscreen&gt;&#xA;    &lt;/iframe&gt;&#xA;&lt;/div&gt;&#xA;&lt;!-- /wp:html --&gt;&#xA;&lt;!-- wp:heading {&#34;level&#34;:3} --&gt;&#xA;&lt;h3 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;1. Introduction: The Silent Conquest of New Worlds&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;!-- /wp:heading --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Imagine a lone rover advancing across the red surface of Mars. This isn&#39;t just a remote-controlled vehicle. It&#39;s a robotic pioneer, an explorer relying on &lt;strong&gt;autonomous rover navigation&lt;/strong&gt; to make critical decisions hundreds of millions of kilometers away from any human operator.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

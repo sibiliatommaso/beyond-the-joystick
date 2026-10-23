@@ -1,46 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Pathfinding Algorithms on My New Hugo Project</title>
-    <link>http://localhost:1313/tags/pathfinding-algorithms/</link>
-    <description>Recent content in Pathfinding Algorithms on My New Hugo Project</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 13 Dec 2025 08:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/pathfinding-algorithms/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Beyond NASA: A Look at the AI Inside China&amp;#8217;s Zhurong Mars Rover</title>
-      <link>http://localhost:1313/posts/2025-12-13-beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/</link>
-      <pubDate>Sat, 13 Dec 2025 08:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-12-13-beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/</guid>
-      <description>&lt;!-- wp:image {&#34;lightbox&#34;:{&#34;enabled&#34;:false},&#34;id&#34;:423,&#34;sizeSlug&#34;:&#34;full&#34;,&#34;linkDestination&#34;:&#34;custom&#34;,&#34;align&#34;:&#34;center&#34;} --&gt;
-&lt;figure class=&#34;wp-block-image aligncenter size-full&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Zhurong_%28rover%29&#34;&gt;&lt;img src=&#34;http://localhost:1313/wp-content/uploads/2025/12/Zhurong_rover.png&#34; alt=&#34;&#34; class=&#34;wp-image-423&#34;/&gt;&lt;/a&gt;&lt;/figure&gt;
-&lt;!-- /wp:image --&gt;
-&lt;!-- wp:paragraph --&gt;
-&lt;p&gt;While global attention is often monopolized by the Jet Propulsion Laboratory (JPL) and its Curiosity-class vehicles, Chinese space engineering reached a critical milestone with the &lt;strong&gt;Tianwen-1&lt;/strong&gt; mission. Landing in May 2021 on the vast plains of &lt;strong&gt;Utopia Planitia&lt;/strong&gt;, the Zhurong rover represents more than just a political success; it is a tangible demonstration of advanced autonomous robotics. AI Inside China&#39;s Zhurong&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover&amp;#8217;s Route</title>
-      <link>http://localhost:1313/posts/2025-11-29-a-vs-d-lite-the-pathfinding-algorithms/</link>
-      <pubDate>Sat, 29 Nov 2025 08:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-11-29-a-vs-d-lite-the-pathfinding-algorithms/</guid>
-      <description>&lt;!-- wp:heading {&#34;level&#34;:3} --&gt;
-&lt;h3 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;The 2.7 Billion Paradox&lt;/strong&gt;&lt;/h3&gt;
-&lt;!-- /wp:heading --&gt;
-&lt;!-- wp:paragraph --&gt;
-&lt;p&gt;Imagine designing the most sophisticated vehicle ever built by humanity, a mobile laboratory costing 2.7 billion, destined to search for traces of ancient life on another planet. Now, imagine having to pilot it using a &#34;brain&#34; less powerful than the one on your wrist right now. &lt;/p&gt;
-&lt;!-- /wp:paragraph --&gt;
-&lt;!-- wp:columns {&#34;verticalAlignment&#34;:&#34;center&#34;} --&gt;
-&lt;div class=&#34;wp-block-columns are-vertically-aligned-center&#34;&gt;&lt;!-- wp:column {&#34;verticalAlignment&#34;:&#34;center&#34;} --&gt;
-&lt;div class=&#34;wp-block-column is-vertically-aligned-center&#34;&gt;&lt;!-- wp:image {&#34;lightbox&#34;:{&#34;enabled&#34;:false},&#34;id&#34;:343,&#34;width&#34;:&#34;298px&#34;,&#34;height&#34;:&#34;auto&#34;,&#34;sizeSlug&#34;:&#34;full&#34;,&#34;linkDestination&#34;:&#34;custom&#34;,&#34;align&#34;:&#34;center&#34;} --&gt;
-&lt;figure class=&#34;wp-block-image aligncenter size-full is-resized&#34;&gt;&lt;a href=&#34;https://www.google.com/url?sa=i&amp;amp;url=https%3A%2F%2Fwww.spaceflightnow.com%2Fmars%2Fmsl%2F120810computer%2F&amp;amp;psig=AOvVaw1_h47DWlk9vKJjHn1kBVNy&amp;amp;ust=1764447184027000&amp;amp;source=images&amp;amp;cd=vfe&amp;amp;opi=89978449&amp;amp;ved=0CBUQjRxqFwoTCJCAtI_UlZEDFQAAAAAdAAAAABAL&#34;&gt;&lt;img src=&#34;http://localhost:1313/wp-content/uploads/2025/11/BAE-Systems-RAD750-single-board-computer.jpg&#34; alt=&#34;Pathfinding Algorithms&#34; class=&#34;wp-image-343&#34; style=&#34;width:298px;height:auto&#34;/&gt;&lt;/a&gt;&lt;figcaption class=&#34;wp-element-caption&#34;&gt;BAE Systems RAD750&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;!-- /wp:image --&gt;&lt;/div&gt;
-&lt;!-- /wp:column --&gt;
-&lt;!-- wp:column {&#34;verticalAlignment&#34;:&#34;center&#34;} --&gt;
-&lt;div class=&#34;wp-block-column is-vertically-aligned-center&#34;&gt;&lt;!-- wp:paragraph --&gt;
-&lt;p&gt;This is the reality of aerospace engineering. NASA’s &lt;em&gt;Perseverance&lt;/em&gt; rover operates on a &lt;strong&gt;BAE Systems RAD750&lt;/strong&gt; processor. It is a &lt;em&gt;Rad-Hard&lt;/em&gt; component (resistant to ionizing radiation) based on PowerPC architecture from the late 90s, with a clock speed of just &lt;strong&gt;200 MHz&lt;/strong&gt;. To put it brutally: your smartphone chip is hundreds of times faster.&lt;/p&gt;
-&lt;!-- /wp:paragraph --&gt;&lt;/div&gt;
-&lt;!-- /wp:column --&gt;&lt;/div&gt;</description>
-    </item>
-  </channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Pathfinding Algorithms on Beyond the Joystick</title>
+		<link>//localhost:1313/tags/pathfinding-algorithms/</link>
+		<description>Recent content in Pathfinding Algorithms on Beyond the Joystick</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 13 Dec 2025 08:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="//localhost:1313/tags/pathfinding-algorithms/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Beyond NASA: A Look at the AI Inside China&amp;#8217;s Zhurong Mars Rover</title>
+				<link>//localhost:1313/posts/2025-12-13-beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/</link>
+				<pubDate>Sat, 13 Dec 2025 08:00:00 +0000</pubDate>
+				<guid>//localhost:1313/posts/2025-12-13-beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/</guid>
+				<description>&lt;!-- wp:image {&#34;lightbox&#34;:{&#34;enabled&#34;:false},&#34;id&#34;:423,&#34;sizeSlug&#34;:&#34;full&#34;,&#34;linkDestination&#34;:&#34;custom&#34;,&#34;align&#34;:&#34;center&#34;} --&gt;&#xA;&lt;figure class=&#34;wp-block-image aligncenter size-full&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Zhurong_%28rover%29&#34;&gt;&lt;img src=&#34;//localhost:1313/wp-content/uploads/2025/12/Zhurong_rover.png&#34; alt=&#34;&#34; class=&#34;wp-image-423&#34;/&gt;&lt;/a&gt;&lt;/figure&gt;&#xA;&lt;!-- /wp:image --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;While global attention is often monopolized by the Jet Propulsion Laboratory (JPL) and its Curiosity-class vehicles, Chinese space engineering reached a critical milestone with the &lt;strong&gt;Tianwen-1&lt;/strong&gt; mission. Landing in May 2021 on the vast plains of &lt;strong&gt;Utopia Planitia&lt;/strong&gt;, the Zhurong rover represents more than just a political success; it is a tangible demonstration of advanced autonomous robotics. AI Inside China&#39;s Zhurong&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover&amp;#8217;s Route</title>
+				<link>//localhost:1313/posts/2025-11-29-a-vs-d-lite-the-pathfinding-algorithms/</link>
+				<pubDate>Sat, 29 Nov 2025 08:00:00 +0000</pubDate>
+				<guid>//localhost:1313/posts/2025-11-29-a-vs-d-lite-the-pathfinding-algorithms/</guid>
+				<description>&lt;!-- wp:heading {&#34;level&#34;:3} --&gt;&#xA;&lt;h3 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;The 2.7 Billion Paradox&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;!-- /wp:heading --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Imagine designing the most sophisticated vehicle ever built by humanity, a mobile laboratory costing 2.7 billion, destined to search for traces of ancient life on another planet. Now, imagine having to pilot it using a &#34;brain&#34; less powerful than the one on your wrist right now. &lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:columns {&#34;verticalAlignment&#34;:&#34;center&#34;} --&gt;&#xA;&lt;div class=&#34;wp-block-columns are-vertically-aligned-center&#34;&gt;&lt;!-- wp:column {&#34;verticalAlignment&#34;:&#34;center&#34;} --&gt;&#xA;&lt;div class=&#34;wp-block-column is-vertically-aligned-center&#34;&gt;&lt;!-- wp:image {&#34;lightbox&#34;:{&#34;enabled&#34;:false},&#34;id&#34;:343,&#34;width&#34;:&#34;298px&#34;,&#34;height&#34;:&#34;auto&#34;,&#34;sizeSlug&#34;:&#34;full&#34;,&#34;linkDestination&#34;:&#34;custom&#34;,&#34;align&#34;:&#34;center&#34;} --&gt;&#xA;&lt;figure class=&#34;wp-block-image aligncenter size-full is-resized&#34;&gt;&lt;a href=&#34;https://www.google.com/url?sa=i&amp;amp;url=https%3A%2F%2Fwww.spaceflightnow.com%2Fmars%2Fmsl%2F120810computer%2F&amp;amp;psig=AOvVaw1_h47DWlk9vKJjHn1kBVNy&amp;amp;ust=1764447184027000&amp;amp;source=images&amp;amp;cd=vfe&amp;amp;opi=89978449&amp;amp;ved=0CBUQjRxqFwoTCJCAtI_UlZEDFQAAAAAdAAAAABAL&#34;&gt;&lt;img src=&#34;//localhost:1313/wp-content/uploads/2025/11/BAE-Systems-RAD750-single-board-computer.jpg&#34; alt=&#34;Pathfinding Algorithms&#34; class=&#34;wp-image-343&#34; style=&#34;width:298px;height:auto&#34;/&gt;&lt;/a&gt;&lt;figcaption class=&#34;wp-element-caption&#34;&gt;BAE Systems RAD750&lt;/figcaption&gt;&lt;/figure&gt;&#xA;&lt;!-- /wp:image --&gt;&lt;/div&gt;&#xA;&lt;!-- /wp:column --&gt;&#xA;&lt;!-- wp:column {&#34;verticalAlignment&#34;:&#34;center&#34;} --&gt;&#xA;&lt;div class=&#34;wp-block-column is-vertically-aligned-center&#34;&gt;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;This is the reality of aerospace engineering. NASA’s &lt;em&gt;Perseverance&lt;/em&gt; rover operates on a &lt;strong&gt;BAE Systems RAD750&lt;/strong&gt; processor. It is a &lt;em&gt;Rad-Hard&lt;/em&gt; component (resistant to ionizing radiation) based on PowerPC architecture from the late 90s, with a clock speed of just &lt;strong&gt;200 MHz&lt;/strong&gt;. To put it brutally: your smartphone chip is hundreds of times faster.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&lt;/div&gt;&#xA;&lt;!-- /wp:column --&gt;&lt;/div&gt;</description>
+			</item>
+	</channel>
 </rss>

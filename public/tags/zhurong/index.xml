@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Zhurong on My New Hugo Project</title>
-    <link>http://localhost:1313/tags/zhurong/</link>
-    <description>Recent content in Zhurong on My New Hugo Project</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 13 Dec 2025 08:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/zhurong/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Beyond NASA: A Look at the AI Inside China&amp;#8217;s Zhurong Mars Rover</title>
-      <link>http://localhost:1313/posts/2025-12-13-beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/</link>
-      <pubDate>Sat, 13 Dec 2025 08:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-12-13-beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/</guid>
-      <description>&lt;!-- wp:image {&#34;lightbox&#34;:{&#34;enabled&#34;:false},&#34;id&#34;:423,&#34;sizeSlug&#34;:&#34;full&#34;,&#34;linkDestination&#34;:&#34;custom&#34;,&#34;align&#34;:&#34;center&#34;} --&gt;
-&lt;figure class=&#34;wp-block-image aligncenter size-full&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Zhurong_%28rover%29&#34;&gt;&lt;img src=&#34;http://localhost:1313/wp-content/uploads/2025/12/Zhurong_rover.png&#34; alt=&#34;&#34; class=&#34;wp-image-423&#34;/&gt;&lt;/a&gt;&lt;/figure&gt;
-&lt;!-- /wp:image --&gt;
-&lt;!-- wp:paragraph --&gt;
-&lt;p&gt;While global attention is often monopolized by the Jet Propulsion Laboratory (JPL) and its Curiosity-class vehicles, Chinese space engineering reached a critical milestone with the &lt;strong&gt;Tianwen-1&lt;/strong&gt; mission. Landing in May 2021 on the vast plains of &lt;strong&gt;Utopia Planitia&lt;/strong&gt;, the Zhurong rover represents more than just a political success; it is a tangible demonstration of advanced autonomous robotics. AI Inside China&#39;s Zhurong&lt;/p&gt;</description>
-    </item>
-  </channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Zhurong on Beyond the Joystick</title>
+		<link>//localhost:1313/tags/zhurong/</link>
+		<description>Recent content in Zhurong on Beyond the Joystick</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 13 Dec 2025 08:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="//localhost:1313/tags/zhurong/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Beyond NASA: A Look at the AI Inside China&amp;#8217;s Zhurong Mars Rover</title>
+				<link>//localhost:1313/posts/2025-12-13-beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/</link>
+				<pubDate>Sat, 13 Dec 2025 08:00:00 +0000</pubDate>
+				<guid>//localhost:1313/posts/2025-12-13-beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/</guid>
+				<description>&lt;!-- wp:image {&#34;lightbox&#34;:{&#34;enabled&#34;:false},&#34;id&#34;:423,&#34;sizeSlug&#34;:&#34;full&#34;,&#34;linkDestination&#34;:&#34;custom&#34;,&#34;align&#34;:&#34;center&#34;} --&gt;&#xA;&lt;figure class=&#34;wp-block-image aligncenter size-full&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Zhurong_%28rover%29&#34;&gt;&lt;img src=&#34;//localhost:1313/wp-content/uploads/2025/12/Zhurong_rover.png&#34; alt=&#34;&#34; class=&#34;wp-image-423&#34;/&gt;&lt;/a&gt;&lt;/figure&gt;&#xA;&lt;!-- /wp:image --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;While global attention is often monopolized by the Jet Propulsion Laboratory (JPL) and its Curiosity-class vehicles, Chinese space engineering reached a critical milestone with the &lt;strong&gt;Tianwen-1&lt;/strong&gt; mission. Landing in May 2021 on the vast plains of &lt;strong&gt;Utopia Planitia&lt;/strong&gt;, the Zhurong rover represents more than just a political success; it is a tangible demonstration of advanced autonomous robotics. AI Inside China&#39;s Zhurong&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

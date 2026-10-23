@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>LiDAR Technology on My New Hugo Project</title>
-    <link>http://localhost:1313/tags/lidar-technology/</link>
-    <description>Recent content in LiDAR Technology on My New Hugo Project</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 17 Jan 2026 13:29:09 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/lidar-technology/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Automotive vs. Space LiDAR: Why Your Car&amp;#8217;s Sensor Can&amp;#8217;t Survive Mars</title>
-      <link>http://localhost:1313/posts/2026-01-17-automotive-vs-space-lidar/</link>
-      <pubDate>Sat, 17 Jan 2026 13:29:09 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2026-01-17-automotive-vs-space-lidar/</guid>
-      <description>&lt;!-- wp:paragraph --&gt;
-&lt;p&gt;From the busy streets of San Francisco to the test tracks of Europe, the buzz around autonomous driving is deafening. Companies like Luminar pushed the boundaries of this revolution, equipping vehicles with sleek, high-tech sensors like the &#34;Iris&#34; that promise to map our highways with millimeter precision, spotting hazards through fog and rain. Seeing this incredible technology in action, it begs a logical question: if we have such advanced, relatively affordable &#34;eyes&#34; right here on Earth, why doesn&#39;t NASA just strap one of these sensors onto the next Mars Rover and call it a day? It would save millions of dollars and years of development. The answer reveals one of the harshest truths of space exploration: the &lt;strong&gt;tyranny of latency&lt;/strong&gt;. As we explored in our analysis of the &lt;strong&gt;&lt;a href=&#34;https://beyondthejoystick.space/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/&#34; title=&#34;The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers&#34;&gt;[20-Minute Lag]&lt;/a&gt;&lt;/strong&gt;, we cannot joystick a rover in real-time; the vehicle must rely on its own senses to survive. While the basic physics of light detection remains the same, the engineering reality creates a massive, unforgiving divide in the battle of &lt;strong&gt;Automotive vs. Space LiDAR&lt;/strong&gt;. It turns out that a sensor designed to survive rush hour traffic is woefully unprepared for the radioactive freeze of the Red Planet.&lt;/p&gt;</description>
-    </item>
-  </channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>LiDAR Technology on Beyond the Joystick</title>
+		<link>//localhost:1313/tags/lidar-technology/</link>
+		<description>Recent content in LiDAR Technology on Beyond the Joystick</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 17 Jan 2026 13:29:09 +0000</lastBuildDate>
+		
+			<atom:link href="//localhost:1313/tags/lidar-technology/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Automotive vs. Space LiDAR: Why Your Car&amp;#8217;s Sensor Can&amp;#8217;t Survive Mars</title>
+				<link>//localhost:1313/posts/2026-01-17-automotive-vs-space-lidar/</link>
+				<pubDate>Sat, 17 Jan 2026 13:29:09 +0000</pubDate>
+				<guid>//localhost:1313/posts/2026-01-17-automotive-vs-space-lidar/</guid>
+				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;From the busy streets of San Francisco to the test tracks of Europe, the buzz around autonomous driving is deafening. Companies like Luminar pushed the boundaries of this revolution, equipping vehicles with sleek, high-tech sensors like the &#34;Iris&#34; that promise to map our highways with millimeter precision, spotting hazards through fog and rain. Seeing this incredible technology in action, it begs a logical question: if we have such advanced, relatively affordable &#34;eyes&#34; right here on Earth, why doesn&#39;t NASA just strap one of these sensors onto the next Mars Rover and call it a day? It would save millions of dollars and years of development. The answer reveals one of the harshest truths of space exploration: the &lt;strong&gt;tyranny of latency&lt;/strong&gt;. As we explored in our analysis of the &lt;strong&gt;&lt;a href=&#34;https://beyondthejoystick.space/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/&#34; title=&#34;The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers&#34;&gt;[20-Minute Lag]&lt;/a&gt;&lt;/strong&gt;, we cannot joystick a rover in real-time; the vehicle must rely on its own senses to survive. While the basic physics of light detection remains the same, the engineering reality creates a massive, unforgiving divide in the battle of &lt;strong&gt;Automotive vs. Space LiDAR&lt;/strong&gt;. It turns out that a sensor designed to survive rush hour traffic is woefully unprepared for the radioactive freeze of the Red Planet.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

@@ -1,0 +1,16 @@
+{{/* Expects a Page as context. */}}
+{{ $summary := .Params.summary | default .Params.excerpt | default .Summary }}
+<article class="card">
+  {{ with .Params.image }}
+  <div class="card__media"><img src="{{ . }}" alt="" loading="lazy" decoding="async"></div>
+  {{ end }}
+  <div class="card__body">
+    <p class="card__meta">
+      {{ with .Params.categories }}{{ $c := index . 0 }}{{ if ne $c "Uncategorized" }}<span class="card__category">{{ $c | htmlUnescape }}</span>{{ end }}{{ end }}
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    </p>
+    <h3 class="card__title"><a href="{{ .RelPermalink }}">{{ .Title | htmlUnescape }}</a></h3>
+    <p class="card__summary">{{ $summary | plainify | htmlUnescape }}</p>
+    <span class="card__cta" aria-hidden="true">Read Article</span>
+  </div>
+</article>

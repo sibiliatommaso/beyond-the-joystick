@@ -1,0 +1,17 @@
+<footer class="site-footer">
+  <div class="container footer__inner">
+    <div class="footer__about">
+      <p class="footer__brand">Beyond the Joystick</p>
+      <p>Technical articles and hands-on projects on space robotics, autonomous navigation, and planetary exploration.</p>
+    </div>
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="/posts/">Articles</a></li>
+        <li><a href="/#labs">Labs &amp; Projects</a></li>
+        <li><a href="/about/">About</a></li>
+        {{ with site.Params.kofiURL }}<li><a href="{{ . }}" rel="noopener">Support the Project</a></li>{{ end }}
+      </ul>
+    </nav>
+  </div>
+  <p class="container footer__legal">&copy; {{ now.Year }} Beyond the Joystick. All rights reserved.</p>
+</footer>
