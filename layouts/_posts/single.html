@@ -1,0 +1,85 @@
+{{ define "main" }}
+
+<article class="post-page">
+
+  <!-- ARTICLE HEADER -->
+  <header class="post-header">
+
+    <a class="post-back-link" href="{{ "/posts/" | relURL }}">
+      ← All Articles
+    </a>
+
+    {{ with .Params.categories }}
+      <div class="post-categories">
+        {{ range . }}
+          {{ $categorySlug := . | urlize }}
+          <a href="{{ printf "/categories/%s/" $categorySlug | relURL }}">
+            {{ . }}
+          </a>
+        {{ end }}
+      </div>
+    {{ end }}
+
+    <h1>{{ .Title }}</h1>
+
+    {{ with .Params.excerpt }}
+      <p class="post-excerpt">
+        {{ . | plainify | htmlUnescape }}
+      </p>
+    {{ else }}
+      {{ with .Description }}
+        <p class="post-excerpt">{{ . }}</p>
+      {{ end }}
+    {{ end }}
+
+    <div class="post-meta">
+
+      <time datetime="{{ .Date.Format "2006-01-02" }}">
+        {{ .Date.Format "January 2, 2006" }}
+      </time>
+
+      <span aria-hidden="true">·</span>
+
+      <span>{{ .ReadingTime }} min read</span>
+
+    </div>
+
+  </header>
+
+
+  <!-- OPTIONAL FEATURED IMAGE -->
+  {{ with .Params.image }}
+    <figure class="post-featured-image">
+      <img src="{{ . | relURL }}"
+           alt="{{ $.Title }}"
+           fetchpriority="high">
+    </figure>
+  {{ end }}
+
+
+  <!-- ARTICLE BODY -->
+  <div class="post-layout">
+
+    <div class="post-content">
+      {{ .Content }}
+    </div>
+
+  </div>
+
+
+  <!-- ARTICLE FOOTER -->
+  <footer class="post-footer">
+
+    <div class="post-footer__divider"></div>
+
+    <p>Enjoyed this article?</p>
+
+    <a class="post-back-link" href="{{ "/posts/" | relURL }}">
+      Explore more articles →
+    </a>
+
+  </footer>
+
+</article>
+
+{{ end }}

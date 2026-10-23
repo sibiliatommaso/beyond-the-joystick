@@ -1,0 +1,225 @@
+{{ define "main" }}
+
+{{ $posts := where site.RegularPages "Section" "posts" }}
+{{ $posts = sort $posts "Date" "desc" }}
+
+{{ $latest := first 6 $posts }}
+
+<div class="articles-page">
+
+  <!-- INTRO -->
+  <header class="articles-intro">
+    <p class="articles-eyebrow">BEYOND THE JOYSTICK</p>
+    <h1>Articles</h1>
+    <p>
+      Explore the ideas, technologies, missions, and projects
+      shaping robotics and autonomous systems.
+    </p>
+  </header>
+
+
+  <!-- LATEST ARTICLES -->
+  <section class="articles-section"
+           aria-labelledby="latest-heading">
+
+    <div class="articles-section__heading">
+      <div>
+        <p class="articles-eyebrow">THE LATEST</p>
+        <h2 id="latest-heading">Latest Articles</h2>
+      </div>
+
+      <span class="articles-count">
+        {{ len $posts }} articles
+      </span>
+    </div>
+
+    <div class="articles-grid">
+
+      {{ range $latest }}
+
+        {{ $excerpt := .Params.excerpt
+            | default .Description
+            | default .Summary }}
+
+        <article class="article-card">
+
+          {{ with .Params.image }}
+            <a class="article-card__image"
+               href="{{ $.RelPermalink }}"
+               tabindex="-1"
+               aria-hidden="true">
+              <img src="{{ . | relURL }}" alt="" loading="lazy">
+            </a>
+          {{ end }}
+
+          <div class="article-card__body">
+
+            {{ with .Params.categories }}
+              {{ range first 1 . }}
+                {{ $categorySlug := . | urlize }}
+                <a class="article-card__category"
+                   href="{{ printf "/categories/%s/" $categorySlug | relURL }}">
+                  {{ . }}
+                </a>
+              {{ end }}
+            {{ end }}
+
+            <p class="article-card__date">
+              <time datetime="{{ .Date.Format "2006-01-02" }}">
+                {{ .Date.Format "January 2, 2006" }}
+              </time>
+              <span aria-hidden="true">·</span>
+              {{ .ReadingTime }} min read
+            </p>
+
+            <h3>
+              <a href="{{ .RelPermalink }}">
+                {{ .Title }}
+              </a>
+            </h3>
+
+            <p class="article-card__excerpt">
+              {{ $excerpt | plainify | htmlUnescape }}
+            </p>
+
+            <a class="article-card__link"
+               href="{{ .RelPermalink }}">
+              Read Article <span aria-hidden="true">→</span>
+            </a>
+
+          </div>
+        </article>
+
+      {{ else }}
+
+        <p>No articles have been published yet.</p>
+
+      {{ end }}
+
+    </div>
+  </section>
+
+
+  <!-- CATEGORIES -->
+  <section class="articles-section"
+           aria-labelledby="categories-heading">
+
+    <div class="articles-section__heading">
+      <div>
+        <p class="articles-eyebrow">EXPLORE THE TOPICS</p>
+        <h2 id="categories-heading">Explore by Category</h2>
+      </div>
+    </div>
+
+    <div class="categories-grid">
+
+      {{ range $term, $pages := site.Taxonomies.categories }}
+
+        {{ $slug := $term | urlize }}
+        {{ $termPage := site.GetPage (printf "/categories/%s" $slug) }}
+        {{ $label := $term | humanize | title }}
+
+        {{ with $termPage }}
+          {{ $label = .Title }}
+        {{ end }}
+
+        <a class="category-card"
+           href="{{ printf "/categories/%s/" $slug | relURL }}">
+
+          <span class="category-card__count">
+            {{ len $pages }}
+            {{ if eq (len $pages) 1 }}article{{ else }}articles{{ end }}
+          </span>
+
+          <h3>{{ $label }}</h3>
+
+          <p>
+            {{ with $termPage }}
+              {{ with .Description }}
+                {{ . }}
+              {{ else }}
+                Explore articles, ideas, and practical insights about {{ $label }}.
+              {{ end }}
+            {{ else }}
+              Explore articles, ideas, and practical insights about {{ $label }}.
+            {{ end }}
+          </p>
+
+          <span class="category-card__link">
+            Explore category <span aria-hidden="true">→</span>
+          </span>
+
+        </a>
+
+      {{ end }}
+
+    </div>
+  </section>
+
+
+  <!-- COMPLETE ARCHIVE -->
+  <section class="articles-section articles-archive"
+           aria-labelledby="archive-heading">
+
+    <div class="articles-section__heading">
+      <div>
+        <p class="articles-eyebrow">THE FULL COLLECTION</p>
+        <h2 id="archive-heading">Browse All Articles</h2>
+      </div>
+    </div>
+
+    <div class="articles-list">
+
+      {{ range $posts }}
+
+        {{ $excerpt := .Params.excerpt
+            | default .Description
+            | default .Summary }}
+
+        <article class="articles-list__item">
+
+          <div class="articles-list__content">
+
+            {{ with .Params.categories }}
+              {{ range first 1 . }}
+                {{ $categorySlug := . | urlize }}
+                <a class="article-card__category"
+                   href="{{ printf "/categories/%s/" $categorySlug | relURL }}">
+                  {{ . }}
+                </a>
+              {{ end }}
+            {{ end }}
+
+            <h3>
+              <a href="{{ .RelPermalink }}">
+                {{ .Title }}
+              </a>
+            </h3>
+
+            <p>{{ $excerpt | plainify | htmlUnescape }}</p>
+
+            <a class="article-card__link"
+               href="{{ .RelPermalink }}">
+              Read Article <span aria-hidden="true">→</span>
+            </a>
+
+          </div>
+
+          <time datetime="{{ .Date.Format "2006-01-02" }}">
+            {{ .Date.Format "Jan 2, 2006" }}
+          </time>
+
+        </article>
+
+      {{ else }}
+
+        <p>No articles have been published yet.</p>
+
+      {{ end }}
+
+    </div>
+  </section>
+
+</div>
+
+{{ end }}
