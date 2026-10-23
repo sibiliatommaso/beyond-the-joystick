@@ -18,40 +18,115 @@
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header class="site-header">
+    ```html
+<header class="site-header">
   <div class="container header__inner">
-    <a class="brand" href="/">Beyond the Joystick</a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
+
+    <a class="brand" href="/" aria-label="Beyond the Joystick — Home">
+      <img
+        class="brand__logo"
+        src="/images/logo.png"
+        alt=""
+        width="44"
+        height="44"
+      >
+      <span class="brand__text">
+        <span class="brand__name">Beyond the Joystick</span>
+        <span class="brand__tagline">Games. Ideas. Beyond the Screen.</span>
+      </span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      aria-label="Open navigation menu"
+      hidden
+    >
+      <span class="menu-toggle__icon" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      <span class="menu-toggle__label">Menu</span>
+    </button>
+
     <nav id="site-nav" class="site-nav" aria-label="Main navigation">
       <ul>
         
-        <li><a href="/">Home</a></li>
+        <li>
+          <a
+            href="/"
+            
+          >
+            Home
+          </a>
+        </li>
         
-        <li><a href="/posts/">Articles</a></li>
+        <li>
+          <a
+            href="/posts/"
+            
+          >
+            Articles
+          </a>
+        </li>
         
-        <li><a href="/#labs">Labs &amp; Projects</a></li>
+        <li>
+          <a
+            href="/#labs"
+            
+          >
+            Labs &amp; Projects
+          </a>
+        </li>
         
-        <li><a href="/about/">About</a></li>
+        <li>
+          <a
+            href="/about/"
+            
+          >
+            About
+          </a>
+        </li>
         
       </ul>
+
       
     </nav>
+
   </div>
+
   <script>
     (function () {
-      var b = document.querySelector('.menu-toggle'), n = document.getElementById('site-nav');
-      if (!b || !n) return;
+      var button = document.querySelector('.menu-toggle');
+      var nav = document.getElementById('site-nav');
+
+      if (!button || !nav) return;
+
       document.documentElement.classList.add('js');
-      b.hidden = false;
-      b.addEventListener('click', function () {
-        var open = b.getAttribute('aria-expanded') === 'true';
-        b.setAttribute('aria-expanded', String(!open));
-        b.textContent = open ? 'Menu' : 'Close menu';
-        n.classList.toggle('is-open', !open);
+      button.hidden = false;
+
+      button.addEventListener('click', function () {
+        var isOpen = button.getAttribute('aria-expanded') === 'true';
+        var willOpen = !isOpen;
+
+        button.setAttribute('aria-expanded', String(willOpen));
+        button.setAttribute(
+          'aria-label',
+          willOpen ? 'Close navigation menu' : 'Open navigation menu'
+        );
+
+        button.querySelector('.menu-toggle__label').textContent =
+          willOpen ? 'Close' : 'Menu';
+
+        nav.classList.toggle('is-open', willOpen);
       });
     })();
   </script>
 </header>
+```
 
 
     <main id="main-content">
