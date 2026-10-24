@@ -14,7 +14,7 @@
 		
 			<atom:link href="//localhost:1313/tags/a-algorithm/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover&amp;#8217;s Route</title>
+				<title>A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover’s Route</title>
 				<link>//localhost:1313/posts/2025-11-29-a-vs-d-lite-the-pathfinding-algorithms/</link>
 				<pubDate>Sat, 29 Nov 2025 08:00:00 +0000</pubDate>
 				<guid>//localhost:1313/posts/2025-11-29-a-vs-d-lite-the-pathfinding-algorithms/</guid>

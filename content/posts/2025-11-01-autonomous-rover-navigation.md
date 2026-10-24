@@ -1,24 +1,24 @@
 ---
 id: 155
-title: 'The Ultimate Guide to Autonomous Rover Navigation'
+title: The Ultimate Guide to Autonomous Rover Navigation
 date: '2025-11-01T08:10:00+00:00'
-author: 'Beyond The Joystick'
-excerpt: "Why can't we joystick a Mars rover? A 26-minute signal lag makes it impossible. This guide explores the necessity of autonomous rover navigation, breaking down the core tech, SLAM, Pathfinding, and Hazard Avoidance. We trace its evolution from Mars to the unique challenges of the Moon, explaining how robots think for themselves."
+author: Beyond The Joystick
+excerpt: Why can't we joystick a Mars rover? A 26-minute signal lag makes it impossible. This guide explores the necessity of autonomous rover navigation, breaking down the core tech, SLAM, Pathfinding, and Hazard Avoidance. We trace its evolution from Mars to the unique challenges of the Moon, explaining how robots think for themselves.
 layout: post
-guid: 'https://beyondthejoystick.space/?p=155'
+guid: https://beyondthejoystick.space/?p=155
 permalink: /autonomous-rover-navigation/
 image: /wp-content/uploads/2025/10/perseverance_rover_on_mars.png
 categories:
-    - 'Algorithms &amp; AI'
-    - 'Core Concepts'
-    - 'Missions &amp; Case Studies'
+- Algorithms & AI
+- Core Concepts
+- Missions & Case Studies
 tags:
-    - athfinding
-    - 'Autonomous Navigation'
-    - 'Mars Rover'
-    - Robotics
-    - SLAM
-    - 'Space Exploration'
+- athfinding
+- Autonomous Navigation
+- Mars Rover
+- Robotics
+- SLAM
+- Space Exploration
 format: false
 ---
 

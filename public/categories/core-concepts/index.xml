@@ -21,7 +21,7 @@
 				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://beyondthejoystick.space/autonomous-rover-navigation/&#34; title=&#34;The Ultimate Guide to Autonomous Rover Navigation&#34;&gt;Navigating celestial bodies autonomously&lt;/a&gt; presents a unique hurdle that we don&#39;t face on Earth: the complete lack of  Global Positioning System (GPS). In this context, a rover&#39;s ability to understand its own location becomes a complex mathematical problem. In advanced robotics, the standard answer to this problem is SLAM (Simultaneous Localization and Mapping). In this article, we’ll break down the core principles of SLAM, examine how it’s critical for current Mars missions, and look at the immense computational strain it puts on space-grade hardware.&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>The 20-Minute Lag: Why We Can&amp;#8217;t Just &amp;#8216;Joystick&amp;#8217; Mars Rovers</title>
+				<title>The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers</title>
 				<link>//localhost:1313/posts/2025-11-01-the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/</link>
 				<pubDate>Sat, 01 Nov 2025 08:10:00 +0000</pubDate>
 				<guid>//localhost:1313/posts/2025-11-01-the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/</guid>

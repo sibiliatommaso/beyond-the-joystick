@@ -2,27 +2,27 @@
 id: 605
 title: 'The New Lunar Gold Rush: How Commercial Rovers are Scaling Autonomous Mobility'
 date: '2026-04-18T07:36:13+00:00'
-author: 'Beyond The Joystick'
-excerpt: 'The lunar exploration paradigm is shifting from multi-billion-dollar, Rad-Hard institutional rovers to agile, modular platforms built with COTS components. To compensate for strict SWaP constraints and reduced sensor redundancy, commercial vehicles like SAS’s LUVMI-X, Astrobotic’s CubeRover, and Australia’s Roo-ver rely on aggressively optimized software. By leveraging Light-Weight SLAM, Visual Odometry, and calculated algorithmic risk for high-tempo Hazard Avoidance, these software-defined rovers act as the automated logistics infrastructure for the emerging cis-lunar economy. This transition proves that scalable autonomous navigation is no longer a scientific luxury, but an indispensable engineering commodity for sustained In-Situ Resource Utilization (ISRU).'
+author: Beyond The Joystick
+excerpt: The lunar exploration paradigm is shifting from multi-billion-dollar, Rad-Hard institutional rovers to agile, modular platforms built with COTS components. To compensate for strict SWaP constraints and reduced sensor redundancy, commercial vehicles like SAS’s LUVMI-X, Astrobotic’s CubeRover, and Australia’s Roo-ver rely on aggressively optimized software. By leveraging Light-Weight SLAM, Visual Odometry, and calculated algorithmic risk for high-tempo Hazard Avoidance, these software-defined rovers act as the automated logistics infrastructure for the emerging cis-lunar economy. This transition proves that scalable autonomous navigation is no longer a scientific luxury, but an indispensable engineering commodity for sustained In-Situ Resource Utilization (ISRU).
 layout: post
-guid: 'https://beyondthejoystick.space/?p=605'
+guid: https://beyondthejoystick.space/?p=605
 permalink: /the-new-lunar-gold-rush-how-commercial-lunar-rovers-are-scaling-autonomous-mobility/
 image: /wp-content/uploads/2026/04/moon-base-nasa.webp
 categories:
-    - 'Advanced Topics &amp; Future'
-    - 'Missions &amp; Case Studies'
-    - 'Sensors &amp; Hardware'
+- Advanced Topics & Future
+- Missions & Case Studies
+- Sensors & Hardware
 tags:
-    - 'Astrobotic CubeRover'
-    - 'Autonomous Navigation AI'
-    - 'Commercial Lunar Rovers'
-    - 'COTS Space Hardware'
-    - 'Light-Weight SLAM'
-    - 'Lunar ISRU'
-    - LUVMI-X
-    - Roo-ver
-    - 'Space Applications Services'
-    - 'Visual Odometry'
+- Astrobotic CubeRover
+- Autonomous Navigation AI
+- Commercial Lunar Rovers
+- COTS Space Hardware
+- Light-Weight SLAM
+- Lunar ISRU
+- LUVMI-X
+- Roo-ver
+- Space Applications Services
+- Visual Odometry
 format: false
 ---
 

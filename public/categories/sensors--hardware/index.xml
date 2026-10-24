@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Sensors &amp; Hardware on Beyond the Joystick</title>
+		<link>//localhost:1313/categories/sensors--hardware/</link>
+		<description>Recent content in Sensors &amp; Hardware on Beyond the Joystick</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 20 Sep 2026 08:19:05 +0000</lastBuildDate>
+		
+			<atom:link href="//localhost:1313/categories/sensors--hardware/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Rover Slip Estimation on Lunar Sand: Lab Test</title>
+				<link>//localhost:1313/posts/2026-09-20-rover-slip-estimation-on-lunar-sand-lab-test/</link>
+				<pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
+				<guid>//localhost:1313/posts/2026-09-20-rover-slip-estimation-on-lunar-sand-lab-test/</guid>
+				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Planetary exploration rovers serve as essential tools for advancing scientific investigations, but their mobility is significantly challenged by loose and deformable surfaces like lunar dust and Martian regolith&lt;sup&gt;&lt;/sup&gt;. These extraterrestrial terrains exhibit low cohesion and bearing capacity, leading to excessive wheel slip where the wheels rotate without generating sufficient forward motion&lt;sup&gt;&lt;/sup&gt;.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;As we dive deeper into &lt;a href=&#34;https://beyondthejoystick.space/autonomous-rover-navigation/&#34;&gt;autonomous space robotics&lt;/a&gt; here on &lt;em&gt;Beyond the Joystick&lt;/em&gt;, I am realizing that mastering rover slip estimation is just as critical as orbital mechanics. If a rover cannot detect slip, standard wheel odometry accrues massive errors, causing deviations from planned trajectories and increasing the risk of entrapment. To understand how engineers solve this, we are going to explore how &lt;a href=&#34;https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=11170582&#34;&gt;academic researchers utilize a single-wheel testbed to analyze wheel-terrain interactions before the software ever leaves Earth&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The New Lunar Gold Rush: How Commercial Rovers are Scaling Autonomous Mobility</title>
+				<link>//localhost:1313/posts/2026-04-18-the-new-lunar-gold-rush-how-commercial-lunar-rovers-are-scaling-autonomous-mobility/</link>
+				<pubDate>Sat, 18 Apr 2026 07:36:13 +0000</pubDate>
+				<guid>//localhost:1313/posts/2026-04-18-the-new-lunar-gold-rush-how-commercial-lunar-rovers-are-scaling-autonomous-mobility/</guid>
+				<description>&lt;!-- wp:image {&#34;lightbox&#34;:{&#34;enabled&#34;:false},&#34;id&#34;:606,&#34;sizeSlug&#34;:&#34;full&#34;,&#34;linkDestination&#34;:&#34;custom&#34;} --&gt;&#xA;&lt;figure class=&#34;wp-block-image size-full&#34;&gt;&lt;a href=&#34;https://www.nasa.gov/news-release/nasa-unveils-initiatives-to-achieve-americas-national-space-policy/&#34;&gt;&lt;img src=&#34;//localhost:1313/wp-content/uploads/2026/04/moon-base-nasa.webp&#34; alt=&#34;Commercial Lunar Rovers&#34; class=&#34;wp-image-606&#34;/&gt;&lt;/a&gt;&lt;/figure&gt;&#xA;&lt;!-- /wp:image --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;The era of bespoke, billion-dollar planetary exploration is undergoing a radical paradigm shift. As the cis-lunar economy accelerates, the demand for scalable infrastructure has catalyzed the rapid development of &lt;strong&gt;commercial lunar rovers&lt;/strong&gt;. Unlike legacy flagship missions—such as NASA&#39;s Perseverance, which relies on custom, heavily shielded &lt;strong&gt;radiation-hardened (Rad-Hard)&lt;/strong&gt; avionics—this new wave prioritizes cost-efficiency and rapid deployment.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Historically, the prohibitive cost of autonomous space navigation stemmed from custom-built hardware and extensively redundant sensor arrays. Legacy systems depend on expensive, legacy processors like the &lt;strong&gt;BAE RAD750&lt;/strong&gt; (operating at a highly constrained 200 MHz) and demand massive &lt;strong&gt;SWaP (Size, Weight, and Power)&lt;/strong&gt; overheads to guarantee absolute mission survival. However, scaling lunar operations requires a decisive departure from these monolithic architectures.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>What Self-Driving Cars Can (and Can’t) Teach Space Rovers</title>
+				<link>//localhost:1313/posts/2026-03-14-self-driving-cars-and-space-rovers/</link>
+				<pubDate>Sat, 14 Mar 2026 08:00:00 +0000</pubDate>
+				<guid>//localhost:1313/posts/2026-03-14-self-driving-cars-and-space-rovers/</guid>
+				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;The evolution of vehicular automation and space robotics represents one of the most fascinating and complex technological convergences in contemporary engineering. Although terrestrial autonomous vehicles (AVs) and planetary rovers operate in diametrically opposed environmental domains, their algorithmic foundations, sensory perception paradigms, and decision-making architectures share deep intersections. On Earth, autonomous driving aims to process massive amounts of data in real time at high speeds. These vehicles navigate structured or semi-structured environments characterized by highly stochastic traffic, dynamic obstacles, and stringent passenger safety requirements.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Automotive vs. Space LiDAR: Why Your Car’s Sensor Can’t Survive Mars</title>
+				<link>//localhost:1313/posts/2026-01-17-automotive-vs-space-lidar/</link>
+				<pubDate>Sat, 17 Jan 2026 13:29:09 +0000</pubDate>
+				<guid>//localhost:1313/posts/2026-01-17-automotive-vs-space-lidar/</guid>
+				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;From the busy streets of San Francisco to the test tracks of Europe, the buzz around autonomous driving is deafening. Companies like Luminar pushed the boundaries of this revolution, equipping vehicles with sleek, high-tech sensors like the &#34;Iris&#34; that promise to map our highways with millimeter precision, spotting hazards through fog and rain. Seeing this incredible technology in action, it begs a logical question: if we have such advanced, relatively affordable &#34;eyes&#34; right here on Earth, why doesn&#39;t NASA just strap one of these sensors onto the next Mars Rover and call it a day? It would save millions of dollars and years of development. The answer reveals one of the harshest truths of space exploration: the &lt;strong&gt;tyranny of latency&lt;/strong&gt;. As we explored in our analysis of the &lt;strong&gt;&lt;a href=&#34;https://beyondthejoystick.space/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/&#34; title=&#34;The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers&#34;&gt;[20-Minute Lag]&lt;/a&gt;&lt;/strong&gt;, we cannot joystick a rover in real-time; the vehicle must rely on its own senses to survive. While the basic physics of light detection remains the same, the engineering reality creates a massive, unforgiving divide in the battle of &lt;strong&gt;Automotive vs. Space LiDAR&lt;/strong&gt;. It turns out that a sensor designed to survive rush hour traffic is woefully unprepared for the radioactive freeze of the Red Planet.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>A Deep Dive into Visual Odometry: How Rovers Know ‘How Far’ They’ve Gone</title>
+				<link>//localhost:1313/posts/2025-12-06-how-rovers-know-how-far-theyve-gone/</link>
+				<pubDate>Sat, 06 Dec 2025 08:00:00 +0000</pubDate>
+				<guid>//localhost:1313/posts/2025-12-06-how-rovers-know-how-far-theyve-gone/</guid>
+				<description>&lt;!-- wp:heading {&#34;level&#34;:3} --&gt;&#xA;&lt;h3 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;Abstract: The Odometer Fallacy on Mars&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;!-- /wp:heading --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;On Earth, measuring distance is a trivial task. A vehicle’s odometer counts wheel rotations, multiplies by the circumference, and derives the distance traveled with high precision. On Mars, however, this deterministic logic collapses.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;In the chaotic, non-geometric terrain of the Red Planet, &lt;strong&gt;wheel rotation does not equal linear motion&lt;/strong&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Rover Perception Systems: How LiDAR, Stereo Vision, and IMUs Work Together</title>
+				<link>//localhost:1313/posts/2025-11-22-rover-perception-systems/</link>
+				<pubDate>Sat, 22 Nov 2025 08:00:00 +0000</pubDate>
+				<guid>//localhost:1313/posts/2025-11-22-rover-perception-systems/</guid>
+				<description>&lt;!-- wp:heading {&#34;level&#34;:3} --&gt;&#xA;&lt;h3 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;Abstract: The Criticality of Multi-Modal Perception&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;!-- /wp:heading --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Autonomous navigation in extraterrestrial environments is defined by an unbreakable physical constraint: &lt;a href=&#34;https://beyondthejoystick.space/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/&#34; title=&#34;The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers&#34;&gt;the speed of light&lt;/a&gt;. With Earth-Mars communication latencies ranging from 4 to 24 minutes, real-time teleoperation is impossible. To survive, a rover must possess a robust &lt;strong&gt;Rover Perception&lt;/strong&gt; architecture.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Rover perception is not merely the collection of images; it is the transformation of raw sensory data into a semantic and geometric understanding of the surrounding environment. This process must occur &lt;em&gt;on-board&lt;/em&gt;, often on resource-constrained processors (such as the radiation-hardened RAD750).&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

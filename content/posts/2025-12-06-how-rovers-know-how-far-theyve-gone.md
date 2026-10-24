@@ -1,26 +1,32 @@
 ---
 id: 409
-title: 'A Deep Dive into Visual Odometry: How Rovers Know &#8216;How Far&#8217; They&#8217;ve Gone'
+title: 'A Deep Dive into Visual Odometry: How Rovers Know ‘How Far’ They’ve Gone'
 date: '2025-12-06T08:00:00+00:00'
-author: 'Beyond The Joystick'
+author: Beyond The Joystick
 excerpt: ''
 layout: post
-guid: 'https://beyondthejoystick.space/?p=409'
+guid: https://beyondthejoystick.space/?p=409
 permalink: /how-rovers-know-how-far-theyve-gone/
 kofi_display_floating_button:
-    - ''
+- ''
 enclosure:
-    - "/wp-content/uploads/2025/12/Rover_Bloccato_Prompt_per_Video.mp4\n6967338\nvideo/mp4\n"
+- '/wp-content/uploads/2025/12/Rover_Bloccato_Prompt_per_Video.mp4
+
+  6967338
+
+  video/mp4
+
+  '
 image: /wp-content/uploads/2025/12/Gemini_Generated_Image_4w0d54w0d54w0d54-scaled.png
 categories:
-    - 'Algorithms &amp; AI'
-    - 'Sensors &amp; Hardware'
+- Algorithms & AI
+- Sensors & Hardware
 tags:
-    - 'Dead Reckoning'
-    - 'Extended Kalman Filter'
-    - 'Mars Rover Navigation'
-    - 'Sensor Fusion'
-    - 'Visual Odometry'
+- Dead Reckoning
+- Extended Kalman Filter
+- Mars Rover Navigation
+- Sensor Fusion
+- Visual Odometry
 format: false
 ---
 
@@ -65,15 +71,17 @@ format: false
 <!-- /wp:paragraph -->
 
 <!-- wp:katex/display-block -->
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>D = \Delta_{ticks} \times C_{wheel}</pre></div>
+<div class="math-block">{{< mathblock >}}
+D = \Delta_{ticks} \times C_{wheel}
+{{< /mathblock >}}</div>
 <!-- /wp:katex/display-block -->
 
 <!-- wp:paragraph -->
-<p>Where [katex]D[/katex] is the distance traveled, [katex]\Delta_{\text{ticks}}[/katex] is the encoder count, and [katex]C_{\text{wheel}}[/katex] is the wheel circumference.</p>
+<p>Where {{< math >}} D {{< /math >}} is the distance traveled, {{< math >}} \Delta_{\text{ticks}} {{< /math >}} is the encoder count, and {{< math >}} C_{\text{wheel}} {{< /math >}} is the wheel circumference.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>However, the Martian surface is a non-Newtonian fluid of loose sand, dust, and jagged bedrock. Here, the friction coefficient ([katex]\mu[/katex]) varies unpredictably. Relying on Dead Reckoning leads to immediate navigational failure due to two primary factors: Longitudinal Slip and Lateral Skid.</p>
+<p>However, the Martian surface is a non-Newtonian fluid of loose sand, dust, and jagged bedrock. Here, the friction coefficient ({{< math >}} \mu {{< /math >}}) varies unpredictably. Relying on Dead Reckoning leads to immediate navigational failure due to two primary factors: Longitudinal Slip and Lateral Skid.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -81,27 +89,29 @@ format: false
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>In robotics, the severity of traction loss is quantified by the Slip Ratio ([katex]s[/katex]). It represents the discrepancy between the theoretical velocity of the wheel and the actual velocity of the rover chassis:</p>
+<p>In robotics, the severity of traction loss is quantified by the Slip Ratio ({{< math >}} s {{< /math >}}). It represents the discrepancy between the theoretical velocity of the wheel and the actual velocity of the rover chassis:</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:shortcode -->
-[katex display=true]s = \frac{r\omega - v}{r\omega}[/katex]
+<div class="math-block">{{< mathblock >}}
+s = \frac{r\omega - v}{r\omega}
+{{< /mathblock >}}</div>
 <!-- /wp:shortcode -->
 
 <!-- wp:paragraph -->
-<p>[katex]r[/katex]: Wheel radius</p>
+<p>{{< math >}} r {{< /math >}}: Wheel radius</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>[katex]\omega[/katex]: Angular velocity (how fast the wheel spins)</p>
+<p>{{< math >}} \omega {{< /math >}}: Angular velocity (how fast the wheel spins)</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>[katex]v[/katex]: Actual longitudinal velocity (how fast the rover moves)</p>
+<p>{{< math >}} v {{< /math >}}: Actual longitudinal velocity (how fast the rover moves)</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>If [katex]s = 0[/katex], there is perfect traction. If [katex]s = 1[/katex] (or 100%), the wheels are spinning freely, but the rover is stationary. This is not a theoretical edge case; it is an operational hazard documented in several historic incidents.</p>
+<p>If {{< math >}} s = 0 {{< /math >}}, there is perfect traction. If {{< math >}} s = 1 {{< /math >}} (or 100%), the wheels are spinning freely, but the rover is stationary. This is not a theoretical edge case; it is an operational hazard documented in several historic incidents.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -171,7 +181,7 @@ format: false
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>To the flight software, the rover is not a physical object; it is a State Vector ([katex]\mathbf{x}[/katex]). This vector contains all the variables necessary to describe the rover's motion in 3D space at any specific time step [katex]k[/katex].</p>
+<p>To the flight software, the rover is not a physical object; it is a State Vector ({{< math >}} \mathbf{x} {{< /math >}}). This vector contains all the variables necessary to describe the rover's motion in 3D space at any specific time step {{< math >}} k {{< /math >}}.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -179,7 +189,8 @@ format: false
 <!-- /wp:paragraph -->
 
 <!-- wp:katex/display-block -->
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\mathbf{x}_k = 
+<div class="math-block">{{< mathblock >}}
+\mathbf{x}_k = 
 \begin{bmatrix} 
 \mathbf{p} \\ 
 \mathbf{v} \\ 
@@ -194,20 +205,21 @@ v_x, v_y, v_z \\
 q_0, q_1, q_2, q_3 \\ 
 b_{ax}, b_{ay}, b_{az} \\ 
 b_{gx}, b_{gy}, b_{gz} 
-\end{bmatrix}</pre></div>
+\end{bmatrix}
+{{< /mathblock >}}</div>
 <!-- /wp:katex/display-block -->
 
 <!-- wp:list -->
 <ul class="wp-block-list"><!-- wp:list-item -->
-<li>[katex]\mathbf{p}, \mathbf{v}[/katex]: Position and Velocity.</li>
+<li>{{< math >}} \mathbf{p}, \mathbf{v} {{< /math >}}: Position and Velocity.</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>[katex]\mathbf{q}[/katex]: Orientation quaternion.</li>
+<li>{{< math >}} \mathbf{q} {{< /math >}}: Orientation quaternion.</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>[katex]\mathbf{b}_a, \mathbf{b}_g[/katex]: Accelerometer and Gyroscope biases (the internal errors of the sensors).</li>
+<li>{{< math >}} \mathbf{b}_a, \mathbf{b}_g {{< /math >}}: Accelerometer and Gyroscope biases (the internal errors of the sensors).</li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
@@ -216,19 +228,21 @@ b_{gx}, b_{gy}, b_{gz}
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>The EKF does not just track where the rover is; it tracks how unsure it is about that location. This is represented by the Error Covariance Matrix ([katex]\mathbf{P}[/katex]).</p>
+<p>The EKF does not just track where the rover is; it tracks how unsure it is about that location. This is represented by the Error Covariance Matrix ({{< math >}} \mathbf{P} {{< /math >}}).</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>If [katex]\mathbf{x}[/katex] has [katex]n[/katex] elements (e.g., 15 states), [katex]\mathbf{P}[/katex] is an [katex]n \times n[/katex] matrix. The diagonal elements represent the variance (uncertainty) of each state variable, while the off-diagonal elements represent the correlations between them.</p>
+<p>If {{< math >}} \mathbf{x} {{< /math >}} has {{< math >}} n {{< /math >}} elements (e.g., 15 states), {{< math >}} \mathbf{P} {{< /math >}} is an {{< math >}} n \times n {{< /math >}} matrix. The diagonal elements represent the variance (uncertainty) of each state variable, while the off-diagonal elements represent the correlations between them.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:katex/display-block -->
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\mathbf{P}_k = \begin{bmatrix} \sigma^2_{p_x} &amp; \dots &amp; \rho_{p_x v_x} \\ \vdots &amp; \ddots &amp; \vdots \\ \rho_{v_x p_x} &amp; \dots &amp; \sigma^2_{b_{gz}} \end{bmatrix}</pre></div>
+<div class="math-block">{{< mathblock >}}
+\mathbf{P}_k = \begin{bmatrix} \sigma^2_{p_x} & \dots & \rho_{p_x v_x} \\ \vdots & \ddots & \vdots \\ \rho_{v_x p_x} & \dots & \sigma^2_{b_{gz}} \end{bmatrix}
+{{< /mathblock >}}</div>
 <!-- /wp:katex/display-block -->
 
 <!-- wp:paragraph -->
-<p>When the rover relies solely on the IMU for a long period, the values in [katex]\mathbf{P}[/katex] grow larger, indicating high uncertainty ("I think I'm here, but I could be 2 meters away").</p>
+<p>When the rover relies solely on the IMU for a long period, the values in {{< math >}} \mathbf{P} {{< /math >}} grow larger, indicating high uncertainty ("I think I'm here, but I could be 2 meters away").</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -236,33 +250,35 @@ b_{gx}, b_{gy}, b_{gz}
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>The magic happens during the "Update Step." When the Visual Odometry system successfully processes an image and outputs a new position measurement ([katex]\mathbf{z}_k[/katex]), the EKF must decide how much to trust this new visual data versus its current IMU-based prediction.</p>
+<p>The magic happens during the "Update Step." When the Visual Odometry system successfully processes an image and outputs a new position measurement ({{< math >}} \mathbf{z}_k {{< /math >}}), the EKF must decide how much to trust this new visual data versus its current IMU-based prediction.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>This decision is governed by the Kalman Gain ([katex]\mathbf{K}[/katex]). The gain matrix determines the "weight" given to the new visual information:</p>
+<p>This decision is governed by the Kalman Gain ({{< math >}} \mathbf{K} {{< /math >}}). The gain matrix determines the "weight" given to the new visual information:</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:katex/display-block -->
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\mathbf{K}_k = \mathbf{P}_k^- \mathbf{H}^T (\mathbf{H} \mathbf{P}_k^- \mathbf{H}^T + \mathbf{R}_k)^{-1}</pre></div>
+<div class="math-block">{{< mathblock >}}
+\mathbf{K}_k = \mathbf{P}_k^- \mathbf{H}^T (\mathbf{H} \mathbf{P}_k^- \mathbf{H}^T + \mathbf{R}_k)^{-1}
+{{< /mathblock >}}</div>
 <!-- /wp:katex/display-block -->
 
 <!-- wp:list -->
 <ul class="wp-block-list"><!-- wp:list-item -->
-<li>[katex]\mathbf{P}_k^-[/katex]: The current uncertainty of the rover's prediction.</li>
+<li>{{< math >}} \mathbf{P}_k^- {{< /math >}}: The current uncertainty of the rover's prediction.</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>[katex]\mathbf{R}_k[/katex]: The noise covariance of the Visual Odometry (how "noisy" the camera data is).</li>
+<li>{{< math >}} \mathbf{R}_k {{< /math >}}: The noise covariance of the Visual Odometry (how "noisy" the camera data is).</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>[katex]\mathbf{H}[/katex]: The measurement matrix mapping state to measurement space.</li>
+<li>{{< math >}} \mathbf{H} {{< /math >}}: The measurement matrix mapping state to measurement space.</li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
 <!-- wp:paragraph -->
-<p>If the Visual Odometry is precise (low [katex]\mathbf{R}[/katex]), the Kalman Gain [katex]\mathbf{K}[/katex] increases, pulling the state vector [katex]\mathbf{x}[/katex] strongly toward the visual measurement. If the rover is in a feature-poor environment and the VO is noisy (high [katex]\mathbf{R}[/katex]), [katex]\mathbf{K}[/katex] decreases, and the rover effectively ignores the visual data, sticking to its inertial prediction.</p>
+<p>If the Visual Odometry is precise (low {{< math >}} \mathbf{R} {{< /math >}}), the Kalman Gain {{< math >}} \mathbf{K} {{< /math >}} increases, pulling the state vector {{< math >}} \mathbf{x} {{< /math >}} strongly toward the visual measurement. If the rover is in a feature-poor environment and the VO is noisy (high {{< math >}} \mathbf{R} {{< /math >}}), {{< math >}} \mathbf{K} {{< /math >}} decreases, and the rover effectively ignores the visual data, sticking to its inertial prediction.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->

@@ -1,22 +1,22 @@
 ---
 id: 600
-title: 'What Self-Driving Cars Can (and Can&#8217;t) Teach Space Rovers'
+title: What Self-Driving Cars Can (and Can’t) Teach Space Rovers
 date: '2026-03-14T08:00:00+00:00'
-author: 'Beyond The Joystick'
-excerpt: 'The convergence of terrestrial autonomous vehicles and planetary rovers reveals profound algorithmic and architectural intersections. While self-driving cars process immense data using high-performance processors in structured environments, space rovers navigate unstructured, high-radiation terrains constrained by severe power limits and communication latency, historically relying on legacy rad-hardened hardware. Today, this paradigm is shifting. The aerospace sector is actively integrating automotive Deep Reinforcement Learning, hybrid computing, and photorealistic simulations to achieve robust autonomous navigation. Conversely, the automotive industry leverages space-proven fault-tolerance and remote teleoperation strategies to master complex urban edge cases, driving a mutual evolution in robotics.'
+author: Beyond The Joystick
+excerpt: The convergence of terrestrial autonomous vehicles and planetary rovers reveals profound algorithmic and architectural intersections. While self-driving cars process immense data using high-performance processors in structured environments, space rovers navigate unstructured, high-radiation terrains constrained by severe power limits and communication latency, historically relying on legacy rad-hardened hardware. Today, this paradigm is shifting. The aerospace sector is actively integrating automotive Deep Reinforcement Learning, hybrid computing, and photorealistic simulations to achieve robust autonomous navigation. Conversely, the automotive industry leverages space-proven fault-tolerance and remote teleoperation strategies to master complex urban edge cases, driving a mutual evolution in robotics.
 layout: post
-guid: 'https://beyondthejoystick.space/?p=600'
+guid: https://beyondthejoystick.space/?p=600
 permalink: /self-driving-cars-and-space-rovers/
 image: /wp-content/uploads/2026/03/Self-driving-cars-and-space-rovers-scaled.png
 categories:
-    - 'Algorithms &amp; AI'
-    - 'Sensors &amp; Hardware'
+- Algorithms & AI
+- Sensors & Hardware
 tags:
-    - 'Computer Vision'
-    - 'Mars Rover'
-    - 'Rover Perception Systems'
-    - SLAM
-    - 'Space Robotics'
+- Computer Vision
+- Mars Rover
+- Rover Perception Systems
+- SLAM
+- Space Robotics
 format: false
 ---
 

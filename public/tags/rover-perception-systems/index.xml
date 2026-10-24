@@ -14,14 +14,14 @@
 		
 			<atom:link href="//localhost:1313/tags/rover-perception-systems/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>What Self-Driving Cars Can (and Can&amp;#8217;t) Teach Space Rovers</title>
+				<title>What Self-Driving Cars Can (and Can’t) Teach Space Rovers</title>
 				<link>//localhost:1313/posts/2026-03-14-self-driving-cars-and-space-rovers/</link>
 				<pubDate>Sat, 14 Mar 2026 08:00:00 +0000</pubDate>
 				<guid>//localhost:1313/posts/2026-03-14-self-driving-cars-and-space-rovers/</guid>
 				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;The evolution of vehicular automation and space robotics represents one of the most fascinating and complex technological convergences in contemporary engineering. Although terrestrial autonomous vehicles (AVs) and planetary rovers operate in diametrically opposed environmental domains, their algorithmic foundations, sensory perception paradigms, and decision-making architectures share deep intersections. On Earth, autonomous driving aims to process massive amounts of data in real time at high speeds. These vehicles navigate structured or semi-structured environments characterized by highly stochastic traffic, dynamic obstacles, and stringent passenger safety requirements.&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>Automotive vs. Space LiDAR: Why Your Car&amp;#8217;s Sensor Can&amp;#8217;t Survive Mars</title>
+				<title>Automotive vs. Space LiDAR: Why Your Car’s Sensor Can’t Survive Mars</title>
 				<link>//localhost:1313/posts/2026-01-17-automotive-vs-space-lidar/</link>
 				<pubDate>Sat, 17 Jan 2026 13:29:09 +0000</pubDate>
 				<guid>//localhost:1313/posts/2026-01-17-automotive-vs-space-lidar/</guid>

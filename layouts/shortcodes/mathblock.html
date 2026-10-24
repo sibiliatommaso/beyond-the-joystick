@@ -1,0 +1,12 @@
+{{- /* Display formula:  {{< mathblock >}} \int_0^1 x\,dx {{< /mathblock >}} */ -}}
+{{- $tex := trim .Inner " \n\r\t" -}}
+{{- $opts := dict "output" "htmlAndMathml" "displayMode" true -}}
+{{- with try (transform.ToMath $tex $opts) -}}
+  {{- with .Err -}}
+    {{- warnf "Math could not be rendered: %s (%s)" . $.Position -}}
+    <code class="math-error">{{ $tex }}</code>
+  {{- else -}}
+    {{- .Value -}}
+    {{- $.Page.Store.Set "hasMath" true -}}
+  {{- end -}}
+{{- end -}}

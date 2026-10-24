@@ -2,14 +2,14 @@
 id: 592
 title: 'VIPER: The New Challenge of AI Navigation in Permanent Moon Shadows'
 date: '2026-02-28T14:07:44+00:00'
-author: 'Beyond The Joystick'
-excerpt: 'This article provides a comprehensive engineering review of the VIPER rover AI navigation system, designed for the extreme conditions of lunar Permanently Shadowed Regions (PSRs). Resurrected for a 2027 Blue Origin launch, VIPER abandons traditional passive solar navigation. Instead, it employs active LED illumination and robust visual odometry to counteract dynamic shadowing. To ensure survival in cryogenic darkness, the architecture leverages computationally efficient grid-based algorithms like D* Lite for real-time hazard avoidance and Extended Kalman Filters (EKF) for precise kinematic slip estimation on porous regolith. Ultimately, VIPER’s hybrid "Earth-in-the-Loop" autonomy establishes the technical baseline for future Artemis surface operations.'
+author: Beyond The Joystick
+excerpt: This article provides a comprehensive engineering review of the VIPER rover AI navigation system, designed for the extreme conditions of lunar Permanently Shadowed Regions (PSRs). Resurrected for a 2027 Blue Origin launch, VIPER abandons traditional passive solar navigation. Instead, it employs active LED illumination and robust visual odometry to counteract dynamic shadowing. To ensure survival in cryogenic darkness, the architecture leverages computationally efficient grid-based algorithms like D* Lite for real-time hazard avoidance and Extended Kalman Filters (EKF) for precise kinematic slip estimation on porous regolith. Ultimately, VIPER’s hybrid "Earth-in-the-Loop" autonomy establishes the technical baseline for future Artemis surface operations.
 layout: post
-guid: 'https://beyondthejoystick.space/?p=592'
+guid: https://beyondthejoystick.space/?p=592
 permalink: /viper-the-new-challenge-of-ai-navigation-in-permanent-moon-shadows/
 image: /wp-content/uploads/2026/02/viper-rover-ai.png
 categories:
-    - Uncategorized
+- Uncategorized
 format: false
 ---
 
@@ -189,7 +189,9 @@ void updateNodeCost(GridMap&amp; map, Point current_pose, Point detected_hazard)
 <!-- /wp:paragraph -->
 
 <!-- wp:katex/display-block -->
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>x_{k|k} = x_{k|k-1} + K_k(z_k - H_k x_{k|k-1})</pre></div>
+<div class="math-block">{{< mathblock >}}
+x_{k|k} = x_{k|k-1} + K_k(z_k - H_k x_{k|k-1})
+{{< /mathblock >}}</div>
 <!-- /wp:katex/display-block -->
 
 <!-- wp:paragraph -->

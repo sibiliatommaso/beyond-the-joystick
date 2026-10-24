@@ -2,23 +2,23 @@
 id: 244
 title: 'The Evolution of Rover AI: A Deep Dive From Sojourner to AutoNav'
 date: '2025-11-01T08:10:00+00:00'
-author: 'Beyond The Joystick'
-excerpt: "Mars' 20-minute communication latency forced the evolution of rover AI. This article charts the path from Sojourner's simple reactive \"bump\" system to Spirit's deliberative 2.5D mapping. It covers Curiosity's continuous AutoNav and Perseverance's real-time predictive navigation, which uses a dedicated Vision Compute Element (VCE), showing how hardware unlocks autonomy."
+author: Beyond The Joystick
+excerpt: Mars' 20-minute communication latency forced the evolution of rover AI. This article charts the path from Sojourner's simple reactive "bump" system to Spirit's deliberative 2.5D mapping. It covers Curiosity's continuous AutoNav and Perseverance's real-time predictive navigation, which uses a dedicated Vision Compute Element (VCE), showing how hardware unlocks autonomy.
 layout: post
-guid: 'https://beyondthejoystick.space/?p=244'
+guid: https://beyondthejoystick.space/?p=244
 permalink: /the-evolution-of-rover-ai/
 image: /wp-content/uploads/2025/10/PIA26073medium.jpg
 categories:
-    - 'Core Concepts'
-    - 'Missions &amp; Case Studies'
+- Core Concepts
+- Missions & Case Studies
 tags:
-    - AutoNav
-    - 'Autonomous Navigation'
-    - 'Computer Vision'
-    - 'Mars Rover'
-    - 'NASA JPL'
-    - Robotics
-    - 'Rover AI Evolution'
+- AutoNav
+- Autonomous Navigation
+- Computer Vision
+- Mars Rover
+- NASA JPL
+- Robotics
+- Rover AI Evolution
 format: false
 ---
 

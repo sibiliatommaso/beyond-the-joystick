@@ -2,25 +2,25 @@
 id: 261
 title: 'Rover Perception Systems: How LiDAR, Stereo Vision, and IMUs Work Together'
 date: '2025-11-22T08:00:00+00:00'
-author: 'Beyond The Joystick'
-excerpt: 'This article analyzes Rover Perception, explaining how Stereo Vision, LiDAR, and IMUs integrate to enable autonomous navigation. It details the role of Sensor Fusion and Extended Kalman Filters in overcoming communication latency. Case studies of Perseverance and VIPER illustrate how these systems map unstructured extraterrestrial environments with precision to ensure mission safety.'
+author: Beyond The Joystick
+excerpt: This article analyzes Rover Perception, explaining how Stereo Vision, LiDAR, and IMUs integrate to enable autonomous navigation. It details the role of Sensor Fusion and Extended Kalman Filters in overcoming communication latency. Case studies of Perseverance and VIPER illustrate how these systems map unstructured extraterrestrial environments with precision to ensure mission safety.
 layout: post
-guid: 'https://beyondthejoystick.space/?p=261'
+guid: https://beyondthejoystick.space/?p=261
 permalink: /rover-perception-systems/
 litespeed_no_cache:
-    - '1'
+- '1'
 litespeed_no_image_lazy:
-    - '1'
+- '1'
 image: /wp-content/uploads/2025/11/rover_lidar.jpg
 categories:
-    - 'Sensors &amp; Hardware'
+- Sensors & Hardware
 tags:
-    - 'Computer Vision'
-    - IMU
-    - LiDAR
-    - 'Rover Perception'
-    - 'Sensor Fusion'
-    - 'Space Robotics'
+- Computer Vision
+- IMU
+- LiDAR
+- Rover Perception
+- Sensor Fusion
+- Space Robotics
 format: false
 ---
 
@@ -69,7 +69,9 @@ format: false
 <!-- /wp:paragraph -->
 
 <!-- wp:katex/display-block -->
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>Z = \frac{f \cdot B}{d}</pre></div>
+<div class="math-block">{{< mathblock >}}
+Z = \frac{f \cdot B}{d}
+{{< /mathblock >}}</div>
 <!-- /wp:katex/display-block -->
 
 <!-- wp:paragraph -->
@@ -171,7 +173,9 @@ format: false
 <!-- /wp:paragraph -->
 
 <!-- wp:katex/display-block -->
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>x(t) = \iint a(t) \, dt^2</pre></div>
+<div class="math-block">{{< mathblock >}}
+x(t) = \iint a(t) \, dt^2
+{{< /mathblock >}}</div>
 <!-- /wp:katex/display-block -->
 
 <!-- wp:paragraph -->

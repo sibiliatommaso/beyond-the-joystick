@@ -2,26 +2,26 @@
 id: 613
 title: 'Rover Slip Estimation on Lunar Sand: Lab Test'
 date: '2026-09-20T08:19:05+00:00'
-author: 'Beyond The Joystick'
-excerpt: 'Planetary rovers face significant mobility challenges on loose extraterrestrial terrains, making sand entrapment a critical threat. In this Lab Breakdown, we decode the science of Rover Slip Estimation. By benchmarking visual odometry derived from optical flow against the tangential velocity measured by wheel encoders, we explore how single-wheel testbeds isolate and quantify traction loss. This technical analysis of hardware integration and ROS 2 nodes is essential for developing robust hazard avoidance. Discover how autonomous systems detect wheel slip to survive the unpredictable surfaces of the Moon and Mars.'
+author: Beyond The Joystick
+excerpt: Planetary rovers face significant mobility challenges on loose extraterrestrial terrains, making sand entrapment a critical threat. In this Lab Breakdown, we decode the science of Rover Slip Estimation. By benchmarking visual odometry derived from optical flow against the tangential velocity measured by wheel encoders, we explore how single-wheel testbeds isolate and quantify traction loss. This technical analysis of hardware integration and ROS 2 nodes is essential for developing robust hazard avoidance. Discover how autonomous systems detect wheel slip to survive the unpredictable surfaces of the Moon and Mars.
 layout: post
-guid: 'https://beyondthejoystick.space/?p=613'
+guid: https://beyondthejoystick.space/?p=613
 permalink: /rover-slip-estimation-on-lunar-sand-lab-test/
 image: /wp-content/uploads/2026/09/PIA26016orig.jpg
 categories:
-    - 'Algorithms &amp; AI'
-    - 'Sensors &amp; Hardware'
+- Algorithms & AI
+- Sensors & Hardware
 tags:
-    - 'Arduino Mega'
-    - Lucas-Kanade
-    - 'Lunar Regolith'
-    - 'Planetary Exploration'
-    - 'ROS 2 Humble'
-    - 'Rover Slip Estimation'
-    - 'Single-Wheel Testbed'
-    - 'Space Robotics'
-    - 'Visual Odometry'
-    - 'Wheel Encoders'
+- Arduino Mega
+- Lucas-Kanade
+- Lunar Regolith
+- Planetary Exploration
+- ROS 2 Humble
+- Rover Slip Estimation
+- Single-Wheel Testbed
+- Space Robotics
+- Visual Odometry
+- Wheel Encoders
 format: false
 ---
 
@@ -82,27 +82,31 @@ format: false
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>First, we process the encoder data to compute the angular displacement, which is then converted into tangential velocity ([katex]v_{enc}[/katex]). This is calculated using the angular velocity ([katex]\omega[/katex]) and the wheel radius ([katex]r[/katex]):</p>
+<p>First, we process the encoder data to compute the angular displacement, which is then converted into tangential velocity ({{< math >}} v_{enc} {{< /math >}}). This is calculated using the angular velocity ({{< math >}} \omega {{< /math >}}) and the wheel radius ({{< math >}} r {{< /math >}}):</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:katex/display-block -->
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>v_{enc} = \omega \cdot r</pre></div>
+<div class="math-block">{{< mathblock >}}
+v_{enc} = \omega \cdot r
+{{< /mathblock >}}</div>
 <!-- /wp:katex/display-block -->
 
 <!-- wp:paragraph -->
-<p>Simultaneously, the actual linear velocity ([katex]v_{opt}[/katex]) is derived from the onboard camera. The system employs the Lucas-Kanade optical flow algorithm to compute pixel displacement per frame, translating image data into a physical metric velocity.</p>
+<p>Simultaneously, the actual linear velocity ({{< math >}} v_{opt} {{< /math >}}) is derived from the onboard camera. The system employs the Lucas-Kanade optical flow algorithm to compute pixel displacement per frame, translating image data into a physical metric velocity.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>To quantify the traction loss, we calculate the slip ratio ([katex]s[/katex]), defined as the difference between the tangential velocity and the linear velocity, normalized by the maximum of these two:</p>
+<p>To quantify the traction loss, we calculate the slip ratio ({{< math >}} s {{< /math >}}), defined as the difference between the tangential velocity and the linear velocity, normalized by the maximum of these two:</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:katex/display-block -->
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>s = \frac{v_{enc} - v_{opt}}{\max(v_{enc}, v_{opt})}</pre></div>
+<div class="math-block">{{< mathblock >}}
+s = \frac{v_{enc} - v_{opt}}{\max(v_{enc}, v_{opt})}
+{{< /mathblock >}}</div>
 <!-- /wp:katex/display-block -->
 
 <!-- wp:paragraph -->
-<p>When [katex]v_{enc} &gt; v_{opt}[/katex], the slip ratio is positive, indicating driving conditions where the wheel is slipping against the regolith.</p>
+<p>When {{< math >}} v_{enc} > v_{opt} {{< /math >}}, the slip ratio is positive, indicating driving conditions where the wheel is slipping against the regolith.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->

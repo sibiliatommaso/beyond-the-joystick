@@ -1,25 +1,25 @@
 ---
 id: 255
-title: 'What is SLAM? The Key Technology for Autonomous Rover Mapping'
+title: What is SLAM? The Key Technology for Autonomous Rover Mapping
 date: '2025-11-08T08:00:00+00:00'
-author: 'Beyond The Joystick'
-excerpt: 'Autonomous rover navigation in GPS-denied environments relies on SLAM (Simultaneous Localization and Mapping). This algorithm uses probabilistic filters like EKF and Graph-SLAM to build maps and track position in real-time. Essential for Mars missions, it has evolved from basic visual odometry to advanced sensor fusion for future exploration.'
+author: Beyond The Joystick
+excerpt: Autonomous rover navigation in GPS-denied environments relies on SLAM (Simultaneous Localization and Mapping). This algorithm uses probabilistic filters like EKF and Graph-SLAM to build maps and track position in real-time. Essential for Mars missions, it has evolved from basic visual odometry to advanced sensor fusion for future exploration.
 layout: post
-guid: 'https://beyondthejoystick.space/?p=255'
+guid: https://beyondthejoystick.space/?p=255
 permalink: /what-is-slam-the-key-technology-for-autonomous-rover-mapping/
 image: /wp-content/uploads/2025/11/perseverance-selfie.webp
 categories:
-    - 'Algorithms &amp; AI'
-    - 'Core Concepts'
+- Algorithms & AI
+- Core Concepts
 tags:
-    - 'Autonomous Navigation'
-    - 'Computer Vision'
-    - Graph-SLAM
-    - 'Mapping Algorithmis'
-    - 'Mars Rover'
-    - 'Sensor Fusion'
-    - SLAM
-    - vSLAM
+- Autonomous Navigation
+- Computer Vision
+- Graph-SLAM
+- Mapping Algorithmis
+- Mars Rover
+- Sensor Fusion
+- SLAM
+- vSLAM
 format: false
 ---
 

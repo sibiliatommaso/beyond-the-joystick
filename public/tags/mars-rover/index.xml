@@ -14,14 +14,14 @@
 		
 			<atom:link href="//localhost:1313/tags/mars-rover/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>What Self-Driving Cars Can (and Can&amp;#8217;t) Teach Space Rovers</title>
+				<title>What Self-Driving Cars Can (and Can’t) Teach Space Rovers</title>
 				<link>//localhost:1313/posts/2026-03-14-self-driving-cars-and-space-rovers/</link>
 				<pubDate>Sat, 14 Mar 2026 08:00:00 +0000</pubDate>
 				<guid>//localhost:1313/posts/2026-03-14-self-driving-cars-and-space-rovers/</guid>
 				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;The evolution of vehicular automation and space robotics represents one of the most fascinating and complex technological convergences in contemporary engineering. Although terrestrial autonomous vehicles (AVs) and planetary rovers operate in diametrically opposed environmental domains, their algorithmic foundations, sensory perception paradigms, and decision-making architectures share deep intersections. On Earth, autonomous driving aims to process massive amounts of data in real time at high speeds. These vehicles navigate structured or semi-structured environments characterized by highly stochastic traffic, dynamic obstacles, and stringent passenger safety requirements.&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>Beyond NASA: A Look at the AI Inside China&amp;#8217;s Zhurong Mars Rover</title>
+				<title>Beyond NASA: A Look at the AI Inside China’s Zhurong Mars Rover</title>
 				<link>//localhost:1313/posts/2025-12-13-beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/</link>
 				<pubDate>Sat, 13 Dec 2025 08:00:00 +0000</pubDate>
 				<guid>//localhost:1313/posts/2025-12-13-beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/</guid>

@@ -1,15 +1,15 @@
 ---
 id: 230
-title: 'The 20-Minute Lag: Why We Can&#8217;t Just &#8216;Joystick&#8217; Mars Rovers'
+title: 'The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers'
 date: '2025-11-01T08:10:00+00:00'
-author: 'Beyond The Joystick'
+author: Beyond The Joystick
 excerpt: 'A 20+ minute communication lag makes "joysticking" Mars rovers impossible, unlike the Moon''s brief 2.5-second delay. This lag forced technology to evolve: from slow direct signals to high-bandwidth orbiter relays and robotic autonomy (AutoNav). Future lasers will boost data, but the lag remains.'
 layout: post
-guid: 'https://beyondthejoystick.space/?p=230'
+guid: https://beyondthejoystick.space/?p=230
 permalink: /the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/
 image: /wp-content/uploads/2025/10/2-minute-lag.png
 categories:
-    - 'Core Concepts'
+- Core Concepts
 format: false
 ---
 

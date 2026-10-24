@@ -14,31 +14,31 @@
 		
 			<atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Algorithms &amp;Amp; AI</title>
-				<link>//localhost:1313/categories/algorithms-amp-ai/</link>
+				<title>Algorithms &amp; AI</title>
+				<link>//localhost:1313/categories/algorithms--ai/</link>
 				<pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
-				<guid>//localhost:1313/categories/algorithms-amp-ai/</guid>
+				<guid>//localhost:1313/categories/algorithms--ai/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Sensors &amp;Amp; Hardware</title>
-				<link>//localhost:1313/categories/sensors-amp-hardware/</link>
+				<title>Sensors &amp; Hardware</title>
+				<link>//localhost:1313/categories/sensors--hardware/</link>
 				<pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
-				<guid>//localhost:1313/categories/sensors-amp-hardware/</guid>
+				<guid>//localhost:1313/categories/sensors--hardware/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Advanced Topics &amp;Amp; Future</title>
-				<link>//localhost:1313/categories/advanced-topics-amp-future/</link>
+				<title>Advanced Topics &amp; Future</title>
+				<link>//localhost:1313/categories/advanced-topics--future/</link>
 				<pubDate>Sat, 18 Apr 2026 07:36:13 +0000</pubDate>
-				<guid>//localhost:1313/categories/advanced-topics-amp-future/</guid>
+				<guid>//localhost:1313/categories/advanced-topics--future/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Missions &amp;Amp; Case Studies</title>
-				<link>//localhost:1313/categories/missions-amp-case-studies/</link>
+				<title>Missions &amp; Case Studies</title>
+				<link>//localhost:1313/categories/missions--case-studies/</link>
 				<pubDate>Sat, 18 Apr 2026 07:36:13 +0000</pubDate>
-				<guid>//localhost:1313/categories/missions-amp-case-studies/</guid>
+				<guid>//localhost:1313/categories/missions--case-studies/</guid>
 				<description></description>
 			</item>
 			<item>

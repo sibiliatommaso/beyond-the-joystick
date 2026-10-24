@@ -21,14 +21,14 @@
 				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Planetary exploration rovers serve as essential tools for advancing scientific investigations, but their mobility is significantly challenged by loose and deformable surfaces like lunar dust and Martian regolith&lt;sup&gt;&lt;/sup&gt;. These extraterrestrial terrains exhibit low cohesion and bearing capacity, leading to excessive wheel slip where the wheels rotate without generating sufficient forward motion&lt;sup&gt;&lt;/sup&gt;.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;As we dive deeper into &lt;a href=&#34;https://beyondthejoystick.space/autonomous-rover-navigation/&#34;&gt;autonomous space robotics&lt;/a&gt; here on &lt;em&gt;Beyond the Joystick&lt;/em&gt;, I am realizing that mastering rover slip estimation is just as critical as orbital mechanics. If a rover cannot detect slip, standard wheel odometry accrues massive errors, causing deviations from planned trajectories and increasing the risk of entrapment. To understand how engineers solve this, we are going to explore how &lt;a href=&#34;https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=11170582&#34;&gt;academic researchers utilize a single-wheel testbed to analyze wheel-terrain interactions before the software ever leaves Earth&lt;/a&gt;.&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>What Self-Driving Cars Can (and Can&amp;#8217;t) Teach Space Rovers</title>
+				<title>What Self-Driving Cars Can (and Can’t) Teach Space Rovers</title>
 				<link>//localhost:1313/posts/2026-03-14-self-driving-cars-and-space-rovers/</link>
 				<pubDate>Sat, 14 Mar 2026 08:00:00 +0000</pubDate>
 				<guid>//localhost:1313/posts/2026-03-14-self-driving-cars-and-space-rovers/</guid>
 				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;The evolution of vehicular automation and space robotics represents one of the most fascinating and complex technological convergences in contemporary engineering. Although terrestrial autonomous vehicles (AVs) and planetary rovers operate in diametrically opposed environmental domains, their algorithmic foundations, sensory perception paradigms, and decision-making architectures share deep intersections. On Earth, autonomous driving aims to process massive amounts of data in real time at high speeds. These vehicles navigate structured or semi-structured environments characterized by highly stochastic traffic, dynamic obstacles, and stringent passenger safety requirements.&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>Beyond NASA: A Look at the AI Inside China&amp;#8217;s Zhurong Mars Rover</title>
+				<title>Beyond NASA: A Look at the AI Inside China’s Zhurong Mars Rover</title>
 				<link>//localhost:1313/posts/2025-12-13-beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/</link>
 				<pubDate>Sat, 13 Dec 2025 08:00:00 +0000</pubDate>
 				<guid>//localhost:1313/posts/2025-12-13-beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/</guid>

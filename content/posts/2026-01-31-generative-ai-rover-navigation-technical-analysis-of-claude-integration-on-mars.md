@@ -2,18 +2,18 @@
 id: 563
 title: 'Generative AI Rover Navigation: Technical Analysis of Claude Integration on Mars'
 date: '2026-01-31T10:04:48+00:00'
-author: 'Beyond The Joystick'
-excerpt: 'This technical report analyzes the pivotal event of Sol 1707-1709, where Perseverance navigated Mars guided by the Claude Code AI agent. For the first time, an LLM was integrated into the critical path, generating executable Rover Markup Language (RML) code. This "Ground-in-the-Loop" paradigm transcends traditional AutoNav limitations through semantic terrain analysis and terrestrial computing power. Rigorously validated via Digital Twin simulation, the AI successfully directed 456 meters of autonomous driving. This milestone demonstrates Generative AI''s capacity to control physical assets in critical environments, redefining space exploration standards.'
+author: Beyond The Joystick
+excerpt: This technical report analyzes the pivotal event of Sol 1707-1709, where Perseverance navigated Mars guided by the Claude Code AI agent. For the first time, an LLM was integrated into the critical path, generating executable Rover Markup Language (RML) code. This "Ground-in-the-Loop" paradigm transcends traditional AutoNav limitations through semantic terrain analysis and terrestrial computing power. Rigorously validated via Digital Twin simulation, the AI successfully directed 456 meters of autonomous driving. This milestone demonstrates Generative AI's capacity to control physical assets in critical environments, redefining space exploration standards.
 layout: post
-guid: 'https://beyondthejoystick.space/?p=563'
+guid: https://beyondthejoystick.space/?p=563
 permalink: /generative-ai-rover-navigation-technical-analysis-of-claude-integration-on-mars/
 kofi_display_floating_button:
-    - ''
+- ''
 image: /wp-content/uploads/2026/01/perseverance_claude_path.png
 categories:
-    - 'Advanced Topics &amp; Future'
-    - 'Algorithms &amp; AI'
-    - 'Missions &amp; Case Studies'
+- Advanced Topics & Future
+- Algorithms & AI
+- Missions & Case Studies
 format: false
 ---
 

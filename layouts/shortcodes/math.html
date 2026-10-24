@@ -1,0 +1,12 @@
+{{- /* Inline formula:  {{< math >}} E = mc^2 {{< /math >}} */ -}}
+{{- $tex := trim .Inner " \n\r\t" -}}
+{{- $opts := dict "output" "htmlAndMathml" "displayMode" false -}}
+{{- with try (transform.ToMath $tex $opts) -}}
+  {{- with .Err -}}
+    {{- warnf "Math could not be rendered: %s (%s)" . $.Position -}}
+    <code class="math-error">{{ $tex }}</code>
+  {{- else -}}
+    {{- .Value -}}
+    {{- $.Page.Store.Set "hasMath" true -}}
+  {{- end -}}
+{{- end -}}

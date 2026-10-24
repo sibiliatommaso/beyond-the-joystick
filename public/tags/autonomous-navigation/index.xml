@@ -21,21 +21,21 @@
 				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Telemetry monitoring in modern space systems, such as Martian rovers and Earth observation satellites, requires the real-time analysis of extremely high-dimensional data streams. These time-series signals are inherently affected by thermal noise and unpredictable radiative variations, making fault detection a critical computational bottleneck. As highlighted in our previous deep dives on &lt;a href=&#34;https://beyondthejoystick.space/generative-ai-rover-navigation-technical-analysis-of-claude-integration-on-mars/&#34; title=&#34;Generative AI Rover Navigation: Technical Analysis of Claude Integration on Mars&#34;&gt;on-board decision-making autonomy&lt;/a&gt;,interplanetary communication latency forces spacecraft to process and interpret anomalies locally, without waiting for a human feedback loop.&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>Automotive vs. Space LiDAR: Why Your Car&amp;#8217;s Sensor Can&amp;#8217;t Survive Mars</title>
+				<title>Automotive vs. Space LiDAR: Why Your Car’s Sensor Can’t Survive Mars</title>
 				<link>//localhost:1313/posts/2026-01-17-automotive-vs-space-lidar/</link>
 				<pubDate>Sat, 17 Jan 2026 13:29:09 +0000</pubDate>
 				<guid>//localhost:1313/posts/2026-01-17-automotive-vs-space-lidar/</guid>
 				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;From the busy streets of San Francisco to the test tracks of Europe, the buzz around autonomous driving is deafening. Companies like Luminar pushed the boundaries of this revolution, equipping vehicles with sleek, high-tech sensors like the &#34;Iris&#34; that promise to map our highways with millimeter precision, spotting hazards through fog and rain. Seeing this incredible technology in action, it begs a logical question: if we have such advanced, relatively affordable &#34;eyes&#34; right here on Earth, why doesn&#39;t NASA just strap one of these sensors onto the next Mars Rover and call it a day? It would save millions of dollars and years of development. The answer reveals one of the harshest truths of space exploration: the &lt;strong&gt;tyranny of latency&lt;/strong&gt;. As we explored in our analysis of the &lt;strong&gt;&lt;a href=&#34;https://beyondthejoystick.space/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/&#34; title=&#34;The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers&#34;&gt;[20-Minute Lag]&lt;/a&gt;&lt;/strong&gt;, we cannot joystick a rover in real-time; the vehicle must rely on its own senses to survive. While the basic physics of light detection remains the same, the engineering reality creates a massive, unforgiving divide in the battle of &lt;strong&gt;Automotive vs. Space LiDAR&lt;/strong&gt;. It turns out that a sensor designed to survive rush hour traffic is woefully unprepared for the radioactive freeze of the Red Planet.&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>Beyond NASA: A Look at the AI Inside China&amp;#8217;s Zhurong Mars Rover</title>
+				<title>Beyond NASA: A Look at the AI Inside China’s Zhurong Mars Rover</title>
 				<link>//localhost:1313/posts/2025-12-13-beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/</link>
 				<pubDate>Sat, 13 Dec 2025 08:00:00 +0000</pubDate>
 				<guid>//localhost:1313/posts/2025-12-13-beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/</guid>
 				<description>&lt;!-- wp:image {&#34;lightbox&#34;:{&#34;enabled&#34;:false},&#34;id&#34;:423,&#34;sizeSlug&#34;:&#34;full&#34;,&#34;linkDestination&#34;:&#34;custom&#34;,&#34;align&#34;:&#34;center&#34;} --&gt;&#xA;&lt;figure class=&#34;wp-block-image aligncenter size-full&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Zhurong_%28rover%29&#34;&gt;&lt;img src=&#34;//localhost:1313/wp-content/uploads/2025/12/Zhurong_rover.png&#34; alt=&#34;&#34; class=&#34;wp-image-423&#34;/&gt;&lt;/a&gt;&lt;/figure&gt;&#xA;&lt;!-- /wp:image --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;While global attention is often monopolized by the Jet Propulsion Laboratory (JPL) and its Curiosity-class vehicles, Chinese space engineering reached a critical milestone with the &lt;strong&gt;Tianwen-1&lt;/strong&gt; mission. Landing in May 2021 on the vast plains of &lt;strong&gt;Utopia Planitia&lt;/strong&gt;, the Zhurong rover represents more than just a political success; it is a tangible demonstration of advanced autonomous robotics. AI Inside China&#39;s Zhurong&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover&amp;#8217;s Route</title>
+				<title>A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover’s Route</title>
 				<link>//localhost:1313/posts/2025-11-29-a-vs-d-lite-the-pathfinding-algorithms/</link>
 				<pubDate>Sat, 29 Nov 2025 08:00:00 +0000</pubDate>
 				<guid>//localhost:1313/posts/2025-11-29-a-vs-d-lite-the-pathfinding-algorithms/</guid>

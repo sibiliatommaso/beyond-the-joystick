@@ -1,23 +1,23 @@
 ---
 id: 430
-title: 'Automotive vs. Space LiDAR: Why Your Car&#8217;s Sensor Can&#8217;t Survive Mars'
+title: 'Automotive vs. Space LiDAR: Why Your Car’s Sensor Can’t Survive Mars'
 date: '2026-01-17T13:29:09+00:00'
-author: 'Beyond The Joystick'
+author: Beyond The Joystick
 excerpt: 'Why doesn''t NASA use standard self-driving car sensors on Mars Rovers? It seems cost-effective, but the reality is harsh. This article dives into the Automotive vs. Space LiDAR debate, analyzing why terrestrial tech—like Luminar’s Iris—fails off-planet. We break down the engineering nightmares of space: deadly cosmic radiation, vacuum outgassing, and extreme thermal cycles that shatter standard electronics. By comparing commercial efficiency against NASA’s reliability, we explain why "good enough" for Earth is fatal on Mars. Plus, discover the surprising exception where a $129 drone part actually made it to the Red Planet.'
 layout: post
-guid: 'https://beyondthejoystick.space/?p=430'
+guid: https://beyondthejoystick.space/?p=430
 permalink: /automotive-vs-space-lidar/
 kofi_display_floating_button:
-    - ''
+- ''
 image: /wp-content/uploads/2026/01/Powered-by-Garmin.png
 categories:
-    - 'Sensors &amp; Hardware'
+- Sensors & Hardware
 tags:
-    - 'Automotive vs Space'
-    - 'Autonomous Navigation'
-    - 'COTS vs Rad-Hard'
-    - 'LiDAR Technology'
-    - 'Rover Perception Systems'
+- Automotive vs Space
+- Autonomous Navigation
+- COTS vs Rad-Hard
+- LiDAR Technology
+- Rover Perception Systems
 format: false
 ---
 

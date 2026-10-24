@@ -1,0 +1,206 @@
+---
+id: 422
+title: 'Beyond NASA: A Look at the AI Inside China&#8217;s Zhurong Mars Rover'
+date: '2025-12-13T08:00:00+00:00'
+author: 'Beyond The Joystick'
+excerpt: 'his analysis explores the technical architecture of China''s Zhurong rover, highlighting how it differs from NASA''s design philosophy. Operating in Utopia Planitia, Zhurong utilizes a hierarchical pathfinding system that combines $A^*$ for global route planning with $D^*$ Lite for dynamic obstacle avoidance. To survive without nuclear power, it employs autonomous "wake/sleep" algorithms based on environmental conditions. Furthermore, the rover mitigates dangerous high-slip interactions using unique active suspension capable of "inchworm" motion and crab walking, allowing it to successfully map geology and hydrated minerals far beyond its nominal 90-sol lifespan.'
+layout: post
+guid: 'https://beyondthejoystick.space/?p=422'
+permalink: /beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/
+kofi_display_floating_button:
+    - ''
+image: /wp-content/uploads/2025/12/Zhurong_rover.png
+categories:
+    - 'Missions &amp; Case Studies'
+tags:
+    - 'Autonomous Navigation'
+    - 'Mars Rover'
+    - 'Pathfinding Algorithms'
+    - 'Space Robotics'
+    - Zhurong
+format: false
+---
+
+<!-- wp:image {"lightbox":{"enabled":false},"id":423,"sizeSlug":"full","linkDestination":"custom","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full"><a href="https://en.wikipedia.org/wiki/Zhurong_%28rover%29"><img src="/wp-content/uploads/2025/12/Zhurong_rover.png" alt="" class="wp-image-423"/></a></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>While global attention is often monopolized by the Jet Propulsion Laboratory (JPL) and its Curiosity-class vehicles, Chinese space engineering reached a critical milestone with the <strong>Tianwen-1</strong> mission. Landing in May 2021 on the vast plains of <strong>Utopia Planitia</strong>, the Zhurong rover represents more than just a political success; it is a tangible demonstration of advanced autonomous robotics. AI Inside China's Zhurong</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading"><strong>Tianwen-1 and Zhurong: Mission Highlights</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Zhurong was designed with a nominal operational life of <strong>90 Sols</strong>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p><strong>Technical Note:</strong> A "Sol" is a Martian day, lasting approximately 24 hours and 39 minutes. While 90 Sols was the minimum requirement for mission success, the rover continued to operate for over an earth-year.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Key Achievements</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>EDL Success:</strong> China became the second nation to successfully complete a soft landing on Mars on its first attempt, managing the "9 minutes of terror" with a fully autonomous GNC (<em>Guidance, Navigation, and Control</em>) system.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Geology and Water:</strong> Using its laser spectrometer (MarSCoDe) and multispectral cameras, Zhurong found evidence of <strong>hydrated minerals</strong> (sulfates, hydrated silica) and sedimentary structures. These findings suggest liquid water was active during the Amazonian epoch—much more recently than previous climate models assumed.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Distance:</strong> By the time it entered hibernation in May 2022, the rover had covered <strong>1,921 meters</strong>, operating with a communication latency of up to 20 minutes.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading"><strong>The Software Architecture: Hierarchical Pathfinding</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The <strong>AI Inside China's Zhurong</strong> must solve the fundamental problem of navigating an unstructured environment. To do this, it doesn't rely on a single "magic" algorithm but rather a <strong>hierarchical architecture</strong> combining global planning with local reactivity.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>1. Global Planning: The Role of A*</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>For long-range planning, the rover utilizes the A* (A-Star) algorithm.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This runs on a "global map" generated from orbital imagery or previous panoramas. As we discussed in <a href="https://beyondthejoystick.space/a-vs-d-lite-the-pathfinding-algorithms/" title="A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover’s Route">A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover's Route</a>, A* is ideal here because it acts as a static "GPS." It calculates the optimal path from point A to point B by minimizing cost (distance + slope), assuming the map is known and immutable.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>2. Local Planning: D* Lite and Reactive Navigation</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The reality of Martian terrain, however, is full of unknowns invisible from orbit. This is where the Local Planner takes over.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>When onboard sensors (stereo cameras and LiDAR) detect an unforeseen obstacle—such as a 30cm rock missing from the global map—the AI switches to a dynamic algorithm, specifically a variant of D* Lite (Dynamic A*).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Unlike A*, <strong>D* Lite</strong> is designed for <strong>incremental re-planning</strong>. Instead of recalculating the entire route from scratch (which would waste valuable CPU cycles), it modifies only the portion of the trajectory affected by the new obstacle. This allows Zhurong to adapt in real-time while moving, avoiding hazards without needing to stop for lengthy computations.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading"><strong>Energy Management: "Solar" AI vs. Nuclear Power</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A distinct feature of Zhurong's software is its predictive management of thermal and electrical energy. This marks a fundamental architectural difference compared to recent American rovers.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>The Problem: Solar vs. RTG</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>NASA's <strong>Perseverance</strong> is powered by an <strong>MMRTG</strong> (Multi-Mission Radioisotope Thermoelectric Generator). Because it is nuclear, it produces heat and electricity constantly, 24/7, regardless of the weather. It doesn't need to "sleep" to survive the cold, only to recharge batteries during peak loads.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"lightbox":{"enabled":false},"id":426,"sizeSlug":"large","linkDestination":"custom","align":"center"} -->
+<figure class="wp-block-image aligncenter size-large"><img src="/wp-content/uploads/2025/12/perseverance-mmrtg-close-1024x576.webp" alt="" class="wp-image-426"/><figcaption class="wp-element-caption">Perseverance's Radioisotope Thermoelectric Generator Before Launch</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Zhurong, conversely, is <strong>solar-powered</strong>. This makes it a slave to day/night cycles and dust storms.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>The "Active Wake/Sleep" Algorithm</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Zhurong's AI integrates a resource management module that monitors two critical variables:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Solar Irradiance:</strong> Measured via reference cells on the panels.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Internal Temperature:</strong> Monitored by thermal sensors within the chassis.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>The algorithm does not follow a fixed clock. If the AI detects that energy production is insufficient (e.g., due to atmospheric dust) or that the temperature is dropping below critical safety thresholds, it autonomously forces the rover into Sleep Mode.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Crucially, the rover is programmed to wake up automatically only when environmental conditions (light levels and temperature) hit specific parameters that guarantee electronics survival. This environment-based decision-making allowed Zhurong to survive the Martian winter far longer than expected.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading"><strong>Hardware: Active Suspension and the "Slip" Problem</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Artificial Intelligence, no matter how advanced, cannot violate the laws of physics. As we detailed in <em><a href="https://beyondthejoystick.space/how-rovers-know-how-far-theyve-gone/" title="A Deep Dive into Visual Odometry: How Rovers Know ‘How Far’ They’ve Gone">A Deep Dive into Visual Odometry: How Rovers Know 'How Far' They've Gone</a></em>, Martian terrain presents deadly friction-related hazards.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>The Phenomenon of "High-Slip Interaction"</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>On Mars, wheel rotation does not guarantee movement. When traversing fine sand (regolith), rovers encounter <strong>high-slip interaction</strong>. If the wheels spin but the chassis doesn't move, it creates an accumulated error—or "Drift"—that destroys localization accuracy. in extreme cases, a high <strong>Slip Ratio</strong> can lead to total entrapment, as seen with the <em>Spirit</em> rover.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Zhurong's Hardware Response</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>To mitigate this, Zhurong adopts a unique active suspension system, more complex than NASA's passive Rocker-Bogie.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"lightbox":{"enabled":false},"id":427,"sizeSlug":"full","linkDestination":"custom","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full"><a href="https://www.researchgate.net/figure/Mobility-system-of-Zhurong-Mars-rover-Color-figure-can-be-viewed-at_fig1_369886832"><img src="/wp-content/uploads/2025/12/Mobility-system-of-Zhurong-Mars-rover-Color-figure-can-be-viewed-at.png" alt="" class="wp-image-427"/></a><figcaption class="wp-element-caption">Mobility system of Zhurong Mars rover</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>When the AI (by comparing Visual Odometry to wheel encoders) detects that the Slip Ratio is rising dangerously, it can command the hardware to execute physical disengagement maneuvers:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Inchworm Motion:</strong> The rover locks its rear wheels and pushes the front wheels forward by extending the suspension, then locks the front and drags the rear. This simulates "walking" rather than rolling, drastically reducing slip.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Chassis Lift:</strong> It can physically raise the rover's body to prevent the "belly" from touching the ground in deep sand.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Crab Walk:</strong> The wheels can steer up to 90 degrees, allowing the rover to move laterally to escape stall situations or optimize solar panel orientation.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading"><strong>Conclusion</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The analysis of the <strong>AI Inside China's Zhurong</strong> reveals how environmental constraints (solar power, soft terrain) drive code evolution. While NASA has pushed the boundaries of raw computing speed (FPGA and nuclear power) as seen in <em>The Evolution of Rover AI: From Sojourner's 'Bump and Go' to Perseverance's AutoNav</em>, the CNSA has developed a resilient system. It is an architecture capable of adapting to the Red Planet's rhythms and modifying its own physical configuration to avoid being trapped in the sands of Utopia Planitia.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->

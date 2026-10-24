@@ -14,7 +14,7 @@
 		
 			<atom:link href="//localhost:1313/tags/sensor-fusion/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>A Deep Dive into Visual Odometry: How Rovers Know &amp;#8216;How Far&amp;#8217; They&amp;#8217;ve Gone</title>
+				<title>A Deep Dive into Visual Odometry: How Rovers Know ‘How Far’ They’ve Gone</title>
 				<link>//localhost:1313/posts/2025-12-06-how-rovers-know-how-far-theyve-gone/</link>
 				<pubDate>Sat, 06 Dec 2025 08:00:00 +0000</pubDate>
 				<guid>//localhost:1313/posts/2025-12-06-how-rovers-know-how-far-theyve-gone/</guid>

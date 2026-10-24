@@ -1,26 +1,26 @@
 ---
 id: 331
-title: 'A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover&#8217;s Route'
+title: 'A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover’s Route'
 date: '2025-11-29T08:00:00+00:00'
-author: 'Beyond The Joystick'
-excerpt: 'This article examines autonomous navigation on Mars, where rovers like Perseverance face severe hardware constraints (200 MHz CPUs). We conduct a technical comparison between A*, the deterministic standard for static global planning, and D Lite*, the superior choice for dynamic replanning. While A* forces computationally expensive recalculations for every new obstacle, D* Lite utilizes incremental updates ($rhs-values$) to optimize processing time. By analyzing Cost Maps and algorithmic complexity, we demonstrate how the evolution toward Field D* and Hybrid AI is critical for safe robotic exploration.'
+author: Beyond The Joystick
+excerpt: This article examines autonomous navigation on Mars, where rovers like Perseverance face severe hardware constraints (200 MHz CPUs). We conduct a technical comparison between A*, the deterministic standard for static global planning, and D Lite*, the superior choice for dynamic replanning. While A* forces computationally expensive recalculations for every new obstacle, D* Lite utilizes incremental updates ($rhs-values$) to optimize processing time. By analyzing Cost Maps and algorithmic complexity, we demonstrate how the evolution toward Field D* and Hybrid AI is critical for safe robotic exploration.
 layout: post
-guid: 'https://beyondthejoystick.space/?p=331'
+guid: https://beyondthejoystick.space/?p=331
 permalink: /a-vs-d-lite-the-pathfinding-algorithms/
 litespeed_no_cache:
-    - '1'
+- '1'
 litespeed_no_image_lazy:
-    - '1'
+- '1'
 litespeed_no_vpi:
-    - '1'
+- '1'
 image: /wp-content/uploads/2025/11/mars-rover-dynamic-pathfinding-visualization-a-star-vs-d-star-lite.jpg-scaled.png
 categories:
-    - 'Algorithms &amp; AI'
+- Algorithms & AI
 tags:
-    - 'A* Algorithm'
-    - 'Autonomous Navigation'
-    - 'D* Lite'
-    - 'Pathfinding Algorithms'
+- A* Algorithm
+- Autonomous Navigation
+- D* Lite
+- Pathfinding Algorithms
 format: false
 ---
 
@@ -167,7 +167,9 @@ format: false
 <!-- /wp:paragraph -->
 
 <!-- wp:katex/display-block -->
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>f(n) = g(n) + h(n)</pre></div>
+<div class="math-block">{{< mathblock >}}
+f(n) = g(n) + h(n)
+{{< /mathblock >}}</div>
 <!-- /wp:katex/display-block -->
 
 <!-- wp:paragraph -->
@@ -195,13 +197,13 @@ format: false
 <!-- wp:html -->
 <ul>
     <li>
-        <strong>Manhattan Distance</strong> ([katex]|x_1 - x_2| + |y_1 - y_2|[/katex]): Standard for urban grids or 4-direction movements (North, South, East, West). It is unsuitable for rovers, as it overestimates diagonal distances in open spaces.
+        <strong>Manhattan Distance</strong> ({{< math >}} |x_1 - x_2| + |y_1 - y_2| {{< /math >}}): Standard for urban grids or 4-direction movements (North, South, East, West). It is unsuitable for rovers, as it overestimates diagonal distances in open spaces.
     </li>
     <li>
-        <strong>Euclidean Distance</strong> ([katex]\sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}[/katex]): The "as the crow flies" distance. It is the most common heuristic for open-field space navigation since it allows movement in any direction. However, it is computationally more expensive due to the square root calculation.
+        <strong>Euclidean Distance</strong> ({{< math >}} \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2} {{< /math >}}): The "as the crow flies" distance. It is the most common heuristic for open-field space navigation since it allows movement in any direction. However, it is computationally more expensive due to the square root calculation.
     </li>
     <li>
-        <strong>Octile / Diagonal Distance</strong>: An excellent compromise for the 8-connected grids used by rovers. It allows diagonal movements at a cost of [katex]\sqrt{2}[/katex] and cardinal movements at a cost of 1.
+        <strong>Octile / Diagonal Distance</strong>: An excellent compromise for the 8-connected grids used by rovers. It allows diagonal movements at a cost of {{< math >}} \sqrt{2} {{< /math >}} and cardinal movements at a cost of 1.
     </li>
 </ul>
 <!-- /wp:html -->
@@ -317,10 +319,10 @@ format: false
 <!-- wp:html -->
 <ul>
     <li>
-        <strong>Consistent Node:</strong> When [katex]g(n) = rhs(n)[/katex]. The node is stable; there is no news.
+        <strong>Consistent Node:</strong> When {{< math >}} g(n) = rhs(n) {{< /math >}}. The node is stable; there is no news.
     </li>
     <li>
-        <strong>Inconsistent Node:</strong> When [katex]g(n) \neq rhs(n)[/katex]. This happens when a sensor detects a change in the Cost Map (e.g., a new rock).
+        <strong>Inconsistent Node:</strong> When {{< math >}} g(n) \neq rhs(n) {{< /math >}}. This happens when a sensor detects a change in the Cost Map (e.g., a new rock).
     </li>
 </ul>
 <!-- /wp:html -->
@@ -405,18 +407,18 @@ format: false
             </tr>
             <tr>
                 <td><strong>Initial Planning Time</strong></td>
-                <td>[katex]O(N \log N)[/katex]</td>
-                <td>[katex]O(N \log N)[/katex] (Identical to A*)</td>
+                <td>{{< math >}} O(N \log N) {{< /math >}}</td>
+                <td>{{< math >}} O(N \log N) {{< /math >}} (Identical to A*)</td>
             </tr>
             <tr>
                 <td><strong>Replanning Time</strong></td>
-                <td>Slow: Recalculates entirely [katex](O(N \log N))[/katex]</td>
-                <td><strong>Very Fast</strong>: Proportional to change [katex](O(k \log N))[/katex]</td>
+                <td>Slow: Recalculates entirely {{< math >}} (O(N \log N)) {{< /math >}}</td>
+                <td><strong>Very Fast</strong>: Proportional to change {{< math >}} (O(k \log N)) {{< /math >}}</td>
             </tr>
             <tr>
                 <td><strong>Memory Footprint</strong></td>
                 <td>Low: Stores only current Open/Closed set</td>
-                <td>High: Must maintain [katex]g[/katex] and [katex]rhs[/katex] for all explored nodes</td>
+                <td>High: Must maintain {{< math >}} g {{< /math >}} and {{< math >}} rhs {{< /math >}} for all explored nodes</td>
             </tr>
             <tr>
                 <td><strong>Complexity Implementation</strong></td>
@@ -452,10 +454,10 @@ format: false
 <!-- wp:html -->
 <ul>
     <li>
-        <strong>A*</strong> always performs work proportional to the graph size ([katex]N[/katex]).
+        <strong>A*</strong> always performs work proportional to the graph size ({{< math >}} N {{< /math >}}).
     </li>
     <li>
-        <strong>D* Lite</strong> performs work proportional to the size of the change ([katex]k[/katex]), where usually [katex]k \ll N[/katex].
+        <strong>D* Lite</strong> performs work proportional to the size of the change ({{< math >}} k {{< /math >}}), where usually {{< math >}} k \ll N {{< /math >}}.
     </li>
 </ul>
 <!-- /wp:html -->

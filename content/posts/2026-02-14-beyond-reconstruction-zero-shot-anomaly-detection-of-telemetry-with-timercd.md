@@ -2,26 +2,26 @@
 id: 582
 title: 'Beyond Reconstruction: Zero-Shot Anomaly Detection of Telemetry with TimeRCD'
 date: '2026-02-14T08:30:00+00:00'
-author: 'Beyond The Joystick'
-excerpt: "Space telemetry analysis is shifting from reconstruction-based models like TadGAN to Zero-Shot Anomaly Detection. Traditional generative models struggle in deep space, suffering from overfitting and failing to identify unprecedented operational faults. The TimeRCD framework introduces a paradigm shift via the Relative Context Discrepancy (RCD) approach. Instead of reconstructing nominal data, TimeRCD measures vector discrepancies between local and global temporal contexts using pre-trained Foundation Models. Validated on NASA's SMAP and MSL datasets, this zero-shot architecture drastically cuts false positives, reduces computational loads on Rad-Hard processors, and paves the way for true onboard spacecraft autonomy."
+author: Beyond The Joystick
+excerpt: Space telemetry analysis is shifting from reconstruction-based models like TadGAN to Zero-Shot Anomaly Detection. Traditional generative models struggle in deep space, suffering from overfitting and failing to identify unprecedented operational faults. The TimeRCD framework introduces a paradigm shift via the Relative Context Discrepancy (RCD) approach. Instead of reconstructing nominal data, TimeRCD measures vector discrepancies between local and global temporal contexts using pre-trained Foundation Models. Validated on NASA's SMAP and MSL datasets, this zero-shot architecture drastically cuts false positives, reduces computational loads on Rad-Hard processors, and paves the way for true onboard spacecraft autonomy.
 layout: post
-guid: 'https://beyondthejoystick.space/?p=582'
+guid: https://beyondthejoystick.space/?p=582
 permalink: /beyond-reconstruction-zero-shot-anomaly-detection-of-telemetry-with-timercd/
 image: /wp-content/uploads/2026/02/Mars-rover-telemetry-data-visualization-concept.png
 categories:
-    - 'Advanced Topics &amp; Future'
-    - 'Algorithms &amp; AI'
+- Advanced Topics & Future
+- Algorithms & AI
 tags:
-    - 'Autonomous Navigation'
-    - 'Deep Learning'
-    - 'Foundation Models'
-    - 'Mars Science Laboratory'
-    - 'NASA SMAP'
-    - 'Rad-Hard Processors'
-    - 'Relative Context Discrepancy'
-    - 'Space Telemetry'
-    - TimeRCD
-    - 'Zero-Shot Anomaly Detection'
+- Autonomous Navigation
+- Deep Learning
+- Foundation Models
+- Mars Science Laboratory
+- NASA SMAP
+- Rad-Hard Processors
+- Relative Context Discrepancy
+- Space Telemetry
+- TimeRCD
+- Zero-Shot Anomaly Detection
 format: false
 ---
 
@@ -50,7 +50,7 @@ format: false
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>In these networks, the time-series of nominal sensors are compressed into a low-dimensional latent space and subsequently "reconstructed." The underlying thesis is that a network trained exclusively on routine operations will fail to decode anomalous patterns. Consequently, a high mathematical variance (e.g., Mean Squared Error) between the original input [katex]X[/katex] and the reconstructed output [katex]\hat{X}[/katex] triggers the alarm.</p>
+<p>In these networks, the time-series of nominal sensors are compressed into a low-dimensional latent space and subsequently "reconstructed." The underlying thesis is that a network trained exclusively on routine operations will fail to decode anomalous patterns. Consequently, a high mathematical variance (e.g., Mean Squared Error) between the original input {{< math >}} X {{< /math >}} and the reconstructed output {{< math >}} \hat{X} {{< /math >}} triggers the alarm.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -71,7 +71,7 @@ format: false
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><strong>The "Reconstruction Trap":</strong> If the network's capacity is increased to tolerate noise and reduce false positives, the model becomes hyper-expressive, successfully reconstructing even fault patterns perfectly. This zeros out the variance [katex]X - \hat{X}[/katex], leading to unreported critical failures (<strong>false negatives</strong>).</li>
+<li><strong>The "Reconstruction Trap":</strong> If the network's capacity is increased to tolerate noise and reduce false positives, the model becomes hyper-expressive, successfully reconstructing even fault patterns perfectly. This zeros out the variance {{< math >}} X - \hat{X} {{< /math >}}, leading to unreported critical failures (<strong>false negatives</strong>).</li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
@@ -122,15 +122,17 @@ format: false
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Mathematically, the anomaly metric [katex]A_t[/katex] at time [katex]t[/katex] is defined by the discrepancy [katex]D[/katex] between the latent representations [katex]E[/katex]:</p>
+<p>Mathematically, the anomaly metric {{< math >}} A_t {{< /math >}} at time {{< math >}} t {{< /math >}} is defined by the discrepancy {{< math >}} D {{< /math >}} between the latent representations {{< math >}} E {{< /math >}}:</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:katex/display-block -->
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>A_t = D(E(X_{local}), E(X_{global}))</pre></div>
+<div class="math-block">{{< mathblock >}}
+A_t = D(E(X_{local}), E(X_{global}))
+{{< /mathblock >}}</div>
 <!-- /wp:katex/display-block -->
 
 <!-- wp:paragraph -->
-<p>If the rover encounters unexpected terrain causing wheel slip (a kinematic anomaly), the local context will experience a sharp vector deviation from the global trend. This distance, usually quantified via cosine similarity or [katex]L_2[/katex] norm, provides a robust anomaly score that is immune to the white noise that typically fools generative models.</p>
+<p>If the rover encounters unexpected terrain causing wheel slip (a kinematic anomaly), the local context will experience a sharp vector deviation from the global trend. This distance, usually quantified via cosine similarity or {{< math >}} L_2 {{< /math >}} norm, provides a robust anomaly score that is immune to the white noise that typically fools generative models.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -213,7 +215,9 @@ def compute_time_rcd_score(telemetry_stream, encoder, local_size, global_size):
 <!-- /wp:paragraph -->
 
 <!-- wp:katex/display-block -->
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>F_1 = 2 \cdot \frac{Precision \cdot Recall}{Precision + Recall}</pre></div>
+<div class="math-block">{{< mathblock >}}
+F_1 = 2 \cdot \frac{Precision \cdot Recall}{Precision + Recall}
+{{< /mathblock >}}</div>
 <!-- /wp:katex/display-block -->
 
 <!-- wp:paragraph -->
@@ -255,7 +259,7 @@ def compute_time_rcd_score(telemetry_stream, encoder, local_size, global_size):
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>This is the true prerequisite for autonomy. When future missions like <em>Dragonfly</em> navigate the dense skies of Titan, or when <em>cryobots</em> descend beneath the icy crust of Europa, communication latency will be measured in hours, no longer in minutes. In that absolute operational darkness, the vehicle's survival will not depend on a flashing alert on JPL monitors, but on the cold, silent, and autonomous evaluation of a metric [katex]A_t[/katex].</p>
+<p>This is the true prerequisite for autonomy. When future missions like <em>Dragonfly</em> navigate the dense skies of Titan, or when <em>cryobots</em> descend beneath the icy crust of Europa, communication latency will be measured in hours, no longer in minutes. In that absolute operational darkness, the vehicle's survival will not depend on a flashing alert on JPL monitors, but on the cold, silent, and autonomous evaluation of a metric {{< math >}} A_t {{< /math >}}.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
