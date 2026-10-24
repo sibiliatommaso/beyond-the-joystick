@@ -1,0 +1,12 @@
+{{/* Ko-fi floating widget: included once in baseof.html so it appears on every page */}}
+<script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    kofiWidgetOverlay.draw('beyondthejoystick', {
+      'type': 'floating-chat',
+      'floating-chat.donateButton.text': 'Support me',
+      'floating-chat.donateButton.background-color': '#F0B44D',
+      'floating-chat.donateButton.text-color': '#0B1220'
+    });
+  });
+</script>

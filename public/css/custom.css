@@ -604,7 +604,7 @@ p { margin: 0 0 1em; max-width: 70ch; }
 /* OUR MISSION */
 
 .about-hero {
-  max-width: 850px;
+  max-width: none;
   margin: 0 auto clamp(5rem, 10vw, 8rem);
 }
 
@@ -618,7 +618,7 @@ p { margin: 0 0 1em; max-width: 70ch; }
 }
 
 .about-hero__intro {
-  max-width: 700px;
+  max-width: none;
   margin-bottom: 2rem;
   color: var(--color-accent) !important;
   font-size: clamp(1.2rem, 2.4vw, 1.65rem) !important;
@@ -627,10 +627,11 @@ p { margin: 0 0 1em; max-width: 70ch; }
 }
 
 .about-hero__text {
-  max-width: 760px;
+  max-width: none;
 }
 
 .about-hero__text p {
+  max-width: none;
   margin-bottom: 1.25rem;
 }
 
@@ -740,11 +741,11 @@ p { margin: 0 0 1em; max-width: 70ch; }
 }
 
 .about-founder__story {
-  max-width: 800px;
-  margin-inline: auto;
+  max-width: none;
 }
 
 .about-founder__story p {
+  max-width: none;
   margin-bottom: 1.25rem;
 }
 
@@ -754,6 +755,10 @@ p { margin: 0 0 1em; max-width: 70ch; }
 
 
 /* SUPPORT / KO-FI */
+
+#support {
+  scroll-margin-top: 6rem;
+}
 
 .about-support {
   padding: clamp(2rem, 6vw, 4.5rem);
@@ -775,11 +780,7 @@ p { margin: 0 0 1em; max-width: 70ch; }
   text-align: center;
 }
 
-.about-support__content h2 {
-  margin-bottom: 1.25rem;
-}
-
-.about-support__content p:not(.about-eyebrow) {
+.about-support__content p {
   margin-inline: auto;
   margin-bottom: 1.25rem;
 }
@@ -787,28 +788,43 @@ p { margin: 0 0 1em; max-width: 70ch; }
 .about-support__button {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .about-support__button a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.75rem;
   max-width: 100%;
-  border-radius: 6px;
-  line-height: 0;
+  padding: 1.15rem 2.75rem;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  background: var(--color-accent);
+  box-shadow: 0 10px 30px rgb(240 180 77 / 25%);
+  color: var(--color-on-accent);
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none;
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    background-color var(--transition),
+    color var(--transition);
 }
 
 .about-support__button a:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 38px rgb(240 180 77 / 35%);
+  background: transparent;
+  color: var(--color-accent);
 }
 
-.about-support__button img {
-  display: block;
-  width: auto;
-  max-width: 100%;
-  height: 36px;
-  border: 0;
+.about-support__note {
+  margin-top: 2rem;
+  margin-bottom: 0 !important;
+  font-size: 0.9rem !important;
 }
 
 
@@ -894,11 +910,11 @@ p { margin: 0 0 1em; max-width: 70ch; }
   text-align: center;
 }
 
-.about-journey h2 {
-  margin-bottom: 1.25rem;
+#journey {
+  margin-bottom: 0;
 }
 
-.about-journey > p:not(.about-eyebrow) {
+.about-journey > p {
   max-width: 660px;
   margin-inline: auto;
   margin-bottom: 1.25rem;
@@ -1045,3 +1061,4 @@ p { margin: 0 0 1em; max-width: 70ch; }
     transform: none;
   }
 }
+
