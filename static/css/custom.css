@@ -546,3 +546,502 @@ p { margin: 0 0 1em; max-width: 70ch; }
   .card:hover,
   .card:hover .card__media img { transform: none; }
 }
+
+/* =========================================================
+   ABOUT PAGE
+   Beyond the Joystick
+   ========================================================= */
+
+.about-page {
+  --about-card-border: rgb(184 194 209 / 14%);
+
+  width: min(100% - 3rem, 1000px);
+  margin-inline: auto;
+  padding-block: clamp(3.5rem, 7vw, 6rem);
+  color: var(--color-text);
+}
+
+.about-page h1,
+.about-page h2,
+.about-page h3 {
+  color: var(--color-text);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+}
+
+.about-page h2 {
+  margin-bottom: 1.25rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.12;
+}
+
+.about-page p {
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.about-page strong {
+  color: var(--color-text);
+}
+
+.about-page a:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 5px;
+}
+
+.about-eyebrow {
+  margin-bottom: 1rem;
+  color: var(--color-accent) !important;
+  font-size: 0.78rem !important;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1.5 !important;
+  text-transform: uppercase;
+}
+
+
+/* OUR MISSION */
+
+.about-hero {
+  max-width: 850px;
+  margin: 0 auto clamp(5rem, 10vw, 8rem);
+}
+
+.about-hero h1 {
+  max-width: 17ch;
+  margin-bottom: 1.5rem;
+  font-size: clamp(2.7rem, 6.5vw, 5rem);
+  line-height: 1.03;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+}
+
+.about-hero__intro {
+  max-width: 700px;
+  margin-bottom: 2rem;
+  color: var(--color-accent) !important;
+  font-size: clamp(1.2rem, 2.4vw, 1.65rem) !important;
+  font-weight: 600;
+  line-height: 1.55 !important;
+}
+
+.about-hero__text {
+  max-width: 760px;
+}
+
+.about-hero__text p {
+  margin-bottom: 1.25rem;
+}
+
+.about-hero__text p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* SHARED SECTIONS */
+
+.about-section {
+  margin-bottom: clamp(5rem, 10vw, 8rem);
+}
+
+.about-section__heading {
+  max-width: 740px;
+  margin-bottom: 2.5rem;
+}
+
+.about-section__heading h2 {
+  margin-bottom: 1rem;
+}
+
+.about-section__intro {
+  max-width: 650px;
+  margin-bottom: 0;
+}
+
+
+/* FOUNDER */
+
+.about-founder {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.75fr) minmax(0, 1.25fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+  margin-bottom: 3rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  overflow: hidden;
+  border: 1px solid var(--about-card-border);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgb(240 180 77 / 7%),
+      transparent 55%
+    ),
+    var(--color-surface);
+}
+
+.about-founder__portrait {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-width: 0;
+  align-self: stretch;
+}
+
+.about-founder__portrait img {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  max-height: 420px;
+  height: auto;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.about-founder__intro {
+  min-width: 0;
+}
+
+.about-founder__name {
+  margin-bottom: 0.5rem;
+  color: var(--color-text) !important;
+  font-size: clamp(1.7rem, 3vw, 2.4rem) !important;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.2 !important;
+}
+
+.about-founder__role {
+  margin-bottom: 1.5rem;
+  color: var(--color-accent) !important;
+  font-size: 1rem !important;
+  font-weight: 600;
+}
+
+.about-founder__intro > p:not(.about-founder__name):not(.about-founder__role) {
+  margin-bottom: 1.5rem;
+}
+
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.about-link:hover {
+  color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.about-founder__story {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.about-founder__story p {
+  margin-bottom: 1.25rem;
+}
+
+.about-founder__story p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* SUPPORT / KO-FI */
+
+.about-support {
+  padding: clamp(2rem, 6vw, 4.5rem);
+  overflow: hidden;
+  border: 1px solid rgb(240 180 77 / 22%);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(
+      ellipse at 100% 0%,
+      rgb(240 180 77 / 10%),
+      transparent 55%
+    ),
+    var(--color-surface);
+}
+
+.about-support__content {
+  max-width: 700px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.about-support__content h2 {
+  margin-bottom: 1.25rem;
+}
+
+.about-support__content p:not(.about-eyebrow) {
+  margin-inline: auto;
+  margin-bottom: 1.25rem;
+}
+
+.about-support__button {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.about-support__button a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  border-radius: 6px;
+  line-height: 0;
+}
+
+.about-support__button a:hover {
+  transform: translateY(-3px);
+}
+
+.about-support__button img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 36px;
+  border: 0;
+}
+
+
+/* TOPICS / CATEGORY CARDS */
+
+.about-topics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.about-topic-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 265px;
+  padding: 1.75rem;
+  border: 1px solid var(--about-card-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: inherit;
+  text-decoration: none;
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    background-color var(--transition);
+}
+
+.about-topic-card:hover {
+  transform: translateY(-4px);
+  border-color: rgb(240 180 77 / 55%);
+  background: var(--color-alt);
+}
+
+.about-topic-card__number {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.about-topic-card h3 {
+  margin-bottom: 0.85rem;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.about-topic-card p {
+  margin-bottom: 1.5rem;
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+.about-topic-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
+.about-topic-card__link span {
+  transition: transform var(--transition);
+}
+
+.about-topic-card:hover .about-topic-card__link span {
+  transform: translateX(4px);
+}
+
+
+/* START YOUR JOURNEY */
+
+.about-journey {
+  padding: clamp(2.5rem, 7vw, 5rem) clamp(1.5rem, 5vw, 3rem);
+  border: 1px solid var(--about-card-border);
+  border-radius: var(--radius);
+  background: var(--color-alt);
+  text-align: center;
+}
+
+.about-journey h2 {
+  margin-bottom: 1.25rem;
+}
+
+.about-journey > p:not(.about-eyebrow) {
+  max-width: 660px;
+  margin-inline: auto;
+  margin-bottom: 1.25rem;
+}
+
+.about-journey__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  padding: 0.95rem 1.5rem;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    transform var(--transition),
+    background-color var(--transition),
+    color var(--transition);
+}
+
+.about-journey__button:hover {
+  transform: translateY(-2px);
+  background: transparent;
+  color: var(--color-accent);
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .about-topics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-founder {
+    grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.3fr);
+    gap: 2rem;
+  }
+
+  .about-founder__portrait img {
+    max-width: 270px;
+  }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 620px) {
+  .about-page {
+    width: min(100% - 2rem, 1000px);
+    padding-block: 3rem;
+  }
+
+  .about-hero {
+    margin-bottom: 4.5rem;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(2.45rem, 11vw, 3.5rem);
+    line-height: 1.04;
+  }
+
+  .about-hero__intro {
+    font-size: 1.2rem !important;
+  }
+
+  .about-section {
+    margin-bottom: 4.5rem;
+  }
+
+  .about-section__heading {
+    margin-bottom: 2rem;
+  }
+
+  .about-founder {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .about-founder__portrait {
+    max-height: 330px;
+    overflow: hidden;
+  }
+
+  .about-founder__portrait img {
+    width: auto;
+    max-width: 100%;
+    max-height: 320px;
+  }
+
+  .about-founder__name {
+    font-size: 1.8rem !important;
+  }
+
+  .about-support {
+    padding: 2rem 1.25rem;
+  }
+
+  .about-topics {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .about-topic-card {
+    min-height: 0;
+    padding: 1.5rem;
+  }
+
+  .about-topic-card__number {
+    margin-bottom: 1rem;
+  }
+
+  .about-journey {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .about-journey__button {
+    width: 100%;
+  }
+}
+
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page *,
+  .about-page *::before,
+  .about-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .about-topic-card:hover,
+  .about-support__button a:hover,
+  .about-journey__button:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Mission: Charting the Future of Autonomous Navigation | Beyond the Joystick</title>
+  <meta name="description" content="Explore planetary robotics, autonomous navigation, SLAM, ROS 2, and practical engineering projects for autonomous rovers.">
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+ <div class="header__inner">
+
+
+	<div class="site-brand">
+  <a class="site-brand__home" href="/" aria-label="Torna alla home">
+    <img
+      class="site-brand__logo"
+      src="/images/logo.png"
+      alt=""
+    >
+  </a>
+
+  <span class="site-brand__title">Beyond the Joystick</span>
+  </div>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      hidden
+    >
+      Menu
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <ul>
+        
+        <li>
+          <a href="/">Home</a>
+        </li>
+        
+        <li>
+          <a href="/posts/">Articles</a>
+        </li>
+        
+        <li>
+          <a href="/#labs">Labs &amp; Projects</a>
+        </li>
+        
+        <li>
+          <a href="/about/">About</a>
+        </li>
+        
+      </ul>
+    </nav>
+
+  </div>
+
+  <script>
+    (function () {
+      var button = document.querySelector('.menu-toggle');
+      var nav = document.getElementById('site-nav');
+
+      if (!button || !nav) return;
+
+      document.documentElement.classList.add('js');
+      button.hidden = false;
+
+      button.addEventListener('click', function () {
+        var open = button.getAttribute('aria-expanded') === 'true';
+
+        button.setAttribute('aria-expanded', String(!open));
+        button.textContent = open ? 'Menu' : 'Close';
+        nav.classList.toggle('is-open', !open);
+      });
+    })();
+  </script>
+</header>
+
+
+  <main id="main-content">
+    
+  <article class="single-page">
+    <h1>Our Mission: Charting the Future of Autonomous Navigation</h1>
+    <div class="about-page">
+  <!-- OUR MISSION -->
+  <section class="about-hero">
+<pre><code>&lt;p class=&quot;about-eyebrow&quot;&gt;BEYOND THE JOYSTICK&lt;/p&gt;
+
+&lt;p class=&quot;about-hero__intro&quot;&gt;
+  Welcome to Beyond The Joystick, your professional resource dedicated
+  to the intersection of Artificial Intelligence and autonomous rover
+  navigation.
+&lt;/p&gt;
+
+&lt;div class=&quot;about-hero__text&quot;&gt;
+
+  &lt;p&gt;
+    The 20-minute communication lag to Mars isn't just a technical
+    challenge; it's the fundamental reason this field exists.
+    We can't simply &quot;joystick&quot; rovers on other worlds. They must think,
+    perceive, and act on their own.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Our mission is to explore and explain the complex technologies,
+    from SLAM algorithms to perception sensors, that allow robotic
+    explorers to navigate independently. We bridge the gap between
+    complex academic theory and real-world application, covering
+    missions from Mars to the Moon and projects you can build on your
+    own workbench.
+  &lt;/p&gt;
+
+&lt;/div&gt;
+</code></pre>
+  </section>
+  <!-- MEET THE FOUNDER -->
+  <section class="about-section">
+<pre><code>&lt;div class=&quot;about-section__heading&quot;&gt;
+  &lt;p class=&quot;about-eyebrow&quot;&gt;THE PERSON BEHIND THE PROJECT&lt;/p&gt;
+  &lt;h2&gt;Meet The Founder&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;about-founder&quot;&gt;
+
+  &lt;div class=&quot;about-founder__portrait&quot;&gt;
+    &lt;img
+      src=&quot;{{ &quot;images/tommy-no-bg.png&quot; | relURL }}&quot;
+      alt=&quot;Tommaso Sibilia, founder of Beyond The Joystick&quot;
+      loading=&quot;lazy&quot;
+    &gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;about-founder__intro&quot;&gt;
+
+    &lt;p class=&quot;about-founder__name&quot;&gt;
+      Hi, I'm Tommaso Sibilia.
+    &lt;/p&gt;
+
+    &lt;p class=&quot;about-founder__role&quot;&gt;
+      Founder and chief editor of
+      &lt;strong&gt;Beyond The Joystick&lt;/strong&gt;.
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      You can find my professional profile on
+      &lt;a
+        class=&quot;about-link&quot;
+        href=&quot;https://www.linkedin.com/in/tommaso-sibilia&quot;
+        target=&quot;_blank&quot;
+        rel=&quot;noopener noreferrer&quot;
+      &gt;&lt;strong&gt;LinkedIn&lt;/strong&gt;&lt;/a&gt;.
+    &lt;/p&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;about-founder__story&quot;&gt;
+
+  &lt;p&gt;
+    Ever since I first discovered how machines could sense and interact
+    with their environment, I’ve been fascinated by the challenge of
+    building intelligent systems capable of exploring — and understanding
+    — the unknown. That curiosity naturally evolved into a passion for
+    &lt;strong&gt;aerospace engineering and autonomous robotics&lt;/strong&gt;,
+    fields where technology and exploration meet.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    I’m currently pursuing a
+    &lt;strong&gt;degree in Aerospace Engineering at Politecnico di Milano&lt;/strong&gt;,
+    where I also serve as an &lt;strong&gt;engineer and team leader&lt;/strong&gt;
+    in &lt;strong&gt;PoliSpace&lt;/strong&gt;, the university’s student space association.
+    Within &lt;strong&gt;RoverTech&lt;/strong&gt;, I design and program the
+    &lt;strong&gt;locomotion and sensing systems&lt;/strong&gt; of our Mars rover
+    prototype, working primarily with
+    &lt;strong&gt;embedded systems (STM32, C, Rust)&lt;/strong&gt; and sensor integration.
+    In parallel, I lead the &lt;strong&gt;IT Team&lt;/strong&gt;, developing internal
+    tools and managing project workflows — experiences that have honed
+    both my &lt;strong&gt;technical and leadership&lt;/strong&gt; skills.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    I created this platform to share
+    &lt;strong&gt;practical insights, technical guides, and reflections&lt;/strong&gt;
+    at the intersection of
+    &lt;strong&gt;robotics, autonomy, and space exploration&lt;/strong&gt;.
+    My goal is to make advanced topics approachable while maintaining
+    the depth and rigor they deserve — building a community for those who,
+    like me, believe that
+    &lt;strong&gt;autonomy is the next frontier of exploration&lt;/strong&gt;.
+  &lt;/p&gt;
+
+&lt;/div&gt;
+</code></pre>
+  </section>
+  <!-- SUPPORT THE MISSION -->
+  <section class="about-section about-support">
+<pre><code>&lt;div class=&quot;about-support__content&quot;&gt;
+
+  &lt;p class=&quot;about-eyebrow&quot;&gt;HELP KEEP THE MISSION GOING&lt;/p&gt;
+
+  &lt;h2&gt;Support The Mission&lt;/h2&gt;
+
+  &lt;p&gt;
+    Writing high-quality articles takes time and coffee. If you want
+    to support Beyond The Joystick and keep the servers running, you
+    can offer me a virtual coffee. No pressure, just gratitude!
+  &lt;/p&gt;
+
+  &lt;div class=&quot;about-support__button&quot;&gt;
+
+    &lt;a
+      href=&quot;https://ko-fi.com/L4L31PCL3I&quot;
+      target=&quot;_blank&quot;
+      rel=&quot;noopener noreferrer&quot;
+      aria-label=&quot;Buy me a coffee on Ko-fi&quot;
+    &gt;
+      &lt;img
+        src=&quot;https://storage.ko-fi.com/cdn/kofi6.png?v=6&quot;
+        alt=&quot;Buy Me a Coffee at ko-fi.com&quot;
+        height=&quot;36&quot;
+        loading=&quot;lazy&quot;
+      &gt;
+    &lt;/a&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+  </section>
+  <!-- WHAT WE COVER -->
+  <section class="about-section">
+<pre><code>&lt;div class=&quot;about-section__heading&quot;&gt;
+
+  &lt;p class=&quot;about-eyebrow&quot;&gt;EXPLORE THE FIELD&lt;/p&gt;
+
+  &lt;h2&gt;What We Cover: From Core Concepts to Advanced AI&lt;/h2&gt;
+
+  &lt;p class=&quot;about-section__intro&quot;&gt;
+    To help you find what you need, our content is organized into
+    several key categories.
+  &lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;about-topics&quot;&gt;
+
+  &lt;a
+    class=&quot;about-topic-card&quot;
+    href=&quot;https://beyondthejoystick.space/category/core-concepts/&quot;
+  &gt;
+    &lt;span class=&quot;about-topic-card__number&quot;&gt;01&lt;/span&gt;
+    &lt;h3&gt;Core Concepts&lt;/h3&gt;
+    &lt;p&gt;
+      We break down the &quot;what&quot; and &quot;why&quot; of autonomous navigation.
+    &lt;/p&gt;
+    &lt;span class=&quot;about-topic-card__link&quot;&gt;Explore category →&lt;/span&gt;
+  &lt;/a&gt;
+
+  &lt;a
+    class=&quot;about-topic-card&quot;
+    href=&quot;https://beyondthejoystick.space/category/advance-topics/&quot;
+  &gt;
+    &lt;span class=&quot;about-topic-card__number&quot;&gt;02&lt;/span&gt;
+    &lt;h3&gt;Advanced Topics &amp;amp; Future&lt;/h3&gt;
+    &lt;p&gt;
+      We look ahead to swarm robotics, autonomous science, and other
+      cutting-edge challenges.
+    &lt;/p&gt;
+    &lt;span class=&quot;about-topic-card__link&quot;&gt;Explore category →&lt;/span&gt;
+  &lt;/a&gt;
+
+  &lt;a
+    class=&quot;about-topic-card&quot;
+    href=&quot;https://beyondthejoystick.space/category/sensors-hardware/&quot;
+  &gt;
+    &lt;span class=&quot;about-topic-card__number&quot;&gt;03&lt;/span&gt;
+    &lt;h3&gt;Sensors &amp;amp; Hardware&lt;/h3&gt;
+    &lt;p&gt;
+      A deep dive into the &quot;eyes and brains&quot; of rovers, from LiDAR
+      to Rad-Hard CPUs.
+    &lt;/p&gt;
+    &lt;span class=&quot;about-topic-card__link&quot;&gt;Explore category →&lt;/span&gt;
+  &lt;/a&gt;
+
+  &lt;a
+    class=&quot;about-topic-card&quot;
+    href=&quot;https://beyondthejoystick.space/category/algorithms-ai/&quot;
+  &gt;
+    &lt;span class=&quot;about-topic-card__number&quot;&gt;04&lt;/span&gt;
+    &lt;h3&gt;Algorithms &amp;amp; AI&lt;/h3&gt;
+    &lt;p&gt;
+      We explore the &quot;how,&quot; from pathfinding (like A* and D* Lite)
+      to Visual Odometry.
+    &lt;/p&gt;
+    &lt;span class=&quot;about-topic-card__link&quot;&gt;Explore category →&lt;/span&gt;
+  &lt;/a&gt;
+
+  &lt;a
+    class=&quot;about-topic-card&quot;
+    href=&quot;https://beyondthejoystick.space/category/missions-case-studies/&quot;
+  &gt;
+    &lt;span class=&quot;about-topic-card__number&quot;&gt;05&lt;/span&gt;
+    &lt;h3&gt;Missions &amp;amp; Case Studies&lt;/h3&gt;
+    &lt;p&gt;
+      We analyze real-world examples, from NASA's Perseverance
+      to the upcoming VIPER.
+    &lt;/p&gt;
+    &lt;span class=&quot;about-topic-card__link&quot;&gt;Explore category →&lt;/span&gt;
+  &lt;/a&gt;
+
+  &lt;a
+    class=&quot;about-topic-card&quot;
+    href=&quot;https://beyondthejoystick.space/category/projects-tutorials/&quot;
+  &gt;
+    &lt;span class=&quot;about-topic-card__number&quot;&gt;06&lt;/span&gt;
+    &lt;h3&gt;Projects &amp;amp; Tutorials&lt;/h3&gt;
+    &lt;p&gt;
+      Hands-on guides to help you build your own mini-rover with ROS 2.
+    &lt;/p&gt;
+    &lt;span class=&quot;about-topic-card__link&quot;&gt;Explore category →&lt;/span&gt;
+  &lt;/a&gt;
+
+&lt;/div&gt;
+</code></pre>
+  </section>
+  <!-- START YOUR JOURNEY -->
+  <section class="about-journey">
+<pre><code>&lt;p class=&quot;about-eyebrow&quot;&gt;YOUR NEXT STEP&lt;/p&gt;
+
+&lt;h2&gt;Start Your Journey&lt;/h2&gt;
+
+&lt;p&gt;
+  Whether you are a student, a professional engineer, or a curious
+  space enthusiast, we are glad you're here.
+&lt;/p&gt;
+
+&lt;p&gt;
+  The best place to start is with our foundational pillar post:
+&lt;/p&gt;
+
+&lt;a
+  class=&quot;about-journey__button&quot;
+  href=&quot;https://beyondthejoystick.space/www-beyondthejoystick-autonomous-rover-navigation/&quot;
+&gt;
+  The Ultimate Guide to Autonomous Rover Navigation
+  &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;
+&lt;/a&gt;
+</code></pre>
+  </section>
+</div>
+
+  </article>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="container footer__inner">
+    <div class="footer__about">
+      <p class="footer__brand">Beyond the Joystick</p>
+      <p>Technical articles and hands-on projects on space robotics, autonomous navigation, and planetary exploration.</p>
+    </div>
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="/posts/">Articles</a></li>
+        <li><a href="/#labs">Labs &amp; Projects</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="https://ko-fi.com/L4L31PCL3I" rel="noopener">Support the Project</a></li>
+      </ul>
+    </nav>
+  </div>
+  <p class="container footer__legal">&copy; 2026 Beyond the Joystick. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
