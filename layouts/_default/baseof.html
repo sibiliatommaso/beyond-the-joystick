@@ -6,6 +6,8 @@
   <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
   <meta name="description" content="{{ site.Params.description }}">
   <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+
+  {{ partial "math.html" . }}
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -17,6 +19,5 @@
   </main>
 
   {{ partial "footer.html" . }}
-  {{ partial "kofi-widget.html" . }}
 </body>
 </html>
