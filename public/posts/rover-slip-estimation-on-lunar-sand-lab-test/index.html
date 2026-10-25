@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rover Slip Estimation on Lunar Sand: Lab Test | Beyond the Joystick</title>
+  <meta name="description" content="Planetary rovers face significant mobility challenges on loose extraterrestrial terrains, making sand entrapment a critical threat. In this Lab Breakdown, we …">
+<meta name="author" content="Tommaso Sibilia">
+<link rel="canonical" href="//localhost:1313/posts/rover-slip-estimation-on-lunar-sand-lab-test/">
+
+
+<meta property="og:site_name" content="Beyond the Joystick">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rover Slip Estimation on Lunar Sand: Lab Test">
+<meta property="og:description" content="Planetary rovers face significant mobility challenges on loose extraterrestrial terrains, making sand entrapment a critical threat. In this Lab Breakdown, we …">
+<meta property="og:url" content="//localhost:1313/posts/rover-slip-estimation-on-lunar-sand-lab-test/">
+<meta property="og:image" content="//localhost:1313/wp-content/uploads/2026/09/PIA26016orig.jpg">
+
+<meta property="article:published_time" content="2026-09-20T08:19:05&#43;00:00">
+<meta property="article:modified_time" content="2026-09-20T08:19:05&#43;00:00">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rover Slip Estimation on Lunar Sand: Lab Test">
+<meta name="twitter:description" content="Planetary rovers face significant mobility challenges on loose extraterrestrial terrains, making sand entrapment a critical threat. In this Lab Breakdown, we …">
+<meta name="twitter:image" content="//localhost:1313/wp-content/uploads/2026/09/PIA26016orig.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","author":{"@type":"Person","name":"Tommaso Sibilia","sameAs":["https://www.linkedin.com/in/tommaso-sibilia","https://github.com/sibiliatommaso"],"url":"//localhost:1313/about/"},"dateModified":"2026-09-20T08:19:05+00:00","datePublished":"2026-09-20T08:19:05+00:00","description":"Planetary rovers face significant mobility challenges on loose extraterrestrial terrains, making sand entrapment a critical threat. In this Lab Breakdown, we …","headline":"Rover Slip Estimation on Lunar Sand: Lab Test","image":"//localhost:1313/wp-content/uploads/2026/09/PIA26016orig.jpg","inLanguage":"en","keywords":"Arduino Mega, Lucas-Kanade, Lunar Regolith, Planetary Exploration, ROS 2 Humble, Rover Slip Estimation, Single-Wheel Testbed, Space Robotics, Visual Odometry, Wheel Encoders","mainEntityOfPage":"//localhost:1313/posts/rover-slip-estimation-on-lunar-sand-lab-test/","publisher":{"@type":"Organization","name":"Beyond the Joystick","url":"//localhost:1313/"}}</script>
+
+
+  <link rel="stylesheet" href="/css/custom.css">
+
+  
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.css" integrity="sha384-u1zONI5gPXUx0UKI62c75/zww972y0v2rSK5ZYlVdS6xEuWDeZWUI66v6t1gvlXJ" crossorigin="anonymous">
+  
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+ <div class="header__inner">
+
+
+	<div class="site-brand">
+  <a class="site-brand__home" href="/" aria-label="Torna alla home">
+    <img
+      class="site-brand__logo"
+      src="/images/logo.png"
+      alt=""
+    >
+  </a>
+
+  <span class="site-brand__title">Beyond the Joystick</span>
+  </div>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      hidden
+    >
+      Menu
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <ul>
+        
+        <li>
+          <a href="/">Home</a>
+        </li>
+        
+        <li>
+          <a href="/posts/">Articles</a>
+        </li>
+        
+        <li>
+          <a href="/#labs">Labs &amp; Projects</a>
+        </li>
+        
+        <li>
+          <a href="/about/">About</a>
+        </li>
+        
+      </ul>
+    </nav>
+
+  </div>
+
+  <script>
+    (function () {
+      var button = document.querySelector('.menu-toggle');
+      var nav = document.getElementById('site-nav');
+
+      if (!button || !nav) return;
+
+      document.documentElement.classList.add('js');
+      button.hidden = false;
+
+      button.addEventListener('click', function () {
+        var open = button.getAttribute('aria-expanded') === 'true';
+
+        button.setAttribute('aria-expanded', String(!open));
+        button.textContent = open ? 'Menu' : 'Close';
+        nav.classList.toggle('is-open', !open);
+      });
+    })();
+  </script>
+</header>
+
+
+  <main id="main-content">
+    
+
+<article class="post-page">
+
+  
+  <header class="post-header">
+
+    <a class="post-back-link" href="/posts/">
+      ← All Articles
+    </a>
+
+    
+  	<div class="post-categories">
+    		
+      			
+      			<a href="/categories/algorithms-ai/">
+        			Algorithms &amp; AI
+      			</a>
+    		
+      			
+      			<a href="/categories/sensors-hardware/">
+        			Sensors &amp; Hardware
+      			</a>
+    		
+  	</div>
+	
+
+    <h1>Rover Slip Estimation on Lunar Sand: Lab Test</h1>
+
+    <div class="post-meta">
+
+      <time datetime="2026-09-20">
+        September 20, 2026
+      </time>
+
+      <span aria-hidden="true">·</span>
+
+      <span>5 min read</span>
+
+    </div>
+
+  </header>
+
+  
+  <div class="post-layout">
+
+    <div class="post-content">
+      <!-- wp:paragraph -->
+<p>Planetary exploration rovers serve as essential tools for advancing scientific investigations, but their mobility is significantly challenged by loose and deformable surfaces like lunar dust and Martian regolith<sup></sup>. These extraterrestrial terrains exhibit low cohesion and bearing capacity, leading to excessive wheel slip where the wheels rotate without generating sufficient forward motion<sup></sup>.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>As we dive deeper into <a href="/autonomous-rover-navigation/">autonomous space robotics</a> here on <em>Beyond the Joystick</em>, I am realizing that mastering rover slip estimation is just as critical as orbital mechanics. If a rover cannot detect slip, standard wheel odometry accrues massive errors, causing deviations from planned trajectories and increasing the risk of entrapment. To understand how engineers solve this, we are going to explore how <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=11170582">academic researchers utilize a single-wheel testbed to analyze wheel-terrain interactions before the software ever leaves Earth</a>.</p>
+<!-- /wp:paragraph -->
+<!-- wp:gallery {"linkTo":"none"} -->
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"lightbox":{"enabled":false},"id":617,"sizeSlug":"large","linkDestination":"custom"} -->
+<figure class="wp-block-image size-large"><a href="https://images.nasa.gov/details/PIA26016"><img src="/wp-content/uploads/2026/09/PIA26016orig.jpg" alt="Rover slip estimation testbed diagram" class="wp-image-617"/></a><figcaption class="wp-element-caption">Curiosity's Navcams View Its Wheels </figcaption></figure>
+<!-- /wp:image -->
+<!-- wp:image {"lightbox":{"enabled":false},"id":618,"sizeSlug":"large","linkDestination":"custom"} -->
+<figure class="wp-block-image size-large"><a href="https://images.nasa.gov/details/PIA26379"><img src="/wp-content/uploads/2026/09/PIA26379orig-1024x768.jpg" alt="Rover slip estimation testbed diagram" class="wp-image-618"/></a><figcaption class="wp-element-caption">Tracks Tell Tale of Perseverance's Crater Rim Climb </figcaption></figure>
+<!-- /wp:image --></figure>
+<!-- /wp:gallery -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Hardware: Inside a Single-Wheel Testbed</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>To develop accurate rover slip estimation models, engineers rely on single-wheel testbeds to isolate wheel-soil interactions, allowing for precise sensor mounting and controlled experimentation<sup></sup>. The physical architecture of a modern testbed consists of several specific hardware components:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>The Frame and Sliding Carriage:</strong> An alluminio frame houses a moving carriage connected via linear bearings, enabling free motion in horizontal and vertical directions.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Motorized Wheel with Encoder:</strong> The setup utilizes a wheel driven by a DC motor equipped with a high-resolution encoder to measure shaft rotation and velocity.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Load Cell Integration:</strong> Mounted above the motor and wheel, a load cell measures the exact weight falling on the wheel to simulate specific gravity conditions.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Onboard Camera:</strong> A downward-facing camera observes the wheel and soil movement directly, providing the visual data required to perform on-board slip estimation. In the lab, researchers often use river sand as a practical, reproducible substrate to simulate lunar regolith.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+<!-- wp:image {"id":621,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="/wp-content/uploads/2026/09/rover-slip-estimation-testbed-diagram-1024x650.png" alt="Rover slip estimation testbed diagram" class="wp-image-621"/></figure>
+<!-- /wp:image -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Core Logic: Optical Flow vs. Angular Velocity</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>The fundamental mathematical principle behind rover slip estimation involves comparing two independent velocity vectors. The algorithm must identify disparities between the data from the wheel encoder and the on-board camera<sup></sup>.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>First, we process the encoder data to compute the angular displacement, which is then converted into tangential velocity (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow></msub></mrow><annotation encoding="application/x-tex">v_{enc}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>). This is calculated using the angular velocity (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi></mrow><annotation encoding="application/x-tex">\omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">ω</span></span></span></span>) and the wheel radius (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">r</span></span></span></span>):</p>
+<!-- /wp:paragraph -->
+<!-- wp:katex/display-block -->
+<div class="math-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>v</mi><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow></msub><mo>=</mo><mi>ω</mi><mo>⋅</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">v_{enc} = \omega \cdot r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.4445em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">ω</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">r</span></span></span></span></span></div>
+<!-- /wp:katex/display-block -->
+<!-- wp:paragraph -->
+<p>Simultaneously, the actual linear velocity (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mrow><mi>o</mi><mi>p</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">v_{opt}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7167em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">o</span><span class="mord mathnormal mtight">pt</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span>) is derived from the onboard camera. The system employs the Lucas-Kanade optical flow algorithm to compute pixel displacement per frame, translating image data into a physical metric velocity.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>To quantify the traction loss, we calculate the slip ratio (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">s</span></span></span></span>), defined as the difference between the tangential velocity and the linear velocity, normalized by the maximum of these two:</p>
+<!-- /wp:paragraph -->
+<!-- wp:katex/display-block -->
+<div class="math-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>s</mi><mo>=</mo><mfrac><mrow><msub><mi>v</mi><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow></msub><mo>−</mo><msub><mi>v</mi><mrow><mi>o</mi><mi>p</mi><mi>t</mi></mrow></msub></mrow><mrow><mi>max</mi><mo>⁡</mo><mo stretchy="false">(</mo><msub><mi>v</mi><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow></msub><mo separator="true">,</mo><msub><mi>v</mi><mrow><mi>o</mi><mi>p</mi><mi>t</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">s = \frac{v_{enc} - v_{opt}}{\max(v_{enc}, v_{opt})}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:2.2324em;vertical-align:-0.9721em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.2603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop">max</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">o</span><span class="mord mathnormal mtight">pt</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">o</span><span class="mord mathnormal mtight">pt</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9721em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div>
+<!-- /wp:katex/display-block -->
+<!-- wp:paragraph -->
+<p>When <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow></msub><mo>&gt;</mo><msub><mi>v</mi><mrow><mi>o</mi><mi>p</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">v_{enc} &gt; v_{opt}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6891em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7167em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">o</span><span class="mord mathnormal mtight">pt</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span>, the slip ratio is positive, indicating driving conditions where the wheel is slipping against the regolith.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Bridging Hardware and Software: The ROS 2 Architecture</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Transitioning from theoretical physics to actionable autonomy requires a robust software stack. As someone who spends hours configuring Docker containers and ROS 2 communication layers for the PoliSpace drone team, I find the architecture of these rover testbeds incredibly familiar and highly effective.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The testbed framework integrates an embedded microcontroller with a high-level control system<sup></sup>:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Low-Level Acquisition:</strong> An Arduino Mega interfaces with the motor drivers, encoders, and load cell. It continuously acquires sensor data and transmits this telemetry over a serial connection in a lightweight JSON format.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>High-Level Processing:</strong> The high-level control layer is implemented using ROS 2 Humble. A Sensor Data Node parses the JSON messages and publishes the encoder counts and load cell readings as ROS topics. Simultaneously, a Motor Control Node publishes PWM commands back to the Arduino to adjust motor speeds.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>This modular architecture allows a separate visualization node to display real-time wheel dynamics and load responses seamlessly<sup></sup>.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Results: When Incline Beats Traction</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>To validate the slip estimation algorithms, researchers command the motor to rotate to a fixed position across different terrain inclinations<sup></sup>.</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Flat Terrain (0°) and Slight Incline (4°):</strong> The optical flow-based data shows good agreement with the encoder-based data. The slip ratio remains relatively low, staying below 0.2, indicating that the wheel maintains excellent traction.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Moderate Incline (7°):</strong> The terrain dynamics shift dramatically. There is significant deviation between the two velocities, with the carriage covering less than half the expected distance. The average slip ratio increases significantly to approximately 0.5 (50% slippage).</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Critical Incline (15°):</strong> The incline completely defeats the wheel's traction. The carriage barely moves any distance, suggesting total slippage and wheel sinkage. The calculated slip ratio approaches 1, indicating a critical loss of mobility.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Conclusion: From the Lab to the Moon</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Accurate rover slip estimation is essential for ensuring reliable traversal and improving rover autonomy<sup></sup>. By integrating encoders, load cells, and optical flow sensing into a single-wheel testbed, we can accurately quantify slip and study the complex mechanics of wheel-terrain interactions<sup></sup>.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>These empirical findings serve as the foundation for developing machine learning-based slip prediction and adaptive control algorithms, ensuring the success of <a href="/the-new-lunar-gold-rush-how-commercial-lunar-rovers-are-scaling-autonomous-mobility/">future missions on challenging extraterrestrial terrains</a>. With my upcoming internship focusing on exactly these ROS 2 slip-detection architectures for lunar rovers, analyzing these laboratory dynamics provides the perfect primer for the engineering challenges ahead.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+    </div>
+
+  </div>
+
+  
+  <footer class="post-footer">
+
+    <div class="post-footer__divider"></div>
+
+    <p>Enjoyed this article?</p>
+
+    <a class="post-back-link" href="/posts/">
+      Explore more articles →
+    </a>
+
+  </footer>
+
+</article>
+
+
+  </main>
+
+  <footer class="site-footer">
+
+  <div class="container footer__grid">
+
+    
+    <div class="footer__col footer__col--brand">
+      <p class="footer__brand">Beyond the Joystick</p>
+      <p class="footer__about">
+        Technical articles and hands-on projects on space robotics,
+        autonomous navigation, and planetary exploration.
+      </p>
+      
+      <a class="footer__support" href="https://ko-fi.com/L4L31PCL3I" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Z"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 2.5c-.8 1-.8 2 0 3M12 2.5c-.8 1-.8 2 0 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        Support the project
+      </a>
+      
+    </div>
+
+    
+    <nav class="footer__col" aria-label="Footer navigation">
+      <h2 class="footer__heading">Explore</h2>
+      <ul class="footer__list">
+        <li><a href="/posts/">Articles</a></li>
+        <li><a href="/#labs">Labs &amp; Projects</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </nav>
+
+    
+    <div class="footer__col">
+      <h2 class="footer__heading">Connect</h2>
+      <ul class="footer__social">
+
+        <li>
+          <a
+            class="footer__social-link"
+            href="https://www.linkedin.com/in/tommaso-sibilia"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="footer__social-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+            <span class="footer__social-text">
+              <strong>LinkedIn</strong>
+              <small>Tommaso Sibilia</small>
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            class="footer__social-link"
+            href="https://github.com/sibiliatommaso?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="footer__social-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
+            <span class="footer__social-text">
+              <strong>GitHub</strong>
+              <small>Code &amp; repositories</small>
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            class="footer__social-link"
+            href="https://www.reddit.com/user/beyond-the-joystick/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="footer__social-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 0C5.373 0 0 5.373 0 12c0 3.314 1.343 6.314 3.515 8.485l-2.286 2.286C.775 23.225 1.097 24 1.738 24H12c6.627 0 12-5.373 12-12S18.627 0 12 0Zm4.388 3.199c1.104 0 1.999.895 1.999 1.999 0 1.105-.895 2-1.999 2-.946 0-1.739-.657-1.947-1.539v.002c-1.147.162-2.032 1.15-2.032 2.341v.007c1.776.067 3.4.567 4.686 1.363.473-.363 1.064-.58 1.707-.58 1.547 0 2.802 1.254 2.802 2.802 0 1.117-.655 2.081-1.601 2.531-.088 3.256-3.637 5.876-7.997 5.876-4.361 0-7.905-2.617-7.998-5.87-.954-.447-1.614-1.415-1.614-2.538 0-1.548 1.255-2.802 2.803-2.802.645 0 1.239.218 1.712.585 1.275-.79 2.881-1.291 4.64-1.365v-.01c0-1.663 1.263-3.034 2.88-3.207.188-.911.993-1.595 1.959-1.595Zm-8.085 8.376c-.784 0-1.459.78-1.506 1.797-.047 1.016.64 1.429 1.426 1.429.786 0 1.371-.369 1.418-1.385.047-1.017-.553-1.841-1.338-1.841Zm7.406 0c-.786 0-1.385.824-1.338 1.841.047 1.017.634 1.385 1.418 1.385.785 0 1.473-.413 1.426-1.429-.046-1.017-.721-1.797-1.506-1.797Zm-3.703 4.013c-.974 0-1.907.048-2.77.135-.147.015-.241.168-.183.305.483 1.154 1.622 1.964 2.953 1.964 1.33 0 2.47-.81 2.953-1.964.057-.137-.037-.29-.185-.305-.863-.087-1.795-.135-2.768-.135Z"/></svg></span>
+            <span class="footer__social-text">
+              <strong>Reddit</strong>
+              <small>u/beyond-the-joystick</small>
+            </span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="container footer__bottom">
+    <p>&copy; 2026 Beyond the Joystick. All rights reserved.</p>
+  </div>
+
+</footer>
+
+
+<script>
+  (function () {
+    if (window.__kofiWidgetLoaded) return;
+    window.__kofiWidgetLoaded = true;
+
+    function draw() {
+      kofiWidgetOverlay.draw('beyondthejoystick', {
+        'type': 'floating-chat',
+        'floating-chat.donateButton.text': 'Support me',
+        'floating-chat.donateButton.background-color': '#F0B44D',
+        'floating-chat.donateButton.text-color': '#0B1220'
+      });
+    }
+
+    var s = document.createElement('script');
+    s.src = 'https://storage.ko-fi.com/cdn/scripts/overlay-widget.js';
+    s.onload = function () {
+      if (document.body) { draw(); }
+      else { document.addEventListener('DOMContentLoaded', draw); }
+    };
+    document.head.appendChild(s);
+  })();
+</script>
+
+
+</body>
+</html>

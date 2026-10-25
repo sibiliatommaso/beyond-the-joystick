@@ -24,6 +24,7 @@ tags:
 - Space Applications Services
 - Visual Odometry
 format: false
+slug: the-new-lunar-gold-rush-how-commercial-lunar-rovers-are-scaling-autonomous-mobility
 ---
 
 <!-- wp:image {"lightbox":{"enabled":false},"id":606,"sizeSlug":"full","linkDestination":"custom"} -->

@@ -3,8 +3,16 @@ title: 'Camera Calibration Explained: An Interactive OpenCV Lab'
 date: '2026-10-24T09:00:00+02:00'
 author: 'Beyond The Joystick'
 description: 'Move 13 sliders and watch a virtual pinhole camera update live. Learn what K, R, T and lens distortion do, with the OpenCV math and Python code.'
-excerpt: 'Move 13 sliders and watch a virtual pinhole camera update live. Learn what K, R, T and lens distortion do, with the OpenCV math and Python code.'
-url: /interactive-camera-calibration-lab/
+summary: 'Move 13 sliders and watch a virtual pinhole camera update in real time: position, orientation, focal length, optical center and lens distortion.'
+number: 1
+weight: 1
+repo: 'https://github.com/sibiliatommaso/camera-calibration-lab'
+article: '/rover-camera-calibration-mathematics/'
+article_title: 'Rover Camera Calibration: The Mathematics of Space Vision'
+stack:
+    - Python
+    - OpenCV
+    - NumPy
 image: /images/camera-calibration-lab-examples.png
 categories:
     - 'Projects & Tutorials'
@@ -20,7 +28,7 @@ tags:
     - Lab
 ---
 
-Every rover that navigates with a camera relies on a handful of numbers it rarely shows you: the focal length, the optical center, the camera pose and the way the lens bends straight lines. This is **camera calibration**, and when those numbers are wrong, visual odometry drifts, stereo depth is off and obstacles appear where they are not. If you are building anything on top of [autonomous rover navigation](/autonomous-rover-navigation/), you will meet the pinhole camera model sooner or later.
+Every rover that navigates with a camera relies on a handful of numbers it rarely shows you: the focal length, the optical center, the camera pose and the way the lens bends straight lines. This is **camera calibration**, and when those numbers are wrong, visual odometry drifts, stereo depth is off and obstacles appear where they are not. If you are building anything on top of rover vision, you will meet the pinhole camera model sooner or later, and the theory is covered in [Rover Camera Calibration: The Mathematics of Space Vision](/rover-camera-calibration-mathematics/).
 
 Reading `K`, `R`, `T` and `distCoeffs` in an OpenCV calibration result is one thing. *Seeing* what each of them does to an image is another. So I built a small lab where you can move every parameter with a slider and watch the image change in real time.
 

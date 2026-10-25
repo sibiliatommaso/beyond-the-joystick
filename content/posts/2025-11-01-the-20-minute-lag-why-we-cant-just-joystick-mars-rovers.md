@@ -11,6 +11,7 @@ image: /wp-content/uploads/2025/10/2-minute-lag.png
 categories:
 - Core Concepts
 format: false
+slug: the-20-minute-lag-why-we-cant-just-joystick-mars-rovers
 ---
 
 <!-- wp:heading {"level":4} -->

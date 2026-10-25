@@ -1,0 +1,32 @@
+{{ define "main" }}
+  <article class="container lab-page">
+
+    <header class="lab-page__header">
+      <p class="labs-eyebrow">LAB {{ printf "%02d" (.Params.number | default 1) }}</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.summary }}<p class="lab-page__lead">{{ . }}</p>{{ end }}
+
+      <div class="lab-page__actions">
+        {{ with .Params.repo }}
+          <a class="lab-btn" href="{{ . }}" target="_blank" rel="noopener noreferrer">View the code on GitHub</a>
+        {{ end }}
+        {{ with .Params.article }}
+          <a class="lab-btn lab-btn--ghost" href="{{ . }}">Read the theory <span aria-hidden="true">→</span></a>
+        {{ end }}
+      </div>
+
+      <p class="lab-page__meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        · {{ .ReadingTime }} min read
+        {{ with .Params.stack }}· {{ delimit . ", " }}{{ end }}
+      </p>
+    </header>
+
+    <div class="lab-page__content">
+      {{ .Content }}
+    </div>
+
+    <p class="lab-page__back"><a href="/labs/">← All labs</a></p>
+
+  </article>
+{{ end }}

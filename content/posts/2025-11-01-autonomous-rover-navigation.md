@@ -20,6 +20,7 @@ tags:
 - SLAM
 - Space Exploration
 format: false
+slug: autonomous-rover-navigation
 ---
 
 <!-- wp:html -->

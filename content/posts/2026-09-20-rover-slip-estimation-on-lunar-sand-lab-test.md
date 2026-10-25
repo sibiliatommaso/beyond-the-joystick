@@ -23,6 +23,7 @@ tags:
 - Visual Odometry
 - Wheel Encoders
 format: false
+slug: rover-slip-estimation-on-lunar-sand-lab-test
 ---
 
 <!-- wp:paragraph -->

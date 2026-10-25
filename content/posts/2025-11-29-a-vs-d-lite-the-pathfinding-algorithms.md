@@ -22,6 +22,7 @@ tags:
 - D* Lite
 - Pathfinding Algorithms
 format: false
+slug: a-vs-d-lite-the-pathfinding-algorithms
 ---
 
 <!-- wp:heading {"level":3} -->

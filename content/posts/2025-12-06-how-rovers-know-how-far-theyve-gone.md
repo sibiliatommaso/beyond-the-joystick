@@ -28,6 +28,7 @@ tags:
 - Sensor Fusion
 - Visual Odometry
 format: false
+slug: how-rovers-know-how-far-theyve-gone
 ---
 
 <!-- wp:heading {"level":3} -->

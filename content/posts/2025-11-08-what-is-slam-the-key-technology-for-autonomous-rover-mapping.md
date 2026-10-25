@@ -21,6 +21,7 @@ tags:
 - SLAM
 - vSLAM
 format: false
+slug: what-is-slam-the-key-technology-for-autonomous-rover-mapping
 ---
 
 <!-- wp:paragraph -->

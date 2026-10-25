@@ -70,6 +70,27 @@
 				<description></description>
 			</item>
 			<item>
+				<title>Computer Vision</title>
+				<link>//localhost:1313/tags/computer-vision/</link>
+				<pubDate>Wed, 21 Oct 2026 15:06:12 +0000</pubDate>
+				<guid>//localhost:1313/tags/computer-vision/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Intrinsic Parameters</title>
+				<link>//localhost:1313/tags/intrinsic-parameters/</link>
+				<pubDate>Wed, 21 Oct 2026 15:06:12 +0000</pubDate>
+				<guid>//localhost:1313/tags/intrinsic-parameters/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>ROS 2</title>
+				<link>//localhost:1313/tags/ros-2/</link>
+				<pubDate>Wed, 21 Oct 2026 15:06:12 +0000</pubDate>
+				<guid>//localhost:1313/tags/ros-2/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Arduino Mega</title>
 				<link>//localhost:1313/tags/arduino-mega/</link>
 				<pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
@@ -200,13 +221,6 @@
 				<link>//localhost:1313/tags/space-applications-services/</link>
 				<pubDate>Sat, 18 Apr 2026 07:36:13 +0000</pubDate>
 				<guid>//localhost:1313/tags/space-applications-services/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Computer Vision</title>
-				<link>//localhost:1313/tags/computer-vision/</link>
-				<pubDate>Sat, 14 Mar 2026 08:00:00 +0000</pubDate>
-				<guid>//localhost:1313/tags/computer-vision/</guid>
 				<description></description>
 			</item>
 			<item>

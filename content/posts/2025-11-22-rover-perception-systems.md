@@ -22,6 +22,7 @@ tags:
 - Sensor Fusion
 - Space Robotics
 format: false
+slug: rover-perception-systems
 ---
 
 <!-- wp:heading {"level":3} -->

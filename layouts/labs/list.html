@@ -1,0 +1,27 @@
+{{ define "main" }}
+  <div class="container labs-page">
+
+    <header class="labs-page__header">
+      <p class="labs-eyebrow">HANDS-ON AND OPEN SOURCE</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Content }}<div class="labs-page__intro">{{ . }}</div>{{ end }}
+    </header>
+
+    <div class="labs-grid">
+      {{ range $i, $lab := .Pages.ByWeight }}
+        <a class="lab-card" href="{{ $lab.RelPermalink }}">
+          <span class="lab-card__number">{{ printf "%02d" (add $i 1) }}</span>
+          <h2>{{ $lab.Title }}</h2>
+          <p>{{ with $lab.Params.summary }}{{ . }}{{ else }}{{ $lab.Summary | plainify | truncate 160 }}{{ end }}</p>
+          {{ with $lab.Params.stack }}
+            <ul class="lab-card__stack" aria-label="Technologies">
+              {{ range . }}<li>{{ . }}</li>{{ end }}
+            </ul>
+          {{ end }}
+          <span class="lab-card__link">Open the lab <span aria-hidden="true">→</span></span>
+        </a>
+      {{ end }}
+    </div>
+
+  </div>
+{{ end }}

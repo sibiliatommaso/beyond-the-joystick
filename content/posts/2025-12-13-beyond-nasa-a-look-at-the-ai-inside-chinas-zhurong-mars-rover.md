@@ -19,6 +19,7 @@ tags:
 - Space Robotics
 - Zhurong
 format: false
+slug: beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover
 ---
 
 <!-- wp:image {"lightbox":{"enabled":false},"id":423,"sizeSlug":"full","linkDestination":"custom","align":"center"} -->

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beyond NASA: A Look at the AI Inside China’s Zhurong Mars Rover | Beyond the Joystick</title>
+  <meta name="description" content="his analysis explores the technical architecture of China&#39;s Zhurong rover, highlighting how it differs from NASA&#39;s design philosophy. Operating in Utopia …">
+<meta name="author" content="Tommaso Sibilia">
+<link rel="canonical" href="//localhost:1313/posts/beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/">
+
+
+<meta property="og:site_name" content="Beyond the Joystick">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Beyond NASA: A Look at the AI Inside China’s Zhurong Mars Rover">
+<meta property="og:description" content="his analysis explores the technical architecture of China&#39;s Zhurong rover, highlighting how it differs from NASA&#39;s design philosophy. Operating in Utopia …">
+<meta property="og:url" content="//localhost:1313/posts/beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/">
+<meta property="og:image" content="//localhost:1313/wp-content/uploads/2025/12/Zhurong_rover.png">
+
+<meta property="article:published_time" content="2025-12-13T08:00:00&#43;00:00">
+<meta property="article:modified_time" content="2025-12-13T08:00:00&#43;00:00">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Beyond NASA: A Look at the AI Inside China’s Zhurong Mars Rover">
+<meta name="twitter:description" content="his analysis explores the technical architecture of China&#39;s Zhurong rover, highlighting how it differs from NASA&#39;s design philosophy. Operating in Utopia …">
+<meta name="twitter:image" content="//localhost:1313/wp-content/uploads/2025/12/Zhurong_rover.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","author":{"@type":"Person","name":"Tommaso Sibilia","sameAs":["https://www.linkedin.com/in/tommaso-sibilia","https://github.com/sibiliatommaso"],"url":"//localhost:1313/about/"},"dateModified":"2025-12-13T08:00:00+00:00","datePublished":"2025-12-13T08:00:00+00:00","description":"his analysis explores the technical architecture of China's Zhurong rover, highlighting how it differs from NASA's design philosophy. Operating in Utopia …","headline":"Beyond NASA: A Look at the AI Inside China’s Zhurong Mars Rover","image":"//localhost:1313/wp-content/uploads/2025/12/Zhurong_rover.png","inLanguage":"en","keywords":"Autonomous Navigation, Mars Rover, Pathfinding Algorithms, Space Robotics, Zhurong","mainEntityOfPage":"//localhost:1313/posts/beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/","publisher":{"@type":"Organization","name":"Beyond the Joystick","url":"//localhost:1313/"}}</script>
+
+
+  <link rel="stylesheet" href="/css/custom.css">
+
+  
+  
+  
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+ <div class="header__inner">
+
+
+	<div class="site-brand">
+  <a class="site-brand__home" href="/" aria-label="Torna alla home">
+    <img
+      class="site-brand__logo"
+      src="/images/logo.png"
+      alt=""
+    >
+  </a>
+
+  <span class="site-brand__title">Beyond the Joystick</span>
+  </div>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      hidden
+    >
+      Menu
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <ul>
+        
+        <li>
+          <a href="/">Home</a>
+        </li>
+        
+        <li>
+          <a href="/posts/">Articles</a>
+        </li>
+        
+        <li>
+          <a href="/#labs">Labs &amp; Projects</a>
+        </li>
+        
+        <li>
+          <a href="/about/">About</a>
+        </li>
+        
+      </ul>
+    </nav>
+
+  </div>
+
+  <script>
+    (function () {
+      var button = document.querySelector('.menu-toggle');
+      var nav = document.getElementById('site-nav');
+
+      if (!button || !nav) return;
+
+      document.documentElement.classList.add('js');
+      button.hidden = false;
+
+      button.addEventListener('click', function () {
+        var open = button.getAttribute('aria-expanded') === 'true';
+
+        button.setAttribute('aria-expanded', String(!open));
+        button.textContent = open ? 'Menu' : 'Close';
+        nav.classList.toggle('is-open', !open);
+      });
+    })();
+  </script>
+</header>
+
+
+  <main id="main-content">
+    
+
+<article class="post-page">
+
+  
+  <header class="post-header">
+
+    <a class="post-back-link" href="/posts/">
+      ← All Articles
+    </a>
+
+    
+  	<div class="post-categories">
+    		
+      			
+      			<a href="/categories/missions-case-studies/">
+        			Missions &amp; Case Studies
+      			</a>
+    		
+  	</div>
+	
+
+    <h1>Beyond NASA: A Look at the AI Inside China’s Zhurong Mars Rover</h1>
+
+    <div class="post-meta">
+
+      <time datetime="2025-12-13">
+        December 13, 2025
+      </time>
+
+      <span aria-hidden="true">·</span>
+
+      <span>5 min read</span>
+
+    </div>
+
+  </header>
+
+  
+  <div class="post-layout">
+
+    <div class="post-content">
+      <!-- wp:image {"lightbox":{"enabled":false},"id":423,"sizeSlug":"full","linkDestination":"custom","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full"><a href="https://en.wikipedia.org/wiki/Zhurong_%28rover%29"><img src="/wp-content/uploads/2025/12/Zhurong_rover.png" alt="" class="wp-image-423"/></a></figure>
+<!-- /wp:image -->
+<!-- wp:paragraph -->
+<p>While global attention is often monopolized by the Jet Propulsion Laboratory (JPL) and its Curiosity-class vehicles, Chinese space engineering reached a critical milestone with the <strong>Tianwen-1</strong> mission. Landing in May 2021 on the vast plains of <strong>Utopia Planitia</strong>, the Zhurong rover represents more than just a political success; it is a tangible demonstration of advanced autonomous robotics. AI Inside China's Zhurong</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading"><strong>Tianwen-1 and Zhurong: Mission Highlights</strong></h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Zhurong was designed with a nominal operational life of <strong>90 Sols</strong>.</p>
+<!-- /wp:paragraph -->
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p><strong>Technical Note:</strong> A "Sol" is a Martian day, lasting approximately 24 hours and 39 minutes. While 90 Sols was the minimum requirement for mission success, the rover continued to operate for over an earth-year.</p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Key Achievements</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>EDL Success:</strong> China became the second nation to successfully complete a soft landing on Mars on its first attempt, managing the "9 minutes of terror" with a fully autonomous GNC (<em>Guidance, Navigation, and Control</em>) system.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Geology and Water:</strong> Using its laser spectrometer (MarSCoDe) and multispectral cameras, Zhurong found evidence of <strong>hydrated minerals</strong> (sulfates, hydrated silica) and sedimentary structures. These findings suggest liquid water was active during the Amazonian epoch—much more recently than previous climate models assumed.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Distance:</strong> By the time it entered hibernation in May 2022, the rover had covered <strong>1,921 meters</strong>, operating with a communication latency of up to 20 minutes.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading"><strong>The Software Architecture: Hierarchical Pathfinding</strong></h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>The <strong>AI Inside China's Zhurong</strong> must solve the fundamental problem of navigating an unstructured environment. To do this, it doesn't rely on a single "magic" algorithm but rather a <strong>hierarchical architecture</strong> combining global planning with local reactivity.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>1. Global Planning: The Role of A*</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>For long-range planning, the rover utilizes the A* (A-Star) algorithm.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>This runs on a "global map" generated from orbital imagery or previous panoramas. As we discussed in <a href="/a-vs-d-lite-the-pathfinding-algorithms/" title="A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover’s Route">A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover's Route</a>, A* is ideal here because it acts as a static "GPS." It calculates the optimal path from point A to point B by minimizing cost (distance + slope), assuming the map is known and immutable.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>2. Local Planning: D* Lite and Reactive Navigation</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>The reality of Martian terrain, however, is full of unknowns invisible from orbit. This is where the Local Planner takes over.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>When onboard sensors (stereo cameras and LiDAR) detect an unforeseen obstacle—such as a 30cm rock missing from the global map—the AI switches to a dynamic algorithm, specifically a variant of D* Lite (Dynamic A*).</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Unlike A*, <strong>D* Lite</strong> is designed for <strong>incremental re-planning</strong>. Instead of recalculating the entire route from scratch (which would waste valuable CPU cycles), it modifies only the portion of the trajectory affected by the new obstacle. This allows Zhurong to adapt in real-time while moving, avoiding hazards without needing to stop for lengthy computations.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading"><strong>Energy Management: "Solar" AI vs. Nuclear Power</strong></h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>A distinct feature of Zhurong's software is its predictive management of thermal and electrical energy. This marks a fundamental architectural difference compared to recent American rovers.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>The Problem: Solar vs. RTG</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>NASA's <strong>Perseverance</strong> is powered by an <strong>MMRTG</strong> (Multi-Mission Radioisotope Thermoelectric Generator). Because it is nuclear, it produces heat and electricity constantly, 24/7, regardless of the weather. It doesn't need to "sleep" to survive the cold, only to recharge batteries during peak loads.</p>
+<!-- /wp:paragraph -->
+<!-- wp:image {"lightbox":{"enabled":false},"id":426,"sizeSlug":"large","linkDestination":"custom","align":"center"} -->
+<figure class="wp-block-image aligncenter size-large"><img src="/wp-content/uploads/2025/12/perseverance-mmrtg-close-1024x576.webp" alt="" class="wp-image-426"/><figcaption class="wp-element-caption">Perseverance's Radioisotope Thermoelectric Generator Before Launch</figcaption></figure>
+<!-- /wp:image -->
+<!-- wp:paragraph -->
+<p>Zhurong, conversely, is <strong>solar-powered</strong>. This makes it a slave to day/night cycles and dust storms.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>The "Active Wake/Sleep" Algorithm</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Zhurong's AI integrates a resource management module that monitors two critical variables:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Solar Irradiance:</strong> Measured via reference cells on the panels.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Internal Temperature:</strong> Monitored by thermal sensors within the chassis.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>The algorithm does not follow a fixed clock. If the AI detects that energy production is insufficient (e.g., due to atmospheric dust) or that the temperature is dropping below critical safety thresholds, it autonomously forces the rover into Sleep Mode.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Crucially, the rover is programmed to wake up automatically only when environmental conditions (light levels and temperature) hit specific parameters that guarantee electronics survival. This environment-based decision-making allowed Zhurong to survive the Martian winter far longer than expected.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading"><strong>Hardware: Active Suspension and the "Slip" Problem</strong></h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Artificial Intelligence, no matter how advanced, cannot violate the laws of physics. As we detailed in <em><a href="/how-rovers-know-how-far-theyve-gone/" title="A Deep Dive into Visual Odometry: How Rovers Know ‘How Far’ They’ve Gone">A Deep Dive into Visual Odometry: How Rovers Know 'How Far' They've Gone</a></em>, Martian terrain presents deadly friction-related hazards.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>The Phenomenon of "High-Slip Interaction"</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>On Mars, wheel rotation does not guarantee movement. When traversing fine sand (regolith), rovers encounter <strong>high-slip interaction</strong>. If the wheels spin but the chassis doesn't move, it creates an accumulated error—or "Drift"—that destroys localization accuracy. in extreme cases, a high <strong>Slip Ratio</strong> can lead to total entrapment, as seen with the <em>Spirit</em> rover.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Zhurong's Hardware Response</strong></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>To mitigate this, Zhurong adopts a unique active suspension system, more complex than NASA's passive Rocker-Bogie.</p>
+<!-- /wp:paragraph -->
+<!-- wp:image {"lightbox":{"enabled":false},"id":427,"sizeSlug":"full","linkDestination":"custom","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full"><a href="https://www.researchgate.net/figure/Mobility-system-of-Zhurong-Mars-rover-Color-figure-can-be-viewed-at_fig1_369886832"><img src="/wp-content/uploads/2025/12/Mobility-system-of-Zhurong-Mars-rover-Color-figure-can-be-viewed-at.png" alt="" class="wp-image-427"/></a><figcaption class="wp-element-caption">Mobility system of Zhurong Mars rover</figcaption></figure>
+<!-- /wp:image -->
+<!-- wp:paragraph -->
+<p>When the AI (by comparing Visual Odometry to wheel encoders) detects that the Slip Ratio is rising dangerously, it can command the hardware to execute physical disengagement maneuvers:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Inchworm Motion:</strong> The rover locks its rear wheels and pushes the front wheels forward by extending the suspension, then locks the front and drags the rear. This simulates "walking" rather than rolling, drastically reducing slip.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Chassis Lift:</strong> It can physically raise the rover's body to prevent the "belly" from touching the ground in deep sand.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Crab Walk:</strong> The wheels can steer up to 90 degrees, allowing the rover to move laterally to escape stall situations or optimize solar panel orientation.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+<!-- wp:heading -->
+<h2 class="wp-block-heading"><strong>Conclusion</strong></h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>The analysis of the <strong>AI Inside China's Zhurong</strong> reveals how environmental constraints (solar power, soft terrain) drive code evolution. While NASA has pushed the boundaries of raw computing speed (FPGA and nuclear power) as seen in <em>The Evolution of Rover AI: From Sojourner's 'Bump and Go' to Perseverance's AutoNav</em>, the CNSA has developed a resilient system. It is an architecture capable of adapting to the Red Planet's rhythms and modifying its own physical configuration to avoid being trapped in the sands of Utopia Planitia.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+    </div>
+
+  </div>
+
+  
+  <footer class="post-footer">
+
+    <div class="post-footer__divider"></div>
+
+    <p>Enjoyed this article?</p>
+
+    <a class="post-back-link" href="/posts/">
+      Explore more articles →
+    </a>
+
+  </footer>
+
+</article>
+
+
+  </main>
+
+  <footer class="site-footer">
+
+  <div class="container footer__grid">
+
+    
+    <div class="footer__col footer__col--brand">
+      <p class="footer__brand">Beyond the Joystick</p>
+      <p class="footer__about">
+        Technical articles and hands-on projects on space robotics,
+        autonomous navigation, and planetary exploration.
+      </p>
+      
+      <a class="footer__support" href="https://ko-fi.com/L4L31PCL3I" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Z"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 2.5c-.8 1-.8 2 0 3M12 2.5c-.8 1-.8 2 0 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        Support the project
+      </a>
+      
+    </div>
+
+    
+    <nav class="footer__col" aria-label="Footer navigation">
+      <h2 class="footer__heading">Explore</h2>
+      <ul class="footer__list">
+        <li><a href="/posts/">Articles</a></li>
+        <li><a href="/#labs">Labs &amp; Projects</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </nav>
+
+    
+    <div class="footer__col">
+      <h2 class="footer__heading">Connect</h2>
+      <ul class="footer__social">
+
+        <li>
+          <a
+            class="footer__social-link"
+            href="https://www.linkedin.com/in/tommaso-sibilia"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="footer__social-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+            <span class="footer__social-text">
+              <strong>LinkedIn</strong>
+              <small>Tommaso Sibilia</small>
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            class="footer__social-link"
+            href="https://github.com/sibiliatommaso?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="footer__social-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
+            <span class="footer__social-text">
+              <strong>GitHub</strong>
+              <small>Code &amp; repositories</small>
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            class="footer__social-link"
+            href="https://www.reddit.com/user/beyond-the-joystick/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="footer__social-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 0C5.373 0 0 5.373 0 12c0 3.314 1.343 6.314 3.515 8.485l-2.286 2.286C.775 23.225 1.097 24 1.738 24H12c6.627 0 12-5.373 12-12S18.627 0 12 0Zm4.388 3.199c1.104 0 1.999.895 1.999 1.999 0 1.105-.895 2-1.999 2-.946 0-1.739-.657-1.947-1.539v.002c-1.147.162-2.032 1.15-2.032 2.341v.007c1.776.067 3.4.567 4.686 1.363.473-.363 1.064-.58 1.707-.58 1.547 0 2.802 1.254 2.802 2.802 0 1.117-.655 2.081-1.601 2.531-.088 3.256-3.637 5.876-7.997 5.876-4.361 0-7.905-2.617-7.998-5.87-.954-.447-1.614-1.415-1.614-2.538 0-1.548 1.255-2.802 2.803-2.802.645 0 1.239.218 1.712.585 1.275-.79 2.881-1.291 4.64-1.365v-.01c0-1.663 1.263-3.034 2.88-3.207.188-.911.993-1.595 1.959-1.595Zm-8.085 8.376c-.784 0-1.459.78-1.506 1.797-.047 1.016.64 1.429 1.426 1.429.786 0 1.371-.369 1.418-1.385.047-1.017-.553-1.841-1.338-1.841Zm7.406 0c-.786 0-1.385.824-1.338 1.841.047 1.017.634 1.385 1.418 1.385.785 0 1.473-.413 1.426-1.429-.046-1.017-.721-1.797-1.506-1.797Zm-3.703 4.013c-.974 0-1.907.048-2.77.135-.147.015-.241.168-.183.305.483 1.154 1.622 1.964 2.953 1.964 1.33 0 2.47-.81 2.953-1.964.057-.137-.037-.29-.185-.305-.863-.087-1.795-.135-2.768-.135Z"/></svg></span>
+            <span class="footer__social-text">
+              <strong>Reddit</strong>
+              <small>u/beyond-the-joystick</small>
+            </span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="container footer__bottom">
+    <p>&copy; 2026 Beyond the Joystick. All rights reserved.</p>
+  </div>
+
+</footer>
+
+
+<script>
+  (function () {
+    if (window.__kofiWidgetLoaded) return;
+    window.__kofiWidgetLoaded = true;
+
+    function draw() {
+      kofiWidgetOverlay.draw('beyondthejoystick', {
+        'type': 'floating-chat',
+        'floating-chat.donateButton.text': 'Support me',
+        'floating-chat.donateButton.background-color': '#F0B44D',
+        'floating-chat.donateButton.text-color': '#0B1220'
+      });
+    }
+
+    var s = document.createElement('script');
+    s.src = 'https://storage.ko-fi.com/cdn/scripts/overlay-widget.js';
+    s.onload = function () {
+      if (document.body) { draw(); }
+      else { document.addEventListener('DOMContentLoaded', draw); }
+    };
+    document.head.appendChild(s);
+  })();
+</script>
+
+
+</body>
+</html>

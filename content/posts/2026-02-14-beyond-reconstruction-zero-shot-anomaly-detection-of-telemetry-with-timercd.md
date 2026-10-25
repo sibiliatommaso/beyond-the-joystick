@@ -23,6 +23,7 @@ tags:
 - TimeRCD
 - Zero-Shot Anomaly Detection
 format: false
+slug: beyond-reconstruction-zero-shot-anomaly-detection-of-telemetry-with-timercd
 ---
 
 <!-- wp:paragraph -->

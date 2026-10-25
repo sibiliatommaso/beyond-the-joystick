@@ -15,6 +15,7 @@ categories:
 - Algorithms & AI
 - Missions & Case Studies
 format: false
+slug: generative-ai-rover-navigation-technical-analysis-of-claude-integration-on-mars
 ---
 
 <!-- wp:html -->

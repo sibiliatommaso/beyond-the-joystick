@@ -19,6 +19,7 @@ tags:
 - LiDAR Technology
 - Rover Perception Systems
 format: false
+slug: automotive-vs-space-lidar
 ---
 
 <!-- wp:paragraph -->

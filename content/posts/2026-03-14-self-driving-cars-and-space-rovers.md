@@ -18,6 +18,7 @@ tags:
 - SLAM
 - Space Robotics
 format: false
+slug: self-driving-cars-and-space-rovers
 ---
 
 <!-- wp:paragraph -->

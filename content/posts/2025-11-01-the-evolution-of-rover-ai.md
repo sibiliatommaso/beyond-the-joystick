@@ -20,6 +20,7 @@ tags:
 - Robotics
 - Rover AI Evolution
 format: false
+slug: the-evolution-of-rover-ai
 ---
 
 <!-- wp:heading -->

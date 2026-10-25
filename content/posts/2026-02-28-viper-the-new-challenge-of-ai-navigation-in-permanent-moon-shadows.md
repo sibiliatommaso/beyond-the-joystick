@@ -11,6 +11,7 @@ image: /wp-content/uploads/2026/02/viper-rover-ai.png
 categories:
 - Uncategorized
 format: false
+slug: viper-the-new-challenge-of-ai-navigation-in-permanent-moon-shadows
 ---
 
 <!-- wp:heading -->
