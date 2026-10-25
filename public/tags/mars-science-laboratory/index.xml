@@ -15,9 +15,9 @@
 			<atom:link href="http://localhost:1313/tags/mars-science-laboratory/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Beyond Reconstruction: Zero-Shot Anomaly Detection of Telemetry with TimeRCD</title>
-				<link>http://localhost:1313/posts/beyond-reconstruction-zero-shot-anomaly-detection-of-telemetry-with-timercd/</link>
+				<link>http://localhost:1313/beyond-reconstruction-zero-shot-anomaly-detection-of-telemetry-with-timercd/</link>
 				<pubDate>Sat, 14 Feb 2026 08:30:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/beyond-reconstruction-zero-shot-anomaly-detection-of-telemetry-with-timercd/</guid>
+				<guid>http://localhost:1313/beyond-reconstruction-zero-shot-anomaly-detection-of-telemetry-with-timercd/</guid>
 				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Telemetry monitoring in modern space systems, such as Martian rovers and Earth observation satellites, requires the real-time analysis of extremely high-dimensional data streams. These time-series signals are inherently affected by thermal noise and unpredictable radiative variations, making fault detection a critical computational bottleneck. As highlighted in our previous deep dives on &lt;a href=&#34;http://localhost:1313/generative-ai-rover-navigation-technical-analysis-of-claude-integration-on-mars/&#34; title=&#34;Generative AI Rover Navigation: Technical Analysis of Claude Integration on Mars&#34;&gt;on-board decision-making autonomy&lt;/a&gt;,interplanetary communication latency forces spacecraft to process and interpret anomalies locally, without waiting for a human feedback loop.&lt;/p&gt;</description>
 			</item>
 	</channel>

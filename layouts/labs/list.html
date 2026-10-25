@@ -2,26 +2,30 @@
 
 <section class="labs-page">
 
-  <header class="labs-hero">
-    <p class="labs-eyebrow">BEYOND THE JOYSTICK · LABORATORY</p>
+  <section class="labs-hero-section">
+    <div class="about-support">
+      <div class="about-support__content labs-hero-content">
+        <p class="labs-eyebrow">BEYOND THE JOYSTICK · LABORATORY</p>
 
-    <h1>Labs &amp; Projects</h1>
+        <h1>Labs &amp; Projects</h1>
 
-    <p class="labs-hero__intro">
-      Go beyond theory. Explore hands-on experiments, interactive tools,
-      and open-source projects designed to make autonomous robotics easier
-      to understand and build.
-    </p>
+        <p>
+          Go beyond theory. Explore hands-on experiments, interactive tools,
+          and open-source projects designed to make autonomous robotics easier
+          to understand and build.
+        </p>
 
-    <div class="labs-hero__actions">
-      <a class="labs-button labs-button--primary" href="#all-labs">
-        Explore the labs
-      </a>
-      <a class="labs-button labs-button--secondary" href="/posts/">
-        Read the articles
-      </a>
+        <div class="about-support__button labs-hero-actions">
+          <a class="labs-button labs-button--primary" href="#all-labs">
+            Explore the labs
+          </a>
+          <a class="labs-button labs-button--secondary" href="https://github.com/sibiliatommaso" target="_blank" rel="noopener noreferrer">
+            View on GitHub
+          </a>
+        </div>
+      </div>
     </div>
-  </header>
+  </section>
 
 
   <section class="labs-intro">
@@ -114,7 +118,7 @@
 
                 <a class="labs-button labs-button--primary"
                    href="{{ .RelPermalink }}">
-                  Explore Lab <span aria-hidden="true">→</span>
+                  Explore Lab <span aria-hidden="true">&rarr;</span>
                 </a>
 
                 {{ with .Params.article }}
@@ -128,7 +132,7 @@
                      href="{{ . }}"
                      target="_blank"
                      rel="noopener noreferrer">
-                    Source Code ↗
+                    Source Code &nearr;
                   </a>
                 {{ end }}
 
@@ -158,21 +162,29 @@
   </section>
 
 
-  <section class="labs-cta">
+  <!-- ULTIMA SEZIONE: Titolo a sinistra fuori dal box + Riquadro centrato con bottone -->
+  <section class="labs-support-section">
+    <div class="labs-section-heading">
+      <div>
+        <p class="labs-eyebrow">KEEP EXPLORING</p>
+        <h2>Curious About the Theory Behind the Experiments?</h2>
+      </div>
+    </div>
 
-    <p class="labs-eyebrow">KEEP EXPLORING</p>
+    <div class="about-support">
+      <div class="about-support__content">
+        <p>
+          Dive into our technical articles to understand the mathematics,
+          algorithms, and engineering principles behind autonomous rovers.
+        </p>
 
-    <h2>Curious About the Theory Behind the Experiments?</h2>
-
-    <p>
-      Dive into our technical articles to understand the mathematics,
-      algorithms, and engineering principles behind autonomous rovers.
-    </p>
-
-    <a class="labs-button labs-button--primary" href="/posts/">
-      Browse All Articles <span aria-hidden="true">→</span>
-    </a>
-
+        <div class="about-support__button">
+          <a href="/posts/">
+            Browse All Articles <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
 
 </section>

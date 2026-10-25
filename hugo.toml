@@ -16,6 +16,10 @@ title = 'Beyond the Joystick'
 [markup.goldmark.renderer]
   unsafe = true
 
+[permalinks]
+  posts = "/:slug/"
+  labs = "/:slug/"
+
 # Syntax highlighting for fenced code blocks (```python ... ```)
 [markup.highlight]
   style = 'github-dark'
@@ -38,5 +42,6 @@ title = 'Beyond the Joystick'
   name = 'About'
   url = '/about/'
   weight = 4
+ 
  
 

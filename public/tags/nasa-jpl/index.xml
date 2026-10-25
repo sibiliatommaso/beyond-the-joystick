@@ -15,9 +15,9 @@
 			<atom:link href="http://localhost:1313/tags/nasa-jpl/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>The Evolution of Rover AI: A Deep Dive From Sojourner to AutoNav</title>
-				<link>http://localhost:1313/posts/the-evolution-of-rover-ai/</link>
+				<link>http://localhost:1313/the-evolution-of-rover-ai/</link>
 				<pubDate>Sat, 01 Nov 2025 08:10:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/the-evolution-of-rover-ai/</guid>
+				<guid>http://localhost:1313/the-evolution-of-rover-ai/</guid>
 				<description>&lt;!-- wp:heading --&gt;&#xA;&lt;h2 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;Abstract: The Challenge of Martian Latency&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;!-- /wp:heading --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;The &lt;strong&gt;evolution of rover AI&lt;/strong&gt; is driven by a fundamental engineering necessity: overcoming the communication latency between Earth and Mars.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;This delay, which can exceed &lt;strong&gt;20 minutes one-way&lt;/strong&gt;, makes direct teleoperation (or &#34;joysticking&#34;) logistically impractical. Any command sent to avoid a hazard would arrive far too late.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;This operational constraint imposes the critical need for &lt;strong&gt;onboard decision-making autonomy&lt;/strong&gt;, transferring intelligence from the Earth-based operator to the rover&#39;s software.&lt;/p&gt;</description>
 			</item>
 	</channel>

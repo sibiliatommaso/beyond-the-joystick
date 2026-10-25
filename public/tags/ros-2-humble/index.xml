@@ -15,9 +15,9 @@
 			<atom:link href="http://localhost:1313/tags/ros-2-humble/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Rover Slip Estimation on Lunar Sand: Lab Test</title>
-				<link>http://localhost:1313/posts/rover-slip-estimation-on-lunar-sand-lab-test/</link>
+				<link>http://localhost:1313/rover-slip-estimation-on-lunar-sand-lab-test/</link>
 				<pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
-				<guid>http://localhost:1313/posts/rover-slip-estimation-on-lunar-sand-lab-test/</guid>
+				<guid>http://localhost:1313/rover-slip-estimation-on-lunar-sand-lab-test/</guid>
 				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Planetary exploration rovers serve as essential tools for advancing scientific investigations, but their mobility is significantly challenged by loose and deformable surfaces like lunar dust and Martian regolith&lt;sup&gt;&lt;/sup&gt;. These extraterrestrial terrains exhibit low cohesion and bearing capacity, leading to excessive wheel slip where the wheels rotate without generating sufficient forward motion&lt;sup&gt;&lt;/sup&gt;.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;As we dive deeper into &lt;a href=&#34;http://localhost:1313/autonomous-rover-navigation/&#34;&gt;autonomous space robotics&lt;/a&gt; here on &lt;em&gt;Beyond the Joystick&lt;/em&gt;, I am realizing that mastering rover slip estimation is just as critical as orbital mechanics. If a rover cannot detect slip, standard wheel odometry accrues massive errors, causing deviations from planned trajectories and increasing the risk of entrapment. To understand how engineers solve this, we are going to explore how &lt;a href=&#34;https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=11170582&#34;&gt;academic researchers utilize a single-wheel testbed to analyze wheel-terrain interactions before the software ever leaves Earth&lt;/a&gt;.&lt;/p&gt;</description>
 			</item>
 	</channel>

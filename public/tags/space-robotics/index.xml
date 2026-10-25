@@ -15,30 +15,30 @@
 			<atom:link href="http://localhost:1313/tags/space-robotics/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Rover Slip Estimation on Lunar Sand: Lab Test</title>
-				<link>http://localhost:1313/posts/rover-slip-estimation-on-lunar-sand-lab-test/</link>
+				<link>http://localhost:1313/rover-slip-estimation-on-lunar-sand-lab-test/</link>
 				<pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
-				<guid>http://localhost:1313/posts/rover-slip-estimation-on-lunar-sand-lab-test/</guid>
+				<guid>http://localhost:1313/rover-slip-estimation-on-lunar-sand-lab-test/</guid>
 				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Planetary exploration rovers serve as essential tools for advancing scientific investigations, but their mobility is significantly challenged by loose and deformable surfaces like lunar dust and Martian regolith&lt;sup&gt;&lt;/sup&gt;. These extraterrestrial terrains exhibit low cohesion and bearing capacity, leading to excessive wheel slip where the wheels rotate without generating sufficient forward motion&lt;sup&gt;&lt;/sup&gt;.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;As we dive deeper into &lt;a href=&#34;http://localhost:1313/autonomous-rover-navigation/&#34;&gt;autonomous space robotics&lt;/a&gt; here on &lt;em&gt;Beyond the Joystick&lt;/em&gt;, I am realizing that mastering rover slip estimation is just as critical as orbital mechanics. If a rover cannot detect slip, standard wheel odometry accrues massive errors, causing deviations from planned trajectories and increasing the risk of entrapment. To understand how engineers solve this, we are going to explore how &lt;a href=&#34;https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=11170582&#34;&gt;academic researchers utilize a single-wheel testbed to analyze wheel-terrain interactions before the software ever leaves Earth&lt;/a&gt;.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>What Self-Driving Cars Can (and Can’t) Teach Space Rovers</title>
-				<link>http://localhost:1313/posts/self-driving-cars-and-space-rovers/</link>
+				<link>http://localhost:1313/self-driving-cars-and-space-rovers/</link>
 				<pubDate>Sat, 14 Mar 2026 08:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/self-driving-cars-and-space-rovers/</guid>
+				<guid>http://localhost:1313/self-driving-cars-and-space-rovers/</guid>
 				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;The evolution of vehicular automation and space robotics represents one of the most fascinating and complex technological convergences in contemporary engineering. Although terrestrial autonomous vehicles (AVs) and planetary rovers operate in diametrically opposed environmental domains, their algorithmic foundations, sensory perception paradigms, and decision-making architectures share deep intersections. On Earth, autonomous driving aims to process massive amounts of data in real time at high speeds. These vehicles navigate structured or semi-structured environments characterized by highly stochastic traffic, dynamic obstacles, and stringent passenger safety requirements.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Beyond NASA: A Look at the AI Inside China’s Zhurong Mars Rover</title>
-				<link>http://localhost:1313/posts/beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/</link>
+				<link>http://localhost:1313/beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/</link>
 				<pubDate>Sat, 13 Dec 2025 08:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/</guid>
+				<guid>http://localhost:1313/beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/</guid>
 				<description>&lt;!-- wp:image {&#34;lightbox&#34;:{&#34;enabled&#34;:false},&#34;id&#34;:423,&#34;sizeSlug&#34;:&#34;full&#34;,&#34;linkDestination&#34;:&#34;custom&#34;,&#34;align&#34;:&#34;center&#34;} --&gt;&#xA;&lt;figure class=&#34;wp-block-image aligncenter size-full&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Zhurong_%28rover%29&#34;&gt;&lt;img src=&#34;http://localhost:1313/wp-content/uploads/2025/12/Zhurong_rover.png&#34; alt=&#34;&#34; class=&#34;wp-image-423&#34;/&gt;&lt;/a&gt;&lt;/figure&gt;&#xA;&lt;!-- /wp:image --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;While global attention is often monopolized by the Jet Propulsion Laboratory (JPL) and its Curiosity-class vehicles, Chinese space engineering reached a critical milestone with the &lt;strong&gt;Tianwen-1&lt;/strong&gt; mission. Landing in May 2021 on the vast plains of &lt;strong&gt;Utopia Planitia&lt;/strong&gt;, the Zhurong rover represents more than just a political success; it is a tangible demonstration of advanced autonomous robotics. AI Inside China&#39;s Zhurong&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Rover Perception Systems: How LiDAR, Stereo Vision, and IMUs Work Together</title>
-				<link>http://localhost:1313/posts/rover-perception-systems/</link>
+				<link>http://localhost:1313/rover-perception-systems/</link>
 				<pubDate>Sat, 22 Nov 2025 08:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/rover-perception-systems/</guid>
+				<guid>http://localhost:1313/rover-perception-systems/</guid>
 				<description>&lt;!-- wp:heading {&#34;level&#34;:3} --&gt;&#xA;&lt;h3 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;Abstract: The Criticality of Multi-Modal Perception&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;!-- /wp:heading --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Autonomous navigation in extraterrestrial environments is defined by an unbreakable physical constraint: &lt;a href=&#34;http://localhost:1313/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/&#34; title=&#34;The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers&#34;&gt;the speed of light&lt;/a&gt;. With Earth-Mars communication latencies ranging from 4 to 24 minutes, real-time teleoperation is impossible. To survive, a rover must possess a robust &lt;strong&gt;Rover Perception&lt;/strong&gt; architecture.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Rover perception is not merely the collection of images; it is the transformation of raw sensory data into a semantic and geometric understanding of the surrounding environment. This process must occur &lt;em&gt;on-board&lt;/em&gt;, often on resource-constrained processors (such as the radiation-hardened RAD750).&lt;/p&gt;</description>
 			</item>
 	</channel>

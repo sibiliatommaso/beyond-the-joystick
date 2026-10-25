@@ -15,37 +15,37 @@
 			<atom:link href="http://localhost:1313/tags/computer-vision/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Rover Camera Calibration: The Mathematics of Space Vision</title>
-				<link>http://localhost:1313/posts/rover-camera-calibration-mathematics/</link>
+				<link>http://localhost:1313/rover-camera-calibration-mathematics/</link>
 				<pubDate>Wed, 21 Oct 2026 15:06:12 +0000</pubDate>
-				<guid>http://localhost:1313/posts/rover-camera-calibration-mathematics/</guid>
+				<guid>http://localhost:1313/rover-camera-calibration-mathematics/</guid>
 				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;When we plug a standard webcam into our PC, we assume the image on the screen is a faithful representation of reality. But in space robotics, a camera is not simply an &#34;eye&#34;: it is a sensor capturing a 2D array of pixels affected by severe optical imperfections. For a rover on the Moon or Mars to use those pixels to avoid crashing into a crater, we must translate light into pure geometry.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>What Self-Driving Cars Can (and Can’t) Teach Space Rovers</title>
-				<link>http://localhost:1313/posts/self-driving-cars-and-space-rovers/</link>
+				<link>http://localhost:1313/self-driving-cars-and-space-rovers/</link>
 				<pubDate>Sat, 14 Mar 2026 08:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/self-driving-cars-and-space-rovers/</guid>
+				<guid>http://localhost:1313/self-driving-cars-and-space-rovers/</guid>
 				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;The evolution of vehicular automation and space robotics represents one of the most fascinating and complex technological convergences in contemporary engineering. Although terrestrial autonomous vehicles (AVs) and planetary rovers operate in diametrically opposed environmental domains, their algorithmic foundations, sensory perception paradigms, and decision-making architectures share deep intersections. On Earth, autonomous driving aims to process massive amounts of data in real time at high speeds. These vehicles navigate structured or semi-structured environments characterized by highly stochastic traffic, dynamic obstacles, and stringent passenger safety requirements.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Rover Perception Systems: How LiDAR, Stereo Vision, and IMUs Work Together</title>
-				<link>http://localhost:1313/posts/rover-perception-systems/</link>
+				<link>http://localhost:1313/rover-perception-systems/</link>
 				<pubDate>Sat, 22 Nov 2025 08:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/rover-perception-systems/</guid>
+				<guid>http://localhost:1313/rover-perception-systems/</guid>
 				<description>&lt;!-- wp:heading {&#34;level&#34;:3} --&gt;&#xA;&lt;h3 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;Abstract: The Criticality of Multi-Modal Perception&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;!-- /wp:heading --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Autonomous navigation in extraterrestrial environments is defined by an unbreakable physical constraint: &lt;a href=&#34;http://localhost:1313/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/&#34; title=&#34;The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers&#34;&gt;the speed of light&lt;/a&gt;. With Earth-Mars communication latencies ranging from 4 to 24 minutes, real-time teleoperation is impossible. To survive, a rover must possess a robust &lt;strong&gt;Rover Perception&lt;/strong&gt; architecture.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Rover perception is not merely the collection of images; it is the transformation of raw sensory data into a semantic and geometric understanding of the surrounding environment. This process must occur &lt;em&gt;on-board&lt;/em&gt;, often on resource-constrained processors (such as the radiation-hardened RAD750).&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>What is SLAM? The Key Technology for Autonomous Rover Mapping</title>
-				<link>http://localhost:1313/posts/what-is-slam-the-key-technology-for-autonomous-rover-mapping/</link>
+				<link>http://localhost:1313/what-is-slam-the-key-technology-for-autonomous-rover-mapping/</link>
 				<pubDate>Sat, 08 Nov 2025 08:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/what-is-slam-the-key-technology-for-autonomous-rover-mapping/</guid>
+				<guid>http://localhost:1313/what-is-slam-the-key-technology-for-autonomous-rover-mapping/</guid>
 				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/autonomous-rover-navigation/&#34; title=&#34;The Ultimate Guide to Autonomous Rover Navigation&#34;&gt;Navigating celestial bodies autonomously&lt;/a&gt; presents a unique hurdle that we don&#39;t face on Earth: the complete lack of  Global Positioning System (GPS). In this context, a rover&#39;s ability to understand its own location becomes a complex mathematical problem. In advanced robotics, the standard answer to this problem is SLAM (Simultaneous Localization and Mapping). In this article, we’ll break down the core principles of SLAM, examine how it’s critical for current Mars missions, and look at the immense computational strain it puts on space-grade hardware.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>The Evolution of Rover AI: A Deep Dive From Sojourner to AutoNav</title>
-				<link>http://localhost:1313/posts/the-evolution-of-rover-ai/</link>
+				<link>http://localhost:1313/the-evolution-of-rover-ai/</link>
 				<pubDate>Sat, 01 Nov 2025 08:10:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/the-evolution-of-rover-ai/</guid>
+				<guid>http://localhost:1313/the-evolution-of-rover-ai/</guid>
 				<description>&lt;!-- wp:heading --&gt;&#xA;&lt;h2 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;Abstract: The Challenge of Martian Latency&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;!-- /wp:heading --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;The &lt;strong&gt;evolution of rover AI&lt;/strong&gt; is driven by a fundamental engineering necessity: overcoming the communication latency between Earth and Mars.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;This delay, which can exceed &lt;strong&gt;20 minutes one-way&lt;/strong&gt;, makes direct teleoperation (or &#34;joysticking&#34;) logistically impractical. Any command sent to avoid a hazard would arrive far too late.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;This operational constraint imposes the critical need for &lt;strong&gt;onboard decision-making autonomy&lt;/strong&gt;, transferring intelligence from the Earth-based operator to the rover&#39;s software.&lt;/p&gt;</description>
 			</item>
 	</channel>

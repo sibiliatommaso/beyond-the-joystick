@@ -15,9 +15,9 @@
 			<atom:link href="http://localhost:1313/categories/projects--tutorials/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Camera Calibration Explained: An Interactive OpenCV Lab</title>
-				<link>http://localhost:1313/labs/camera-calibration-lab/</link>
+				<link>http://localhost:1313/camera-calibration-explained-an-interactive-opencv-lab/</link>
 				<pubDate>Sat, 24 Oct 2026 09:00:00 +0200</pubDate>
-				<guid>http://localhost:1313/labs/camera-calibration-lab/</guid>
+				<guid>http://localhost:1313/camera-calibration-explained-an-interactive-opencv-lab/</guid>
 				<description>Move 13 sliders and watch a virtual pinhole camera update in real time: position, orientation, focal length, optical center and lens distortion.</description>
 			</item>
 	</channel>

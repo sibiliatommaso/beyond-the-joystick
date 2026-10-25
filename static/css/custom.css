@@ -526,13 +526,43 @@ p { margin: 0 0 1em; max-width: 70ch; }
 }
 
 /* 13. ARTICLES PAGE */
-.articles-page { width: min(100% - 3rem, 1240px); margin-inline: auto; padding-block: clamp(3.5rem, 7vw, 6rem); }
+/* 13. ARTICLES PAGE */
+.articles-page { 
+  width: min(100% - 2rem, var(--container, 1160px)); 
+  margin-inline: auto; 
+  padding: 2rem 0 5rem; 
+}
 
-.articles-eyebrow { margin-bottom: 0.75rem; color: var(--color-accent); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
+.articles-eyebrow { 
+  margin-bottom: 0.75rem; 
+  color: var(--color-accent); 
+  font-size: 0.76rem; 
+  font-weight: 800; 
+  letter-spacing: 0.15em; 
+  text-transform: uppercase; 
+}
 
-.articles-intro { max-width: 760px; margin: 0 auto clamp(4rem, 8vw, 7rem); text-align: center; }
-.articles-intro h1 { margin-bottom: 1.25rem; font-size: clamp(3rem, 7vw, 5rem); line-height: 1.05; letter-spacing: -0.055em; }
-.articles-intro > p:last-child { max-width: 650px; margin-inline: auto; color: var(--color-muted); font-size: clamp(1.05rem, 1.8vw, 1.2rem); line-height: 1.8; }
+.articles-intro { 
+  max-width: 800px; 
+  margin: 2rem 0 4rem; 
+  text-align: left; 
+}
+
+.articles-intro h1 { 
+  max-width: 850px;
+  margin: 0.8rem 0 1.5rem; 
+  font-size: clamp(2.5rem, 6vw, 4.5rem); 
+  line-height: 1.2; 
+  letter-spacing: -0.045em; 
+}
+
+.articles-intro > p:last-child { 
+  max-width: 720px; 
+  margin: 0; 
+  color: var(--color-muted); 
+  font-size: clamp(1.05rem, 2vw, 1.25rem); 
+  line-height: 1.75; 
+}
 
 .articles-section { margin-bottom: clamp(4rem, 8vw, 7rem); }
 .articles-section__heading { display: flex; align-items: end; justify-content: space-between; gap: 1.5rem; margin-bottom: 2rem; }
@@ -1535,4 +1565,115 @@ main blockquote p:last-child { margin-bottom: 0; }
   }
 }
 
+/* =========================================
+   LABS CTA SECTION (Stile About personalizzato)
+   ========================================= */
 
+.labs-support-section {
+  margin-top: 5rem;
+}
+
+.labs-support-section .labs-section-heading {
+  display: block;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.labs-support-section .labs-section-heading h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  letter-spacing: -0.04em;
+  margin-bottom: 0;
+}
+
+/* =========================================
+   LABS HERO BOX (Prima sezione centrata)
+   ========================================= */
+
+.labs-hero-section {
+  margin-bottom: 4rem;
+}
+
+.labs-hero-content {
+  max-width: 760px !important;
+  text-align: center;
+}
+
+.labs-hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  letter-spacing: -0.045em;
+  margin-bottom: 1.25rem;
+  text-wrap: balance;
+}
+
+.labs-hero-content > p {
+  color: var(--color-muted, #B8C2D1);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+
+.labs-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 0;
+}
+
+/* =========================================
+   DEFINITIVE ARTICLES HERO BOX (Centrato perfettamente)
+   ========================================= */
+
+.articles-page {
+  width: min(100% - 3rem, var(--container, 1160px));
+  margin-inline: auto;
+  padding-block: clamp(3.5rem, 7vw, 6rem);
+}
+
+.articles-intro {
+  max-width: none !important;
+  margin: 0 0 clamp(4rem, 8vw, 7rem) 0 !important;
+  text-align: center !important;
+}
+
+.articles-hero-box {
+  width: 100%;
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 5vw, 3rem);
+  background: var(--color-surface, #141F32);
+  border: 1px solid var(--color-border, #2B3A50);
+  border-radius: var(--radius, 12px);
+  box-sizing: border-box;
+  text-align: center !important; /* Forza il centro per tutto il box */
+}
+
+/* Forza l'allineamento centrale e la corretta disposizione per ogni elemento figlio */
+.articles-hero-box > * {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+.articles-hero-box h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  letter-spacing: -0.045em;
+  margin-bottom: 1.25rem;
+  color: var(--color-text);
+  text-align: center !important;
+}
+
+.articles-hero-text {
+  max-width: 680px !important;
+  margin-inline: auto !important;
+  margin-bottom: 2rem !important;
+  color: var(--color-muted) !important;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.75;
+  text-align: center !important;
+}
+
+.articles-hero-actions {
+  display: flex;
+  justify-content: center !important;
+  margin-top: 0;
+  text-align: center;
+}

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/labs/camera-calibration-lab/</loc>
+    <loc>http://localhost:1313/camera-calibration-explained-an-interactive-opencv-lab/</loc>
     <lastmod>2026-10-24T09:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
@@ -62,7 +62,7 @@
     <loc>http://localhost:1313/tags/ros-2/</loc>
     <lastmod>2026-10-21T15:06:12+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/rover-camera-calibration-mathematics/</loc>
+    <loc>http://localhost:1313/rover-camera-calibration-mathematics/</loc>
     <lastmod>2026-10-21T15:06:12+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/algorithms--ai/</loc>
@@ -86,7 +86,7 @@
     <loc>http://localhost:1313/tags/rover-slip-estimation/</loc>
     <lastmod>2026-09-20T08:19:05+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/rover-slip-estimation-on-lunar-sand-lab-test/</loc>
+    <loc>http://localhost:1313/rover-slip-estimation-on-lunar-sand-lab-test/</loc>
     <lastmod>2026-09-20T08:19:05+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/single-wheel-testbed/</loc>
@@ -134,7 +134,7 @@
     <loc>http://localhost:1313/tags/space-applications-services/</loc>
     <lastmod>2026-04-18T07:36:13+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/the-new-lunar-gold-rush-how-commercial-lunar-rovers-are-scaling-autonomous-mobility/</loc>
+    <loc>http://localhost:1313/the-new-lunar-gold-rush-how-commercial-lunar-rovers-are-scaling-autonomous-mobility/</loc>
     <lastmod>2026-04-18T07:36:13+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/mars-rover/</loc>
@@ -146,16 +146,16 @@
     <loc>http://localhost:1313/tags/slam/</loc>
     <lastmod>2026-03-14T08:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/self-driving-cars-and-space-rovers/</loc>
+    <loc>http://localhost:1313/self-driving-cars-and-space-rovers/</loc>
     <lastmod>2026-03-14T08:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/viper-the-new-challenge-of-ai-navigation-in-permanent-moon-shadows/</loc>
+    <loc>http://localhost:1313/viper-the-new-challenge-of-ai-navigation-in-permanent-moon-shadows/</loc>
     <lastmod>2026-02-28T14:07:44+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/autonomous-navigation/</loc>
     <lastmod>2026-02-14T08:30:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/beyond-reconstruction-zero-shot-anomaly-detection-of-telemetry-with-timercd/</loc>
+    <loc>http://localhost:1313/beyond-reconstruction-zero-shot-anomaly-detection-of-telemetry-with-timercd/</loc>
     <lastmod>2026-02-14T08:30:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/deep-learning/</loc>
@@ -185,13 +185,13 @@
     <loc>http://localhost:1313/tags/zero-shot-anomaly-detection/</loc>
     <lastmod>2026-02-14T08:30:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/generative-ai-rover-navigation-technical-analysis-of-claude-integration-on-mars/</loc>
+    <loc>http://localhost:1313/generative-ai-rover-navigation-technical-analysis-of-claude-integration-on-mars/</loc>
     <lastmod>2026-01-31T10:04:48+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/automotive-vs-space/</loc>
     <lastmod>2026-01-17T13:29:09+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/automotive-vs-space-lidar/</loc>
+    <loc>http://localhost:1313/automotive-vs-space-lidar/</loc>
     <lastmod>2026-01-17T13:29:09+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/cots-vs-rad-hard/</loc>
@@ -200,7 +200,7 @@
     <loc>http://localhost:1313/tags/lidar-technology/</loc>
     <lastmod>2026-01-17T13:29:09+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/</loc>
+    <loc>http://localhost:1313/beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/</loc>
     <lastmod>2025-12-13T08:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/pathfinding-algorithms/</loc>
@@ -209,7 +209,7 @@
     <loc>http://localhost:1313/tags/zhurong/</loc>
     <lastmod>2025-12-13T08:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/how-rovers-know-how-far-theyve-gone/</loc>
+    <loc>http://localhost:1313/how-rovers-know-how-far-theyve-gone/</loc>
     <lastmod>2025-12-06T08:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/dead-reckoning/</loc>
@@ -227,7 +227,7 @@
     <loc>http://localhost:1313/tags/a-algorithm/</loc>
     <lastmod>2025-11-29T08:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/a-vs-d-lite-the-pathfinding-algorithms/</loc>
+    <loc>http://localhost:1313/a-vs-d-lite-the-pathfinding-algorithms/</loc>
     <lastmod>2025-11-29T08:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/d-lite/</loc>
@@ -242,7 +242,7 @@
     <loc>http://localhost:1313/tags/rover-perception/</loc>
     <lastmod>2025-11-22T08:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/rover-perception-systems/</loc>
+    <loc>http://localhost:1313/rover-perception-systems/</loc>
     <lastmod>2025-11-22T08:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/graph-slam/</loc>
@@ -254,7 +254,7 @@
     <loc>http://localhost:1313/tags/vslam/</loc>
     <lastmod>2025-11-08T08:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/what-is-slam-the-key-technology-for-autonomous-rover-mapping/</loc>
+    <loc>http://localhost:1313/what-is-slam-the-key-technology-for-autonomous-rover-mapping/</loc>
     <lastmod>2025-11-08T08:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/athfinding/</loc>
@@ -275,13 +275,13 @@
     <loc>http://localhost:1313/tags/space-exploration/</loc>
     <lastmod>2025-11-01T08:10:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/</loc>
+    <loc>http://localhost:1313/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/</loc>
     <lastmod>2025-11-01T08:10:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/the-evolution-of-rover-ai/</loc>
+    <loc>http://localhost:1313/the-evolution-of-rover-ai/</loc>
     <lastmod>2025-11-01T08:10:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/autonomous-rover-navigation/</loc>
+    <loc>http://localhost:1313/autonomous-rover-navigation/</loc>
     <lastmod>2025-11-01T08:10:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
