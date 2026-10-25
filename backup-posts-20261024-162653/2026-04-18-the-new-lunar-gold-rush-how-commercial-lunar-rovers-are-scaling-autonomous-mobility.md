@@ -5,7 +5,7 @@ date: '2026-04-18T07:36:13+00:00'
 author: 'Beyond The Joystick'
 excerpt: 'The lunar exploration paradigm is shifting from multi-billion-dollar, Rad-Hard institutional rovers to agile, modular platforms built with COTS components. To compensate for strict SWaP constraints and reduced sensor redundancy, commercial vehicles like SAS’s LUVMI-X, Astrobotic’s CubeRover, and Australia’s Roo-ver rely on aggressively optimized software. By leveraging Light-Weight SLAM, Visual Odometry, and calculated algorithmic risk for high-tempo Hazard Avoidance, these software-defined rovers act as the automated logistics infrastructure for the emerging cis-lunar economy. This transition proves that scalable autonomous navigation is no longer a scientific luxury, but an indispensable engineering commodity for sustained In-Situ Resource Utilization (ISRU).'
 layout: post
-guid: 'https://beyondthejoystick.space/?p=605'
+guid: '/?p=605'
 permalink: /the-new-lunar-gold-rush-how-commercial-lunar-rovers-are-scaling-autonomous-mobility/
 image: /wp-content/uploads/2026/04/moon-base-nasa.webp
 categories:
@@ -39,7 +39,7 @@ format: false
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>The engineering solution lies in leveraging modular designs and <strong><a href="https://beyondthejoystick.space/automotive-vs-space-lidar/" title="Automotive vs. Space LiDAR: Why Your Car’s Sensor Can’t Survive Mars">Commercial Off-The-Shelf</a> (COTS)</strong> components. By drastically reducing the hardware footprint and accepting calculated operational risks, aerospace engineers are forcing a critical evolution in software architecture. To compensate for less robust sensory inputs and severely restricted computational budgets, <strong>autonomous navigation AI</strong> must become exponentially more efficient.</p>
+<p>The engineering solution lies in leveraging modular designs and <strong><a href="/automotive-vs-space-lidar/" title="Automotive vs. Space LiDAR: Why Your Car’s Sensor Can’t Survive Mars">Commercial Off-The-Shelf</a> (COTS)</strong> components. By drastically reducing the hardware footprint and accepting calculated operational risks, aerospace engineers are forcing a critical evolution in software architecture. To compensate for less robust sensory inputs and severely restricted computational budgets, <strong>autonomous navigation AI</strong> must become exponentially more efficient.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -97,7 +97,7 @@ format: false
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Operating near the lunar South Pole requires descending into <strong><a href="https://beyondthejoystick.space/viper-the-new-challenge-of-ai-navigation-in-permanent-moon-shadows/" title="VIPER: The New Challenge of AI Navigation in Permanent Moon Shadows">Permanently Shadowed Regions</a> (PSRs)</strong>, where temperatures plummet and ambient solar illumination is completely non-existent. The LUVMI-X architecture tackles this absolute darkness through specialized active illumination systems that are tightly integrated with its sensory suite.</p>
+<p>Operating near the lunar South Pole requires descending into <strong><a href="/viper-the-new-challenge-of-ai-navigation-in-permanent-moon-shadows/" title="VIPER: The New Challenge of AI Navigation in Permanent Moon Shadows">Permanently Shadowed Regions</a> (PSRs)</strong>, where temperatures plummet and ambient solar illumination is completely non-existent. The LUVMI-X architecture tackles this absolute darkness through specialized active illumination systems that are tightly integrated with its sensory suite.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->

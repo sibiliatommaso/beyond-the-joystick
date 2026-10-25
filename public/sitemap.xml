@@ -2,19 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>//localhost:1313/posts/</loc>
+    <lastmod>2026-10-24T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/</loc>
+    <lastmod>2026-10-24T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/camera-calibration/</loc>
+    <lastmod>2026-10-24T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/interactive-camera-calibration-lab/</loc>
+    <lastmod>2026-10-24T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/categories/</loc>
+    <lastmod>2026-10-24T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/homography/</loc>
+    <lastmod>2026-10-24T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/intrinsic-matrix/</loc>
+    <lastmod>2026-10-24T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/lab/</loc>
+    <lastmod>2026-10-24T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/lens-distortion/</loc>
+    <lastmod>2026-10-24T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/opencv/</loc>
+    <lastmod>2026-10-24T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/pinhole-camera-model/</loc>
+    <lastmod>2026-10-24T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/categories/projects--tutorials/</loc>
+    <lastmod>2026-10-24T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/python/</loc>
+    <lastmod>2026-10-24T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/categories/sensors--hardware/</loc>
+    <lastmod>2026-10-24T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/</loc>
+    <lastmod>2026-10-24T09:00:00+02:00</lastmod>
+  </url><url>
     <loc>//localhost:1313/categories/algorithms--ai/</loc>
     <lastmod>2026-09-20T08:19:05+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/arduino-mega/</loc>
-    <lastmod>2026-09-20T08:19:05+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/</loc>
-    <lastmod>2026-09-20T08:19:05+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/</loc>
-    <lastmod>2026-09-20T08:19:05+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/categories/</loc>
     <lastmod>2026-09-20T08:19:05+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/lucas-kanade/</loc>
@@ -35,16 +71,10 @@
     <loc>//localhost:1313/posts/2026-09-20-rover-slip-estimation-on-lunar-sand-lab-test/</loc>
     <lastmod>2026-09-20T08:19:05+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/sensors--hardware/</loc>
-    <lastmod>2026-09-20T08:19:05+00:00</lastmod>
-  </url><url>
     <loc>//localhost:1313/tags/single-wheel-testbed/</loc>
     <lastmod>2026-09-20T08:19:05+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/space-robotics/</loc>
-    <lastmod>2026-09-20T08:19:05+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/</loc>
     <lastmod>2026-09-20T08:19:05+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/visual-odometry/</loc>

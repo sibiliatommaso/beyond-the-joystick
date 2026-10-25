@@ -10,21 +10,28 @@
 		
 		
 		
-			<lastBuildDate>Sun, 20 Sep 2026 08:19:05 +0000</lastBuildDate>
+			<lastBuildDate>Sat, 24 Oct 2026 09:00:00 +0200</lastBuildDate>
 		
 			<atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Algorithms &amp; AI</title>
-				<link>//localhost:1313/categories/algorithms--ai/</link>
-				<pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
-				<guid>//localhost:1313/categories/algorithms--ai/</guid>
+				<title>Projects &amp; Tutorials</title>
+				<link>//localhost:1313/categories/projects--tutorials/</link>
+				<pubDate>Sat, 24 Oct 2026 09:00:00 +0200</pubDate>
+				<guid>//localhost:1313/categories/projects--tutorials/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Sensors &amp; Hardware</title>
 				<link>//localhost:1313/categories/sensors--hardware/</link>
-				<pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
+				<pubDate>Sat, 24 Oct 2026 09:00:00 +0200</pubDate>
 				<guid>//localhost:1313/categories/sensors--hardware/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Algorithms &amp; AI</title>
+				<link>//localhost:1313/categories/algorithms--ai/</link>
+				<pubDate>Sun, 20 Sep 2026 08:19:05 +0000</pubDate>
+				<guid>//localhost:1313/categories/algorithms--ai/</guid>
 				<description></description>
 			</item>
 			<item>

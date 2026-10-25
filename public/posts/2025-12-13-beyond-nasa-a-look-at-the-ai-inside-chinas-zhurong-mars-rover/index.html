@@ -4,7 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Beyond NASA: A Look at the AI Inside China’s Zhurong Mars Rover | Beyond the Joystick</title>
-  <meta name="description" content="Explore planetary robotics, autonomous navigation, SLAM, ROS 2, and practical engineering projects for autonomous rovers.">
+  <meta name="description" content="his analysis explores the technical architecture of China&#39;s Zhurong rover, highlighting how it differs from NASA&#39;s design philosophy. Operating in Utopia …">
+<meta name="author" content="Tommaso Sibilia">
+<link rel="canonical" href="//localhost:1313/posts/2025-12-13-beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/">
+
+
+<meta property="og:site_name" content="Beyond the Joystick">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Beyond NASA: A Look at the AI Inside China’s Zhurong Mars Rover">
+<meta property="og:description" content="his analysis explores the technical architecture of China&#39;s Zhurong rover, highlighting how it differs from NASA&#39;s design philosophy. Operating in Utopia …">
+<meta property="og:url" content="//localhost:1313/posts/2025-12-13-beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/">
+<meta property="og:image" content="//localhost:1313/wp-content/uploads/2025/12/Zhurong_rover.png">
+
+<meta property="article:published_time" content="2025-12-13T08:00:00&#43;00:00">
+<meta property="article:modified_time" content="2025-12-13T08:00:00&#43;00:00">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Beyond NASA: A Look at the AI Inside China’s Zhurong Mars Rover">
+<meta name="twitter:description" content="his analysis explores the technical architecture of China&#39;s Zhurong rover, highlighting how it differs from NASA&#39;s design philosophy. Operating in Utopia …">
+<meta name="twitter:image" content="//localhost:1313/wp-content/uploads/2025/12/Zhurong_rover.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","author":{"@type":"Person","name":"Tommaso Sibilia","sameAs":["https://www.linkedin.com/in/tommaso-sibilia","https://github.com/sibiliatommaso"],"url":"//localhost:1313/about/"},"dateModified":"2025-12-13T08:00:00+00:00","datePublished":"2025-12-13T08:00:00+00:00","description":"his analysis explores the technical architecture of China's Zhurong rover, highlighting how it differs from NASA's design philosophy. Operating in Utopia …","headline":"Beyond NASA: A Look at the AI Inside China’s Zhurong Mars Rover","image":"//localhost:1313/wp-content/uploads/2025/12/Zhurong_rover.png","inLanguage":"en","keywords":"Autonomous Navigation, Mars Rover, Pathfinding Algorithms, Space Robotics, Zhurong","mainEntityOfPage":"//localhost:1313/posts/2025-12-13-beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/","publisher":{"@type":"Organization","name":"Beyond the Joystick","url":"//localhost:1313/"}}</script>
+
+
   <link rel="stylesheet" href="/css/custom.css">
 
   
@@ -173,7 +195,7 @@
 <p>For long-range planning, the rover utilizes the A* (A-Star) algorithm.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p>This runs on a "global map" generated from orbital imagery or previous panoramas. As we discussed in <a href="https://beyondthejoystick.space/a-vs-d-lite-the-pathfinding-algorithms/" title="A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover’s Route">A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover's Route</a>, A* is ideal here because it acts as a static "GPS." It calculates the optimal path from point A to point B by minimizing cost (distance + slope), assuming the map is known and immutable.</p>
+<p>This runs on a "global map" generated from orbital imagery or previous panoramas. As we discussed in <a href="/a-vs-d-lite-the-pathfinding-algorithms/" title="A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover’s Route">A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover's Route</a>, A* is ideal here because it acts as a static "GPS." It calculates the optimal path from point A to point B by minimizing cost (distance + slope), assuming the map is known and immutable.</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading"><strong>2. Local Planning: D* Lite and Reactive Navigation</strong></h3>
@@ -229,7 +251,7 @@
 <h2 class="wp-block-heading"><strong>Hardware: Active Suspension and the "Slip" Problem</strong></h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Artificial Intelligence, no matter how advanced, cannot violate the laws of physics. As we detailed in <em><a href="https://beyondthejoystick.space/how-rovers-know-how-far-theyve-gone/" title="A Deep Dive into Visual Odometry: How Rovers Know ‘How Far’ They’ve Gone">A Deep Dive into Visual Odometry: How Rovers Know 'How Far' They've Gone</a></em>, Martian terrain presents deadly friction-related hazards.</p>
+<p>Artificial Intelligence, no matter how advanced, cannot violate the laws of physics. As we detailed in <em><a href="/how-rovers-know-how-far-theyve-gone/" title="A Deep Dive into Visual Odometry: How Rovers Know ‘How Far’ They’ve Gone">A Deep Dive into Visual Odometry: How Rovers Know 'How Far' They've Gone</a></em>, Martian terrain presents deadly friction-related hazards.</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading"><strong>The Phenomenon of "High-Slip Interaction"</strong></h3>

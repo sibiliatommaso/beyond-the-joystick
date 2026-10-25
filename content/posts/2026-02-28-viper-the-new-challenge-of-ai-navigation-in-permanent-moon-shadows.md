@@ -5,7 +5,7 @@ date: '2026-02-28T14:07:44+00:00'
 author: Beyond The Joystick
 excerpt: This article provides a comprehensive engineering review of the VIPER rover AI navigation system, designed for the extreme conditions of lunar Permanently Shadowed Regions (PSRs). Resurrected for a 2027 Blue Origin launch, VIPER abandons traditional passive solar navigation. Instead, it employs active LED illumination and robust visual odometry to counteract dynamic shadowing. To ensure survival in cryogenic darkness, the architecture leverages computationally efficient grid-based algorithms like D* Lite for real-time hazard avoidance and Extended Kalman Filters (EKF) for precise kinematic slip estimation on porous regolith. Ultimately, VIPER’s hybrid "Earth-in-the-Loop" autonomy establishes the technical baseline for future Artemis surface operations.
 layout: post
-guid: https://beyondthejoystick.space/?p=592
+guid: /?p=592
 permalink: /viper-the-new-challenge-of-ai-navigation-in-permanent-moon-shadows/
 image: /wp-content/uploads/2026/02/viper-rover-ai.png
 categories:
@@ -120,7 +120,7 @@ format: false
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Therefore, VIPER utilizes grid-based pathfinding algorithms that can re-evaluate routes in real-time as new, local data is acquired. <a href="https://beyondthejoystick.space/a-vs-d-lite-the-pathfinding-algorithms/" title="A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover’s Route">While A* is common for static maps, the <em>D* Lite algorithm</em> (or highly customized variants of it) is the industry standard for dynamic, unknown environments.</a> D* Lite efficiently recomputes the shortest path as the rover's sensors discover unmapped obstacles, rather than recalculating the entire route from scratch.</p>
+<p>Therefore, VIPER utilizes grid-based pathfinding algorithms that can re-evaluate routes in real-time as new, local data is acquired. <a href="/a-vs-d-lite-the-pathfinding-algorithms/" title="A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover’s Route">While A* is common for static maps, the <em>D* Lite algorithm</em> (or highly customized variants of it) is the industry standard for dynamic, unknown environments.</a> D* Lite efficiently recomputes the shortest path as the rover's sensors discover unmapped obstacles, rather than recalculating the entire route from scratch.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->

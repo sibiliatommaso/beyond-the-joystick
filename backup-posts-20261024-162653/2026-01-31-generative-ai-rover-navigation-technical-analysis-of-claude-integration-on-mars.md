@@ -5,7 +5,7 @@ date: '2026-01-31T10:04:48+00:00'
 author: 'Beyond The Joystick'
 excerpt: 'This technical report analyzes the pivotal event of Sol 1707-1709, where Perseverance navigated Mars guided by the Claude Code AI agent. For the first time, an LLM was integrated into the critical path, generating executable Rover Markup Language (RML) code. This "Ground-in-the-Loop" paradigm transcends traditional AutoNav limitations through semantic terrain analysis and terrestrial computing power. Rigorously validated via Digital Twin simulation, the AI successfully directed 456 meters of autonomous driving. This milestone demonstrates Generative AI''s capacity to control physical assets in critical environments, redefining space exploration standards.'
 layout: post
-guid: 'https://beyondthejoystick.space/?p=563'
+guid: '/?p=563'
 permalink: /generative-ai-rover-navigation-technical-analysis-of-claude-integration-on-mars/
 kofi_display_floating_button:
     - ''
@@ -53,7 +53,7 @@ format: false
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>To understand the magnitude of this integration, it is necessary to contextualize it within the evolution of Martian navigation systems. <a href="https://beyondthejoystick.space/the-evolution-of-rover-ai/" title="The Evolution of Rover AI: A Deep Dive From Sojourner to AutoNav">As detailed in my previous analysis of the architectural shift from Sojourner’s reactive "bump and go" to Perseverance’s predictive systems</a>,this evolution has historically been constrained by "light-time delay". In early missions such as Sojourner, navigation was almost entirely deterministic and "blind," limited to a few centimeters per Sol. Subsequently, with the Mars Exploration Rovers and Curiosity, AutoNav was introduced. Although revolutionary, AutoNav is constrained by onboard computing power (radiation-hardened RAD750 processors that are computationally limited) and an intrinsic "myopia," as it can only process local data without strategic context.</p>
+<p>To understand the magnitude of this integration, it is necessary to contextualize it within the evolution of Martian navigation systems. <a href="/the-evolution-of-rover-ai/" title="The Evolution of Rover AI: A Deep Dive From Sojourner to AutoNav">As detailed in my previous analysis of the architectural shift from Sojourner’s reactive "bump and go" to Perseverance’s predictive systems</a>,this evolution has historically been constrained by "light-time delay". In early missions such as Sojourner, navigation was almost entirely deterministic and "blind," limited to a few centimeters per Sol. Subsequently, with the Mars Exploration Rovers and Curiosity, AutoNav was introduced. Although revolutionary, AutoNav is constrained by onboard computing power (radiation-hardened RAD750 processors that are computationally limited) and an intrinsic "myopia," as it can only process local data without strategic context.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->

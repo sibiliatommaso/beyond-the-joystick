@@ -1176,3 +1176,60 @@ p { margin: 0 0 1em; max-width: 70ch; }
 /* MATH (KaTeX) */
 .katex-display { overflow-x: auto; overflow-y: hidden; padding-block: 0.25rem; }
 .math-error { color: #FF8A80; overflow-wrap: anywhere; }
+
+
+/* ARTICLE CONTENT: code, inline code, tables, figures, quotes */
+main pre {
+  overflow-x: auto;
+  margin: 0;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  tab-size: 4;
+}
+
+main .highlight { margin: 1.5rem 0; }
+
+main :not(pre) > code {
+  padding: 0.15em 0.4em;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+  font-size: 0.9em;
+}
+
+main table {
+  display: block;
+  max-width: 100%;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+main th,
+main td {
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+main th { border-bottom-color: var(--color-accent); color: var(--color-text); }
+
+main figure { margin: 2rem 0; }
+main figure img { border: 1px solid var(--color-border); border-radius: var(--radius-sm); }
+main figcaption { margin-top: 0.6rem; color: var(--color-muted); font-size: 0.9rem; }
+
+main blockquote {
+  margin: 1.5rem 0;
+  padding: 0.9rem 1.25rem;
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--color-surface);
+}
+
+main blockquote p:last-child { margin-bottom: 0; }
+

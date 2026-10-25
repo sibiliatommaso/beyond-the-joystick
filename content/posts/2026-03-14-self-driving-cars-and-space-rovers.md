@@ -5,7 +5,7 @@ date: '2026-03-14T08:00:00+00:00'
 author: Beyond The Joystick
 excerpt: The convergence of terrestrial autonomous vehicles and planetary rovers reveals profound algorithmic and architectural intersections. While self-driving cars process immense data using high-performance processors in structured environments, space rovers navigate unstructured, high-radiation terrains constrained by severe power limits and communication latency, historically relying on legacy rad-hardened hardware. Today, this paradigm is shifting. The aerospace sector is actively integrating automotive Deep Reinforcement Learning, hybrid computing, and photorealistic simulations to achieve robust autonomous navigation. Conversely, the automotive industry leverages space-proven fault-tolerance and remote teleoperation strategies to master complex urban edge cases, driving a mutual evolution in robotics.
 layout: post
-guid: https://beyondthejoystick.space/?p=600
+guid: /?p=600
 permalink: /self-driving-cars-and-space-rovers/
 image: /wp-content/uploads/2026/03/Self-driving-cars-and-space-rovers-scaled.png
 categories:
@@ -25,7 +25,7 @@ format: false
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>In deep space, the autonomous exploration of rovers is dictated by radically different paradigms. The primary challenges include the absence of real-time communication due to trans-planetary transmission delays, which can exceed <a href="https://beyondthejoystick.space/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/" title="The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers">20 minutes for Mars</a>. Furthermore, rovers operate in completely unstructured environments and face extreme limitations in computational capacity, thermal power, and debilitating exposure to cosmic radiation.</p>
+<p>In deep space, the autonomous exploration of rovers is dictated by radically different paradigms. The primary challenges include the absence of real-time communication due to trans-planetary transmission delays, which can exceed <a href="/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/" title="The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers">20 minutes for Mars</a>. Furthermore, rovers operate in completely unstructured environments and face extreme limitations in computational capacity, thermal power, and debilitating exposure to cosmic radiation.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -101,7 +101,7 @@ format: false
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>The fundamental bottleneck separating the cognitive capacities of a commercial autonomous car from a state-of-the-art Martian rover is strictly <a href="https://beyondthejoystick.space/automotive-vs-space-lidar/" title="Automotive vs. Space LiDAR: Why Your Car’s Sensor Can’t Survive Mars">hardware-based</a>. The disparities in pure computing power are staggering and stem from a ruthless environmental constraint: the extreme radiation environment of space and severe thermal and energy budget limits.</p>
+<p>The fundamental bottleneck separating the cognitive capacities of a commercial autonomous car from a state-of-the-art Martian rover is strictly <a href="/automotive-vs-space-lidar/" title="Automotive vs. Space LiDAR: Why Your Car’s Sensor Can’t Survive Mars">hardware-based</a>. The disparities in pure computing power are staggering and stem from a ruthless environmental constraint: the extreme radiation environment of space and severe thermal and energy budget limits.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->

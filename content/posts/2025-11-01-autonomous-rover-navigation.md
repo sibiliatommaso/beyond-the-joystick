@@ -5,7 +5,7 @@ date: '2025-11-01T08:10:00+00:00'
 author: Beyond The Joystick
 excerpt: Why can't we joystick a Mars rover? A 26-minute signal lag makes it impossible. This guide explores the necessity of autonomous rover navigation, breaking down the core tech, SLAM, Pathfinding, and Hazard Avoidance. We trace its evolution from Mars to the unique challenges of the Moon, explaining how robots think for themselves.
 layout: post
-guid: https://beyondthejoystick.space/?p=155
+guid: /?p=155
 permalink: /autonomous-rover-navigation/
 image: /wp-content/uploads/2025/10/perseverance_rover_on_mars.png
 categories:
@@ -86,7 +86,7 @@ format: false
 <!-- /wp:separator -->
 
 <!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading"><strong>2. The "Why": <a href="https://beyondthejoystick.space/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/" title="The Tyranny of Latency">The Tyranny of Latency</a></strong></h3>
+<h3 class="wp-block-heading"><strong>2. The "Why": <a href="/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/" title="The Tyranny of Latency">The Tyranny of Latency</a></strong></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->

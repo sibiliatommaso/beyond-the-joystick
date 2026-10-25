@@ -5,7 +5,7 @@ date: '2025-11-22T08:00:00+00:00'
 author: Beyond The Joystick
 excerpt: This article analyzes Rover Perception, explaining how Stereo Vision, LiDAR, and IMUs integrate to enable autonomous navigation. It details the role of Sensor Fusion and Extended Kalman Filters in overcoming communication latency. Case studies of Perseverance and VIPER illustrate how these systems map unstructured extraterrestrial environments with precision to ensure mission safety.
 layout: post
-guid: https://beyondthejoystick.space/?p=261
+guid: /?p=261
 permalink: /rover-perception-systems/
 litespeed_no_cache:
 - '1'
@@ -29,7 +29,7 @@ format: false
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Autonomous navigation in extraterrestrial environments is defined by an unbreakable physical constraint: <a href="https://beyondthejoystick.space/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/" title="The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers">the speed of light</a>. With Earth-Mars communication latencies ranging from 4 to 24 minutes, real-time teleoperation is impossible. To survive, a rover must possess a robust <strong>Rover Perception</strong> architecture.</p>
+<p>Autonomous navigation in extraterrestrial environments is defined by an unbreakable physical constraint: <a href="/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/" title="The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers">the speed of light</a>. With Earth-Mars communication latencies ranging from 4 to 24 minutes, real-time teleoperation is impossible. To survive, a rover must possess a robust <strong>Rover Perception</strong> architecture.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->

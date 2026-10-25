@@ -4,7 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover’s Route | Beyond the Joystick</title>
-  <meta name="description" content="Explore planetary robotics, autonomous navigation, SLAM, ROS 2, and practical engineering projects for autonomous rovers.">
+  <meta name="description" content="This article examines autonomous navigation on Mars, where rovers like Perseverance face severe hardware constraints (200 MHz CPUs). We conduct a technical …">
+<meta name="author" content="Tommaso Sibilia">
+<link rel="canonical" href="//localhost:1313/posts/2025-11-29-a-vs-d-lite-the-pathfinding-algorithms/">
+
+
+<meta property="og:site_name" content="Beyond the Joystick">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover’s Route">
+<meta property="og:description" content="This article examines autonomous navigation on Mars, where rovers like Perseverance face severe hardware constraints (200 MHz CPUs). We conduct a technical …">
+<meta property="og:url" content="//localhost:1313/posts/2025-11-29-a-vs-d-lite-the-pathfinding-algorithms/">
+<meta property="og:image" content="//localhost:1313/wp-content/uploads/2025/11/mars-rover-dynamic-pathfinding-visualization-a-star-vs-d-star-lite.jpg-scaled.png">
+
+<meta property="article:published_time" content="2025-11-29T08:00:00&#43;00:00">
+<meta property="article:modified_time" content="2025-11-29T08:00:00&#43;00:00">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover’s Route">
+<meta name="twitter:description" content="This article examines autonomous navigation on Mars, where rovers like Perseverance face severe hardware constraints (200 MHz CPUs). We conduct a technical …">
+<meta name="twitter:image" content="//localhost:1313/wp-content/uploads/2025/11/mars-rover-dynamic-pathfinding-visualization-a-star-vs-d-star-lite.jpg-scaled.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","author":{"@type":"Person","name":"Tommaso Sibilia","sameAs":["https://www.linkedin.com/in/tommaso-sibilia","https://github.com/sibiliatommaso"],"url":"//localhost:1313/about/"},"dateModified":"2025-11-29T08:00:00+00:00","datePublished":"2025-11-29T08:00:00+00:00","description":"This article examines autonomous navigation on Mars, where rovers like Perseverance face severe hardware constraints (200 MHz CPUs). We conduct a technical …","headline":"A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover’s Route","image":"//localhost:1313/wp-content/uploads/2025/11/mars-rover-dynamic-pathfinding-visualization-a-star-vs-d-star-lite.jpg-scaled.png","inLanguage":"en","keywords":"A* Algorithm, Autonomous Navigation, D* Lite, Pathfinding Algorithms","mainEntityOfPage":"//localhost:1313/posts/2025-11-29-a-vs-d-lite-the-pathfinding-algorithms/","publisher":{"@type":"Organization","name":"Beyond the Joystick","url":"//localhost:1313/"}}</script>
+
+
   <link rel="stylesheet" href="/css/custom.css">
 
   
@@ -158,7 +180,7 @@
 <p>In this scenario, software efficiency isn't an academic luxury; it is an unbreakable physical constraint. Autonomous navigation doesn't just mean drawing a straight line on an empty map. It means surviving a "mathematical maze" of slippery slopes, sharp rocks (called <em>ventifacts</em>), and soft sand traps, all while having to conserve every single CPU cycle and watt of energy.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p>Since direct control from Earth is impossible due to the communication delays inherent in orbital mechanics (a challenge we analyzed in detail in our article on <a href="https://beyondthejoystick.space/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/" title="The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers">The 20-Minute Lag</a>), the rover is alone. It must make life-or-death decisions autonomously.</p>
+<p>Since direct control from Earth is impossible due to the communication delays inherent in orbital mechanics (a challenge we analyzed in detail in our article on <a href="/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/" title="The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers">The 20-Minute Lag</a>), the rover is alone. It must make life-or-death decisions autonomously.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>This is where <strong>pathfinding algorithms</strong> come into play. They are not just lines of code; they are the rover's true pilots. In this article, we will analyze the "decision engine" that drives Martian exploration, comparing two giants of graph theory: <strong>A</strong>* (A-Star), the deterministic standard for global planning, and <em>D *Lite</em>, the master of dynamic navigation and real-time replanning.</p>
@@ -537,7 +559,7 @@ M834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">�
 <h2 class="wp-block-heading"><strong>Case Studies: Implementing Field D* on Mars</strong></h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>While the mechanical and exploratory evolution of rovers is treated in detail in our in-depth article on <a href="https://beyondthejoystick.space/the-evolution-of-rover-ai/" title="The Evolution of Rover AI: A Deep Dive From Sojourner to AutoNav">The Evolution of Rover AI</a>, here we focus exclusively on the algorithmic stack that allowed the quantum leap in autonomous navigation.</p>
+<p>While the mechanical and exploratory evolution of rovers is treated in detail in our in-depth article on <a href="/the-evolution-of-rover-ai/" title="The Evolution of Rover AI: A Deep Dive From Sojourner to AutoNav">The Evolution of Rover AI</a>, here we focus exclusively on the algorithmic stack that allowed the quantum leap in autonomous navigation.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>Not all rovers "think" the same way. The adoption of complex pathfinding algorithms went hand in hand with the increase in <em>on-board</em> computing power.</p>

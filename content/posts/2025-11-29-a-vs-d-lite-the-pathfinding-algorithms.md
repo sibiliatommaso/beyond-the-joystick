@@ -5,7 +5,7 @@ date: '2025-11-29T08:00:00+00:00'
 author: Beyond The Joystick
 excerpt: This article examines autonomous navigation on Mars, where rovers like Perseverance face severe hardware constraints (200 MHz CPUs). We conduct a technical comparison between A*, the deterministic standard for static global planning, and D Lite*, the superior choice for dynamic replanning. While A* forces computationally expensive recalculations for every new obstacle, D* Lite utilizes incremental updates ($rhs-values$) to optimize processing time. By analyzing Cost Maps and algorithmic complexity, we demonstrate how the evolution toward Field D* and Hybrid AI is critical for safe robotic exploration.
 layout: post
-guid: https://beyondthejoystick.space/?p=331
+guid: /?p=331
 permalink: /a-vs-d-lite-the-pathfinding-algorithms/
 litespeed_no_cache:
 - '1'
@@ -57,7 +57,7 @@ format: false
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Since direct control from Earth is impossible due to the communication delays inherent in orbital mechanics (a challenge we analyzed in detail in our article on <a href="https://beyondthejoystick.space/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/" title="The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers">The 20-Minute Lag</a>), the rover is alone. It must make life-or-death decisions autonomously.</p>
+<p>Since direct control from Earth is impossible due to the communication delays inherent in orbital mechanics (a challenge we analyzed in detail in our article on <a href="/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/" title="The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers">The 20-Minute Lag</a>), the rover is alone. It must make life-or-death decisions autonomously.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -505,7 +505,7 @@ f(n) = g(n) + h(n)
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>While the mechanical and exploratory evolution of rovers is treated in detail in our in-depth article on <a href="https://beyondthejoystick.space/the-evolution-of-rover-ai/" title="The Evolution of Rover AI: A Deep Dive From Sojourner to AutoNav">The Evolution of Rover AI</a>, here we focus exclusively on the algorithmic stack that allowed the quantum leap in autonomous navigation.</p>
+<p>While the mechanical and exploratory evolution of rovers is treated in detail in our in-depth article on <a href="/the-evolution-of-rover-ai/" title="The Evolution of Rover AI: A Deep Dive From Sojourner to AutoNav">The Evolution of Rover AI</a>, here we focus exclusively on the algorithmic stack that allowed the quantum leap in autonomous navigation.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->

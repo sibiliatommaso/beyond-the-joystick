@@ -5,7 +5,7 @@ date: '2026-09-20T08:19:05+00:00'
 author: Beyond The Joystick
 excerpt: Planetary rovers face significant mobility challenges on loose extraterrestrial terrains, making sand entrapment a critical threat. In this Lab Breakdown, we decode the science of Rover Slip Estimation. By benchmarking visual odometry derived from optical flow against the tangential velocity measured by wheel encoders, we explore how single-wheel testbeds isolate and quantify traction loss. This technical analysis of hardware integration and ROS 2 nodes is essential for developing robust hazard avoidance. Discover how autonomous systems detect wheel slip to survive the unpredictable surfaces of the Moon and Mars.
 layout: post
-guid: https://beyondthejoystick.space/?p=613
+guid: /?p=613
 permalink: /rover-slip-estimation-on-lunar-sand-lab-test/
 image: /wp-content/uploads/2026/09/PIA26016orig.jpg
 categories:
@@ -30,7 +30,7 @@ format: false
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>As we dive deeper into <a href="https://beyondthejoystick.space/autonomous-rover-navigation/">autonomous space robotics</a> here on <em>Beyond the Joystick</em>, I am realizing that mastering rover slip estimation is just as critical as orbital mechanics. If a rover cannot detect slip, standard wheel odometry accrues massive errors, causing deviations from planned trajectories and increasing the risk of entrapment. To understand how engineers solve this, we are going to explore how <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=11170582">academic researchers utilize a single-wheel testbed to analyze wheel-terrain interactions before the software ever leaves Earth</a>.</p>
+<p>As we dive deeper into <a href="/autonomous-rover-navigation/">autonomous space robotics</a> here on <em>Beyond the Joystick</em>, I am realizing that mastering rover slip estimation is just as critical as orbital mechanics. If a rover cannot detect slip, standard wheel odometry accrues massive errors, causing deviations from planned trajectories and increasing the risk of entrapment. To understand how engineers solve this, we are going to explore how <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=11170582">academic researchers utilize a single-wheel testbed to analyze wheel-terrain interactions before the software ever leaves Earth</a>.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:gallery {"linkTo":"none"} -->
@@ -166,7 +166,7 @@ s = \frac{v_{enc} - v_{opt}}{\max(v_{enc}, v_{opt})}
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>These empirical findings serve as the foundation for developing machine learning-based slip prediction and adaptive control algorithms, ensuring the success of <a href="https://beyondthejoystick.space/the-new-lunar-gold-rush-how-commercial-lunar-rovers-are-scaling-autonomous-mobility/">future missions on challenging extraterrestrial terrains</a>. With my upcoming internship focusing on exactly these ROS 2 slip-detection architectures for lunar rovers, analyzing these laboratory dynamics provides the perfect primer for the engineering challenges ahead.</p>
+<p>These empirical findings serve as the foundation for developing machine learning-based slip prediction and adaptive control algorithms, ensuring the success of <a href="/the-new-lunar-gold-rush-how-commercial-lunar-rovers-are-scaling-autonomous-mobility/">future missions on challenging extraterrestrial terrains</a>. With my upcoming internship focusing on exactly these ROS 2 slip-detection architectures for lunar rovers, analyzing these laboratory dynamics provides the perfect primer for the engineering challenges ahead.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->

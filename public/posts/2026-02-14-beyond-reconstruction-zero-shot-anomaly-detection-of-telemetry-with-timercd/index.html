@@ -4,7 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Beyond Reconstruction: Zero-Shot Anomaly Detection of Telemetry with TimeRCD | Beyond the Joystick</title>
-  <meta name="description" content="Explore planetary robotics, autonomous navigation, SLAM, ROS 2, and practical engineering projects for autonomous rovers.">
+  <meta name="description" content="Space telemetry analysis is shifting from reconstruction-based models like TadGAN to Zero-Shot Anomaly Detection. Traditional generative models struggle in deep …">
+<meta name="author" content="Tommaso Sibilia">
+<link rel="canonical" href="//localhost:1313/posts/2026-02-14-beyond-reconstruction-zero-shot-anomaly-detection-of-telemetry-with-timercd/">
+
+
+<meta property="og:site_name" content="Beyond the Joystick">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Beyond Reconstruction: Zero-Shot Anomaly Detection of Telemetry with TimeRCD">
+<meta property="og:description" content="Space telemetry analysis is shifting from reconstruction-based models like TadGAN to Zero-Shot Anomaly Detection. Traditional generative models struggle in deep …">
+<meta property="og:url" content="//localhost:1313/posts/2026-02-14-beyond-reconstruction-zero-shot-anomaly-detection-of-telemetry-with-timercd/">
+<meta property="og:image" content="//localhost:1313/wp-content/uploads/2026/02/Mars-rover-telemetry-data-visualization-concept.png">
+
+<meta property="article:published_time" content="2026-02-14T08:30:00&#43;00:00">
+<meta property="article:modified_time" content="2026-02-14T08:30:00&#43;00:00">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Beyond Reconstruction: Zero-Shot Anomaly Detection of Telemetry with TimeRCD">
+<meta name="twitter:description" content="Space telemetry analysis is shifting from reconstruction-based models like TadGAN to Zero-Shot Anomaly Detection. Traditional generative models struggle in deep …">
+<meta name="twitter:image" content="//localhost:1313/wp-content/uploads/2026/02/Mars-rover-telemetry-data-visualization-concept.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","author":{"@type":"Person","name":"Tommaso Sibilia","sameAs":["https://www.linkedin.com/in/tommaso-sibilia","https://github.com/sibiliatommaso"],"url":"//localhost:1313/about/"},"dateModified":"2026-02-14T08:30:00+00:00","datePublished":"2026-02-14T08:30:00+00:00","description":"Space telemetry analysis is shifting from reconstruction-based models like TadGAN to Zero-Shot Anomaly Detection. Traditional generative models struggle in deep …","headline":"Beyond Reconstruction: Zero-Shot Anomaly Detection of Telemetry with TimeRCD","image":"//localhost:1313/wp-content/uploads/2026/02/Mars-rover-telemetry-data-visualization-concept.png","inLanguage":"en","keywords":"Autonomous Navigation, Deep Learning, Foundation Models, Mars Science Laboratory, NASA SMAP, Rad-Hard Processors, Relative Context Discrepancy, Space Telemetry, TimeRCD, Zero-Shot Anomaly Detection","mainEntityOfPage":"//localhost:1313/posts/2026-02-14-beyond-reconstruction-zero-shot-anomaly-detection-of-telemetry-with-timercd/","publisher":{"@type":"Organization","name":"Beyond the Joystick","url":"//localhost:1313/"}}</script>
+
+
   <link rel="stylesheet" href="/css/custom.css">
 
   
@@ -137,7 +159,7 @@
 
     <div class="post-content">
       <!-- wp:paragraph -->
-<p>Telemetry monitoring in modern space systems, such as Martian rovers and Earth observation satellites, requires the real-time analysis of extremely high-dimensional data streams. These time-series signals are inherently affected by thermal noise and unpredictable radiative variations, making fault detection a critical computational bottleneck. As highlighted in our previous deep dives on <a href="https://beyondthejoystick.space/generative-ai-rover-navigation-technical-analysis-of-claude-integration-on-mars/" title="Generative AI Rover Navigation: Technical Analysis of Claude Integration on Mars">on-board decision-making autonomy</a>,interplanetary communication latency forces spacecraft to process and interpret anomalies locally, without waiting for a human feedback loop.</p>
+<p>Telemetry monitoring in modern space systems, such as Martian rovers and Earth observation satellites, requires the real-time analysis of extremely high-dimensional data streams. These time-series signals are inherently affected by thermal noise and unpredictable radiative variations, making fault detection a critical computational bottleneck. As highlighted in our previous deep dives on <a href="/generative-ai-rover-navigation-technical-analysis-of-claude-integration-on-mars/" title="Generative AI Rover Navigation: Technical Analysis of Claude Integration on Mars">on-board decision-making autonomy</a>,interplanetary communication latency forces spacecraft to process and interpret anomalies locally, without waiting for a human feedback loop.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>Historically, space anomaly detection has relied almost exclusively on the <strong>Reconstruction Error</strong> paradigm. Deep learning architectures like TadGAN or Variational Autoencoders are trained to reconstruct "nominal" telemetry patterns, flagging statistically significant deviations as anomalies. Unfortunately, this approach leads to two structural problems: severe overfitting on standard operational data and the inability to recognize unseen contextual faults during training. To overcome this, ground and flight system engineering is migrating toward <strong>Zero-Shot Anomaly Detection</strong>, a branch of artificial intelligence capable of isolating unprecedented systemic alterations without requiring data labeling or prior training on those specific error signatures.</p>

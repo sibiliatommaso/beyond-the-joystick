@@ -5,7 +5,7 @@ date: '2026-02-14T08:30:00+00:00'
 author: Beyond The Joystick
 excerpt: Space telemetry analysis is shifting from reconstruction-based models like TadGAN to Zero-Shot Anomaly Detection. Traditional generative models struggle in deep space, suffering from overfitting and failing to identify unprecedented operational faults. The TimeRCD framework introduces a paradigm shift via the Relative Context Discrepancy (RCD) approach. Instead of reconstructing nominal data, TimeRCD measures vector discrepancies between local and global temporal contexts using pre-trained Foundation Models. Validated on NASA's SMAP and MSL datasets, this zero-shot architecture drastically cuts false positives, reduces computational loads on Rad-Hard processors, and paves the way for true onboard spacecraft autonomy.
 layout: post
-guid: https://beyondthejoystick.space/?p=582
+guid: /?p=582
 permalink: /beyond-reconstruction-zero-shot-anomaly-detection-of-telemetry-with-timercd/
 image: /wp-content/uploads/2026/02/Mars-rover-telemetry-data-visualization-concept.png
 categories:
@@ -26,7 +26,7 @@ format: false
 ---
 
 <!-- wp:paragraph -->
-<p>Telemetry monitoring in modern space systems, such as Martian rovers and Earth observation satellites, requires the real-time analysis of extremely high-dimensional data streams. These time-series signals are inherently affected by thermal noise and unpredictable radiative variations, making fault detection a critical computational bottleneck. As highlighted in our previous deep dives on <a href="https://beyondthejoystick.space/generative-ai-rover-navigation-technical-analysis-of-claude-integration-on-mars/" title="Generative AI Rover Navigation: Technical Analysis of Claude Integration on Mars">on-board decision-making autonomy</a>,interplanetary communication latency forces spacecraft to process and interpret anomalies locally, without waiting for a human feedback loop.</p>
+<p>Telemetry monitoring in modern space systems, such as Martian rovers and Earth observation satellites, requires the real-time analysis of extremely high-dimensional data streams. These time-series signals are inherently affected by thermal noise and unpredictable radiative variations, making fault detection a critical computational bottleneck. As highlighted in our previous deep dives on <a href="/generative-ai-rover-navigation-technical-analysis-of-claude-integration-on-mars/" title="Generative AI Rover Navigation: Technical Analysis of Claude Integration on Mars">on-board decision-making autonomy</a>,interplanetary communication latency forces spacecraft to process and interpret anomalies locally, without waiting for a human feedback loop.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->

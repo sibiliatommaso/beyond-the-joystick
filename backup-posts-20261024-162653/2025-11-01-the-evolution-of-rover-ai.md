@@ -5,7 +5,7 @@ date: '2025-11-01T08:10:00+00:00'
 author: 'Beyond The Joystick'
 excerpt: "Mars' 20-minute communication latency forced the evolution of rover AI. This article charts the path from Sojourner's simple reactive \"bump\" system to Spirit's deliberative 2.5D mapping. It covers Curiosity's continuous AutoNav and Perseverance's real-time predictive navigation, which uses a dedicated Vision Compute Element (VCE), showing how hardware unlocks autonomy."
 layout: post
-guid: 'https://beyondthejoystick.space/?p=244'
+guid: '/?p=244'
 permalink: /the-evolution-of-rover-ai/
 image: /wp-content/uploads/2025/10/PIA26073medium.jpg
 categories:
@@ -559,7 +559,7 @@ format: false
 <!-- /wp:separator -->
 
 <!-- wp:paragraph -->
-<p><em>This article analyzed the historical trajectory of Martian autonomy. But what exactly are the pathfinding algorithms these rovers use? Continue <a href="https://beyondthejoystick.space/blog/" title="Blog">following us</a> as we analyze A*, D* Lite, and the algorithms that allow Perseverance to choose its path.</em></p>
+<p><em>This article analyzed the historical trajectory of Martian autonomy. But what exactly are the pathfinding algorithms these rovers use? Continue <a href="/blog/" title="Blog">following us</a> as we analyze A*, D* Lite, and the algorithms that allow Perseverance to choose its path.</em></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->

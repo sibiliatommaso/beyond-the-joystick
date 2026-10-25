@@ -1,9 +1,12 @@
+# Absolute production URL: needed for canonical links, sitemap, social images and structured data.
+# `hugo server` still serves on localhost while you work.
 baseURL = '/'
 locale = 'en-us'
 title = 'Beyond the Joystick'
 # NOTE: `theme = 'PaperMod'` is intentionally removed.
  
 [params]
+  authorName = 'Tommaso Sibilia'
   description = 'Explore planetary robotics, autonomous navigation, SLAM, ROS 2, and practical engineering projects for autonomous rovers.'
   # Hero image (existing file). Confirm source and credit before publishing.
   heroImage = '/wp-content/uploads/2025/11/perseverance-selfie.webp'
@@ -12,6 +15,12 @@ title = 'Beyond the Joystick'
  
 [markup.goldmark.renderer]
   unsafe = true
+
+# Syntax highlighting for fenced code blocks (```python ... ```)
+[markup.highlight]
+  style = 'github-dark'
+  noClasses = true
+  tabWidth = 4
  
 [[menus.main]]
   name = 'Home'

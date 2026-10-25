@@ -5,7 +5,7 @@ date: '2025-12-06T08:00:00+00:00'
 author: Beyond The Joystick
 excerpt: ''
 layout: post
-guid: https://beyondthejoystick.space/?p=409
+guid: /?p=409
 permalink: /how-rovers-know-how-far-theyve-gone/
 kofi_display_floating_button:
 - ''
@@ -294,7 +294,7 @@ b_{gx}, b_{gy}, b_{gz}
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>As we analyzed in our historical breakdown, <strong><a href="https://beyondthejoystick.space/the-evolution-of-rover-ai/" title="The Evolution of Rover AI: A Deep Dive From Sojourner to AutoNav">The Evolution of Rover AI: From Sojourner's 'Bump and Go' to Perseverance's AutoNav</a></strong>, this computational load has historically been the primary bottleneck for Martian navigation.</p>
+<p>As we analyzed in our historical breakdown, <strong><a href="/the-evolution-of-rover-ai/" title="The Evolution of Rover AI: A Deep Dive From Sojourner to AutoNav">The Evolution of Rover AI: From Sojourner's 'Bump and Go' to Perseverance's AutoNav</a></strong>, this computational load has historically been the primary bottleneck for Martian navigation.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -381,7 +381,7 @@ b_{gx}, b_{gy}, b_{gz}
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>However, Visual Odometry is just the beginning. As we explored in our deep dive into <strong><a href="https://beyondthejoystick.space/what-is-slam-the-key-technology-for-autonomous-rover-mapping/" title="What is SLAM? The Key Technology for Autonomous Rover Mapping">What is SLAM? How Rovers Map Alien Worlds in Real-Time</a></strong>, the future of exploration is moving from simple localization to <strong>Simultaneous Localization and Mapping (SLAM)</strong>. While VO tells the rover where it is relative to where it started <em>a moment ago</em>, SLAM allows it to understand where it is on a global map, correcting drift over kilometers of travel.</p>
+<p>However, Visual Odometry is just the beginning. As we explored in our deep dive into <strong><a href="/what-is-slam-the-key-technology-for-autonomous-rover-mapping/" title="What is SLAM? The Key Technology for Autonomous Rover Mapping">What is SLAM? How Rovers Map Alien Worlds in Real-Time</a></strong>, the future of exploration is moving from simple localization to <strong>Simultaneous Localization and Mapping (SLAM)</strong>. While VO tells the rover where it is relative to where it started <em>a moment ago</em>, SLAM allows it to understand where it is on a global map, correcting drift over kilometers of travel.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->

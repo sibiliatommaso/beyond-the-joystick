@@ -5,7 +5,7 @@ date: '2025-12-13T08:00:00+00:00'
 author: Beyond The Joystick
 excerpt: his analysis explores the technical architecture of China's Zhurong rover, highlighting how it differs from NASA's design philosophy. Operating in Utopia Planitia, Zhurong utilizes a hierarchical pathfinding system that combines $A^*$ for global route planning with $D^*$ Lite for dynamic obstacle avoidance. To survive without nuclear power, it employs autonomous "wake/sleep" algorithms based on environmental conditions. Furthermore, the rover mitigates dangerous high-slip interactions using unique active suspension capable of "inchworm" motion and crab walking, allowing it to successfully map geology and hydrated minerals far beyond its nominal 90-sol lifespan.
 layout: post
-guid: https://beyondthejoystick.space/?p=422
+guid: /?p=422
 permalink: /beyond-nasa-a-look-at-the-ai-inside-chinas-zhurong-mars-rover/
 kofi_display_floating_button:
 - ''
@@ -78,7 +78,7 @@ format: false
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>This runs on a "global map" generated from orbital imagery or previous panoramas. As we discussed in <a href="https://beyondthejoystick.space/a-vs-d-lite-the-pathfinding-algorithms/" title="A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover’s Route">A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover's Route</a>, A* is ideal here because it acts as a static "GPS." It calculates the optimal path from point A to point B by minimizing cost (distance + slope), assuming the map is known and immutable.</p>
+<p>This runs on a "global map" generated from orbital imagery or previous panoramas. As we discussed in <a href="/a-vs-d-lite-the-pathfinding-algorithms/" title="A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover’s Route">A* vs. D* Lite: The Pathfinding Algorithms That Choose a Rover's Route</a>, A* is ideal here because it acts as a static "GPS." It calculates the optimal path from point A to point B by minimizing cost (distance + slope), assuming the map is known and immutable.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -152,7 +152,7 @@ format: false
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Artificial Intelligence, no matter how advanced, cannot violate the laws of physics. As we detailed in <em><a href="https://beyondthejoystick.space/how-rovers-know-how-far-theyve-gone/" title="A Deep Dive into Visual Odometry: How Rovers Know ‘How Far’ They’ve Gone">A Deep Dive into Visual Odometry: How Rovers Know 'How Far' They've Gone</a></em>, Martian terrain presents deadly friction-related hazards.</p>
+<p>Artificial Intelligence, no matter how advanced, cannot violate the laws of physics. As we detailed in <em><a href="/how-rovers-know-how-far-theyve-gone/" title="A Deep Dive into Visual Odometry: How Rovers Know ‘How Far’ They’ve Gone">A Deep Dive into Visual Odometry: How Rovers Know 'How Far' They've Gone</a></em>, Martian terrain presents deadly friction-related hazards.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->

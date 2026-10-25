@@ -5,7 +5,7 @@ date: '2025-11-08T08:00:00+00:00'
 author: Beyond The Joystick
 excerpt: Autonomous rover navigation in GPS-denied environments relies on SLAM (Simultaneous Localization and Mapping). This algorithm uses probabilistic filters like EKF and Graph-SLAM to build maps and track position in real-time. Essential for Mars missions, it has evolved from basic visual odometry to advanced sensor fusion for future exploration.
 layout: post
-guid: https://beyondthejoystick.space/?p=255
+guid: /?p=255
 permalink: /what-is-slam-the-key-technology-for-autonomous-rover-mapping/
 image: /wp-content/uploads/2025/11/perseverance-selfie.webp
 categories:
@@ -24,7 +24,7 @@ format: false
 ---
 
 <!-- wp:paragraph -->
-<p><a href="https://beyondthejoystick.space/autonomous-rover-navigation/" title="The Ultimate Guide to Autonomous Rover Navigation">Navigating celestial bodies autonomously</a> presents a unique hurdle that we don't face on Earth: the complete lack of  Global Positioning System (GPS). In this context, a rover's ability to understand its own location becomes a complex mathematical problem. In advanced robotics, the standard answer to this problem is SLAM (Simultaneous Localization and Mapping). In this article, we’ll break down the core principles of SLAM, examine how it’s critical for current Mars missions, and look at the immense computational strain it puts on space-grade hardware.</p>
+<p><a href="/autonomous-rover-navigation/" title="The Ultimate Guide to Autonomous Rover Navigation">Navigating celestial bodies autonomously</a> presents a unique hurdle that we don't face on Earth: the complete lack of  Global Positioning System (GPS). In this context, a rover's ability to understand its own location becomes a complex mathematical problem. In advanced robotics, the standard answer to this problem is SLAM (Simultaneous Localization and Mapping). In this article, we’ll break down the core principles of SLAM, examine how it’s critical for current Mars missions, and look at the immense computational strain it puts on space-grade hardware.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
@@ -156,7 +156,7 @@ format: false
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Running SLAM in real-time requires significant computing power, a scarce resource in space. "Rad-hard" (radiation-hardened) processors, like the <a href="https://beyondthejoystick.space/the-evolution-of-rover-ai/" title="The Evolution of Rover AI: A Deep Dive From Sojourner to AutoNav"><strong>RAD750</strong> used on Curiosity and Perseverance</a>, are technologically decades behind terrestrial consumer CPUs to ensure reliability.</p>
+<p>Running SLAM in real-time requires significant computing power, a scarce resource in space. "Rad-hard" (radiation-hardened) processors, like the <a href="/the-evolution-of-rover-ai/" title="The Evolution of Rover AI: A Deep Dive From Sojourner to AutoNav"><strong>RAD750</strong> used on Curiosity and Perseverance</a>, are technologically decades behind terrestrial consumer CPUs to ensure reliability.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list -->

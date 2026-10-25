@@ -5,7 +5,7 @@ date: '2025-11-01T08:10:00+00:00'
 author: 'Beyond The Joystick'
 excerpt: 'A 20+ minute communication lag makes "joysticking" Mars rovers impossible, unlike the Moon''s brief 2.5-second delay. This lag forced technology to evolve: from slow direct signals to high-bandwidth orbiter relays and robotic autonomy (AutoNav). Future lasers will boost data, but the lag remains.'
 layout: post
-guid: 'https://beyondthejoystick.space/?p=230'
+guid: '/?p=230'
 permalink: /the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/
 image: /wp-content/uploads/2025/10/2-minute-lag.png
 categories:
@@ -268,7 +268,7 @@ format: false
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>The challenge of lag has been won by autonomy. The next one, energy, has just begun. <strong>Subscribe to continue <a href="https://beyondthejoystick.space/blog/" title="Blog">exploring </a>the frontiers of technology with me.</strong></p>
+<p>The challenge of lag has been won by autonomy. The next one, energy, has just begun. <strong>Subscribe to continue <a href="/blog/" title="Blog">exploring </a>the frontiers of technology with me.</strong></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"id":238,"sizeSlug":"large","linkDestination":"none"} -->

@@ -1,0 +1,48 @@
+{{- /* SEO head: description, canonical, Open Graph, Twitter Card, JSON-LD.
+       Called from baseof.html inside <head>. */ -}}
+{{- $desc := site.Params.description -}}
+{{- with .Description }}{{ $desc = . }}{{ else }}{{ with .Params.excerpt }}{{ $desc = . }}{{ end }}{{ end -}}
+{{- $desc = $desc | plainify | truncate 160 -}}
+{{- $img := .Params.image | default site.Params.heroImage -}}
+{{- $author := site.Params.authorName | default "Tommaso Sibilia" -}}
+{{- $ogTitle := cond .IsHome site.Title .Title -}}
+
+<meta name="description" content="{{ $desc }}">
+<meta name="author" content="{{ $author }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">{{ end }}
+
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="{{ cond .IsPage "article" "website" }}">
+<meta property="og:title" content="{{ $ogTitle }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ with $img }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+{{ if .IsPage }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}">
+{{ end }}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $ogTitle }}">
+<meta name="twitter:description" content="{{ $desc }}">
+{{ with $img }}<meta name="twitter:image" content="{{ . | absURL }}">{{ end }}
+
+{{- /* Structured data for articles */ -}}
+{{ if and .IsPage (eq .Section "posts") }}
+  {{- $ld := dict
+        "@context" "https://schema.org"
+        "@type" "TechArticle"
+        "headline" .Title
+        "description" $desc
+        "inLanguage" "en"
+        "datePublished" (.Date.Format "2006-01-02T15:04:05-07:00")
+        "dateModified" (.Lastmod.Format "2006-01-02T15:04:05-07:00")
+        "mainEntityOfPage" .Permalink
+        "author" (dict "@type" "Person" "name" $author "url" ("about/" | absURL)
+                       "sameAs" (slice "https://www.linkedin.com/in/tommaso-sibilia" "https://github.com/sibiliatommaso"))
+        "publisher" (dict "@type" "Organization" "name" site.Title "url" site.Home.Permalink) -}}
+  {{- with $img }}{{ $ld = merge $ld (dict "image" (. | absURL)) }}{{ end -}}
+  {{- with .Params.tags }}{{ $ld = merge $ld (dict "keywords" (delimit . ", ")) }}{{ end }}
+<script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
+{{ end }}

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
-  <meta name="description" content="{{ site.Params.description }}">
+  {{ partial "seo.html" . }}
   <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
 
   {{/* KaTeX stylesheet: only on pages where a formula was rendered */}}
