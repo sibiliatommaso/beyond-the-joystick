@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Mapping Algorithmis on Beyond the Joystick</title>
-		<link>//localhost:1313/tags/mapping-algorithmis/</link>
+		<link>http://localhost:1313/tags/mapping-algorithmis/</link>
 		<description>Recent content in Mapping Algorithmis on Beyond the Joystick</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
@@ -12,13 +12,13 @@
 		
 			<lastBuildDate>Sat, 08 Nov 2025 08:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="//localhost:1313/tags/mapping-algorithmis/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/mapping-algorithmis/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>What is SLAM? The Key Technology for Autonomous Rover Mapping</title>
-				<link>//localhost:1313/posts/2025-11-08-what-is-slam-the-key-technology-for-autonomous-rover-mapping/</link>
+				<link>http://localhost:1313/posts/what-is-slam-the-key-technology-for-autonomous-rover-mapping/</link>
 				<pubDate>Sat, 08 Nov 2025 08:00:00 +0000</pubDate>
-				<guid>//localhost:1313/posts/2025-11-08-what-is-slam-the-key-technology-for-autonomous-rover-mapping/</guid>
-				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;&lt;a href=&#34;//localhost:1313/autonomous-rover-navigation/&#34; title=&#34;The Ultimate Guide to Autonomous Rover Navigation&#34;&gt;Navigating celestial bodies autonomously&lt;/a&gt; presents a unique hurdle that we don&#39;t face on Earth: the complete lack of  Global Positioning System (GPS). In this context, a rover&#39;s ability to understand its own location becomes a complex mathematical problem. In advanced robotics, the standard answer to this problem is SLAM (Simultaneous Localization and Mapping). In this article, we’ll break down the core principles of SLAM, examine how it’s critical for current Mars missions, and look at the immense computational strain it puts on space-grade hardware.&lt;/p&gt;</description>
+				<guid>http://localhost:1313/posts/what-is-slam-the-key-technology-for-autonomous-rover-mapping/</guid>
+				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/autonomous-rover-navigation/&#34; title=&#34;The Ultimate Guide to Autonomous Rover Navigation&#34;&gt;Navigating celestial bodies autonomously&lt;/a&gt; presents a unique hurdle that we don&#39;t face on Earth: the complete lack of  Global Positioning System (GPS). In this context, a rover&#39;s ability to understand its own location becomes a complex mathematical problem. In advanced robotics, the standard answer to this problem is SLAM (Simultaneous Localization and Mapping). In this article, we’ll break down the core principles of SLAM, examine how it’s critical for current Mars missions, and look at the immense computational strain it puts on space-grade hardware.&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>ROS 2 on Beyond the Joystick</title>
-		<link>//localhost:1313/tags/ros-2/</link>
+		<link>http://localhost:1313/tags/ros-2/</link>
 		<description>Recent content in ROS 2 on Beyond the Joystick</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Wed, 21 Oct 2026 15:06:12 +0000</lastBuildDate>
 		
-			<atom:link href="//localhost:1313/tags/ros-2/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/ros-2/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Rover Camera Calibration: The Mathematics of Space Vision</title>
-				<link>//localhost:1313/rover-camera-calibration-mathematics/</link>
+				<link>http://localhost:1313/posts/rover-camera-calibration-mathematics/</link>
 				<pubDate>Wed, 21 Oct 2026 15:06:12 +0000</pubDate>
-				<guid>//localhost:1313/rover-camera-calibration-mathematics/</guid>
+				<guid>http://localhost:1313/posts/rover-camera-calibration-mathematics/</guid>
 				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;When we plug a standard webcam into our PC, we assume the image on the screen is a faithful representation of reality. But in space robotics, a camera is not simply an &#34;eye&#34;: it is a sensor capturing a 2D array of pixels affected by severe optical imperfections. For a rover on the Moon or Mars to use those pixels to avoid crashing into a crater, we must translate light into pure geometry.&lt;/p&gt;</description>
 			</item>
 	</channel>

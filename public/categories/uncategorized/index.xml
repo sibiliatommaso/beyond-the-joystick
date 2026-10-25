@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Uncategorized on Beyond the Joystick</title>
-		<link>//localhost:1313/categories/uncategorized/</link>
+		<link>http://localhost:1313/categories/uncategorized/</link>
 		<description>Recent content in Uncategorized on Beyond the Joystick</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Sat, 28 Feb 2026 14:07:44 +0000</lastBuildDate>
 		
-			<atom:link href="//localhost:1313/categories/uncategorized/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/categories/uncategorized/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>VIPER: The New Challenge of AI Navigation in Permanent Moon Shadows</title>
-				<link>//localhost:1313/posts/2026-02-28-viper-the-new-challenge-of-ai-navigation-in-permanent-moon-shadows/</link>
+				<link>http://localhost:1313/posts/viper-the-new-challenge-of-ai-navigation-in-permanent-moon-shadows/</link>
 				<pubDate>Sat, 28 Feb 2026 14:07:44 +0000</pubDate>
-				<guid>//localhost:1313/posts/2026-02-28-viper-the-new-challenge-of-ai-navigation-in-permanent-moon-shadows/</guid>
+				<guid>http://localhost:1313/posts/viper-the-new-challenge-of-ai-navigation-in-permanent-moon-shadows/</guid>
 				<description>&lt;!-- wp:heading --&gt;&#xA;&lt;h2 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;Abstract: The Resurrection of VIPER and the Extreme Lunar South Pole&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;!-- /wp:heading --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;The paradigm of autonomous space robotics is undergoing a fundamental shift. The &lt;strong&gt;VIPER rover AI navigation&lt;/strong&gt; architecture represents a definitive milestone in this evolution. As documented by NASA Ames Research Center, the &lt;em&gt;Volatiles Investigating Polar Exploration Rover&lt;/em&gt; (VIPER) was designed to operate where no solar-powered vehicle has gone before: the &lt;strong&gt;Permanently Shadowed Regions (PSRs)&lt;/strong&gt; of the lunar South Pole.&lt;/p&gt;</description>
 			</item>
 	</channel>

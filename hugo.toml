@@ -1,6 +1,6 @@
 # Absolute production URL: needed for canonical links, sitemap, social images and structured data.
 # `hugo server` still serves on localhost while you work.
-baseURL = '/'
+baseURL = 'https://beyondthejoystick.space/'
 locale = 'en-us'
 title = 'Beyond the Joystick'
 # NOTE: `theme = 'PaperMod'` is intentionally removed.
@@ -32,7 +32,7 @@ title = 'Beyond the Joystick'
   weight = 2
 [[menus.main]]
   name = 'Labs & Projects'
-  url = '/#labs'
+  url = '/labs/'
   weight = 3
 [[menus.main]]
   name = 'About'

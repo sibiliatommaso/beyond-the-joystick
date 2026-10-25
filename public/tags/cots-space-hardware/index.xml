@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>COTS Space Hardware on Beyond the Joystick</title>
-		<link>//localhost:1313/tags/cots-space-hardware/</link>
+		<link>http://localhost:1313/tags/cots-space-hardware/</link>
 		<description>Recent content in COTS Space Hardware on Beyond the Joystick</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
@@ -12,13 +12,13 @@
 		
 			<lastBuildDate>Sat, 18 Apr 2026 07:36:13 +0000</lastBuildDate>
 		
-			<atom:link href="//localhost:1313/tags/cots-space-hardware/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/cots-space-hardware/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>The New Lunar Gold Rush: How Commercial Rovers are Scaling Autonomous Mobility</title>
-				<link>//localhost:1313/posts/2026-04-18-the-new-lunar-gold-rush-how-commercial-lunar-rovers-are-scaling-autonomous-mobility/</link>
+				<link>http://localhost:1313/posts/the-new-lunar-gold-rush-how-commercial-lunar-rovers-are-scaling-autonomous-mobility/</link>
 				<pubDate>Sat, 18 Apr 2026 07:36:13 +0000</pubDate>
-				<guid>//localhost:1313/posts/2026-04-18-the-new-lunar-gold-rush-how-commercial-lunar-rovers-are-scaling-autonomous-mobility/</guid>
-				<description>&lt;!-- wp:image {&#34;lightbox&#34;:{&#34;enabled&#34;:false},&#34;id&#34;:606,&#34;sizeSlug&#34;:&#34;full&#34;,&#34;linkDestination&#34;:&#34;custom&#34;} --&gt;&#xA;&lt;figure class=&#34;wp-block-image size-full&#34;&gt;&lt;a href=&#34;https://www.nasa.gov/news-release/nasa-unveils-initiatives-to-achieve-americas-national-space-policy/&#34;&gt;&lt;img src=&#34;//localhost:1313/wp-content/uploads/2026/04/moon-base-nasa.webp&#34; alt=&#34;Commercial Lunar Rovers&#34; class=&#34;wp-image-606&#34;/&gt;&lt;/a&gt;&lt;/figure&gt;&#xA;&lt;!-- /wp:image --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;The era of bespoke, billion-dollar planetary exploration is undergoing a radical paradigm shift. As the cis-lunar economy accelerates, the demand for scalable infrastructure has catalyzed the rapid development of &lt;strong&gt;commercial lunar rovers&lt;/strong&gt;. Unlike legacy flagship missions—such as NASA&#39;s Perseverance, which relies on custom, heavily shielded &lt;strong&gt;radiation-hardened (Rad-Hard)&lt;/strong&gt; avionics—this new wave prioritizes cost-efficiency and rapid deployment.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Historically, the prohibitive cost of autonomous space navigation stemmed from custom-built hardware and extensively redundant sensor arrays. Legacy systems depend on expensive, legacy processors like the &lt;strong&gt;BAE RAD750&lt;/strong&gt; (operating at a highly constrained 200 MHz) and demand massive &lt;strong&gt;SWaP (Size, Weight, and Power)&lt;/strong&gt; overheads to guarantee absolute mission survival. However, scaling lunar operations requires a decisive departure from these monolithic architectures.&lt;/p&gt;</description>
+				<guid>http://localhost:1313/posts/the-new-lunar-gold-rush-how-commercial-lunar-rovers-are-scaling-autonomous-mobility/</guid>
+				<description>&lt;!-- wp:image {&#34;lightbox&#34;:{&#34;enabled&#34;:false},&#34;id&#34;:606,&#34;sizeSlug&#34;:&#34;full&#34;,&#34;linkDestination&#34;:&#34;custom&#34;} --&gt;&#xA;&lt;figure class=&#34;wp-block-image size-full&#34;&gt;&lt;a href=&#34;https://www.nasa.gov/news-release/nasa-unveils-initiatives-to-achieve-americas-national-space-policy/&#34;&gt;&lt;img src=&#34;http://localhost:1313/wp-content/uploads/2026/04/moon-base-nasa.webp&#34; alt=&#34;Commercial Lunar Rovers&#34; class=&#34;wp-image-606&#34;/&gt;&lt;/a&gt;&lt;/figure&gt;&#xA;&lt;!-- /wp:image --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;The era of bespoke, billion-dollar planetary exploration is undergoing a radical paradigm shift. As the cis-lunar economy accelerates, the demand for scalable infrastructure has catalyzed the rapid development of &lt;strong&gt;commercial lunar rovers&lt;/strong&gt;. Unlike legacy flagship missions—such as NASA&#39;s Perseverance, which relies on custom, heavily shielded &lt;strong&gt;radiation-hardened (Rad-Hard)&lt;/strong&gt; avionics—this new wave prioritizes cost-efficiency and rapid deployment.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Historically, the prohibitive cost of autonomous space navigation stemmed from custom-built hardware and extensively redundant sensor arrays. Legacy systems depend on expensive, legacy processors like the &lt;strong&gt;BAE RAD750&lt;/strong&gt; (operating at a highly constrained 200 MHz) and demand massive &lt;strong&gt;SWaP (Size, Weight, and Power)&lt;/strong&gt; overheads to guarantee absolute mission survival. However, scaling lunar operations requires a decisive departure from these monolithic architectures.&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>

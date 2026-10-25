@@ -1,6 +1,5 @@
 ---
-title: 'Labs & Projects'
-description: 'Hands-on, open-source labs for autonomous rover navigation: interactive tools, tutorials and code you can run on your own machine.'
+title: "Labs & Projects"
+description: "Explore hands-on robotics labs, interactive experiments, and practical tools for autonomous rover navigation."
+summary: "Turn robotics theory into practical experience through hands-on labs, experiments, and open-source projects."
 ---
-
-Reading about perception and navigation is one thing; seeing it work is another. Each lab is a small, open-source project you can run on your own machine, paired with a tutorial that explains the math and the code step by step.

@@ -1,27 +1,180 @@
 {{ define "main" }}
-  <div class="container labs-page">
 
-    <header class="labs-page__header">
-      <p class="labs-eyebrow">HANDS-ON AND OPEN SOURCE</p>
-      <h1>{{ .Title }}</h1>
-      {{ with .Content }}<div class="labs-page__intro">{{ . }}</div>{{ end }}
-    </header>
+<section class="labs-page">
 
-    <div class="labs-grid">
-      {{ range $i, $lab := .Pages.ByWeight }}
-        <a class="lab-card" href="{{ $lab.RelPermalink }}">
-          <span class="lab-card__number">{{ printf "%02d" (add $i 1) }}</span>
-          <h2>{{ $lab.Title }}</h2>
-          <p>{{ with $lab.Params.summary }}{{ . }}{{ else }}{{ $lab.Summary | plainify | truncate 160 }}{{ end }}</p>
-          {{ with $lab.Params.stack }}
-            <ul class="lab-card__stack" aria-label="Technologies">
-              {{ range . }}<li>{{ . }}</li>{{ end }}
-            </ul>
-          {{ end }}
-          <span class="lab-card__link">Open the lab <span aria-hidden="true">→</span></span>
-        </a>
-      {{ end }}
+  <header class="labs-hero">
+    <p class="labs-eyebrow">BEYOND THE JOYSTICK · LABORATORY</p>
+
+    <h1>Labs &amp; Projects</h1>
+
+    <p class="labs-hero__intro">
+      Go beyond theory. Explore hands-on experiments, interactive tools,
+      and open-source projects designed to make autonomous robotics easier
+      to understand and build.
+    </p>
+
+    <div class="labs-hero__actions">
+      <a class="labs-button labs-button--primary" href="#all-labs">
+        Explore the labs
+      </a>
+      <a class="labs-button labs-button--secondary" href="/posts/">
+        Read the articles
+      </a>
+    </div>
+  </header>
+
+
+  <section class="labs-intro">
+    <p class="labs-eyebrow">LEARN BY EXPERIMENTING</p>
+
+    <h2>From Concepts to Real-World Applications</h2>
+
+    <p>
+      Understanding robotics takes more than reading equations.
+      These labs connect mathematical principles, algorithms, sensors,
+      and software with practical experiments you can explore yourself.
+      Browse the projects, inspect the source code, and use the accompanying
+      tutorials to understand how everything works.
+    </p>
+  </section>
+
+
+  {{ $labs := where .Pages "Kind" "page" }}
+  {{ $labs = sort $labs "Weight" "asc" }}
+
+  <section class="labs-collection" id="all-labs">
+
+    <div class="labs-section-heading">
+      <div>
+        <p class="labs-eyebrow">THE COLLECTION</p>
+        <h2>Explore Our Labs</h2>
+      </div>
+
+      <p class="labs-count">
+        {{ len $labs }} {{ if eq (len $labs) 1 }}lab{{ else }}labs{{ end }}
+      </p>
     </div>
 
-  </div>
+
+    {{ if $labs }}
+
+      <div class="labs-grid">
+
+        {{ range $labs }}
+
+          <article class="lab-card">
+
+            {{ with .Params.image }}
+              <a class="lab-card__image-link" href="{{ $.RelPermalink }}" aria-label="Explore {{ $.Title }}">
+                <img
+                  class="lab-card__image"
+                  src="{{ . | relURL }}"
+                  alt="{{ $.Title }}"
+                  loading="lazy"
+                >
+              </a>
+            {{ end }}
+
+            <div class="lab-card__body">
+
+              {{ with .Params.categories }}
+                <div class="lab-card__categories">
+                  {{ range . }}
+                    <span class="lab-card__category">{{ . }}</span>
+                  {{ end }}
+                </div>
+              {{ end }}
+
+              <h3>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </h3>
+
+              {{ with .Params.summary }}
+                <p class="lab-card__description">{{ . }}</p>
+              {{ else }}
+                {{ with .Description }}
+                  <p class="lab-card__description">{{ . }}</p>
+                {{ else }}
+                  <p class="lab-card__description">
+                    Explore this hands-on robotics lab and discover the
+                    engineering concepts behind the project.
+                  </p>
+                {{ end }}
+              {{ end }}
+
+              {{ with .Params.stack }}
+                <div class="lab-card__stack" aria-label="Technologies">
+                  {{ range . }}
+                    <span>{{ . }}</span>
+                  {{ end }}
+                </div>
+              {{ end }}
+
+              <div class="lab-card__actions">
+
+                <a class="labs-button labs-button--primary"
+                   href="{{ .RelPermalink }}">
+                  Explore Lab <span aria-hidden="true">→</span>
+                </a>
+
+                {{ with .Params.article }}
+                  <a class="lab-card__text-link" href="{{ . | relURL }}">
+                    Read Tutorial
+                  </a>
+                {{ end }}
+
+                {{ with .Params.repo }}
+                  <a class="lab-card__text-link"
+                     href="{{ . }}"
+                     target="_blank"
+                     rel="noopener noreferrer">
+                    Source Code ↗
+                  </a>
+                {{ end }}
+
+              </div>
+
+            </div>
+
+          </article>
+
+        {{ end }}
+
+      </div>
+
+    {{ else }}
+
+      <div class="labs-empty">
+        <h3>New experiments are on the way.</h3>
+        <p>
+          We are preparing new hands-on projects in autonomous navigation,
+          computer vision, sensors, and robotics software.
+          Check back soon!
+        </p>
+      </div>
+
+    {{ end }}
+
+  </section>
+
+
+  <section class="labs-cta">
+
+    <p class="labs-eyebrow">KEEP EXPLORING</p>
+
+    <h2>Curious About the Theory Behind the Experiments?</h2>
+
+    <p>
+      Dive into our technical articles to understand the mathematics,
+      algorithms, and engineering principles behind autonomous rovers.
+    </p>
+
+    <a class="labs-button labs-button--primary" href="/posts/">
+      Browse All Articles <span aria-hidden="true">→</span>
+    </a>
+
+  </section>
+
+</section>
+
 {{ end }}

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Sensor Fusion on Beyond the Joystick</title>
-		<link>//localhost:1313/tags/sensor-fusion/</link>
+		<link>http://localhost:1313/tags/sensor-fusion/</link>
 		<description>Recent content in Sensor Fusion on Beyond the Joystick</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
@@ -12,27 +12,27 @@
 		
 			<lastBuildDate>Sat, 06 Dec 2025 08:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="//localhost:1313/tags/sensor-fusion/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/sensor-fusion/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>A Deep Dive into Visual Odometry: How Rovers Know ‘How Far’ They’ve Gone</title>
-				<link>//localhost:1313/posts/2025-12-06-how-rovers-know-how-far-theyve-gone/</link>
+				<link>http://localhost:1313/posts/how-rovers-know-how-far-theyve-gone/</link>
 				<pubDate>Sat, 06 Dec 2025 08:00:00 +0000</pubDate>
-				<guid>//localhost:1313/posts/2025-12-06-how-rovers-know-how-far-theyve-gone/</guid>
+				<guid>http://localhost:1313/posts/how-rovers-know-how-far-theyve-gone/</guid>
 				<description>&lt;!-- wp:heading {&#34;level&#34;:3} --&gt;&#xA;&lt;h3 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;Abstract: The Odometer Fallacy on Mars&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;!-- /wp:heading --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;On Earth, measuring distance is a trivial task. A vehicle’s odometer counts wheel rotations, multiplies by the circumference, and derives the distance traveled with high precision. On Mars, however, this deterministic logic collapses.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;In the chaotic, non-geometric terrain of the Red Planet, &lt;strong&gt;wheel rotation does not equal linear motion&lt;/strong&gt;.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Rover Perception Systems: How LiDAR, Stereo Vision, and IMUs Work Together</title>
-				<link>//localhost:1313/posts/2025-11-22-rover-perception-systems/</link>
+				<link>http://localhost:1313/posts/rover-perception-systems/</link>
 				<pubDate>Sat, 22 Nov 2025 08:00:00 +0000</pubDate>
-				<guid>//localhost:1313/posts/2025-11-22-rover-perception-systems/</guid>
-				<description>&lt;!-- wp:heading {&#34;level&#34;:3} --&gt;&#xA;&lt;h3 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;Abstract: The Criticality of Multi-Modal Perception&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;!-- /wp:heading --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Autonomous navigation in extraterrestrial environments is defined by an unbreakable physical constraint: &lt;a href=&#34;//localhost:1313/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/&#34; title=&#34;The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers&#34;&gt;the speed of light&lt;/a&gt;. With Earth-Mars communication latencies ranging from 4 to 24 minutes, real-time teleoperation is impossible. To survive, a rover must possess a robust &lt;strong&gt;Rover Perception&lt;/strong&gt; architecture.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Rover perception is not merely the collection of images; it is the transformation of raw sensory data into a semantic and geometric understanding of the surrounding environment. This process must occur &lt;em&gt;on-board&lt;/em&gt;, often on resource-constrained processors (such as the radiation-hardened RAD750).&lt;/p&gt;</description>
+				<guid>http://localhost:1313/posts/rover-perception-systems/</guid>
+				<description>&lt;!-- wp:heading {&#34;level&#34;:3} --&gt;&#xA;&lt;h3 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;Abstract: The Criticality of Multi-Modal Perception&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;!-- /wp:heading --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Autonomous navigation in extraterrestrial environments is defined by an unbreakable physical constraint: &lt;a href=&#34;http://localhost:1313/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/&#34; title=&#34;The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers&#34;&gt;the speed of light&lt;/a&gt;. With Earth-Mars communication latencies ranging from 4 to 24 minutes, real-time teleoperation is impossible. To survive, a rover must possess a robust &lt;strong&gt;Rover Perception&lt;/strong&gt; architecture.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Rover perception is not merely the collection of images; it is the transformation of raw sensory data into a semantic and geometric understanding of the surrounding environment. This process must occur &lt;em&gt;on-board&lt;/em&gt;, often on resource-constrained processors (such as the radiation-hardened RAD750).&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>What is SLAM? The Key Technology for Autonomous Rover Mapping</title>
-				<link>//localhost:1313/posts/2025-11-08-what-is-slam-the-key-technology-for-autonomous-rover-mapping/</link>
+				<link>http://localhost:1313/posts/what-is-slam-the-key-technology-for-autonomous-rover-mapping/</link>
 				<pubDate>Sat, 08 Nov 2025 08:00:00 +0000</pubDate>
-				<guid>//localhost:1313/posts/2025-11-08-what-is-slam-the-key-technology-for-autonomous-rover-mapping/</guid>
-				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;&lt;a href=&#34;//localhost:1313/autonomous-rover-navigation/&#34; title=&#34;The Ultimate Guide to Autonomous Rover Navigation&#34;&gt;Navigating celestial bodies autonomously&lt;/a&gt; presents a unique hurdle that we don&#39;t face on Earth: the complete lack of  Global Positioning System (GPS). In this context, a rover&#39;s ability to understand its own location becomes a complex mathematical problem. In advanced robotics, the standard answer to this problem is SLAM (Simultaneous Localization and Mapping). In this article, we’ll break down the core principles of SLAM, examine how it’s critical for current Mars missions, and look at the immense computational strain it puts on space-grade hardware.&lt;/p&gt;</description>
+				<guid>http://localhost:1313/posts/what-is-slam-the-key-technology-for-autonomous-rover-mapping/</guid>
+				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/autonomous-rover-navigation/&#34; title=&#34;The Ultimate Guide to Autonomous Rover Navigation&#34;&gt;Navigating celestial bodies autonomously&lt;/a&gt; presents a unique hurdle that we don&#39;t face on Earth: the complete lack of  Global Positioning System (GPS). In this context, a rover&#39;s ability to understand its own location becomes a complex mathematical problem. In advanced robotics, the standard answer to this problem is SLAM (Simultaneous Localization and Mapping). In this article, we’ll break down the core principles of SLAM, examine how it’s critical for current Mars missions, and look at the immense computational strain it puts on space-grade hardware.&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>

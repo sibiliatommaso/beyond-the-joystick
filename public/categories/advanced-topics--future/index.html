@@ -6,21 +6,21 @@
   <title>Advanced Topics &amp; Future | Beyond the Joystick</title>
   <meta name="description" content="Swarm robotics, autonomous science and other cutting-edge challenges for the next generation of planetary rovers.">
 <meta name="author" content="Tommaso Sibilia">
-<link rel="canonical" href="//localhost:1313/categories/advanced-topics--future/">
-<link rel="alternate" type="application/rss+xml" href="//localhost:1313/categories/advanced-topics--future/index.xml" title="Beyond the Joystick">
+<link rel="canonical" href="http://localhost:1313/categories/advanced-topics--future/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/categories/advanced-topics--future/index.xml" title="Beyond the Joystick">
 
 <meta property="og:site_name" content="Beyond the Joystick">
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Advanced Topics &amp; Future">
 <meta property="og:description" content="Swarm robotics, autonomous science and other cutting-edge challenges for the next generation of planetary rovers.">
-<meta property="og:url" content="//localhost:1313/categories/advanced-topics--future/">
-<meta property="og:image" content="//localhost:1313/wp-content/uploads/2025/11/perseverance-selfie.webp">
+<meta property="og:url" content="http://localhost:1313/categories/advanced-topics--future/">
+<meta property="og:image" content="http://localhost:1313/wp-content/uploads/2025/11/perseverance-selfie.webp">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Advanced Topics &amp; Future">
 <meta name="twitter:description" content="Swarm robotics, autonomous science and other cutting-edge challenges for the next generation of planetary rovers.">
-<meta name="twitter:image" content="//localhost:1313/wp-content/uploads/2025/11/perseverance-selfie.webp">
+<meta name="twitter:image" content="http://localhost:1313/wp-content/uploads/2025/11/perseverance-selfie.webp">
 
   <link rel="stylesheet" href="/css/custom.css">
 
@@ -69,7 +69,7 @@
         </li>
         
         <li>
-          <a href="/#labs">Labs &amp; Projects</a>
+          <a href="/labs/">Labs &amp; Projects</a>
         </li>
         
         <li>
@@ -106,6 +106,7 @@
   <main id="main-content">
     
   <h1>Advanced Topics &amp; Future</h1>
+
   <ul>
     
   </ul>
@@ -206,6 +207,31 @@
 <script>
   (function () {
     if (window.__kofiWidgetLoaded) return;
+    window.__kofiWidgetLoaded = true;
+
+    function draw() {
+      kofiWidgetOverlay.draw('beyondthejoystick', {
+        'type': 'floating-chat',
+        'floating-chat.donateButton.text': 'Support me',
+        'floating-chat.donateButton.background-color': '#F0B44D',
+        'floating-chat.donateButton.text-color': '#0B1220'
+      });
+    }
+
+    var s = document.createElement('script');
+    s.src = 'https://storage.ko-fi.com/cdn/scripts/overlay-widget.js';
+    s.onload = function () {
+      if (document.body) { draw(); }
+      else { document.addEventListener('DOMContentLoaded', draw); }
+    };
+    document.head.appendChild(s);
+  })();
+</script>
+
+
+</body>
+</html>
+;
     window.__kofiWidgetLoaded = true;
 
     function draw() {

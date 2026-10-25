@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Lab on Beyond the Joystick</title>
-		<link>//localhost:1313/tags/lab/</link>
+		<link>http://localhost:1313/tags/lab/</link>
 		<description>Recent content in Lab on Beyond the Joystick</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
@@ -12,13 +12,13 @@
 		
 			<lastBuildDate>Sat, 24 Oct 2026 09:00:00 +0200</lastBuildDate>
 		
-			<atom:link href="//localhost:1313/tags/lab/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/lab/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Camera Calibration Explained: An Interactive OpenCV Lab</title>
-				<link>//localhost:1313/interactive-camera-calibration-lab/</link>
+				<link>http://localhost:1313/labs/camera-calibration-lab/</link>
 				<pubDate>Sat, 24 Oct 2026 09:00:00 +0200</pubDate>
-				<guid>//localhost:1313/interactive-camera-calibration-lab/</guid>
-				<description>&lt;p&gt;Every rover that navigates with a camera relies on a handful of numbers it rarely shows you: the focal length, the optical center, the camera pose and the way the lens bends straight lines. This is &lt;strong&gt;camera calibration&lt;/strong&gt;, and when those numbers are wrong, visual odometry drifts, stereo depth is off and obstacles appear where they are not. If you are building anything on top of &lt;a href=&#34;//localhost:1313/autonomous-rover-navigation/&#34;&gt;autonomous rover navigation&lt;/a&gt;, you will meet the pinhole camera model sooner or later.&lt;/p&gt;</description>
+				<guid>http://localhost:1313/labs/camera-calibration-lab/</guid>
+				<description>Move 13 sliders and watch a virtual pinhole camera update in real time: position, orientation, focal length, optical center and lens distortion.</description>
 			</item>
 	</channel>
 </rss>
