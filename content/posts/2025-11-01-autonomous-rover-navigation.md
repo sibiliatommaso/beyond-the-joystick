@@ -9,9 +9,9 @@ guid: /?p=155
 permalink: /autonomous-rover-navigation/
 image: /wp-content/uploads/2025/10/perseverance_rover_on_mars.png
 categories:
-- Algorithms & AI
+- Algorithms AI
 - Core Concepts
-- Missions & Case Studies
+- Missions Case Studies
 tags:
 - athfinding
 - Autonomous Navigation

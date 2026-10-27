@@ -9,9 +9,9 @@ guid: /?p=605
 permalink: /the-new-lunar-gold-rush-how-commercial-lunar-rovers-are-scaling-autonomous-mobility/
 image: /wp-content/uploads/2026/04/moon-base-nasa.webp
 categories:
-- Advanced Topics & Future
-- Missions & Case Studies
-- Sensors & Hardware
+- Advanced Topics Future
+- Missions Case Studies
+- Sensors Hardware
 tags:
 - Astrobotic CubeRover
 - Autonomous Navigation AI

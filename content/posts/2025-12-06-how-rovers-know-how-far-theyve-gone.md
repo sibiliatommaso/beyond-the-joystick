@@ -19,8 +19,8 @@ enclosure:
   '
 image: /wp-content/uploads/2025/12/Gemini_Generated_Image_4w0d54w0d54w0d54-scaled.png
 categories:
-- Algorithms & AI
-- Sensors & Hardware
+- Algorithms AI
+- Sensors Hardware
 tags:
 - Dead Reckoning
 - Extended Kalman Filter

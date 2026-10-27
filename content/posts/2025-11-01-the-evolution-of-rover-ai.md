@@ -10,7 +10,7 @@ permalink: /the-evolution-of-rover-ai/
 image: /wp-content/uploads/2025/10/PIA26073medium.jpg
 categories:
 - Core Concepts
-- Missions & Case Studies
+- Missions Case Studies
 tags:
 - AutoNav
 - Autonomous Navigation

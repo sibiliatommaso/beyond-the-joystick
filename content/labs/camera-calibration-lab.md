@@ -15,8 +15,8 @@ stack:
     - NumPy
 image: /images/camera-calibration-lab-examples.png
 categories:
-    - 'Projects & Tutorials'
-    - 'Sensors & Hardware'
+    - 'Projects Tutorials'
+    - 'Sensors Hardware'
 tags:
     - 'Camera Calibration'
     - 'Pinhole Camera Model'

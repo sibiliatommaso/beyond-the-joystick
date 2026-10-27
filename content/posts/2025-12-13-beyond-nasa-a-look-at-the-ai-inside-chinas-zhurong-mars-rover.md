@@ -11,7 +11,7 @@ kofi_display_floating_button:
 - ''
 image: /wp-content/uploads/2025/12/Zhurong_rover.png
 categories:
-- Missions & Case Studies
+- Missions Case Studies
 tags:
 - Autonomous Navigation
 - Mars Rover

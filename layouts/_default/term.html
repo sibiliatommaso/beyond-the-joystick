@@ -1,0 +1,27 @@
+{{ define "main" }}
+{{ $allPages := .Pages.ByDate.Reverse }}
+{{ $featured := first 1 $allPages }}
+{{ $rest := after 1 $allPages }}
+<link rel="stylesheet" href="{{ "css/category-mission-control.css" | relURL }}">
+<main class="mc-category">
+  <section class="mc-hero">
+    <div class="mc-hero__grid" aria-hidden="true"></div>
+    <div class="mc-hero__content">
+      <p class="mc-kicker"><span class="mc-live-dot"></span> RESEARCH DIVISION · BEYOND THE JOYSTICK</p>
+      <h1>{{ .Title | htmlUnescape }}</h1>
+      <p class="mc-hero__intro">{{ with .Description }}{{ . }}{{ else }}Explore the concepts, technologies, and missions shaping autonomous robotics.{{ end }}</p>
+      <div class="mc-hero__meta"><span><strong>{{ len $allPages }}</strong> {{ if eq (len $allPages) 1 }}ARTICLE{{ else }}ARTICLES{{ end }}</span><span class="mc-meta-divider"></span><span>FIELD NOTES & TECHNICAL DOSSIERS</span></div>
+      <a class="mc-scroll-link" href="#category-archive">EXPLORE THE ARCHIVE <span aria-hidden="true">↓</span></a>
+    </div>
+    <div class="mc-hero__visual" aria-hidden="true"><div class="mc-radar"><span class="mc-radar__ring"></span><span class="mc-radar__ring mc-radar__ring--two"></span><span class="mc-radar__ring mc-radar__ring--three"></span><span class="mc-radar__cross mc-radar__cross--h"></span><span class="mc-radar__cross mc-radar__cross--v"></span><span class="mc-radar__sweep"></span><span class="mc-radar__point mc-radar__point--one"></span><span class="mc-radar__point mc-radar__point--two"></span><span class="mc-radar__point mc-radar__point--three"></span></div><p class="mc-visual-caption">AUTONOMOUS SYSTEMS<br><span>SCANNING KNOWLEDGE BASE</span></p></div>
+  </section>
+  <section class="mc-briefing"><p class="mc-section-index">01 / BRIEFING</p><div><p class="mc-eyebrow">MISSION BRIEFING</p><h2>Understand the field.<br><span>Explore what comes next.</span></h2></div><p class="mc-briefing__copy">{{ with .Description }}{{ . }}{{ else }}A curated collection of articles about the ideas, engineering decisions, and real-world challenges behind autonomous robotics.{{ end }}</p></section>
+  {{ range $featured }}
+  <section class="mc-featured"><div class="mc-featured__image">{{ with .Params.image }}<img src="{{ . | relURL }}" alt="" loading="lazy">{{ else }}<div class="mc-image-placeholder"><span>FIELD<br>RESEARCH</span></div>{{ end }}<span class="mc-image-label">FEATURED DOSSIER</span></div><div class="mc-featured__body"><p class="mc-eyebrow">EDITOR'S SELECTION · {{ .Date.Format "JAN 2006" }}</p><h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2><p>{{ .Params.excerpt | default .Description | default .Summary | plainify | htmlUnescape | truncate 240 }}</p><div class="mc-featured__footer"><span>{{ .ReadingTime }} MIN READ</span><a href="{{ .RelPermalink }}">OPEN DOSSIER <span aria-hidden="true">↗</span></a></div></div></section>
+  {{ end }}
+  <section class="mc-archive" id="category-archive"><div class="mc-archive__heading"><div><p class="mc-eyebrow">02 / KNOWLEDGE ARCHIVE</p><h2>Explore the dossiers</h2></div><span class="mc-archive__count">{{ len $allPages }} ENTRIES</span></div>
+  {{ if gt (len $rest) 0 }}<div class="mc-card-grid">{{ range $index, $page := $rest }}<article class="mc-card"><a class="mc-card__image" href="{{ $page.RelPermalink }}" tabindex="-1" aria-hidden="true">{{ with $page.Params.image }}<img src="{{ . | relURL }}" alt="" loading="lazy">{{ else }}<span class="mc-card__placeholder">BTJ / {{ printf "%03d" (add $index 2) }}</span>{{ end }}<span class="mc-card__file">FILE {{ printf "%03d" (add $index 2) }}</span></a><div class="mc-card__body"><p class="mc-card__meta">{{ $page.Date.Format "JAN 02, 2006" }} <span>·</span> {{ $page.ReadingTime }} MIN READ</p><h3><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h3><p class="mc-card__excerpt">{{ $page.Params.excerpt | default $page.Description | default $page.Summary | plainify | htmlUnescape | truncate 155 }}</p><a class="mc-card__link" href="{{ $page.RelPermalink }}">READ DOSSIER <span aria-hidden="true">→</span></a></div></article>{{ end }}</div>{{ else if not $featured }}<div class="mc-empty"><span class="mc-empty__mark">∅</span><h3>No dossiers published yet</h3><p>New research notes and articles will appear here as they are published.</p></div>{{ else }}<p class="mc-single-note">This category currently contains one article. More dossiers will appear here as the archive grows.</p>{{ end }}</section>
+  <section class="mc-divisions"><div><p class="mc-eyebrow">03 / CONTINUE EXPLORING</p><h2>Explore other divisions</h2></div><div class="mc-divisions__links">{{ range site.Taxonomies.categories }}{{ $otherPage := .Page }}{{ if and $otherPage (ne $otherPage.RelPermalink $.RelPermalink) }}<a href="{{ $otherPage.RelPermalink }}"><span>{{ $otherPage.Title | htmlUnescape }}</span><span aria-hidden="true">↗</span></a>{{ end }}{{ end }}</div></section>
+</main>
+<script src="{{ "js/category-mission-control.js" | relURL }}" defer></script>
+{{ end }}

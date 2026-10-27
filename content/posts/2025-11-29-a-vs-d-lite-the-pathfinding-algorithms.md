@@ -15,7 +15,7 @@ litespeed_no_vpi:
 - '1'
 image: /wp-content/uploads/2025/11/mars-rover-dynamic-pathfinding-visualization-a-star-vs-d-star-lite.jpg-scaled.png
 categories:
-- Algorithms & AI
+- Algorithms AI
 tags:
 - A* Algorithm
 - Autonomous Navigation

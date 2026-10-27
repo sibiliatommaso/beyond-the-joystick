@@ -257,5 +257,220 @@
 </script>
 
 
+<button id="newsletter-trigger-btn" aria-label="Open Newsletter Modal">
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+  </svg>
+  <span>Newsletter</span>
+</button>
+
+
+<div id="newsletter-modal" class="newsletter-modal-overlay" aria-hidden="true">
+  <div class="newsletter-modal-content">
+    
+    
+    <button id="newsletter-close-btn" aria-label="Close Newsletter">&times;</button>
+
+    
+    <style>
+      @font-face {
+        font-display: block;
+        font-family: Roboto;
+        src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2");
+      }
+      :where(.sib-form-message-panel) { display: none; }
+      :where(.sib-form-message-panel .sib-notification__icon) { width: 20px; height: 20px; }
+      #sib-container input::placeholder { font-family: inherit; color: #c0ccda; }
+    </style>
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
+    <div class="sib-form" style="text-align: center; background-color: transparent;">
+      <div id="sib-form-container" class="sib-form-container">
+        
+        <div id="error-message" class="sib-form-message-panel" style="font-size:14px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:6px; max-width:100%;">
+          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+            <span class="sib-form-message-panel__inner-text">La tua iscrizione non può essere convalidata.</span>
+          </div>
+        </div>
+
+        <div id="success-message" class="sib-form-message-panel" style="font-size:14px; text-align:left; color:#085229; background-color:#e7faf0; border-color:#13ce66; border-radius:6px; max-width:100%;">
+          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+            <span class="sib-form-message-panel__inner-text">La tua iscrizione è avvenuta correttamente.</span>
+          </div>
+        </div>
+
+        <div id="sib-container" class="sib-container--large sib-container--vertical" style="max-width:100%; text-align:center; background-color:#141F32; border:1px solid #2B3A50; border-radius:12px; color:#F1F0E8; direction:ltr; padding: 1.5rem;">
+          <form id="sib-form" method="POST" action="https://49eea206.sibforms.com/serve/MUIFAHS0-n-oQvDPBGBfghoybiNHCjVNimRaMLMafKqWnfgHl5aq_JuUoWRB5D7850nAJ72_IJ_MUKZzl5LXmyZyhyWptik8Hb-tRRLJKdNCa5pejsqipXtW5z-P1N9kYOHe9Oqh0y1ry7YwTuYgDJGjfXFhrzM-6I7FtO7_2IDvlSvoGtJYaaQceFKXdVYCYGOyl0PAhGTSe9spSQ==" data-type="subscription">
+            
+            <div style="padding: 4px 0;">
+              <p style="font-size:0.75rem; font-weight:800; color:#F0B44D; letter-spacing:0.12em; text-transform:uppercase; margin:0 0 0.5rem;">STAY AHEAD OF THE CURVE</p>
+              <h3 style="font-size:1.4rem; font-weight:700; color:#F1F0E8; margin:0 0 0.75rem; line-height:1.2;">Explore the Future of Autonomous Robotics</h3>
+              <p style="font-size:0.9rem; color:#B8C2D1; margin:0 0 1.25rem; line-height:1.5;">Get the latest articles, hands-on projects, and technical insights delivered straight to your inbox.</p>
+            </div>
+
+            <div style="padding: 4px 0;">
+              <div class="sib-input sib-form-block">
+                <div class="form__entry entry_block">
+                  <div class="entry__field">
+                    <input class="input" type="email" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="Your email address..." data-required="true" required style="width:100%; padding:0.75rem; border-radius:6px; border:1px solid #2B3A50; background:#0B1220; color:#F1F0E8; font-size:0.95rem; box-sizing:border-box;" />
+                  </div>
+                  <label class="entry__error entry__error--primary" style="font-size:12px; color:#ff4949; text-align:left;"></label>
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 8px 0;">
+              <button class="sib-form-block__button sib-form-block__button-with-loader" style="width:100%; font-size:0.95rem; font-weight:700; color:#0B1220; background-color:#F0B44D; border:none; border-radius:6px; padding:0.8rem; cursor:pointer;" form="sib-form" type="submit">
+                Subscribe to Newsletter
+              </button>
+            </div>
+
+            <p style="font-size:0.8rem; color:#B8C2D1; margin-top:0.5rem;"><em>No spam. Just robotics and ideas worth exploring.</em></p>
+
+            <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none;">
+            <input type="hidden" name="locale" value="it">
+          </form>
+        </div>
+
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+
+<style>
+   
+  #newsletter-trigger-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: #141F32;
+    color: #F0B44D;
+    border: 1px solid #F0B44D;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  #newsletter-trigger-btn:hover {
+    transform: translateY(-2px);
+    background-color: #F0B44D;
+    color: #0B1220;
+  }
+
+   
+  .newsletter-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 20px;
+    background: rgba(11, 18, 32, 0.6);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  .newsletter-modal-overlay.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+   
+  .newsletter-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+  }
+  .newsletter-modal-overlay.is-active .newsletter-modal-content {
+    transform: translateY(0);
+  }
+
+   
+  #newsletter-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 10;
+    background: transparent;
+    border: none;
+    color: #B8C2D1;
+    font-size: 1.6rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+  #newsletter-close-btn:hover { color: #F0B44D; }
+
+  @media (max-width: 480px) {
+    .newsletter-modal-overlay { padding: 10px; }
+  }
+</style>
+
+
+<script>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Scegli un prefisso paese';
+  window.LOCALE = 'it';
+  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Le informazioni fornite non sono valide.";
+  window.REQUIRED_ERROR_MESSAGE = "Questo campo non può essere lasciato vuoto.";
+  window.GENERIC_INVALID_MESSAGE = "Le informazioni fornite non sono valide.";
+  window.translation = { common: { selectedList: '{quantity} lista selezionata' } };
+</script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const modal = document.getElementById("newsletter-modal");
+    const triggerBtn = document.getElementById("newsletter-trigger-btn");
+    const closeBtn = document.getElementById("newsletter-close-btn");
+
+    function openModal() {
+      modal.classList.add("is-active");
+      modal.setAttribute("aria-hidden", "false");
+    }
+
+    function closeModal() {
+      modal.classList.remove("is-active");
+      modal.setAttribute("aria-hidden", "true");
+    }
+
+    
+    triggerBtn.addEventListener("click", openModal);
+
+    
+    closeBtn.addEventListener("click", closeModal);
+
+    
+    modal.addEventListener("click", function(e) {
+      if (e.target === modal) closeModal();
+    });
+
+    
+    if (!sessionStorage.getItem("newsletter_dismissed")) {
+      setTimeout(function() {
+        openModal();
+      }, 30000); 
+    }
+
+    
+    closeBtn.addEventListener("click", function() {
+      sessionStorage.setItem("newsletter_dismissed", "true");
+    });
+  });
+</script>
+
+
 </body>
 </html>

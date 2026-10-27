@@ -198,83 +198,59 @@
 
     <div class="about-topics">
 
-      <a
-        class="about-topic-card"
-        href="/categories/core-concepts/"
-      >
-        <span class="about-topic-card__number">01</span>
-        <h3>Core Concepts</h3>
-        <p>
-          We break down the "what" and "why" of autonomous navigation.
-        </p>
-        <span class="about-topic-card__link">Explore category →</span>
+  {{ $topics := slice
+    (dict "slug" "core-concepts" "number" "01" "title" "Core Concepts" "description" "We break down the what and why of autonomous navigation.")
+    (dict "slug" "advanced-topics-future" "number" "02" "title" "Advanced Topics & Future" "description" "We look ahead to swarm robotics, autonomous science, and other cutting-edge challenges.")
+    (dict "slug" "sensors-hardware" "number" "03" "title" "Sensors & Hardware" "description" "A deep dive into the eyes and brains of rovers, from LiDAR to Rad-Hard CPUs.")
+    (dict "slug" "algorithms-ai" "number" "04" "title" "Algorithms & AI" "description" "We explore the how, from pathfinding like A* and D* Lite to Visual Odometry.")
+    (dict "slug" "missions-case-studies" "number" "05" "title" "Missions & Case Studies" "description" "We analyze real-world examples, from NASA's Perseverance to the upcoming VIPER.")
+    (dict "slug" "projects-tutorials" "number" "06" "title" "Projects & Tutorials" "description" "Hands-on guides to help you build your own mini-rover with ROS 2.")
+  }}
+
+  {{ range $topics }}
+
+    {{ $slug := .slug }}
+    {{ $termPage := site.GetPage (printf "/categories/%s" $slug) }}
+
+    {{ if $termPage }}
+
+      <a class="about-topic-card" href="{{ $termPage.RelPermalink }}">
+
+        <span class="about-topic-card__number">{{ .number }}</span>
+
+        <h3>{{ .title }}</h3>
+
+        <p>{{ .description }}</p>
+
+        <span class="about-topic-card__link">
+          Explore category →
+        </span>
+
       </a>
 
-      <a
-        class="about-topic-card"
-        href="/categories/advance-topics/"
-      >
-        <span class="about-topic-card__number">02</span>
-        <h3>Advanced Topics &amp; Future</h3>
-        <p>
-          We look ahead to swarm robotics, autonomous science, and other
-          cutting-edge challenges.
-        </p>
-        <span class="about-topic-card__link">Explore category →</span>
+    {{ else }}
+
+      {{ warnf "About page: category page not found for slug %q" $slug }}
+
+      <a class="about-topic-card" href="{{ printf "/categories/%s/" $slug | relURL }}">
+
+        <span class="about-topic-card__number">{{ .number }}</span>
+
+        <h3>{{ .title }}</h3>
+
+        <p>{{ .description }}</p>
+
+        <span class="about-topic-card__link">
+          Explore category →
+        </span>
+
       </a>
 
-      <a
-        class="about-topic-card"
-        href="/categories/sensors-hardware/"
-      >
-        <span class="about-topic-card__number">03</span>
-        <h3>Sensors &amp; Hardware</h3>
-        <p>
-          A deep dive into the "eyes and brains" of rovers, from LiDAR
-          to Rad-Hard CPUs.
-        </p>
-        <span class="about-topic-card__link">Explore category →</span>
-      </a>
+    {{ end }}
 
-      <a
-        class="about-topic-card"
-        href="/categories/algorithms-ai"  
-      >
-        <span class="about-topic-card__number">04</span>
-        <h3>Algorithms &amp; AI</h3>
-        <p>
-          We explore the "how," from pathfinding (like A* and D* Lite)
-          to Visual Odometry.
-        </p>
-        <span class="about-topic-card__link">Explore category →</span>
-      </a>
+  {{ end }}
 
-      <a
-        class="about-topic-card"
-        href="/categories/missions-case-studies/"
-      >
-        <span class="about-topic-card__number">05</span>
-        <h3>Missions &amp; Case Studies</h3>
-        <p>
-          We analyze real-world examples, from NASA's Perseverance
-          to the upcoming VIPER.
-        </p>
-        <span class="about-topic-card__link">Explore category →</span>
-      </a>
-
-      <a
-        class="about-topic-card"
-        href="/categories/projects-tutorials/"
-      >
-        <span class="about-topic-card__number">06</span>
-        <h3>Projects &amp; Tutorials</h3>
-        <p>
-          Hands-on guides to help you build your own mini-rover with ROS 2.
-        </p>
-        <span class="about-topic-card__link">Explore category →</span>
-      </a>
-
-    </div>
+</div>
 
   </section>
 

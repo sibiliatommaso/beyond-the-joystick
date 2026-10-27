@@ -9,8 +9,8 @@ guid: /?p=613
 permalink: /rover-slip-estimation-on-lunar-sand-lab-test/
 image: /wp-content/uploads/2026/09/PIA26016orig.jpg
 categories:
-- Algorithms & AI
-- Sensors & Hardware
+- Algorithms AI
+- Sensors Hardware
 tags:
 - Arduino Mega
 - Lucas-Kanade

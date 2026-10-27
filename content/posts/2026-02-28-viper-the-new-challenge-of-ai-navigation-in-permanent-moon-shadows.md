@@ -9,7 +9,7 @@ guid: /?p=592
 permalink: /viper-the-new-challenge-of-ai-navigation-in-permanent-moon-shadows/
 image: /wp-content/uploads/2026/02/viper-rover-ai.png
 categories:
-- Algorithms & AI
+- Algorithms AI
 format: false
 slug: viper-the-new-challenge-of-ai-navigation-in-permanent-moon-shadows
 ---

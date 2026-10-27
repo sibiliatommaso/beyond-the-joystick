@@ -11,7 +11,7 @@ slug: rover-camera-calibration-mathematics
 image: /images/camera-calibration-lab-examples.png
 categories:
     - 'Core Concepts'
-    - 'Sensors & Hardware'
+    - 'Sensors Hardware'
 tags:
     - 'Camera Calibration'
     - 'Pinhole Camera Model'

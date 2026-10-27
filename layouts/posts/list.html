@@ -4,6 +4,15 @@
 {{ $posts = sort $posts "Date" "desc" }}
 {{ $latest := first 6 $posts }}
 
+{{ $categoryLabels := dict
+  "advanced-topics-future" "Advanced Topics & Future"
+  "sensors-hardware" "Sensors & Hardware"
+  "algorithms-ai" "Algorithms & AI"
+  "missions-case-studies" "Missions & Case Studies"
+  "projects-tutorials" "Projects & Tutorials"
+  "core-concepts" "Core Concepts"
+}}
+
 <div class="articles-page">
 
   <!-- INTRO -->
@@ -26,10 +35,8 @@
     </div>
   </section>
 
-
   <!-- LATEST ARTICLES -->
-  <section class="articles-section"
-           aria-labelledby="latest-heading">
+  <section class="articles-section" aria-labelledby="latest-heading">
 
     <div class="articles-section__heading">
       <div>
@@ -46,33 +53,33 @@
 
       {{ range $latest }}
 
-        {{ $excerpt := .Params.excerpt
-            | default .Description
-            | default .Summary }}
+        {{ $post := . }}
+        {{ $excerpt := .Params.excerpt | default .Description | default .Summary }}
 
         <article class="article-card">
 
           <!-- COVER IMAGE -->
           {{ with .Params.image }}
             <a class="article-card__image"
-               href="{{ $.RelPermalink }}"
+               href="{{ $post.RelPermalink }}"
                tabindex="-1"
                aria-hidden="true">
-              <img src="{{ . | relURL }}"
-                   alt=""
-                   loading="lazy">
+              <img src="{{ . | relURL }}" alt="" loading="lazy">
             </a>
           {{ end }}
 
           <div class="article-card__body">
 
             <!-- CATEGORY -->
-            {{ with .Params.categories }}
+            {{ with $post.GetTerms "categories" }}
               {{ range first 1 . }}
-                {{ $categorySlug := . | urlize }}
+                {{ $category := . }}
+                {{ $slug := $category.Title | urlize }}
+                {{ $label := index $categoryLabels $slug | default $category.LinkTitle }}
+
                 <a class="article-card__category"
-                   href="{{ printf "/categories/%s/" $categorySlug | relURL }}">
-                  {{ . | htmlUnescape | replaceRE "&[Aa]mp;" "&" }}
+                   href="{{ $category.RelPermalink }}">
+                  {{ $label | htmlUnescape }}
                 </a>
               {{ end }}
             {{ end }}
@@ -99,8 +106,7 @@
             </p>
 
             <!-- READ MORE -->
-            <a class="article-card__link"
-               href="{{ .RelPermalink }}">
+            <a class="article-card__link" href="{{ .RelPermalink }}">
               Read Article <span aria-hidden="true">→</span>
             </a>
 
@@ -116,10 +122,8 @@
     </div>
   </section>
 
-
   <!-- CATEGORIES -->
-  <section class="articles-section"
-           aria-labelledby="categories-heading">
+  <section class="articles-section" aria-labelledby="categories-heading">
 
     <div class="articles-section__heading">
       <div>
@@ -132,37 +136,25 @@
 
       {{ range $term, $pages := site.Taxonomies.categories }}
 
+        {{ $termPage := $pages.Page }}
         {{ $slug := $term | urlize }}
-        {{ $termPage := site.GetPage (printf "/categories/%s" $slug) }}
-
-        {{ $label := $term | htmlUnescape | humanize }}
-
-        {{ with $termPage }}
-          {{ $label = .Title | htmlUnescape }}
-        {{ end }}
-
-        {{ $label = replaceRE "&[Aa]mp;" "&" $label }}
+        {{ $label := index $categoryLabels $slug | default $termPage.LinkTitle }}
         {{ $label = replace $label "Ai" "AI" }}
 
-        <a class="category-card"
-           href="{{ printf "/categories/%s/" $slug | relURL }}">
+        <a class="category-card" href="{{ $termPage.RelPermalink }}">
 
           <span class="category-card__count">
             {{ len $pages }}
             {{ if eq (len $pages) 1 }}article{{ else }}articles{{ end }}
           </span>
 
-          <h3>{{ $label }}</h3>
+          <h3>{{ $label | htmlUnescape }}</h3>
 
           <p>
-            {{ with $termPage }}
-              {{ with .Description }}
-                {{ . | htmlUnescape }}
-              {{ else }}
-                Explore articles, ideas, and practical insights about {{ $label }}.
-              {{ end }}
+            {{ with $termPage.Description }}
+              {{ . | htmlUnescape }}
             {{ else }}
-              Explore articles, ideas, and practical insights about {{ $label }}.
+              Explore articles, ideas, and practical insights about {{ $label | htmlUnescape }}.
             {{ end }}
           </p>
 
@@ -177,10 +169,10 @@
     </div>
   </section>
 
-
   <!-- COMPLETE ARCHIVE -->
   <section class="articles-section articles-archive"
-           aria-labelledby="archive-heading" id="all-posts">
+           aria-labelledby="archive-heading"
+           id="all-posts">
 
     <div class="articles-section__heading">
       <div>
@@ -193,21 +185,23 @@
 
       {{ range $posts }}
 
-        {{ $excerpt := .Params.excerpt
-            | default .Description
-            | default .Summary }}
+        {{ $post := . }}
+        {{ $excerpt := .Params.excerpt | default .Description | default .Summary }}
 
         <article class="articles-list__item">
 
           <div class="articles-list__content">
 
             <!-- CATEGORY -->
-            {{ with .Params.categories }}
+            {{ with $post.GetTerms "categories" }}
               {{ range first 1 . }}
-                {{ $categorySlug := . | urlize }}
+                {{ $category := . }}
+                {{ $slug := $category.Title | urlize }}
+                {{ $label := index $categoryLabels $slug | default $category.LinkTitle }}
+
                 <a class="article-card__category"
-                   href="{{ printf "/categories/%s/" $categorySlug | relURL }}">
-                  {{ . | htmlUnescape | replaceRE "&[Aa]mp;" "&" }}
+                   href="{{ $category.RelPermalink }}">
+                  {{ $label | htmlUnescape }}
                 </a>
               {{ end }}
             {{ end }}
@@ -225,8 +219,7 @@
             </p>
 
             <!-- READ MORE -->
-            <a class="article-card__link"
-               href="{{ .RelPermalink }}">
+            <a class="article-card__link" href="{{ .RelPermalink }}">
               Read Article <span aria-hidden="true">→</span>
             </a>
 

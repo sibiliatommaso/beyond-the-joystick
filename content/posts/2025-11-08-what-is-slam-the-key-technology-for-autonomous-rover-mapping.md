@@ -9,7 +9,7 @@ guid: /?p=255
 permalink: /what-is-slam-the-key-technology-for-autonomous-rover-mapping/
 image: /wp-content/uploads/2025/11/perseverance-selfie.webp
 categories:
-- Algorithms & AI
+- Algorithms AI
 - Core Concepts
 tags:
 - Autonomous Navigation

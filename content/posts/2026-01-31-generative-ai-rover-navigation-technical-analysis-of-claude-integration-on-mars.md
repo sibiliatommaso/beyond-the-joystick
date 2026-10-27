@@ -11,9 +11,9 @@ kofi_display_floating_button:
 - ''
 image: /wp-content/uploads/2026/01/perseverance_claude_path.png
 categories:
-- Advanced Topics & Future
-- Algorithms & AI
-- Missions & Case Studies
+- Advanced Topics Future
+- Algorithms AI
+- Missions Case Studies
 format: false
 slug: generative-ai-rover-navigation-technical-analysis-of-claude-integration-on-mars
 ---

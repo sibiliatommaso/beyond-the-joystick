@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Advanced Topics Future on Beyond the Joystick</title>
+		<link>http://localhost:1313/categories/advanced-topics-future/</link>
+		<description>Recent content in Advanced Topics Future on Beyond the Joystick</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 18 Apr 2026 07:36:13 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/categories/advanced-topics-future/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>The New Lunar Gold Rush: How Commercial Rovers are Scaling Autonomous Mobility</title>
+				<link>http://localhost:1313/the-new-lunar-gold-rush-how-commercial-lunar-rovers-are-scaling-autonomous-mobility/</link>
+				<pubDate>Sat, 18 Apr 2026 07:36:13 +0000</pubDate>
+				<guid>http://localhost:1313/the-new-lunar-gold-rush-how-commercial-lunar-rovers-are-scaling-autonomous-mobility/</guid>
+				<description>&lt;!-- wp:image {&#34;lightbox&#34;:{&#34;enabled&#34;:false},&#34;id&#34;:606,&#34;sizeSlug&#34;:&#34;full&#34;,&#34;linkDestination&#34;:&#34;custom&#34;} --&gt;&#xA;&lt;figure class=&#34;wp-block-image size-full&#34;&gt;&lt;a href=&#34;https://www.nasa.gov/news-release/nasa-unveils-initiatives-to-achieve-americas-national-space-policy/&#34;&gt;&lt;img src=&#34;http://localhost:1313/wp-content/uploads/2026/04/moon-base-nasa.webp&#34; alt=&#34;Commercial Lunar Rovers&#34; class=&#34;wp-image-606&#34;/&gt;&lt;/a&gt;&lt;/figure&gt;&#xA;&lt;!-- /wp:image --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;The era of bespoke, billion-dollar planetary exploration is undergoing a radical paradigm shift. As the cis-lunar economy accelerates, the demand for scalable infrastructure has catalyzed the rapid development of &lt;strong&gt;commercial lunar rovers&lt;/strong&gt;. Unlike legacy flagship missions—such as NASA&#39;s Perseverance, which relies on custom, heavily shielded &lt;strong&gt;radiation-hardened (Rad-Hard)&lt;/strong&gt; avionics—this new wave prioritizes cost-efficiency and rapid deployment.&lt;/p&gt;&#xA;&lt;!-- /wp:paragraph --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Historically, the prohibitive cost of autonomous space navigation stemmed from custom-built hardware and extensively redundant sensor arrays. Legacy systems depend on expensive, legacy processors like the &lt;strong&gt;BAE RAD750&lt;/strong&gt; (operating at a highly constrained 200 MHz) and demand massive &lt;strong&gt;SWaP (Size, Weight, and Power)&lt;/strong&gt; overheads to guarantee absolute mission survival. However, scaling lunar operations requires a decisive departure from these monolithic architectures.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Beyond Reconstruction: Zero-Shot Anomaly Detection of Telemetry with TimeRCD</title>
+				<link>http://localhost:1313/beyond-reconstruction-zero-shot-anomaly-detection-of-telemetry-with-timercd/</link>
+				<pubDate>Sat, 14 Feb 2026 08:30:00 +0000</pubDate>
+				<guid>http://localhost:1313/beyond-reconstruction-zero-shot-anomaly-detection-of-telemetry-with-timercd/</guid>
+				<description>&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Telemetry monitoring in modern space systems, such as Martian rovers and Earth observation satellites, requires the real-time analysis of extremely high-dimensional data streams. These time-series signals are inherently affected by thermal noise and unpredictable radiative variations, making fault detection a critical computational bottleneck. As highlighted in our previous deep dives on &lt;a href=&#34;http://localhost:1313/generative-ai-rover-navigation-technical-analysis-of-claude-integration-on-mars/&#34; title=&#34;Generative AI Rover Navigation: Technical Analysis of Claude Integration on Mars&#34;&gt;on-board decision-making autonomy&lt;/a&gt;,interplanetary communication latency forces spacecraft to process and interpret anomalies locally, without waiting for a human feedback loop.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Generative AI Rover Navigation: Technical Analysis of Claude Integration on Mars</title>
+				<link>http://localhost:1313/generative-ai-rover-navigation-technical-analysis-of-claude-integration-on-mars/</link>
+				<pubDate>Sat, 31 Jan 2026 10:04:48 +0000</pubDate>
+				<guid>http://localhost:1313/generative-ai-rover-navigation-technical-analysis-of-claude-integration-on-mars/</guid>
+				<description>&lt;!-- wp:html --&gt;&#xA;&lt;div style=&#34;width: 100%; display: flex; justify-content: center; align-items: center;&#34;&gt;&#xA;    &lt;iframe&#xA;        src=&#34;https://www.youtube.com/embed/LO2GluKu4C8?playlist=LO2GluKu4C8&amp;loop=1&amp;autoplay=1&amp;mute=1&#34;&#xA;        style=&#34;width: 100%; aspect-ratio: 16 / 9; height: auto; border: none;&#34;&#xA;        allow=&#34;autoplay; encrypted-media&#34;&#xA;        allowfullscreen&gt;&#xA;    &lt;/iframe&gt;&#xA;&lt;/div&gt;&#xA;&lt;!-- /wp:html --&gt;&#xA;&lt;!-- wp:heading --&gt;&#xA;&lt;h2 class=&#34;wp-block-heading&#34;&gt;&lt;strong&gt;1. Introduction: The Paradigm Shift in Telemetry&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;!-- /wp:heading --&gt;&#xA;&lt;!-- wp:paragraph --&gt;&#xA;&lt;p&gt;Robotic exploration of the solar system has reached a historical inflection point, determined not by the evolution of propulsion or materials, but by a radical transformation in logical and decision-making paradigms. The event that occurred between December 8 and 10, 2025 (Sol 1707 and 1709) at NASA&#39;s Jet Propulsion Laboratory (JPL) represents the crystallization of this shift. For the first time in the history of aerospace engineering, a Large Language Model (LLM)—specifically Anthropic’s coding agent, Claude Code—was integrated directly into the &#34;critical path&#34; of tactical planning for an extraterrestrial surface asset.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

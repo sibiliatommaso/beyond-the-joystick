@@ -9,8 +9,8 @@ guid: /?p=600
 permalink: /self-driving-cars-and-space-rovers/
 image: /wp-content/uploads/2026/03/Self-driving-cars-and-space-rovers-scaled.png
 categories:
-- Algorithms & AI
-- Sensors & Hardware
+- Algorithms AI
+- Sensors Hardware
 tags:
 - Computer Vision
 - Mars Rover

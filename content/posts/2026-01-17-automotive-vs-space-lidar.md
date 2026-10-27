@@ -11,7 +11,7 @@ kofi_display_floating_button:
 - ''
 image: /wp-content/uploads/2026/01/Powered-by-Garmin.png
 categories:
-- Sensors & Hardware
+- Sensors Hardware
 tags:
 - Automotive vs Space
 - Autonomous Navigation

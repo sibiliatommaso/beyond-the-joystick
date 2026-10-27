@@ -13,7 +13,7 @@ litespeed_no_image_lazy:
 - '1'
 image: /wp-content/uploads/2025/11/rover_lidar.jpg
 categories:
-- Sensors & Hardware
+- Sensors Hardware
 tags:
 - Computer Vision
 - IMU

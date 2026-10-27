@@ -9,8 +9,8 @@ guid: /?p=582
 permalink: /beyond-reconstruction-zero-shot-anomaly-detection-of-telemetry-with-timercd/
 image: /wp-content/uploads/2026/02/Mars-rover-telemetry-data-visualization-concept.png
 categories:
-- Advanced Topics & Future
-- Algorithms & AI
+- Advanced Topics Future
+- Algorithms AI
 tags:
 - Autonomous Navigation
 - Deep Learning
