@@ -14,17 +14,17 @@
 		
 			<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Projects &amp; Tutorials</title>
-				<link>http://localhost:1313/categories/projects--tutorials/</link>
+				<title>Projects Tutorials</title>
+				<link>http://localhost:1313/categories/projects-tutorials/</link>
 				<pubDate>Sat, 24 Oct 2026 09:00:00 +0200</pubDate>
-				<guid>http://localhost:1313/categories/projects--tutorials/</guid>
+				<guid>http://localhost:1313/categories/projects-tutorials/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Sensors &amp; Hardware</title>
-				<link>http://localhost:1313/categories/sensors--hardware/</link>
+				<title>Sensors Hardware</title>
+				<link>http://localhost:1313/categories/sensors-hardware/</link>
 				<pubDate>Sat, 24 Oct 2026 09:00:00 +0200</pubDate>
-				<guid>http://localhost:1313/categories/sensors--hardware/</guid>
+				<guid>http://localhost:1313/categories/sensors-hardware/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -32,13 +32,6 @@
 				<link>http://localhost:1313/categories/core-concepts/</link>
 				<pubDate>Wed, 21 Oct 2026 15:06:12 +0000</pubDate>
 				<guid>http://localhost:1313/categories/core-concepts/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Sensors Hardware</title>
-				<link>http://localhost:1313/categories/sensors-hardware/</link>
-				<pubDate>Wed, 21 Oct 2026 15:06:12 +0000</pubDate>
-				<guid>http://localhost:1313/categories/sensors-hardware/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -70,31 +63,10 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Advanced Topics &amp; Future</title>
-				<link>http://localhost:1313/categories/advanced-topics--future/</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/categories/advanced-topics--future/</guid>
-				<description></description>
-			</item>
-			<item>
 				<title>Algorithms &amp; AI</title>
 				<link>http://localhost:1313/categories/algorithms--ai/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/categories/algorithms--ai/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Algorithms &amp; AI</title>
-				<link>http://localhost:1313/categories/algorithms--ai/</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/categories/algorithms--ai/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Missions &amp; Case Studies</title>
-				<link>http://localhost:1313/categories/missions--case-studies/</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/categories/missions--case-studies/</guid>
 				<description></description>
 			</item>
 			<item>

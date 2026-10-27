@@ -35,13 +35,13 @@
     <loc>http://localhost:1313/tags/pinhole-camera-model/</loc>
     <lastmod>2026-10-24T09:00:00+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/projects--tutorials/</loc>
+    <loc>http://localhost:1313/categories/projects-tutorials/</loc>
     <lastmod>2026-10-24T09:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/python/</loc>
     <lastmod>2026-10-24T09:00:00+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/sensors--hardware/</loc>
+    <loc>http://localhost:1313/categories/sensors-hardware/</loc>
     <lastmod>2026-10-24T09:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
@@ -65,7 +65,7 @@
     <loc>http://localhost:1313/rover-camera-calibration-mathematics/</loc>
     <lastmod>2026-10-21T15:06:12+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/algorithms--ai/</loc>
+    <loc>http://localhost:1313/categories/algorithms-ai/</loc>
     <lastmod>2026-09-20T08:19:05+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/arduino-mega/</loc>
@@ -101,7 +101,7 @@
     <loc>http://localhost:1313/tags/wheel-encoders/</loc>
     <lastmod>2026-09-20T08:19:05+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/advanced-topics--future/</loc>
+    <loc>http://localhost:1313/categories/advanced-topics-future/</loc>
     <lastmod>2026-04-18T07:36:13+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/astrobotic-cuberover/</loc>
@@ -125,7 +125,7 @@
     <loc>http://localhost:1313/tags/luvmi-x/</loc>
     <lastmod>2026-04-18T07:36:13+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/missions--case-studies/</loc>
+    <loc>http://localhost:1313/categories/missions-case-studies/</loc>
     <lastmod>2026-04-18T07:36:13+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/roo-ver/</loc>

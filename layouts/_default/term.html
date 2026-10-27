@@ -1,27 +1,173 @@
 {{ define "main" }}
+{{ $termPage := . }}
 {{ $allPages := .Pages.ByDate.Reverse }}
-{{ $featured := first 1 $allPages }}
-{{ $rest := after 1 $allPages }}
+{{ $latest := first 1 $allPages }}
+{{ $archive := $allPages }}
+
+{{/* Display labels are independent from the URL slugs. Keep these keys aligned
+     with the actual category slugs used by the content. */}}
+{{ $categoryLabels := dict
+  "core-concepts" "Core Concepts"
+  "advanced-topics-future" "Advanced Topics & Future"
+  "sensors-hardware" "Sensors & Hardware"
+  "algorithms-ai" "Algorithms & AI"
+  "missions-case-studies" "Missions & Case Studies"
+  "projects-tutorials" "Projects & Tutorials"
+}}
+{{ $categorySlug := .Data.Term | urlize }}
+{{ $categoryLabel := index $categoryLabels $categorySlug | default (.Title | htmlUnescape) }}
+
 <link rel="stylesheet" href="{{ "css/category-mission-control.css" | relURL }}">
-<main class="mc-category">
-  <section class="mc-hero">
+
+<div class="mc-category">
+  <!-- HERO / MISSION CONTROL -->
+  <section class="mc-hero" aria-labelledby="mc-category-title">
     <div class="mc-hero__grid" aria-hidden="true"></div>
+    <div class="mc-hero__orb" aria-hidden="true"></div>
+
     <div class="mc-hero__content">
-      <p class="mc-kicker"><span class="mc-live-dot"></span> RESEARCH DIVISION · BEYOND THE JOYSTICK</p>
-      <h1>{{ .Title | htmlUnescape }}</h1>
+      <p class="mc-kicker"><span class="mc-live-dot" aria-hidden="true"></span> RESEARCH DIVISION · BEYOND THE JOYSTICK</p>
+      <h1 id="mc-category-title">{{ $categoryLabel | htmlUnescape }}</h1>
       <p class="mc-hero__intro">{{ with .Description }}{{ . }}{{ else }}Explore the concepts, technologies, and missions shaping autonomous robotics.{{ end }}</p>
-      <div class="mc-hero__meta"><span><strong>{{ len $allPages }}</strong> {{ if eq (len $allPages) 1 }}ARTICLE{{ else }}ARTICLES{{ end }}</span><span class="mc-meta-divider"></span><span>FIELD NOTES & TECHNICAL DOSSIERS</span></div>
-      <a class="mc-scroll-link" href="#category-archive">EXPLORE THE ARCHIVE <span aria-hidden="true">↓</span></a>
+
+      <div class="mc-hero__meta">
+        <span><strong>{{ len $allPages }}</strong> {{ if eq (len $allPages) 1 }}ARTICLE{{ else }}ARTICLES{{ end }}</span>
+        <span class="mc-meta-divider" aria-hidden="true"></span>
+        <span>FIELD NOTES &amp; TECHNICAL DOSSIERS</span>
+      </div>
+
+      <a class="mc-scroll-link" href="#category-archive">EXPLORE THE DOSSIERS <span aria-hidden="true">↓</span></a>
     </div>
-    <div class="mc-hero__visual" aria-hidden="true"><div class="mc-radar"><span class="mc-radar__ring"></span><span class="mc-radar__ring mc-radar__ring--two"></span><span class="mc-radar__ring mc-radar__ring--three"></span><span class="mc-radar__cross mc-radar__cross--h"></span><span class="mc-radar__cross mc-radar__cross--v"></span><span class="mc-radar__sweep"></span><span class="mc-radar__point mc-radar__point--one"></span><span class="mc-radar__point mc-radar__point--two"></span><span class="mc-radar__point mc-radar__point--three"></span></div><p class="mc-visual-caption">AUTONOMOUS SYSTEMS<br><span>SCANNING KNOWLEDGE BASE</span></p></div>
+
+    <div class="mc-hero__visual" aria-hidden="true">
+      <div class="mc-radar">
+        <span class="mc-radar__ring mc-radar__ring--one"></span>
+        <span class="mc-radar__ring mc-radar__ring--two"></span>
+        <span class="mc-radar__ring mc-radar__ring--three"></span>
+        <span class="mc-radar__cross mc-radar__cross--h"></span>
+        <span class="mc-radar__cross mc-radar__cross--v"></span>
+        <span class="mc-radar__sweep"></span>
+        <span class="mc-radar__point mc-radar__point--one"></span>
+        <span class="mc-radar__point mc-radar__point--two"></span>
+        <span class="mc-radar__point mc-radar__point--three"></span>
+      </div>
+      <p class="mc-visual-caption">AUTONOMOUS SYSTEMS<br><span>KNOWLEDGE BASE / ONLINE</span></p>
+    </div>
   </section>
-  <section class="mc-briefing"><p class="mc-section-index">01 / BRIEFING</p><div><p class="mc-eyebrow">MISSION BRIEFING</p><h2>Understand the field.<br><span>Explore what comes next.</span></h2></div><p class="mc-briefing__copy">{{ with .Description }}{{ . }}{{ else }}A curated collection of articles about the ideas, engineering decisions, and real-world challenges behind autonomous robotics.{{ end }}</p></section>
-  {{ range $featured }}
-  <section class="mc-featured"><div class="mc-featured__image">{{ with .Params.image }}<img src="{{ . | relURL }}" alt="" loading="lazy">{{ else }}<div class="mc-image-placeholder"><span>FIELD<br>RESEARCH</span></div>{{ end }}<span class="mc-image-label">FEATURED DOSSIER</span></div><div class="mc-featured__body"><p class="mc-eyebrow">EDITOR'S SELECTION · {{ .Date.Format "JAN 2006" }}</p><h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2><p>{{ .Params.excerpt | default .Description | default .Summary | plainify | htmlUnescape | truncate 240 }}</p><div class="mc-featured__footer"><span>{{ .ReadingTime }} MIN READ</span><a href="{{ .RelPermalink }}">OPEN DOSSIER <span aria-hidden="true">↗</span></a></div></div></section>
-  {{ end }}
-  <section class="mc-archive" id="category-archive"><div class="mc-archive__heading"><div><p class="mc-eyebrow">02 / KNOWLEDGE ARCHIVE</p><h2>Explore the dossiers</h2></div><span class="mc-archive__count">{{ len $allPages }} ENTRIES</span></div>
-  {{ if gt (len $rest) 0 }}<div class="mc-card-grid">{{ range $index, $page := $rest }}<article class="mc-card"><a class="mc-card__image" href="{{ $page.RelPermalink }}" tabindex="-1" aria-hidden="true">{{ with $page.Params.image }}<img src="{{ . | relURL }}" alt="" loading="lazy">{{ else }}<span class="mc-card__placeholder">BTJ / {{ printf "%03d" (add $index 2) }}</span>{{ end }}<span class="mc-card__file">FILE {{ printf "%03d" (add $index 2) }}</span></a><div class="mc-card__body"><p class="mc-card__meta">{{ $page.Date.Format "JAN 02, 2006" }} <span>·</span> {{ $page.ReadingTime }} MIN READ</p><h3><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h3><p class="mc-card__excerpt">{{ $page.Params.excerpt | default $page.Description | default $page.Summary | plainify | htmlUnescape | truncate 155 }}</p><a class="mc-card__link" href="{{ $page.RelPermalink }}">READ DOSSIER <span aria-hidden="true">→</span></a></div></article>{{ end }}</div>{{ else if not $featured }}<div class="mc-empty"><span class="mc-empty__mark">∅</span><h3>No dossiers published yet</h3><p>New research notes and articles will appear here as they are published.</p></div>{{ else }}<p class="mc-single-note">This category currently contains one article. More dossiers will appear here as the archive grows.</p>{{ end }}</section>
-  <section class="mc-divisions"><div><p class="mc-eyebrow">03 / CONTINUE EXPLORING</p><h2>Explore other divisions</h2></div><div class="mc-divisions__links">{{ range site.Taxonomies.categories }}{{ $otherPage := .Page }}{{ if and $otherPage (ne $otherPage.RelPermalink $.RelPermalink) }}<a href="{{ $otherPage.RelPermalink }}"><span>{{ $otherPage.Title | htmlUnescape }}</span><span aria-hidden="true">↗</span></a>{{ end }}{{ end }}</div></section>
-</main>
+
+  <!-- 01 / BRIEFING -->
+  <section class="mc-briefing" aria-labelledby="mc-briefing-title">
+    <p class="mc-section-index">01 / MISSION BRIEFING</p>
+    <div class="mc-briefing__heading">
+      <h2 id="mc-briefing-title">Understand the field.<br><span>Explore what comes next.</span></h2>
+    </div>
+    <p class="mc-briefing__copy">{{ with .Description }}{{ . }}{{ else }}A curated collection of articles exploring the ideas, engineering decisions, and real-world challenges behind autonomous robotics.{{ end }}</p>
+  </section>
+
+  <!-- 02 / LAST ARTICLE -->
+  <section class="mc-last-article" aria-labelledby="mc-last-article-title">
+    <div class="mc-section-heading">
+      <div>
+        <p class="mc-section-index">02 / LATEST TRANSMISSION</p>
+        <h2 id="mc-last-article-title">The latest from this division</h2>
+      </div>
+      <span class="mc-status"><span aria-hidden="true"></span> MOST RECENT ENTRY</span>
+    </div>
+
+    {{ if $latest }}
+      {{ range $latest }}
+        {{ $page := . }}
+        <article class="mc-featured">
+          <a class="mc-featured__image" href="{{ $page.RelPermalink }}" aria-label="Read {{ $page.Title }}">
+            {{ with $page.Params.image }}
+              <img src="{{ . | relURL }}" alt="" loading="lazy">
+            {{ else }}
+              <span class="mc-image-placeholder" aria-hidden="true"><span>FIELD<br>RESEARCH</span><i></i></span>
+            {{ end }}
+            <span class="mc-image-label">LATEST DOSSIER</span>
+          </a>
+          <div class="mc-featured__body">
+            <p class="mc-featured__meta">PUBLISHED {{ $page.Date.Format "02 JAN 2006" }} <span aria-hidden="true">·</span> {{ $page.ReadingTime }} MIN READ</p>
+            <h3><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h3>
+            <p class="mc-featured__excerpt">{{ $page.Params.excerpt | default $page.Description | default $page.Summary | plainify | htmlUnescape | truncate 260 }}</p>
+            <div class="mc-featured__footer">
+              <span>FILE 001 · {{ $categoryLabel | upper }}</span>
+              <a href="{{ $page.RelPermalink }}">READ THE ARTICLE <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+      {{ end }}
+    {{ else }}
+      <div class="mc-empty">
+        <span class="mc-empty__mark" aria-hidden="true">∅</span>
+        <h3>No articles published yet</h3>
+        <p>The latest article for this division will appear here when it is published.</p>
+      </div>
+    {{ end }}
+  </section>
+
+<!-- 03 / DOSSIER ARCHIVE (includes all articles, including the latest) -->
+  <section class="mc-archive" id="category-archive" aria-labelledby="mc-archive-title">
+    <div class="mc-archive__heading">
+      <div>
+        <p class="mc-section-index">03 / KNOWLEDGE ARCHIVE</p>
+        <h2 id="mc-archive-title">Explore the dossiers</h2>
+      </div>
+      <span class="mc-archive__count">{{ len $allPages }} TOTAL {{ if eq (len $allPages) 1 }}ENTRY{{ else }}ENTRIES{{ end }}</span>
+    </div>
+
+    {{ if gt (len $archive) 0 }}
+      <div class="mc-card-grid">
+        {{ range $index, $page := $archive }}
+          <article class="mc-card">
+            <a class="mc-card__image" href="{{ $page.RelPermalink }}" tabindex="-1" aria-hidden="true">
+              {{ with $page.Params.image }}
+                <img src="{{ . | relURL }}" alt="" loading="lazy">
+              {{ else }}
+                <span class="mc-card__placeholder">BTJ / {{ printf "%03d" (add $index 1) }}</span>
+              {{ end }}
+              <span class="mc-card__file">FILE {{ printf "%03d" (add $index 1) }}</span>
+            </a>
+            <div class="mc-card__body">
+              <p class="mc-card__meta">{{ $page.Date.Format "02 JAN 2006" }} <span aria-hidden="true">·</span> {{ $page.ReadingTime }} MIN READ</p>
+              <h3><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h3>
+              <p class="mc-card__excerpt">{{ $page.Params.excerpt | default $page.Description | default $page.Summary | plainify | htmlUnescape | truncate 165 }}</p>
+              <a class="mc-card__link" href="{{ $page.RelPermalink }}">OPEN DOSSIER <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    {{ else if eq (len $allPages) 0 }}
+      <div class="mc-empty">
+        <span class="mc-empty__mark" aria-hidden="true">∅</span>
+        <h3>The archive is waiting for its first entry</h3>
+        <p>New articles assigned to this category will appear here automatically.</p>
+      </div>
+    {{ else }}
+      <p class="mc-single-note">This division has one published article, featured above. New dossiers will appear here as the archive grows.</p>
+    {{ end }}
+  </section>
+
+  <!-- 04 / CONTINUE EXPLORING -->
+  <section class="mc-divisions" aria-labelledby="mc-divisions-title">
+    <div class="mc-divisions__intro">
+      <p class="mc-section-index">04 / CONTINUE EXPLORING</p>
+      <h2 id="mc-divisions-title">Explore other divisions</h2>
+      <p class="mc-divisions__copy">Follow another thread of research through the Beyond the Joystick knowledge base.</p>
+    </div>
+    <nav class="mc-divisions__links" aria-label="Other categories">
+      {{ range $slug, $pages := site.Taxonomies.categories }}
+        {{ $otherPage := $pages.Page }}
+        {{ if $otherPage }}
+          {{ $otherSlug := $slug | urlize }}
+          {{ $otherLabel := index $categoryLabels $otherSlug | default $otherPage.LinkTitle }}
+          {{ if ne $otherPage.RelPermalink $termPage.RelPermalink }}
+            <a href="{{ $otherPage.RelPermalink }}"><span>{{ $otherLabel | htmlUnescape }}</span><span aria-hidden="true">↗</span></a>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </nav>
+  </section>
+</div>
 <script src="{{ "js/category-mission-control.js" | relURL }}" defer></script>
 {{ end }}
