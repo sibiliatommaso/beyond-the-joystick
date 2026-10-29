@@ -112,7 +112,7 @@
                 Explore Articles
             </a>
 
-            <a class="btn btn--secondary" href="#labs">
+            <a class="btn btn--secondary" href="{{ "/labs/" | relURL }}">
                 Discover the Labs
             </a>
         </div>
@@ -226,7 +226,8 @@
 </section>
 
 
-<!-- LABS & PROJECTS: unchanged -->
+```html
+<!-- LABS & PROJECTS: slider matching Latest Articles -->
 <section
     class="section section--alt"
     id="labs"
@@ -248,36 +249,136 @@
         </div>
 
         {{ $allLabs := where site.RegularPages ".Params.lab" true }}
-        {{ $labs := first 3 ($allLabs.ByDate.Reverse) }}
+        {{ $labs := first 6 ($allLabs.ByDate.Reverse) }}
+        {{ $labCount := len $labs }}
 
-        {{ if gt (len $labs) 0 }}
+        {{ if gt $labCount 0 }}
 
-            <div class="lab-grid">
+            <div class="articles-slider labs-slider" data-articles-slider>
 
-                {{ range $labs }}
-                    {{ $lab := . }}
+                <div class="articles-slider__viewport">
+                    <div class="articles-slider__track">
 
-                    <article class="lab-card">
+                        {{ range $i, $lab := $labs }}
 
-                        {{ with $lab.Params.lab_type }}
-                            <p class="lab-card__type">{{ . | htmlEscape }}</p>
+                            <div
+                                class="articles-slider__slide"
+                                role="group"
+                                aria-roledescription="slide"
+                                aria-label="{{ add $i 1 }} of {{ $labCount }}"
+                            >
+
+                                <article class="lab-card">
+
+                                    {{ with $lab.Params.lab_type }}
+                                        <p class="lab-card__type">
+                                            {{ . | htmlEscape }}
+                                        </p>
+                                    {{ end }}
+
+                                    <h3 class="lab-card__title">
+                                        <a href="{{ $lab.RelPermalink }}">
+                                            {{ $lab.Title | htmlUnescape }}
+                                        </a>
+                                    </h3>
+
+                                    {{ with $lab.Params.image }}
+                                        <a
+                                            class="lab-card__image-link"
+                                            href="{{ $lab.RelPermalink }}"
+                                            tabindex="-1"
+                                            aria-hidden="true"
+                                        >
+                                            <img
+                                                class="lab-card__image"
+                                                src="{{ . | relURL }}"
+                                                alt=""
+                                                loading="lazy"
+                                                decoding="async"
+                                            >
+                                        </a>
+                                    {{ end }}
+
+                                    {{ $summary := $lab.Params.summary
+                                        | default $lab.Params.excerpt
+                                        | default $lab.Summary
+                                    }}
+
+                                    <p class="lab-card__summary">
+                                        {{ $summary
+                                            | plainify
+                                            | htmlUnescape
+                                            | truncate 220
+                                        }}
+                                    </p>
+
+                                    <a
+                                        class="text-link"
+                                        href="{{ $lab.RelPermalink }}"
+                                    >
+                                        Explore Lab
+                                        <span aria-hidden="true">&rarr;</span>
+                                    </a>
+
+                                </article>
+
+                            </div>
+
                         {{ end }}
 
-                        <h3 class="lab-card__title">
-                            <a href="{{ $lab.RelPermalink }}">
-                                {{ $lab.Title | htmlUnescape }}
-                            </a>
-                        </h3>
+                    </div>
+                </div>
 
-                        {{ $summary := $lab.Params.summary | default $lab.Params.excerpt | default $lab.Summary }}
+                {{ if gt $labCount 1 }}
 
-                        <p class="lab-card__summary">
-                            {{ $summary | plainify | htmlUnescape | truncate 220 }}
-                        </p>
+                    <div class="articles-slider__controls">
 
-                    </article>
+                        <button
+                            class="articles-slider__arrow"
+                            type="button"
+                            data-slider-prev
+                            aria-label="Previous labs"
+                        >
+                            <span aria-hidden="true">&larr;</span>
+                        </button>
+
+                        <div
+                            class="articles-slider__dots"
+                            data-slider-dots
+                            aria-label="Choose lab position"
+                        ></div>
+
+                        <button
+                            class="articles-slider__arrow"
+                            type="button"
+                            data-slider-next
+                            aria-label="Next labs"
+                        >
+                            <span aria-hidden="true">&rarr;</span>
+                        </button>
+
+                        <button
+                            class="articles-slider__pause"
+                            type="button"
+                            data-slider-pause
+                            aria-pressed="false"
+                        >
+                            Pause
+                        </button>
+
+                    </div>
+
                 {{ end }}
 
+            </div>
+
+            <div class="section__more">
+                <a
+                    class="btn btn--secondary"
+                    href="{{ "/labs/" | relURL }}"
+                >
+                    View All Labs
+                </a>
             </div>
 
         {{ else }}
@@ -288,8 +389,11 @@
                     here as they are published.
                 </p>
 
-                <a href="{{ "/posts/" | relURL }}">
-                    Browse the Articles
+                <a
+                    class="btn btn--secondary"
+                    href="{{ "/labs/" | relURL }}"
+                >
+                    Explore the Labs
                 </a>
             </div>
 
@@ -297,6 +401,7 @@
 
     </div>
 </section>
+```
 
 
 <!-- ABOUT: unchanged -->

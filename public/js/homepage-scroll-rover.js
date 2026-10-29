@@ -91,7 +91,7 @@
       // Hero: il rover esce con la hero sfumando; poi compare sulla barra.
       if (t < 0.45) {
         const u = ease(t / 0.45);
-        hero.scale = heroScale * (1 - 0.25 * u);
+        hero.scale = heroScale * (1 - 0.15 * u);
         hero.op = 1 - u;
         return hero;
       }
@@ -161,7 +161,7 @@
     const pr = probe.getBoundingClientRect();
 
     const gutter = Math.max(0, Math.min(pr.left, vw - pr.right));
-    const laneW = Math.min(104, gutter * 0.62);
+    const laneW = Math.min(150, gutter * 0.75);
     const compact = !still && laneW < MIN_LANE;
     root.classList.toggle("home-rover-compact", compact);
 

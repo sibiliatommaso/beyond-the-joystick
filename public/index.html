@@ -164,7 +164,7 @@
                 Explore Articles
             </a>
 
-            <a class="btn btn--secondary" href="#labs">
+            <a class="btn btn--secondary" href="/labs/">
                 Discover the Labs
             </a>
         </div>
@@ -731,6 +731,7 @@
 </section>
 
 
+```html
 
 <section
     class="section section--alt"
@@ -754,17 +755,84 @@
 
         
         
+        
 
         
 
-            <div class="empty-state">
-                <p>
-                    Practical tutorials and engineering projects will appear
-                    here as they are published.
-                </p>
+            <div class="articles-slider labs-slider" data-articles-slider>
 
-                <a href="/posts/">
-                    Browse the Articles
+                <div class="articles-slider__viewport">
+                    <div class="articles-slider__track">
+
+                        
+
+                            <div
+                                class="articles-slider__slide"
+                                role="group"
+                                aria-roledescription="slide"
+                                aria-label="1 of 1"
+                            >
+
+                                <article class="lab-card">
+
+                                    
+
+                                    <h3 class="lab-card__title">
+                                        <a href="/camera-geometry-playground-opencv/">
+                                            Camera Geometry Playground: Explore Intrinsics, Pose and Lens Distortion
+                                        </a>
+                                    </h3>
+
+                                    
+                                        <a
+                                            class="lab-card__image-link"
+                                            href="/camera-geometry-playground-opencv/"
+                                            tabindex="-1"
+                                            aria-hidden="true"
+                                        >
+                                            <img
+                                                class="lab-card__image"
+                                                src="/images/camera-calibration-lab-examples.png"
+                                                alt=""
+                                                loading="lazy"
+                                                decoding="async"
+                                            >
+                                        </a>
+                                    
+
+                                    
+
+                                    <p class="lab-card__summary">
+                                        Move 13 sliders to see how intrinsics, pose and radial distortion change an image. This interactive OpenCV playground helps explain camera geometry; it does not estimate calibration parameters from a real camera.
+                                    </p>
+
+                                    <a
+                                        class="text-link"
+                                        href="/camera-geometry-playground-opencv/"
+                                    >
+                                        Explore Lab
+                                        <span aria-hidden="true">&rarr;</span>
+                                    </a>
+
+                                </article>
+
+                            </div>
+
+                        
+
+                    </div>
+                </div>
+
+                
+
+            </div>
+
+            <div class="section__more">
+                <a
+                    class="btn btn--secondary"
+                    href="/labs/"
+                >
+                    View All Labs
                 </a>
             </div>
 
@@ -772,6 +840,7 @@
 
     </div>
 </section>
+```
 
 
 

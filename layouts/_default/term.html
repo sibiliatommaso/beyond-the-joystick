@@ -3,9 +3,7 @@
 {{ $allPages := .Pages.ByDate.Reverse }}
 {{ $latest := first 1 $allPages }}
 {{ $archive := $allPages }}
-
-{{/* Display labels are independent from the URL slugs. Keep these keys aligned
-     with the actual category slugs used by the content. */}}
+{{/* Display labels are independent from the URL slugs. Keep these keys aligned with the actual category slugs used by the content. */}}
 {{ $categoryLabels := dict
   "core-concepts" "Core Concepts"
   "advanced-topics-future" "Advanced Topics & Future"
@@ -16,7 +14,6 @@
 }}
 {{ $categorySlug := .Data.Term | urlize }}
 {{ $categoryLabel := index $categoryLabels $categorySlug | default (.Title | htmlUnescape) }}
-
 <link rel="stylesheet" href="{{ "css/category-mission-control.css" | relURL }}">
 
 <div class="mc-category">
@@ -29,27 +26,35 @@
       <p class="mc-kicker"><span class="mc-live-dot" aria-hidden="true"></span> RESEARCH DIVISION · BEYOND THE JOYSTICK</p>
       <h1 id="mc-category-title">{{ $categoryLabel | htmlUnescape }}</h1>
       <p class="mc-hero__intro">{{ with .Description }}{{ . }}{{ else }}Explore the concepts, technologies, and missions shaping autonomous robotics.{{ end }}</p>
-
       <div class="mc-hero__meta">
         <span><strong>{{ len $allPages }}</strong> {{ if eq (len $allPages) 1 }}ARTICLE{{ else }}ARTICLES{{ end }}</span>
         <span class="mc-meta-divider" aria-hidden="true"></span>
         <span>FIELD NOTES &amp; TECHNICAL DOSSIERS</span>
       </div>
-
       <a class="mc-scroll-link" href="#category-archive">EXPLORE THE DOSSIERS <span aria-hidden="true">↓</span></a>
     </div>
 
-    <div class="mc-hero__visual" aria-hidden="true">
-      <div class="mc-radar">
-        <span class="mc-radar__ring mc-radar__ring--one"></span>
-        <span class="mc-radar__ring mc-radar__ring--two"></span>
-        <span class="mc-radar__ring mc-radar__ring--three"></span>
-        <span class="mc-radar__cross mc-radar__cross--h"></span>
-        <span class="mc-radar__cross mc-radar__cross--v"></span>
-        <span class="mc-radar__sweep"></span>
-        <span class="mc-radar__point mc-radar__point--one"></span>
-        <span class="mc-radar__point mc-radar__point--two"></span>
-        <span class="mc-radar__point mc-radar__point--three"></span>
+    <div class="mc-hero__visual">
+      <div class="mc-radar" data-article-radar aria-label="Article radar">
+        <span class="mc-radar__ring mc-radar__ring--one" aria-hidden="true"></span>
+        <span class="mc-radar__ring mc-radar__ring--two" aria-hidden="true"></span>
+        <span class="mc-radar__ring mc-radar__ring--three" aria-hidden="true"></span>
+        <span class="mc-radar__cross mc-radar__cross--h" aria-hidden="true"></span>
+        <span class="mc-radar__cross mc-radar__cross--v" aria-hidden="true"></span>
+        <span class="mc-radar__sweep" aria-hidden="true"></span>
+
+        <div class="mc-radar__points" data-radar-points aria-hidden="true">
+          {{ range $index, $page := $allPages }}
+            <span
+              class="mc-radar__point"
+              data-radar-point
+              data-title="{{ $page.Title }}"
+              data-url="{{ $page.RelPermalink }}"
+            ></span>
+          {{ end }}
+        </div>
+
+        <div class="mc-radar__current" data-radar-current aria-live="polite" aria-atomic="true"></div>
       </div>
       <p class="mc-visual-caption">AUTONOMOUS SYSTEMS<br><span>KNOWLEDGE BASE / ONLINE</span></p>
     </div>
@@ -106,7 +111,7 @@
     {{ end }}
   </section>
 
-<!-- 03 / DOSSIER ARCHIVE (includes all articles, including the latest) -->
+  <!-- 03 / DOSSIER ARCHIVE (includes all articles, including the latest) -->
   <section class="mc-archive" id="category-archive" aria-labelledby="mc-archive-title">
     <div class="mc-archive__heading">
       <div>

@@ -128,8 +128,6 @@
 
 
 
-
-
 <link rel="stylesheet" href="/css/category-mission-control.css">
 
 <div class="mc-category">
@@ -142,27 +140,63 @@
       <p class="mc-kicker"><span class="mc-live-dot" aria-hidden="true"></span> RESEARCH DIVISION · BEYOND THE JOYSTICK</p>
       <h1 id="mc-category-title">Core Concepts</h1>
       <p class="mc-hero__intro">The &#39;what&#39; and &#39;why&#39; of autonomous navigation: the foundations every rover engineer needs before touching an algorithm.</p>
-
       <div class="mc-hero__meta">
         <span><strong>5</strong> ARTICLES</span>
         <span class="mc-meta-divider" aria-hidden="true"></span>
         <span>FIELD NOTES &amp; TECHNICAL DOSSIERS</span>
       </div>
-
       <a class="mc-scroll-link" href="#category-archive">EXPLORE THE DOSSIERS <span aria-hidden="true">↓</span></a>
     </div>
 
-    <div class="mc-hero__visual" aria-hidden="true">
-      <div class="mc-radar">
-        <span class="mc-radar__ring mc-radar__ring--one"></span>
-        <span class="mc-radar__ring mc-radar__ring--two"></span>
-        <span class="mc-radar__ring mc-radar__ring--three"></span>
-        <span class="mc-radar__cross mc-radar__cross--h"></span>
-        <span class="mc-radar__cross mc-radar__cross--v"></span>
-        <span class="mc-radar__sweep"></span>
-        <span class="mc-radar__point mc-radar__point--one"></span>
-        <span class="mc-radar__point mc-radar__point--two"></span>
-        <span class="mc-radar__point mc-radar__point--three"></span>
+    <div class="mc-hero__visual">
+      <div class="mc-radar" data-article-radar aria-label="Article radar">
+        <span class="mc-radar__ring mc-radar__ring--one" aria-hidden="true"></span>
+        <span class="mc-radar__ring mc-radar__ring--two" aria-hidden="true"></span>
+        <span class="mc-radar__ring mc-radar__ring--three" aria-hidden="true"></span>
+        <span class="mc-radar__cross mc-radar__cross--h" aria-hidden="true"></span>
+        <span class="mc-radar__cross mc-radar__cross--v" aria-hidden="true"></span>
+        <span class="mc-radar__sweep" aria-hidden="true"></span>
+
+        <div class="mc-radar__points" data-radar-points aria-hidden="true">
+          
+            <span
+              class="mc-radar__point"
+              data-radar-point
+              data-title="Rover Camera Calibration: The Mathematics of Space Vision"
+              data-url="/rover-camera-calibration-mathematics/"
+            ></span>
+          
+            <span
+              class="mc-radar__point"
+              data-radar-point
+              data-title="What is SLAM? The Key Technology for Autonomous Rover Mapping"
+              data-url="/what-is-slam-the-key-technology-for-autonomous-rover-mapping/"
+            ></span>
+          
+            <span
+              class="mc-radar__point"
+              data-radar-point
+              data-title="The Ultimate Guide to Autonomous Rover Navigation"
+              data-url="/autonomous-rover-navigation/"
+            ></span>
+          
+            <span
+              class="mc-radar__point"
+              data-radar-point
+              data-title="The Evolution of Rover AI: A Deep Dive From Sojourner to AutoNav"
+              data-url="/the-evolution-of-rover-ai/"
+            ></span>
+          
+            <span
+              class="mc-radar__point"
+              data-radar-point
+              data-title="The 20-Minute Lag: Why We Can’t Just ‘Joystick’ Mars Rovers"
+              data-url="/the-20-minute-lag-why-we-cant-just-joystick-mars-rovers/"
+            ></span>
+          
+        </div>
+
+        <div class="mc-radar__current" data-radar-current aria-live="polite" aria-atomic="true"></div>
       </div>
       <p class="mc-visual-caption">AUTONOMOUS SYSTEMS<br><span>KNOWLEDGE BASE / ONLINE</span></p>
     </div>
@@ -211,7 +245,7 @@
     
   </section>
 
-
+  
   <section class="mc-archive" id="category-archive" aria-labelledby="mc-archive-title">
     <div class="mc-archive__heading">
       <div>

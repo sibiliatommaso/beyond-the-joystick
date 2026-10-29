@@ -5,6 +5,7 @@ date: '2026-10-24T09:00:00+02:00'
 author: 'Beyond The Joystick'
 description: 'Explore how a virtual pinhole camera responds to focal length, optical center, pose and radial lens distortion. An interactive OpenCV playground for understanding camera geometry before calibrating real hardware.'
 summary: 'Move 13 sliders to see how intrinsics, pose and radial distortion change an image. This interactive OpenCV playground helps explain camera geometry; it does not estimate calibration parameters from a real camera.'
+lab: true
 number: 1
 weight: 1
 repo: 'https://github.com/sibiliatommaso/camera-geometry-playground'
