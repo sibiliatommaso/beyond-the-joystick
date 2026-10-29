@@ -1,6 +1,6 @@
 ---
 title: 'Camera Geometry Playground: Explore Intrinsics, Pose and Lens Distortion'
-slug: camera-calibration-explained-an-interactive-opencv-lab
+slug: camera-geometry-playground-opencv
 date: '2026-10-24T09:00:00+02:00'
 author: 'Beyond The Joystick'
 description: 'Explore how a virtual pinhole camera responds to focal length, optical center, pose and radial lens distortion. An interactive OpenCV playground for understanding camera geometry before calibrating real hardware.'
@@ -8,7 +8,7 @@ summary: 'Move 13 sliders to see how intrinsics, pose and radial distortion chan
 number: 1
 weight: 1
 repo: 'https://github.com/sibiliatommaso/camera-geometry-playground'
-article: '/rover-camera-calibration-mathematics/'
+article: '/rover-camera-calibration-math/'
 article_title: 'Rover Camera Calibration: The Mathematics of Space Vision'
 stack:
   - Python
@@ -18,6 +18,8 @@ image: /images/camera-calibration-lab-examples.png
 categories:
   - 'Projects Tutorials'
   - 'Sensors Hardware'
+aliases:
+  - '/camera-calibration-explained-an-interactive-opencv-lab/'
 tags:
   - 'Camera Geometry'
   - 'Pinhole Camera Model'
@@ -35,7 +37,7 @@ The **Camera Geometry Playground** is a small interactive OpenCV application for
 
 > **Important distinction:** this is a visualisation and learning tool, not a camera-calibration program. It does not detect a chessboard or calibration target, estimate parameters from a physical camera, minimise reprojection error, or generate a calibration file. Every parameter is supplied manually through the sliders. Use it to understand the model before or alongside a proper real-camera calibration workflow.
 
-If you want the mathematical background first, read [Rover Camera Calibration: The Mathematics of Space Vision](/rover-camera-calibration-mathematics/). That article explains the theory; this playground gives you a hands-on way to explore the visual effects of the parameters.
+If you want the mathematical background first, read [Rover Camera Calibration: The Mathematics of Space Vision](/rover-camera-calibration-math/). That article explains the theory; this playground gives you a hands-on way to explore the visual effects of the parameters.
 
 ## What you can explore
 
