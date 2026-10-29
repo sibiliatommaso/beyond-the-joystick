@@ -37,7 +37,7 @@ The **Camera Geometry Playground** is a small interactive OpenCV application for
 
 > **Important distinction:** this is a visualisation and learning tool, not a camera-calibration program. It does not detect a chessboard or calibration target, estimate parameters from a physical camera, minimise reprojection error, or generate a calibration file. Every parameter is supplied manually through the sliders. Use it to understand the model before or alongside a proper real-camera calibration workflow.
 
-If you want the mathematical background first, read [Rover Camera Calibration: The Mathematics of Space Vision](/rover-camera-calibration-math/). That article explains the theory; this playground gives you a hands-on way to explore the visual effects of the parameters.
+If you want the mathematical background first, read [Rover Camera Calibration: The Mathematics of Space Vision](/rover-camera-calibration-mathematics/). That article explains the theory; this playground gives you a hands-on way to explore the visual effects of the parameters.
 
 ## What you can explore
 
