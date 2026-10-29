@@ -20,6 +20,10 @@ title = 'Beyond the Joystick'
   posts = "/:slug/"
   labs = "/:slug/"
 
+  [services]
+  [services.googleAnalytics]
+    id = 'G-V55NX8DX4V'
+
 # Syntax highlighting for fenced code blocks (```python ... ```)
 [markup.highlight]
   style = 'github-dark'
