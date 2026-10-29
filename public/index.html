@@ -27,7 +27,22 @@
   
   
   
-	<meta name="generator" content="Hugo 0.168.0">
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-V55NX8DX4V"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-V55NX8DX4V');
+        }
+      </script>
+	<meta name="generator" content="Hugo 0.169.0">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -108,17 +123,27 @@
     
 
 
-<section class="hero" aria-labelledby="hero-title">
-    
-        <img
-            class="hero__img"
-            src="/wp-content/uploads/2025/11/perseverance-selfie.webp"
-            alt=""
-            aria-hidden="true"
-            fetchpriority="high"
-        >
-    
+<svg
+    class="home-rover-route"
+    data-home-rover-route
+    aria-hidden="true"
+    focusable="false"
+>
+    <path class="home-rover-route__glow" data-home-rover-glow></path>
+    <path class="home-rover-route__line" data-home-rover-path></path>
+    <path class="home-rover-route__done" data-home-rover-done></path>
+    <g class="home-rover-route__checkpoints" data-home-rover-checkpoints></g>
+</svg>
 
+
+<div class="home-rover" data-home-rover aria-hidden="true">
+
+    <img class="home-rover__art" src="/images/rover-preview.png" alt="" decoding="async" fetchpriority="high">
+
+</div>
+
+
+<section class="hero hero--rover" aria-labelledby="hero-title">
     <div class="container hero__content">
         <p class="hero__eyebrow">PLANETARY ROBOTICS &amp; AUTONOMY</p>
 
@@ -144,6 +169,7 @@
             </a>
         </div>
     </div>
+
 </section>
 
 
@@ -814,6 +840,7 @@
 
 
 <script src="/js/articles-slider.js" defer></script>
+<script src="/js/homepage-scroll-rover.js" defer></script>
 
 
   </main>

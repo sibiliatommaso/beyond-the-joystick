@@ -14,38 +14,31 @@
 		
 			<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Camera Calibration</title>
-				<link>http://localhost:1313/tags/camera-calibration/</link>
+				<title>Camera Geometry</title>
+				<link>http://localhost:1313/tags/camera-geometry/</link>
 				<pubDate>Sat, 24 Oct 2026 09:00:00 +0200</pubDate>
-				<guid>http://localhost:1313/tags/camera-calibration/</guid>
+				<guid>http://localhost:1313/tags/camera-geometry/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Homography</title>
-				<link>http://localhost:1313/tags/homography/</link>
+				<title>Computer Vision</title>
+				<link>http://localhost:1313/tags/computer-vision/</link>
 				<pubDate>Sat, 24 Oct 2026 09:00:00 +0200</pubDate>
-				<guid>http://localhost:1313/tags/homography/</guid>
+				<guid>http://localhost:1313/tags/computer-vision/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Intrinsic Matrix</title>
-				<link>http://localhost:1313/tags/intrinsic-matrix/</link>
+				<title>Extrinsic Parameters</title>
+				<link>http://localhost:1313/tags/extrinsic-parameters/</link>
 				<pubDate>Sat, 24 Oct 2026 09:00:00 +0200</pubDate>
-				<guid>http://localhost:1313/tags/intrinsic-matrix/</guid>
+				<guid>http://localhost:1313/tags/extrinsic-parameters/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Lab</title>
-				<link>http://localhost:1313/tags/lab/</link>
+				<title>Intrinsic Parameters</title>
+				<link>http://localhost:1313/tags/intrinsic-parameters/</link>
 				<pubDate>Sat, 24 Oct 2026 09:00:00 +0200</pubDate>
-				<guid>http://localhost:1313/tags/lab/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Lens Distortion</title>
-				<link>http://localhost:1313/tags/lens-distortion/</link>
-				<pubDate>Sat, 24 Oct 2026 09:00:00 +0200</pubDate>
-				<guid>http://localhost:1313/tags/lens-distortion/</guid>
+				<guid>http://localhost:1313/tags/intrinsic-parameters/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -70,17 +63,24 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Computer Vision</title>
-				<link>http://localhost:1313/tags/computer-vision/</link>
-				<pubDate>Wed, 21 Oct 2026 15:06:12 +0000</pubDate>
-				<guid>http://localhost:1313/tags/computer-vision/</guid>
+				<title>Radial Distortion</title>
+				<link>http://localhost:1313/tags/radial-distortion/</link>
+				<pubDate>Sat, 24 Oct 2026 09:00:00 +0200</pubDate>
+				<guid>http://localhost:1313/tags/radial-distortion/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Intrinsic Parameters</title>
-				<link>http://localhost:1313/tags/intrinsic-parameters/</link>
+				<title>Camera Calibration</title>
+				<link>http://localhost:1313/tags/camera-calibration/</link>
 				<pubDate>Wed, 21 Oct 2026 15:06:12 +0000</pubDate>
-				<guid>http://localhost:1313/tags/intrinsic-parameters/</guid>
+				<guid>http://localhost:1313/tags/camera-calibration/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Lens Distortion</title>
+				<link>http://localhost:1313/tags/lens-distortion/</link>
+				<pubDate>Wed, 21 Oct 2026 15:06:12 +0000</pubDate>
+				<guid>http://localhost:1313/tags/lens-distortion/</guid>
 				<description></description>
 			</item>
 			<item>

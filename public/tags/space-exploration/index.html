@@ -27,6 +27,21 @@
   
   
   
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-V55NX8DX4V"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-V55NX8DX4V');
+        }
+      </script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -108,27 +123,192 @@
 
 
 
+
+
+
+
+
+
+
 <link rel="stylesheet" href="/css/category-mission-control.css">
-<main class="mc-category">
-  <section class="mc-hero">
+
+<div class="mc-category">
+  
+  <section class="mc-hero" aria-labelledby="mc-category-title">
     <div class="mc-hero__grid" aria-hidden="true"></div>
+    <div class="mc-hero__orb" aria-hidden="true"></div>
+
     <div class="mc-hero__content">
-      <p class="mc-kicker"><span class="mc-live-dot"></span> RESEARCH DIVISION · BEYOND THE JOYSTICK</p>
-      <h1>Space Exploration</h1>
+      <p class="mc-kicker"><span class="mc-live-dot" aria-hidden="true"></span> RESEARCH DIVISION · BEYOND THE JOYSTICK</p>
+      <h1 id="mc-category-title">Space Exploration</h1>
       <p class="mc-hero__intro">Explore the concepts, technologies, and missions shaping autonomous robotics.</p>
-      <div class="mc-hero__meta"><span><strong>1</strong> ARTICLE</span><span class="mc-meta-divider"></span><span>FIELD NOTES & TECHNICAL DOSSIERS</span></div>
-      <a class="mc-scroll-link" href="#category-archive">EXPLORE THE ARCHIVE <span aria-hidden="true">↓</span></a>
+
+      <div class="mc-hero__meta">
+        <span><strong>1</strong> ARTICLE</span>
+        <span class="mc-meta-divider" aria-hidden="true"></span>
+        <span>FIELD NOTES &amp; TECHNICAL DOSSIERS</span>
+      </div>
+
+      <a class="mc-scroll-link" href="#category-archive">EXPLORE THE DOSSIERS <span aria-hidden="true">↓</span></a>
     </div>
-    <div class="mc-hero__visual" aria-hidden="true"><div class="mc-radar"><span class="mc-radar__ring"></span><span class="mc-radar__ring mc-radar__ring--two"></span><span class="mc-radar__ring mc-radar__ring--three"></span><span class="mc-radar__cross mc-radar__cross--h"></span><span class="mc-radar__cross mc-radar__cross--v"></span><span class="mc-radar__sweep"></span><span class="mc-radar__point mc-radar__point--one"></span><span class="mc-radar__point mc-radar__point--two"></span><span class="mc-radar__point mc-radar__point--three"></span></div><p class="mc-visual-caption">AUTONOMOUS SYSTEMS<br><span>SCANNING KNOWLEDGE BASE</span></p></div>
+
+    <div class="mc-hero__visual" aria-hidden="true">
+      <div class="mc-radar">
+        <span class="mc-radar__ring mc-radar__ring--one"></span>
+        <span class="mc-radar__ring mc-radar__ring--two"></span>
+        <span class="mc-radar__ring mc-radar__ring--three"></span>
+        <span class="mc-radar__cross mc-radar__cross--h"></span>
+        <span class="mc-radar__cross mc-radar__cross--v"></span>
+        <span class="mc-radar__sweep"></span>
+        <span class="mc-radar__point mc-radar__point--one"></span>
+        <span class="mc-radar__point mc-radar__point--two"></span>
+        <span class="mc-radar__point mc-radar__point--three"></span>
+      </div>
+      <p class="mc-visual-caption">AUTONOMOUS SYSTEMS<br><span>KNOWLEDGE BASE / ONLINE</span></p>
+    </div>
   </section>
-  <section class="mc-briefing"><p class="mc-section-index">01 / BRIEFING</p><div><p class="mc-eyebrow">MISSION BRIEFING</p><h2>Understand the field.<br><span>Explore what comes next.</span></h2></div><p class="mc-briefing__copy">A curated collection of articles about the ideas, engineering decisions, and real-world challenges behind autonomous robotics.</p></section>
+
   
-  <section class="mc-featured"><div class="mc-featured__image"><img src="/wp-content/uploads/2025/10/perseverance_rover_on_mars.png" alt="" loading="lazy"><span class="mc-image-label">FEATURED DOSSIER</span></div><div class="mc-featured__body"><p class="mc-eyebrow">EDITOR'S SELECTION · JAN 2025</p><h2><a href="/autonomous-rover-navigation/">The Ultimate Guide to Autonomous Rover Navigation</a></h2><p>Why can&#39;t we joystick a Mars rover? A 26-minute signal lag makes it impossible. This guide explores the necessity of autonomous rover navigation, breaking down the core tech, SLAM, Pathfinding, and Hazard Avoidance. We trace its evolution …</p><div class="mc-featured__footer"><span>21 MIN READ</span><a href="/autonomous-rover-navigation/">OPEN DOSSIER <span aria-hidden="true">↗</span></a></div></div></section>
+  <section class="mc-briefing" aria-labelledby="mc-briefing-title">
+    <p class="mc-section-index">01 / MISSION BRIEFING</p>
+    <div class="mc-briefing__heading">
+      <h2 id="mc-briefing-title">Understand the field.<br><span>Explore what comes next.</span></h2>
+    </div>
+    <p class="mc-briefing__copy">A curated collection of articles exploring the ideas, engineering decisions, and real-world challenges behind autonomous robotics.</p>
+  </section>
+
   
-  <section class="mc-archive" id="category-archive"><div class="mc-archive__heading"><div><p class="mc-eyebrow">02 / KNOWLEDGE ARCHIVE</p><h2>Explore the dossiers</h2></div><span class="mc-archive__count">1 ENTRIES</span></div>
-  <p class="mc-single-note">This category currently contains one article. More dossiers will appear here as the archive grows.</p></section>
-  <section class="mc-divisions"><div><p class="mc-eyebrow">03 / CONTINUE EXPLORING</p><h2>Explore other divisions</h2></div><div class="mc-divisions__links"><a href="/categories/advanced-topics-future/"><span>Advanced Topics Future</span><span aria-hidden="true">↗</span></a><a href="/categories/algorithms-ai/"><span>Algorithms AI</span><span aria-hidden="true">↗</span></a><a href="/categories/core-concepts/"><span>Core Concepts</span><span aria-hidden="true">↗</span></a><a href="/categories/missions-case-studies/"><span>Missions Case Studies</span><span aria-hidden="true">↗</span></a><a href="/categories/projects-tutorials/"><span>Projects Tutorials</span><span aria-hidden="true">↗</span></a><a href="/categories/sensors-hardware/"><span>Sensors Hardware</span><span aria-hidden="true">↗</span></a></div></section>
-</main>
+  <section class="mc-last-article" aria-labelledby="mc-last-article-title">
+    <div class="mc-section-heading">
+      <div>
+        <p class="mc-section-index">02 / LATEST TRANSMISSION</p>
+        <h2 id="mc-last-article-title">The latest from this division</h2>
+      </div>
+      <span class="mc-status"><span aria-hidden="true"></span> MOST RECENT ENTRY</span>
+    </div>
+
+    
+      
+        
+        <article class="mc-featured">
+          <a class="mc-featured__image" href="/autonomous-rover-navigation/" aria-label="Read The Ultimate Guide to Autonomous Rover Navigation">
+            
+              <img src="/wp-content/uploads/2025/10/perseverance_rover_on_mars.png" alt="" loading="lazy">
+            
+            <span class="mc-image-label">LATEST DOSSIER</span>
+          </a>
+          <div class="mc-featured__body">
+            <p class="mc-featured__meta">PUBLISHED 01 JAN 2025 <span aria-hidden="true">·</span> 21 MIN READ</p>
+            <h3><a href="/autonomous-rover-navigation/">The Ultimate Guide to Autonomous Rover Navigation</a></h3>
+            <p class="mc-featured__excerpt">Why can&#39;t we joystick a Mars rover? A 26-minute signal lag makes it impossible. This guide explores the necessity of autonomous rover navigation, breaking down the core tech, SLAM, Pathfinding, and Hazard Avoidance. We trace its evolution from Mars to the …</p>
+            <div class="mc-featured__footer">
+              <span>FILE 001 · SPACE EXPLORATION</span>
+              <a href="/autonomous-rover-navigation/">READ THE ARTICLE <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+      
+    
+  </section>
+
+
+  <section class="mc-archive" id="category-archive" aria-labelledby="mc-archive-title">
+    <div class="mc-archive__heading">
+      <div>
+        <p class="mc-section-index">03 / KNOWLEDGE ARCHIVE</p>
+        <h2 id="mc-archive-title">Explore the dossiers</h2>
+      </div>
+      <span class="mc-archive__count">1 TOTAL ENTRY</span>
+    </div>
+
+    
+      <div class="mc-card-grid">
+        
+          <article class="mc-card">
+            <a class="mc-card__image" href="/autonomous-rover-navigation/" tabindex="-1" aria-hidden="true">
+              
+                <img src="/wp-content/uploads/2025/10/perseverance_rover_on_mars.png" alt="" loading="lazy">
+              
+              <span class="mc-card__file">FILE 001</span>
+            </a>
+            <div class="mc-card__body">
+              <p class="mc-card__meta">01 JAN 2025 <span aria-hidden="true">·</span> 21 MIN READ</p>
+              <h3><a href="/autonomous-rover-navigation/">The Ultimate Guide to Autonomous Rover Navigation</a></h3>
+              <p class="mc-card__excerpt">Why can&#39;t we joystick a Mars rover? A 26-minute signal lag makes it impossible. This guide explores the necessity of autonomous rover navigation, breaking down the …</p>
+              <a class="mc-card__link" href="/autonomous-rover-navigation/">OPEN DOSSIER <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        
+      </div>
+    
+  </section>
+
+  
+  <section class="mc-divisions" aria-labelledby="mc-divisions-title">
+    <div class="mc-divisions__intro">
+      <p class="mc-section-index">04 / CONTINUE EXPLORING</p>
+      <h2 id="mc-divisions-title">Explore other divisions</h2>
+      <p class="mc-divisions__copy">Follow another thread of research through the Beyond the Joystick knowledge base.</p>
+    </div>
+    <nav class="mc-divisions__links" aria-label="Other categories">
+      
+        
+        
+          
+          
+          
+            <a href="/categories/advanced-topics-future/"><span>Advanced Topics &amp; Future</span><span aria-hidden="true">↗</span></a>
+          
+        
+      
+        
+        
+          
+          
+          
+            <a href="/categories/algorithms-ai/"><span>Algorithms &amp; AI</span><span aria-hidden="true">↗</span></a>
+          
+        
+      
+        
+        
+          
+          
+          
+            <a href="/categories/core-concepts/"><span>Core Concepts</span><span aria-hidden="true">↗</span></a>
+          
+        
+      
+        
+        
+          
+          
+          
+            <a href="/categories/missions-case-studies/"><span>Missions &amp; Case Studies</span><span aria-hidden="true">↗</span></a>
+          
+        
+      
+        
+        
+          
+          
+          
+            <a href="/categories/projects-tutorials/"><span>Projects &amp; Tutorials</span><span aria-hidden="true">↗</span></a>
+          
+        
+      
+        
+        
+          
+          
+          
+            <a href="/categories/sensors-hardware/"><span>Sensors &amp; Hardware</span><span aria-hidden="true">↗</span></a>
+          
+        
+      
+    </nav>
+  </section>
+</div>
 <script src="/js/category-mission-control.js" defer></script>
 
   </main>

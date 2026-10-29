@@ -27,6 +27,21 @@
   
   
   
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-V55NX8DX4V"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-V55NX8DX4V');
+        }
+      </script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -198,11 +213,11 @@
               
 
               <h3>
-                <a href="/camera-calibration-explained-an-interactive-opencv-lab/">Camera Calibration Explained: An Interactive OpenCV Lab</a>
+                <a href="/camera-geometry-playground-opencv/">Camera Geometry Playground: Explore Intrinsics, Pose and Lens Distortion</a>
               </h3>
 
               
-                <p class="lab-card__description">Move 13 sliders and watch a virtual pinhole camera update in real time: position, orientation, focal length, optical center and lens distortion.</p>
+                <p class="lab-card__description">Move 13 sliders to see how intrinsics, pose and radial distortion change an image. This interactive OpenCV playground helps explain camera geometry; it does not estimate calibration parameters from a real camera.</p>
               
 
               
@@ -220,7 +235,7 @@
               <div class="lab-card__actions">
 
                 <a class="labs-button labs-button--primary"
-                   href="/camera-calibration-explained-an-interactive-opencv-lab/">
+                   href="/camera-geometry-playground-opencv/">
                   Explore Lab <span aria-hidden="true">&rarr;</span>
                 </a>
 
@@ -232,7 +247,7 @@
 
                 
                   <a class="lab-card__text-link"
-                     href="https://github.com/sibiliatommaso/camera-calibration-lab"
+                     href="https://github.com/sibiliatommaso/camera-geometry-playground"
                      target="_blank"
                      rel="noopener noreferrer">
                     Source Code &nearr;

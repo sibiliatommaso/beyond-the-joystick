@@ -1677,3 +1677,188 @@ main blockquote p:last-child { margin-bottom: 0; }
   margin-top: 0;
   text-align: center;
 }
+
+/* =========================================================
+   HOMEPAGE ROVER
+   Sostituisce i due blocchi precedenti "HOMEPAGE ROVER ..."
+   (da qui alla fine del file). Il resto del CSS non cambia.
+   Logica in: static/js/homepage-scroll-rover.js
+   ========================================================= */
+
+/* ---- Rotta e checkpoint (disegnati da JS dentro <main>) ---- */
+main.home-rover-route-host {
+  position: relative;
+}
+
+main.home-rover-route-host > .home-rover-route {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;            /* lo mostra JS quando serve */
+  max-width: none;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.home-rover-route__glow,
+.home-rover-route__line,
+.home-rover-route__done {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.home-rover-route__glow {
+  stroke: #4d9cc2;
+  stroke-width: 10;
+  opacity: 0.17;
+}
+
+.home-rover-route__line {
+  stroke: #f0b44d;
+  stroke-width: 2.5;
+  stroke-dasharray: 7 9;
+  opacity: 0.55;
+}
+
+/* tratto gia' percorso */
+.home-rover-route__done {
+  stroke: #f0b44d;
+  stroke-width: 3;
+  opacity: 0.95;
+}
+
+.home-rover-route__checkpoint-ring {
+  fill: #0b1220;
+  stroke: #f0b44d;
+  stroke-width: 2.5;
+  opacity: 0.95;
+  vector-effect: non-scaling-stroke;
+  transition: fill 240ms ease;
+}
+
+.home-rover-route__checkpoint.is-reached .home-rover-route__checkpoint-ring { fill: #f0b44d; }
+
+.home-rover-route__checkpoint-number {
+  fill: #f1f0e8;
+  font: 800 11px/1 ui-sans-serif, system-ui, sans-serif;
+  paint-order: stroke;
+  stroke: #0b1220;
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  dominant-baseline: middle;
+}
+
+.home-rover-route__checkpoint.is-reached .home-rover-route__checkpoint-number {
+  fill: #0b1220;
+  stroke: none;
+}
+
+/* ---- Il rover ----
+   Un solo elemento fisso, spostato in <body> da JS e animato SOLO con
+   transform/opacity (compositor): niente layout, niente scatti.
+   z-index sotto l'header (100) e sopra tutte le sezioni. */
+.home-rover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  display: none;            /* senza JS non appare */
+  width: 520px;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  user-select: none;
+  transform-origin: 50% 50%;
+  will-change: transform, opacity;
+  filter: drop-shadow(0 10px 16px rgb(0 0 0 / 30%));
+}
+
+html.home-rover-ready .home-rover { display: block; }
+
+.home-rover__art {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+
+/* ---- Hero: spazio riservato al rover accanto al titolo ---- */
+.hero--rover .hero__content {
+  padding-right: clamp(340px, 40vw, 560px);
+}
+
+@media (max-width: 1100px) {
+  .hero--rover .hero__content { padding-right: clamp(260px, 36vw, 380px); }
+}
+
+@media (max-width: 900px) {
+  .hero--rover .hero__content { padding-right: clamp(220px, 31vw, 300px); }
+}
+
+@media (max-width: 620px) {
+  /* telefono: il rover sta sotto i pulsanti */
+  .hero--rover .hero__content {
+    padding-right: 0;
+    padding-bottom: 200px;
+  }
+}
+
+/* ---- Barra inferiore (solo schermi senza margine laterale libero) ----
+   Il rover viaggia su questa barra, cosi' non copre mai il testo. */
+.home-rover-track {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 29;
+  display: none;
+  height: 64px;
+  opacity: 0;
+  pointer-events: none;
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+}
+
+.home-rover-track__line,
+.home-rover-track__done {
+  position: absolute;
+  right: var(--track-pad, 30px);
+  bottom: 16px;
+  left: var(--track-pad, 30px);
+  height: 0;
+}
+
+.home-rover-track__line { border-top: 2px dashed rgb(240 180 77 / 45%); }
+
+.home-rover-track__done {
+  border-top: 3px solid #f0b44d;
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.home-rover-track__dot {
+  position: absolute;
+  bottom: 16px;
+  width: 14px;
+  height: 14px;
+  margin: 0 0 -8px -7px;
+  border: 2px solid #f0b44d;
+  border-radius: 50%;
+  background: #0b1220;
+  transition: background-color 240ms ease;
+}
+
+.home-rover-track__dot.is-reached { background: #f0b44d; }
+
+/* lascia lo spazio della barra in fondo alla pagina */
+html.home-rover-compact body { padding-bottom: 64px; }
+
+/* ---- Movimento ridotto: il rover resta nella hero, niente rotta ---- */
+@media (prefers-reduced-motion: reduce) {
+  main.home-rover-route-host > .home-rover-route,
+  .home-rover-track { display: none !important; }
+}

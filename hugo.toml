@@ -12,6 +12,7 @@ title = 'Beyond the Joystick'
   heroImage = '/wp-content/uploads/2025/11/perseverance-selfie.webp'
   # Leave empty until the real Ko-fi URL is verified; the support buttons stay hidden.
   kofiURL = 'https://ko-fi.com/L4L31PCL3I'
+  homeRoverImage = '/images/rover-preview.png'
  
 [markup.goldmark.renderer]
   unsafe = true

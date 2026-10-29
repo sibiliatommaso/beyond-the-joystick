@@ -14,11 +14,11 @@
 		
 			<atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Camera Calibration Explained: An Interactive OpenCV Lab</title>
-				<link>http://localhost:1313/camera-calibration-explained-an-interactive-opencv-lab/</link>
+				<title>Camera Geometry Playground: Explore Intrinsics, Pose and Lens Distortion</title>
+				<link>http://localhost:1313/camera-geometry-playground-opencv/</link>
 				<pubDate>Sat, 24 Oct 2026 09:00:00 +0200</pubDate>
-				<guid>http://localhost:1313/camera-calibration-explained-an-interactive-opencv-lab/</guid>
-				<description>Move 13 sliders and watch a virtual pinhole camera update in real time: position, orientation, focal length, optical center and lens distortion.</description>
+				<guid>http://localhost:1313/camera-geometry-playground-opencv/</guid>
+				<description>Move 13 sliders to see how intrinsics, pose and radial distortion change an image. This interactive OpenCV playground helps explain camera geometry; it does not estimate calibration parameters from a real camera.</description>
 			</item>
 	</channel>
 </rss>

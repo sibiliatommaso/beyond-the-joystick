@@ -1,17 +1,97 @@
 {{ define "main" }}
 
-<!-- HERO -->
-<section class="hero" aria-labelledby="hero-title">
-    {{ with site.Params.heroImage }}
-        <img
-            class="hero__img"
-            src="{{ . | relURL }}"
-            alt=""
-            aria-hidden="true"
-            fetchpriority="high"
-        >
-    {{ end }}
+<!-- Rotta + checkpoint (disegnati da JS, nello spazio del documento) -->
+<svg
+    class="home-rover-route"
+    data-home-rover-route
+    aria-hidden="true"
+    focusable="false"
+>
+    <path class="home-rover-route__glow" data-home-rover-glow></path>
+    <path class="home-rover-route__line" data-home-rover-path></path>
+    <path class="home-rover-route__done" data-home-rover-done></path>
+    <g class="home-rover-route__checkpoints" data-home-rover-checkpoints></g>
+</svg>
 
+<!-- ROVER: un solo elemento. Lo script lo sposta in <body>, cosi' nessuna
+     sezione puo' coprirlo. Se in config c'e' homeRoverImage usa l'immagine,
+     altrimenti l'SVG inline. -->
+<div class="home-rover" data-home-rover aria-hidden="true">
+{{ with site.Params.homeRoverImage }}
+    <img class="home-rover__art" src="{{ . | relURL }}" alt="" decoding="async" fetchpriority="high">
+{{ else }}
+        <svg class="home-rover__art" viewBox="0 0 360 250" role="presentation" focusable="false">
+            <defs>
+                <linearGradient id="rover-shell" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#fff5d8"/>
+                    <stop offset="1" stop-color="#c7d1d9"/>
+                </linearGradient>
+                <linearGradient id="rover-panel" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#234d70"/>
+                    <stop offset="1" stop-color="#101d31"/>
+                </linearGradient>
+                <radialGradient id="rover-lens">
+                    <stop offset="0" stop-color="#b7edff"/>
+                    <stop offset="0.45" stop-color="#3988ad"/>
+                    <stop offset="1" stop-color="#0b1220"/>
+                </radialGradient>
+                <filter id="rover-glow" x="-80%" y="-80%" width="260%" height="260%">
+                    <feGaussianBlur stdDeviation="5"/>
+                </filter>
+            </defs>
+
+            <ellipse cx="184" cy="211" rx="139" ry="17" fill="#f0b44d" opacity="0.18" filter="url(#rover-glow)"/>
+            <ellipse cx="184" cy="214" rx="123" ry="12" fill="#050a12" opacity="0.65"/>
+
+            <!-- Six rugged wheels -->
+            <g class="home-rover__wheels" fill="#101722" stroke="#f0b44d" stroke-width="4">
+                <circle cx="83" cy="176" r="25"/><circle cx="143" cy="190" r="25"/><circle cx="235" cy="190" r="25"/><circle cx="294" cy="176" r="25"/>
+            </g>
+            <g fill="none" stroke="#91a5b4" stroke-width="3" opacity="0.9">
+                <circle cx="83" cy="176" r="13"/><circle cx="143" cy="190" r="13"/><circle cx="235" cy="190" r="13"/><circle cx="294" cy="176" r="13"/>
+                <path d="M83 163v26m-13-13h26M143 177v26m-13-13h26M235 177v26m-13-13h26M294 163v26m-13-13h26"/>
+            </g>
+
+            <!-- Suspension and chassis -->
+            <g fill="none" stroke="#d6a348" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M86 155 112 132 143 166M143 166 170 149 235 166 265 132 292 155"/>
+                <path d="M111 132 102 111M265 132 275 111" stroke-width="4"/>
+            </g>
+            <path d="M75 119 112 91 267 91 305 119 288 149 95 149Z" fill="#263b50" stroke="#f0b44d" stroke-width="3"/>
+            <path d="M92 117 119 99 260 99 288 117 279 137 102 137Z" fill="url(#rover-shell)" stroke="#fff0c8" stroke-width="2"/>
+
+            <!-- Instrument deck -->
+            <path d="M125 101 145 79 236 79 259 101Z" fill="#d8e0e4" stroke="#8294a2" stroke-width="2"/>
+            <rect x="151" y="87" width="72" height="12" rx="3" fill="#354b5d"/>
+            <path d="M159 89v8m8-8v8m8-8v8m8-8v8m8-8v8m8-8v8m8-8v8" stroke="#f0b44d" stroke-width="1.5"/>
+
+            <!-- Solar panels -->
+            <path d="M42 79 101 65 112 101 53 115Z" fill="url(#rover-panel)" stroke="#9eb6c9" stroke-width="2"/>
+            <path d="M245 65 306 79 295 115 234 101Z" fill="url(#rover-panel)" stroke="#9eb6c9" stroke-width="2"/>
+            <g fill="none" stroke="#65a8d0" stroke-width="1.5" opacity="0.95">
+                <path d="M61 75 72 109M79 71 90 105M97 67 108 101M54 91 105 78M59 104 109 91"/>
+                <path d="M263 67 252 101M282 71 271 105M300 75 289 109M251 78 302 91M247 91 297 104"/>
+            </g>
+
+            <!-- Mast and science-camera head -->
+            <path d="M183 83 183 52 197 39" fill="none" stroke="#d6e0e8" stroke-width="7" stroke-linecap="round"/>
+            <path d="M183 83 183 52 197 39" fill="none" stroke="#6e8798" stroke-width="2" stroke-linecap="round"/>
+            <path d="M168 28 181 12 220 12 232 27 226 47 174 47Z" fill="url(#rover-shell)" stroke="#f0b44d" stroke-width="3"/>
+            <rect x="179" y="20" width="42" height="18" rx="4" fill="#263c50"/>
+            <circle cx="191" cy="29" r="7" fill="url(#rover-lens)" stroke="#cceeff" stroke-width="1.5"/>
+            <circle cx="211" cy="29" r="4" fill="#f0b44d"/>
+            <path d="M199 12V2M199 2h15" fill="none" stroke="#c7d1d9" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="215" cy="2" r="3" fill="#f0b44d"/>
+
+            <!-- Small status light -->
+            <circle cx="274" cy="124" r="4" fill="#f0b44d"/>
+            <circle cx="274" cy="124" r="8" fill="none" stroke="#f0b44d" stroke-width="1.5" opacity="0.55"/>
+        </svg>
+{{ end }}
+</div>
+
+<!-- HERO: same original content, with the cover image replaced by the rover -->
+<section class="hero hero--rover" aria-labelledby="hero-title">
     <div class="container hero__content">
         <p class="hero__eyebrow">PLANETARY ROBOTICS &amp; AUTONOMY</p>
 
@@ -37,10 +117,11 @@
             </a>
         </div>
     </div>
+
 </section>
 
 
-<!-- LATEST ARTICLES -->
+<!-- LATEST ARTICLES: unchanged -->
 <section
     class="section"
     id="latest-articles"
@@ -145,7 +226,7 @@
 </section>
 
 
-<!-- LABS & PROJECTS -->
+<!-- LABS & PROJECTS: unchanged -->
 <section
     class="section section--alt"
     id="labs"
@@ -218,7 +299,7 @@
 </section>
 
 
-<!-- ABOUT -->
+<!-- ABOUT: unchanged -->
 <section class="section" id="about" aria-labelledby="about-title">
     <div class="container">
 
@@ -246,7 +327,7 @@
 </section>
 
 
-<!-- OPTIONAL SUPPORT -->
+<!-- OPTIONAL SUPPORT: unchanged -->
 {{ with site.Params.kofiURL }}
 <section
     class="section section--support"
@@ -282,7 +363,8 @@
 {{ end }}
 
 
-<!-- SLIDER SCRIPT -->
+<!-- Existing article slider + isolated homepage-only rover script -->
 <script src="{{ "js/articles-slider.js" | relURL }}" defer></script>
+<script src="{{ "js/homepage-scroll-rover.js" | relURL }}" defer></script>
 
 {{ end }}
