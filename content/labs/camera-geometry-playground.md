@@ -8,7 +8,7 @@ summary: 'Move 13 sliders to see how intrinsics, pose and radial distortion chan
 number: 1
 weight: 1
 repo: 'https://github.com/sibiliatommaso/camera-geometry-playground'
-article: '/rover-camera-calibration-math/'
+article: '/rover-camera-calibration-mathematics/'
 article_title: 'Rover Camera Calibration: The Mathematics of Space Vision'
 stack:
   - Python
