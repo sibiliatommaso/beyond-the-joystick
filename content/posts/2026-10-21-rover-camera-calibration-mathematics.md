@@ -31,7 +31,7 @@ format: false
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p><strong>Try it yourself:</strong> the companion <a href="/labs/camera-geometry-playground-opencv/">Interactive Camera Calibration Lab</a> lets you move every parameter described in this article with a slider and watch the image change in real time.</p>
+<p><strong>Try it yourself:</strong> the companion <a href="/labs/camera-geometry-playground-opencv/">Camera Geometry Playground</a> lets you move every parameter described in this article with a slider and watch the image change in real time.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
